@@ -122,19 +122,42 @@
                 <div class="w-24 h-1 bg-oasis-500 mx-auto rounded-full"></div>
             </div>
             
-            <div class="space-y-6">
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                    <h4 class="text-xl font-bold text-slate-900 mb-2">Do you accept new patients?</h4>
-                    <p class="text-slate-600">Yes, we are currently accepting new patients for all our specialized departments. You can use the appointment form below to schedule your first visit.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                    <h4 class="text-xl font-bold text-slate-900 mb-2">What insurance plans do you accept?</h4>
-                    <p class="text-slate-600">We work with all major health insurance providers. Please bring your insurance card to your first appointment so our concierge team can verify your coverage.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                    <h4 class="text-xl font-bold text-slate-900 mb-2">Do you offer telehealth appointments?</h4>
-                    <p class="text-slate-600">Yes, we offer secure virtual consultations for existing patients for follow-ups and minor health inquiries.</p>
-                </div>
+            <div class="space-y-4">
+                <details class="group bg-white rounded-2xl shadow-sm border border-slate-100 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer text-xl font-bold text-slate-900">
+                        Do you accept new patients?
+                        <span class="ml-4 flex-shrink-0 transition duration-300 group-open:-rotate-180">
+                            <svg class="w-6 h-6 text-oasis-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600">
+                        Yes, we are currently accepting new patients for all our specialized departments. You can use the appointment form below to schedule your first visit.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-2xl shadow-sm border border-slate-100 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer text-xl font-bold text-slate-900">
+                        What insurance plans do you accept?
+                        <span class="ml-4 flex-shrink-0 transition duration-300 group-open:-rotate-180">
+                            <svg class="w-6 h-6 text-oasis-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600">
+                        We work with all major health insurance providers. Please bring your insurance card to your first appointment so our concierge team can verify your coverage.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-2xl shadow-sm border border-slate-100 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer text-xl font-bold text-slate-900">
+                        Do you offer telehealth appointments?
+                        <span class="ml-4 flex-shrink-0 transition duration-300 group-open:-rotate-180">
+                            <svg class="w-6 h-6 text-oasis-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600">
+                        Yes, we offer secure virtual consultations for existing patients for follow-ups and minor health inquiries.
+                    </div>
+                </details>
             </div>
         </div>
     </section>
