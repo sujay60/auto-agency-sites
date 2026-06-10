@@ -134,17 +134,66 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-slate-50 relative content-layer">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+                <div class="w-24 h-1 bg-medical-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <h4 class="text-xl font-bold text-slate-900 mb-2">Do you accept walk-ins?</h4>
+                    <p class="text-slate-600">While we prefer appointments to minimize your wait time, we do accept walk-ins for urgent non-life-threatening medical issues.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <h4 class="text-xl font-bold text-slate-900 mb-2">How long is a typical consultation?</h4>
+                    <p class="text-slate-600">A standard consultation is 15-20 minutes. If you have multiple health concerns, please book a long consultation when making your appointment.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <h4 class="text-xl font-bold text-slate-900 mb-2">Are your facilities fully accessible?</h4>
+                    <p class="text-slate-600">Yes, Larapinta Clinic is completely wheelchair accessible, including all consultation rooms and restrooms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact -->
     <section id="contact" class="py-24 bg-slate-900 text-white content-layer">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-12">Visit Larapinta Clinic</h2>
-            <div class="inline-flex flex-col items-center p-10 bg-slate-800 rounded-3xl border border-slate-700 shadow-2xl">
-                <div class="w-16 h-16 bg-medical-500/20 text-medical-400 rounded-full flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold">Visit Larapinta Clinic</h2>
+                <p class="text-slate-400 mt-4 text-lg">Schedule your appointment or visit our facility today.</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-16">
+                
+                <!-- Left Column: Info & Form -->
+                <div>
+                    <div class="flex items-start gap-4 mb-8">
+                        <div class="w-12 h-12 bg-medical-500/20 text-medical-400 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">Clinic Location</h3>
+                            <p class="text-slate-400">26 Diarama Cl<br>Araluen NT 0870, Australia</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
+                        <h3 class="text-2xl font-bold mb-6 text-white">Book an Appointment</h3>
+                        <form class="space-y-4">
+                            <input type="text" placeholder="Full Name" class="w-full bg-slate-900/50 border border-slate-700 text-white placeholder-slate-400 px-4 py-3 rounded-xl focus:outline-none focus:border-medical-500">
+                            <input type="tel" placeholder="Phone Number" class="w-full bg-slate-900/50 border border-slate-700 text-white placeholder-slate-400 px-4 py-3 rounded-xl focus:outline-none focus:border-medical-500">
+                            <button class="w-full bg-medical-500 text-white font-bold py-4 rounded-xl hover:bg-medical-400 transition-colors mt-2">
+                                Request Appointment
+                            </button>
+                        </form>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-2">Location</h3>
-                <p class="text-slate-400 text-lg mb-8">26 Diarama Cl<br>Araluen NT 0870, Australia</p>
-                <div class="w-full rounded-2xl overflow-hidden shadow-lg h-64 border border-slate-700">
+
+                <!-- Right Column: Map -->
+                <div class="w-full rounded-3xl overflow-hidden shadow-2xl h-full min-h-[400px] border border-slate-700">
                     <iframe 
                         src="https://www.google.com/maps?q=26+Diarama+Cl,+Araluen+NT+0870,+Australia&output=embed" 
                         width="100%" 
@@ -154,6 +203,7 @@
                         loading="lazy">
                     </iframe>
                 </div>
+
             </div>
         </div>
     </section>

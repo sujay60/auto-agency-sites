@@ -114,7 +114,32 @@
         </div>
     </section>
 
-    <!-- Contact -->
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-slate-50 relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+                <div class="w-24 h-1 bg-oasis-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <h4 class="text-xl font-bold text-slate-900 mb-2">Do you accept new patients?</h4>
+                    <p class="text-slate-600">Yes, we are currently accepting new patients for all our specialized departments. You can use the appointment form below to schedule your first visit.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <h4 class="text-xl font-bold text-slate-900 mb-2">What insurance plans do you accept?</h4>
+                    <p class="text-slate-600">We work with all major health insurance providers. Please bring your insurance card to your first appointment so our concierge team can verify your coverage.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <h4 class="text-xl font-bold text-slate-900 mb-2">Do you offer telehealth appointments?</h4>
+                    <p class="text-slate-600">Yes, we offer secure virtual consultations for existing patients for follow-ups and minor health inquiries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="py-24 bg-oasis-900 text-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-16">
@@ -141,6 +166,24 @@
                                 <a href="tel:+61489996924" class="text-oasis-200 hover:text-white transition-colors">+61 489 996 924</a>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Appointment Form -->
+                    <div class="mt-12 bg-oasis-800 p-8 rounded-3xl">
+                        <h3 class="text-2xl font-bold mb-6 text-white">Book an Appointment</h3>
+                        <form class="space-y-4">
+                            <input type="text" placeholder="Full Name" class="w-full bg-oasis-900/50 border border-oasis-700 text-white placeholder-oasis-300 px-4 py-3 rounded-xl focus:outline-none focus:border-oasis-500">
+                            <input type="tel" placeholder="Phone Number" class="w-full bg-oasis-900/50 border border-oasis-700 text-white placeholder-oasis-300 px-4 py-3 rounded-xl focus:outline-none focus:border-oasis-500">
+                            <select class="w-full bg-oasis-900/50 border border-oasis-700 text-oasis-300 px-4 py-3 rounded-xl focus:outline-none focus:border-oasis-500">
+                                <option value="" disabled selected>Select Service</option>
+                                <option value="general">General Consultation</option>
+                                <option value="specialist">Specialist Visit</option>
+                                <option value="telehealth">Telehealth</option>
+                            </select>
+                            <button class="w-full bg-oasis-500 text-white font-bold py-4 rounded-xl hover:bg-oasis-400 transition-colors mt-2">
+                                Confirm Request
+                            </button>
+                        </form>
                     </div>
                 </div>
                 <div class="bg-white p-4 rounded-3xl shadow-2xl h-full min-h-[400px]">
