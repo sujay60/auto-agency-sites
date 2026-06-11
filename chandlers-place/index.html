@@ -5,99 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chandler's Place | Coral Gables Fine Dining</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Outfit', sans-serif; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .fade-in { animation: fadeIn 1s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
+        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://loremflickr.com/1600/900/restaurant'); background-size: cover; background-position: center; }
+        summary { list-style: none; cursor: pointer; }
+        summary::-webkit-details-marker { display: none; }
     </style>
 </head>
-<body class="bg-[#fcfaf7] text-stone-800">
+<body class="bg-stone-50 text-stone-800">
 
-    <!-- Nav -->
-    <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
-        <div class="text-2xl font-bold tracking-tighter text-amber-900">CHANDLER'S PLACE</div>
-        <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest text-stone-600">
-            <a href="#about" class="hover:text-amber-900 transition">About</a>
-            <a href="#menu" class="hover:text-amber-900 transition">Menu</a>
-            <a href="#contact" class="hover:text-amber-900 transition">Contact</a>
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-8 py-6 bg-white shadow-sm sticky top-0 z-50">
+        <div class="text-2xl font-bold tracking-tighter text-amber-900 uppercase">Chandler's Place</div>
+        <div class="hidden md:flex space-x-8 font-medium text-stone-600">
+            <a href="#about" class="hover:text-amber-700 transition">About</a>
+            <a href="#menu" class="hover:text-amber-700 transition">Menu</a>
+            <a href="#testimonials" class="hover:text-amber-700 transition">Testimonials</a>
+            <a href="#contact" class="hover:text-amber-700 transition">Contact</a>
         </div>
-        <button class="md:hidden text-2xl">☰</button>
+        <button class="md:hidden">Menu</button>
     </nav>
 
-    <!-- Hero -->
-    <header class="relative px-8 py-24 md:py-32 flex flex-col items-center text-center">
-        <div class="fade-in max-w-3xl">
-            <span class="text-amber-700 font-semibold tracking-widest uppercase text-sm mb-4 block">Exquisite Dining in Coral Gables</span>
-            <h1 class="text-5xl md:text-7xl font-bold text-stone-900 mb-8">Culinary Excellence in Every Bite</h1>
-            <p class="text-lg text-stone-600 mb-10 max-w-xl mx-auto">Experience the perfect blend of local ingredients and refined techniques. Proudly serving the community with a 4.7-star rating from our cherished guests.</p>
-            <a href="#contact" class="bg-amber-900 text-white px-10 py-4 rounded-full hover:bg-stone-800 transition">Reserve Your Table</a>
+    <!-- Hero Section -->
+    <header class="hero-gradient h-screen flex flex-col items-center justify-center text-white text-center px-4">
+        <div class="mb-4 inline-block bg-amber-600 px-4 py-1 rounded-full text-sm font-semibold tracking-widest uppercase">4.7 Star Rated Dining</div>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6">Experience Culinary Excellence</h1>
+        <p class="text-xl md:text-2xl max-w-2xl mb-10 font-light">Join us at Chandler's Place for an unforgettable journey of flavors in the heart of Coral Gables.</p>
+        <div class="flex gap-4">
+            <a href="#contact" class="bg-amber-700 hover:bg-amber-800 px-8 py-4 rounded-sm transition">Reserve a Table</a>
+            <a href="#menu" class="bg-white text-stone-900 px-8 py-4 rounded-sm hover:bg-stone-200 transition">View Menu</a>
         </div>
     </header>
 
-    <!-- About -->
-    <section id="about" class="px-8 py-24 bg-white">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <img src="https://loremflickr.com/800/600/restaurant" alt="Restaurant Interior" class="rounded-2xl shadow-xl w-full h-[500px] object-cover">
-            <div>
-                <h2 class="text-4xl mb-6">A Legacy of Flavor</h2>
-                <p class="text-stone-600 mb-6 leading-relaxed">At Chandler's Place, we believe dining is an art form. Located in the heart of Coral Gables, our kitchen focuses on seasonal, locally sourced produce transformed into unforgettable memories. Our team is dedicated to providing you with an atmosphere of sophisticated warmth.</p>
-                <div class="flex items-center gap-4">
-                    <div class="bg-amber-100 p-4 rounded-lg">
-                        <span class="text-amber-900 font-bold text-xl">4.7 ★</span>
-                        <p class="text-xs text-amber-800">Google Rating</p>
-                    </div>
+    <!-- About Section -->
+    <section id="about" class="py-24 px-8 max-w-6xl mx-auto">
+        <h2 class="text-4xl text-amber-900 mb-8">Our Story</h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-stone-600 leading-relaxed">
+                <p>Founded on the principles of passion, quality, and hospitality, Chandler's Place has become a staple of the Coral Gables dining scene. We believe that a meal is more than just sustenance; it is a moment to pause, connect, and celebrate the simple joy of exceptional food.</p>
+                <p>Our culinary team draws inspiration from seasonal ingredients sourced from local Floridian farms, ensuring that every dish plated is a testament to freshness and authenticity. We blend traditional techniques with modern creativity to deliver flavors that resonate with every guest.</p>
+                <p>Whether you're celebrating a milestone anniversary, closing a business deal, or simply enjoying a weeknight dinner, our refined atmosphere and dedicated service team ensure your experience is nothing short of extraordinary.</p>
+            </div>
+            <img src="https://loremflickr.com/800/600/chef" alt="Chef" class="rounded-sm shadow-xl">
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="menu" class="py-24 bg-stone-900 text-stone-100">
+        <div class="max-w-6xl mx-auto px-8">
+            <h2 class="text-4xl text-amber-500 mb-16 text-center">Our Offerings</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 border border-stone-700 rounded-sm hover:border-amber-600 transition">
+                    <h3 class="text-2xl mb-4">Fine Dining</h3>
+                    <p class="text-stone-400">Indulge in a curated multi-course menu featuring prime cuts and fresh seafood, paired with our sommelier’s top selections.</p>
+                </div>
+                <div class="p-8 border border-stone-700 rounded-sm hover:border-amber-600 transition">
+                    <h3 class="text-2xl mb-4">Private Events</h3>
+                    <p class="text-stone-400">Host your next corporate function or intimate celebration in our private dining room, equipped for any occasion.</p>
+                </div>
+                <div class="p-8 border border-stone-700 rounded-sm hover:border-amber-600 transition">
+                    <h3 class="text-2xl mb-4">Catering Services</h3>
+                    <p class="text-stone-400">Bring the Chandler's Place experience to your own venue with our premium full-service catering and event planning.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="px-8 py-24 max-w-4xl mx-auto">
-        <h2 class="text-4xl text-center mb-16">Frequently Asked Questions</h2>
+    <!-- FAQ Section -->
+    <section class="py-24 px-8 max-w-4xl mx-auto">
+        <h2 class="text-4xl text-amber-900 mb-12 text-center">Frequently Asked Questions</h2>
         <div class="space-y-4">
-            <details class="bg-white p-6 rounded-xl border border-stone-200">
-                <summary class="font-bold cursor-pointer flex justify-between">Do you accept reservations for large groups? <span>+</span></summary>
-                <p class="mt-4 text-stone-600">Yes, we accommodate parties of all sizes. Please contact us at least 48 hours in advance for groups larger than six.</p>
+            <details class="bg-white p-6 border-b border-stone-200">
+                <summary class="font-bold text-lg">Do you require a reservation?</summary>
+                <p class="mt-4 text-stone-600">While we welcome walk-ins, reservations are highly recommended, especially on weekends, to ensure you get your preferred table.</p>
             </details>
-            <details class="bg-white p-6 rounded-xl border border-stone-200">
-                <summary class="font-bold cursor-pointer flex justify-between">Are there vegetarian and gluten-free options? <span>+</span></summary>
-                <p class="mt-4 text-stone-600">Absolutely. Our chef prepares a variety of diet-friendly options that do not compromise on flavor or quality.</p>
+            <details class="bg-white p-6 border-b border-stone-200">
+                <summary class="font-bold text-lg">Are you family friendly?</summary>
+                <p class="mt-4 text-stone-600">Yes, we love hosting families. We offer a sophisticated children's menu and high chairs are available upon request.</p>
             </details>
-            <details class="bg-white p-6 rounded-xl border border-stone-200">
-                <summary class="font-bold cursor-pointer flex justify-between">What is your dress code? <span>+</span></summary>
-                <p class="mt-4 text-stone-600">We maintain a "Smart Casual" dress code to preserve the refined ambiance of our dining room.</p>
+            <details class="bg-white p-6 border-b border-stone-200">
+                <summary class="font-bold text-lg">What is your dress code?</summary>
+                <p class="mt-4 text-stone-600">We maintain a smart-casual dress code. We invite you to dress comfortably while enjoying the elegant vibe of our dining room.</p>
             </details>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="px-8 py-24 bg-stone-900 text-stone-200">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+    <!-- Contact & Maps -->
+    <section id="contact" class="py-24 bg-stone-100">
+        <div class="max-w-6xl mx-auto px-8 grid md:grid-cols-2 gap-16">
             <div>
-                <h2 class="text-4xl text-white mb-8">Visit Us</h2>
-                <div class="space-y-6 mb-10">
-                    <p> 166 Alhambra Cir, Coral Gables, FL 33134, United States</p>
+                <h2 class="text-4xl text-amber-900 mb-8">Contact Us</h2>
+                <div class="space-y-4 mb-8 text-lg">
                     <p> +1 305-444-1121</p>
+                    <p> 166 Alhambra Cir, Coral Gables, FL 33134, United States</p>
                 </div>
                 <form class="space-y-4">
-                    <input type="text" placeholder="Name" class="w-full bg-stone-800 p-4 rounded-lg focus:outline-none border border-stone-700">
-                    <input type="date" class="w-full bg-stone-800 p-4 rounded-lg focus:outline-none border border-stone-700">
-                    <button class="w-full bg-amber-700 py-4 rounded-lg font-bold hover:bg-amber-600 transition">Book Table</button>
+                    <input type="text" placeholder="Full Name" class="w-full p-4 border rounded-sm">
+                    <input type="email" placeholder="Email Address" class="w-full p-4 border rounded-sm">
+                    <textarea placeholder="Your Message" class="w-full p-4 border rounded-sm h-32"></textarea>
+                    <button class="bg-amber-900 text-white px-8 py-4 w-full">Send Request</button>
                 </form>
             </div>
-            <div class="h-[400px] w-full bg-stone-800 rounded-2xl overflow-hidden shadow-2xl">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.6359550474646!2d-80.2592759849811!3d25.7516805836371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b7f58d9e2621%3A0x6a2c2c0c0c0c0c0c!2s166%20Alhambra%20Cir%2C%20Coral%20Gables%2C%20FL%2033134!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="rounded-xl overflow-hidden shadow-2xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.424683072382!2d-80.26189562464731!3d25.75052967740954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b897103a45c7%3A0x86701f01657c9634!2s166%20Alhambra%20Cir%2C%20Coral%20Gables%2C%20FL%2033134!5e0!3m2!1sen!2sus!4v1699999999999" width="100%" height="100%" style="border:0; min-height: 400px;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-12 text-center text-stone-500 text-sm">
-        <p>&copy; 2023 Chandler's Place. All Rights Reserved.</p>
+    <footer class="py-12 bg-stone-900 text-stone-400 text-center">
+        <p>&copy; 2023 Chandler's Place. All rights reserved.</p>
     </footer>
 
 </body>
