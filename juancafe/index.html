@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuanCafe | Artisanal Bakery & Cake Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        details summary::-webkit-details-marker { display: none; }
+        .fade-in { animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="bg-[#faf9f6] text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-8 py-6 bg-white shadow-sm sticky top-0 z-50">
+        <div class="text-2xl font-bold text-[#d4a373]">JuanCafe</div>
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="#about" class="hover:text-[#d4a373] transition">About</a>
+            <a href="#menu" class="hover:text-[#d4a373] transition">Menu</a>
+            <a href="#contact" class="hover:text-[#d4a373] transition">Contact</a>
+        </div>
+        <div class="md:hidden">
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">☰</button>
+        </div>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white p-6 border-b">
+        <a href="#about" class="block py-2">About</a>
+        <a href="#menu" class="block py-2">Menu</a>
+        <a href="#contact" class="block py-2">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="py-24 px-8 text-center bg-[#fefae0]">
+        <h1 class="text-5xl md:text-7xl mb-6 text-[#6f4e37]">Sweet Moments, Baked Daily</h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">Experience the finest artisanal cakes and pastries in the heart of Coral Gables. Rated 4.7 stars by our lovely community.</p>
+        <a href="#contact" class="bg-[#d4a373] text-white px-10 py-4 rounded-full text-lg hover:bg-[#bc8a5f] transition shadow-lg">Order Your Cake</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-8 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <img src="https://loremflickr.com/800/600/bakery" alt="Bakery" class="rounded-2xl shadow-xl w-full">
+        <div>
+            <h2 class="text-4xl mb-6 text-[#6f4e37]">Crafted with Passion</h2>
+            <p class="text-lg leading-relaxed mb-6">At JuanCafe, we believe every celebration deserves a masterpiece. From custom wedding cakes to morning buttery croissants, we source the finest ingredients to bring joy to your table.</p>
+            <div class="flex items-center space-x-2 text-[#d4a373] font-bold">
+                <span>★ 4.7 Google Rating</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 px-8 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl mb-12 text-center text-[#6f4e37]">Frequently Asked</h2>
+            <div class="space-y-6">
+                <details class="bg-[#fefae0] p-6 rounded-lg cursor-pointer">
+                    <summary class="font-bold text-lg">Do you offer gluten-free options?</summary>
+                    <p class="mt-4 text-gray-600">Yes! We have a dedicated selection of gluten-free cupcakes and cakes available daily. Please inquire for specific dietary requests.</p>
+                </details>
+                <details class="bg-[#fefae0] p-6 rounded-lg cursor-pointer">
+                    <summary class="font-bold text-lg">How far in advance should I order a cake?</summary>
+                    <p class="mt-4 text-gray-600">For standard cakes, 48 hours notice is preferred. For custom wedding or event cakes, we recommend booking at least 2 weeks in advance.</p>
+                </details>
+                <details class="bg-[#fefae0] p-6 rounded-lg cursor-pointer">
+                    <summary class="font-bold text-lg">Do you provide catering services?</summary>
+                    <p class="mt-4 text-gray-600">Absolutely. We offer catering for office parties, birthdays, and brunch events. Contact us for a custom quote.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section id="contact" class="py-24 px-8 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl mb-8 text-[#6f4e37]">Visit Us</h2>
+                <div class="space-y-4 mb-8">
+                    <p> 288 Aragon Ave, Coral Gables, FL 33134</p>
+                    <p> +1 305-444-6118</p>
+                </div>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Name" class="w-full p-4 border rounded-lg">
+                    <input type="email" placeholder="Email" class="w-full p-4 border rounded-lg">
+                    <textarea placeholder="Message" class="w-full p-4 border rounded-lg h-32"></textarea>
+                    <button class="w-full bg-[#6f4e37] text-white py-4 rounded-lg hover:bg-[#5a3e2d] transition">Send Request</button>
+                </form>
+            </div>
+            <div class="h-96 w-full">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.7744318728464!2d-80.25992922485547!3d25.750860877382093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b7a151515151%3A0x15151515151515!2s288%20Aragon%20Ave%2C%20Coral%20Gables%2C%20FL%2033134!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-2xl shadow-lg"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center border-t border-gray-200">
+        <p class="text-gray-500">&copy; 2023 JuanCafe. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
