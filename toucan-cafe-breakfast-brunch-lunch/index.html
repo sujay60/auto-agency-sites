@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toucan Cafe | Breakfast, Brunch & Lunch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        summary::-webkit-details-marker { display: none; }
+        .fade-in { animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-[#FAF9F6] text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-8 py-6 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="text-2xl font-bold text-emerald-800">TOUCAN CAFE</div>
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="#about" class="hover:text-orange-500 transition">About</a>
+            <a href="#menu" class="hover:text-orange-500 transition">Menu</a>
+            <a href="#contact" class="hover:text-orange-500 transition">Contact</a>
+        </div>
+        <div class="md:hidden text-2xl">☰</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative py-24 px-8 bg-emerald-900 text-white overflow-hidden">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1 space-y-6 fade-in">
+                <div class="inline-block px-4 py-1 bg-orange-500 rounded-full text-sm font-semibold tracking-wider">4.8 STARS RATING</div>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight">Elevate Your Mornings at Toucan Cafe</h1>
+                <p class="text-lg opacity-90">Experience the perfect blend of fresh ingredients and vibrant tropical flavors in the heart of West Palm Beach.</p>
+                <a href="#contact" class="inline-block bg-white text-emerald-900 px-8 py-4 rounded-lg font-bold hover:bg-orange-100 transition">Reserve Your Table</a>
+            </div>
+            <div class="flex-1">
+                <img src="https://loremflickr.com/800/600/brunch" alt="Delicious Brunch" class="rounded-2xl shadow-2xl rotate-3 hover:rotate-0 transition duration-500">
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-8 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <img src="https://loremflickr.com/800/600/cafe" alt="Cafe Interior" class="rounded-2xl shadow-lg">
+            <div class="space-y-6">
+                <h2 class="text-4xl font-bold text-emerald-900">Crafted with Passion</h2>
+                <p class="text-lg text-slate-600">Toucan Cafe isn't just about food; it's about the feeling. We source locally, roast fresh, and plate every dish with an artistic touch. Whether you're here for a quick espresso or a long, lazy brunch, we make every second count.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 px-8 bg-slate-100">
+        <div class="max-w-3xl mx-auto space-y-6">
+            <h2 class="text-3xl font-bold text-center text-emerald-900 mb-12">Frequently Asked Questions</h2>
+            <details class="bg-white p-6 rounded-xl shadow-sm cursor-pointer">
+                <summary class="font-bold text-lg text-emerald-800">Do you offer vegan and gluten-free options?</summary>
+                <p class="mt-4 text-slate-600">Absolutely! We believe everyone should enjoy brunch. Our menu features a variety of dedicated plant-based and gluten-sensitive dishes.</p>
+            </details>
+            <details class="bg-white p-6 rounded-xl shadow-sm cursor-pointer">
+                <summary class="font-bold text-lg text-emerald-800">Do you take reservations?</summary>
+                <p class="mt-4 text-slate-600">For groups larger than 6, we highly recommend booking in advance through our contact form below.</p>
+            </details>
+            <details class="bg-white p-6 rounded-xl shadow-sm cursor-pointer">
+                <summary class="font-bold text-lg text-emerald-800">Is there parking available?</summary>
+                <p class="mt-4 text-slate-600">Yes, we provide ample complimentary parking in the Forum Place complex for all our guests.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-8 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16">
+            <div class="space-y-8">
+                <h2 class="text-4xl font-bold text-emerald-900">Visit Us</h2>
+                <div class="space-y-4">
+                    <p class="flex items-center gap-3"><span class="text-2xl"></span> 1691 Forum Pl Suite A, West Palm Beach, FL 33401</p>
+                    <p class="flex items-center gap-3"><span class="text-2xl"></span> +1 518-253-3594</p>
+                </div>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-4 border rounded-lg">
+                    <input type="email" placeholder="Your Email" class="w-full p-4 border rounded-lg">
+                    <textarea placeholder="Special Requests?" class="w-full p-4 border rounded-lg"></textarea>
+                    <button class="w-full bg-emerald-800 text-white py-4 rounded-lg font-bold hover:bg-emerald-700">Send Message</button>
+                </form>
+            </div>
+            <div class="h-96 w-full rounded-2xl overflow-hidden shadow-2xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3572.164805828459!2d-80.0906233!3d26.6853683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d8d6f51f5c66e9%3A0x6b6c22143046f88!2s1691%20Forum%20Pl%20Suite%20A%2C%20West%20Palm%20Beach%2C%20FL%2033401%2C%20USA!5e0!3m2!1sen!2s!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-white text-center text-slate-500 border-t">
+        <p>© 2023 Toucan Cafe. Crafted with love in West Palm Beach.</p>
+    </footer>
+
+</body>
+</html>
