@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gables Cafe | Authentic Cuban Cuisine in Coral Gables</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cuban: {
+                            gold: '#D4AF37',
+                            red: '#8B0000',
+                            cream: '#FDFBF7',
+                            dark: '#2D2926'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        details summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-cuban-cream text-cuban-dark">
+
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
+        <div class="text-2xl font-bold tracking-tighter text-cuban-red">GABLES CAFE</div>
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="#about" class="hover:text-cuban-red transition">Our Story</a>
+            <a href="#contact" class="hover:text-cuban-red transition">Visit Us</a>
+        </div>
+        <button class="md:hidden">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="px-8 py-16 md:py-24 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <div class="inline-block bg-cuban-red text-white px-4 py-1 rounded-full text-sm mb-6">4.7 Stars on Google</div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Taste the Heart of <span class="text-cuban-red">Havana</span> in Coral Gables.</h1>
+            <p class="text-lg opacity-80 mb-8">Experience authentic Cuban recipes, rich cafecito, and the vibrant culture of Miami’s most iconic neighborhood.</p>
+            <a href="#contact" class="bg-cuban-dark text-white px-8 py-4 rounded hover:bg-cuban-red transition">Reserve Your Table</a>
+        </div>
+        <img src="https://loremflickr.com/800/600/cubanfood" alt="Cuban Restaurant" class="rounded-2xl shadow-2xl">
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="bg-white py-24 px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">A Tradition of Flavor</h2>
+            <p class="text-xl leading-relaxed opacity-70">Located in the heart of Coral Gables, Gables Cafe brings generations of Cuban culinary expertise to your table. From our slow-roasted Lechon Asado to our velvety flan, every dish is prepared with passion and the finest ingredients.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 px-8 max-w-3xl mx-auto">
+        <h2 class="text-4xl font-bold mb-12 text-center">Common Questions</h2>
+        <div class="space-y-4">
+            <details class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <summary class="font-bold cursor-pointer text-lg">Do you offer vegan or vegetarian options?</summary>
+                <p class="mt-4 opacity-70">Yes! We offer a variety of authentic Cuban side dishes, including yuca with mojo, moros y cristianos, and fresh seasonal salads.</p>
+            </details>
+            <details class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <summary class="font-bold cursor-pointer text-lg">Is there parking available near the cafe?</summary>
+                <p class="mt-4 opacity-70">Street parking is available on Almeria Ave, and there is a public parking garage within two blocks of our location.</p>
+            </details>
+            <details class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <summary class="font-bold cursor-pointer text-lg">Do you host private events?</summary>
+                <p class="mt-4 opacity-70">Absolutely. Please contact us via phone or email to discuss catering or private dining arrangements for your special occasions.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="px-8 py-24 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
+                <div class="space-y-6">
+                    <p class="flex items-center gap-4 text-lg"><span></span> +1 305-529-6642</p>
+                    <p class="flex items-center gap-4 text-lg"><span></span> 100 Almeria Ave, Coral Gables, FL 33134</p>
+                </div>
+                <form class="mt-12 space-y-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-4 border border-gray-300 rounded">
+                    <input type="email" placeholder="Your Email" class="w-full p-4 border border-gray-300 rounded">
+                    <textarea placeholder="Message" class="w-full p-4 border border-gray-300 rounded h-32"></textarea>
+                    <button class="w-full bg-cuban-red text-white py-4 rounded font-bold hover:bg-black transition">Send Request</button>
+                </form>
+            </div>
+            <div class="h-96 w-full">
+                <iframe class="w-full h-full rounded-2xl shadow-xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.3970222071064!2d-80.2583803246399!3d25.75056707740523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b7a123456789%3A0x123456789!2s100%20Almeria%20Ave%2C%20Coral%20Gables%2C%20FL%2033134!5e0!3m2!1sen!2sus!4v1715000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-200 text-center text-sm opacity-60">
+        &copy; 2024 Gables Cafe. All rights reserved. Authentic Cuban Cuisine.
+    </footer>
+
+</body>
+</html>
