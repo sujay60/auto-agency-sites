@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Beach Cafe | Miami Beach Dining</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        details summary::-webkit-details-marker { display: none; }
+        .fade-in { animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-[#faf9f6] text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-8 py-6 bg-white/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="text-2xl font-bold tracking-tighter text-[#c5a059]">ICON BEACH</div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
+            <a href="#about" class="hover:text-[#c5a059] transition">About</a>
+            <a href="#menu" class="hover:text-[#c5a059] transition">Menu</a>
+            <a href="#contact" class="hover:text-[#c5a059] transition">Contact</a>
+        </div>
+        <button class="md:hidden text-2xl">☰</button>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative h-[80vh] flex items-center justify-center text-center text-white px-4">
+        <img src="https://loremflickr.com/1600/1200/miami,restaurant" class="absolute inset-0 w-full h-full object-cover brightness-50" alt="Cafe Hero">
+        <div class="relative z-10 fade-in">
+            <div class="inline-block px-4 py-1 mb-4 border border-white/30 rounded-full text-xs tracking-widest uppercase">Rated 4.8 Stars by Locals</div>
+            <h1 class="text-5xl md:text-7xl mb-6">Oceanfront Dining at its Finest</h1>
+            <p class="text-lg md:text-xl font-light mb-8 max-w-2xl mx-auto">Experience the vibrant flavors of Miami Beach with fresh, locally sourced ingredients and artisanal coffee.</p>
+            <a href="#contact" class="bg-[#c5a059] hover:bg-[#b08c4a] px-8 py-4 text-white uppercase text-sm tracking-widest transition">Reserve a Table</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-8 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div class="fade-in">
+            <h2 class="text-4xl mb-6">A Taste of Ocean Drive</h2>
+            <p class="text-slate-600 mb-6 leading-relaxed">Located in the heart of the historic district, Icon Beach Cafe serves as your sanctuary by the sea. From sunrise espressos to sunset cocktails, we blend culinary excellence with the laid-back rhythm of Miami.</p>
+            <p class="text-slate-600 leading-relaxed">Our 4.8-star reputation is built on our commitment to fresh seafood, organic produce, and exceptional service.</p>
+        </div>
+        <img src="https://loremflickr.com/800/600/brunch" class="rounded-2xl shadow-2xl" alt="Cafe Interior">
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-[#f2efe9] px-8">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl text-center mb-16">Frequently Asked</h2>
+            <div class="space-y-4">
+                <details class="bg-white p-6 rounded-lg cursor-pointer shadow-sm">
+                    <summary class="font-semibold text-lg flex justify-between">Do you accept reservations? <span>+</span></summary>
+                    <p class="mt-4 text-slate-600 text-sm">Yes, we recommend booking in advance, especially during the weekend sunset hours.</p>
+                </details>
+                <details class="bg-white p-6 rounded-lg cursor-pointer shadow-sm">
+                    <summary class="font-semibold text-lg flex justify-between">Is there outdoor seating? <span>+</span></summary>
+                    <p class="mt-4 text-slate-600 text-sm">Absolutely. Our terrace offers the best ocean breeze and views on Ocean Drive.</p>
+                </details>
+                <details class="bg-white p-6 rounded-lg cursor-pointer shadow-sm">
+                    <summary class="font-semibold text-lg flex justify-between">Are you pet friendly? <span>+</span></summary>
+                    <p class="mt-4 text-slate-600 text-sm">We love our furry friends! Our outdoor patio is fully pet-friendly.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-8 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl mb-8">Visit Us</h2>
+                <div class="space-y-6 text-slate-600 mb-12">
+                    <p> 860 Ocean Dr, Miami Beach, FL 33139, USA</p>
+                    <p> +1 305-204-0328</p>
+                </div>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Name" class="w-full p-4 border border-gray-200 focus:outline-none focus:border-[#c5a059]">
+                    <input type="email" placeholder="Email" class="w-full p-4 border border-gray-200 focus:outline-none focus:border-[#c5a059]">
+                    <textarea placeholder="Message" class="w-full p-4 border border-gray-200 h-32 focus:outline-none focus:border-[#c5a059]"></textarea>
+                    <button class="w-full bg-slate-900 text-white py-4 uppercase tracking-widest text-sm hover:bg-[#c5a059] transition">Send Request</button>
+                </form>
+            </div>
+            <div class="h-full min-h-[400px] rounded-2xl overflow-hidden shadow-xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.743282245785!2d-80.13110292463664!3d25.777977477375253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b49c7145749f%3A0xe21287140f0c057!2s860%20Ocean%20Dr%2C%20Miami%20Beach%2C%20FL%2033139!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-slate-500 border-t border-gray-200">
+        <p class="uppercase tracking-widest text-xs">&copy; 2023 Icon Beach Cafe. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
