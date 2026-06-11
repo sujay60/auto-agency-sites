@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angry Moon Cafe | Authentic European Dining</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .fade-in { animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        details summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-8 py-6 bg-stone-900 text-stone-100">
+        <div class="text-2xl font-bold tracking-tighter">ANGRY MOON</div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+            <a href="#about" class="hover:text-amber-500 transition">About</a>
+            <a href="#menu" class="hover:text-amber-500 transition">Cuisine</a>
+            <a href="#contact" class="hover:text-amber-500 transition">Contact</a>
+        </div>
+        <button class="md:hidden">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative py-24 px-8 bg-stone-900 text-stone-100 text-center">
+        <div class="max-w-4xl mx-auto fade-in">
+            <div class="inline-block px-4 py-1 mb-6 border border-amber-500 text-amber-500 text-xs tracking-widest uppercase">4.4 Star Google Rating</div>
+            <h1 class="text-5xl md:text-7xl mb-6">A Taste of Europe in Palm Beach</h1>
+            <p class="text-stone-400 text-lg mb-10 max-w-2xl mx-auto">Experience the rustic charm and refined flavors of traditional European cuisine. Angry Moon Cafe brings the heart of the continent to your table.</p>
+            <a href="#contact" class="px-8 py-4 bg-amber-600 hover:bg-amber-700 transition font-semibold">Reserve Your Table</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-8 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <img src="https://loremflickr.com/800/600/restaurant" alt="European Dining" class="rounded-lg shadow-2xl">
+        <div>
+            <h2 class="text-4xl mb-6">Crafted with Tradition</h2>
+            <p class="text-stone-600 leading-relaxed mb-6">Our chefs utilize authentic European techniques to bring you an unforgettable culinary journey. From artisanal pastries to hearty dinner entrées, every plate tells a story of heritage and passion.</p>
+            <p class="text-stone-600 leading-relaxed">Located in the vibrant PGA Blvd, we offer a serene escape for those seeking quality, flavor, and a touch of European elegance.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 px-8 bg-stone-100">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl text-center mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="bg-white p-6 shadow-sm cursor-pointer">
+                    <summary class="font-bold text-lg flex justify-between">Do you accommodate dietary restrictions? <span>+</span></summary>
+                    <p class="mt-4 text-stone-600">Yes, our kitchen is happy to adapt dishes for gluten-free, vegetarian, and vegan guests. Please inform your server upon arrival.</p>
+                </details>
+                <details class="bg-white p-6 shadow-sm cursor-pointer">
+                    <summary class="font-bold text-lg flex justify-between">Do I need a reservation? <span>+</span></summary>
+                    <p class="mt-4 text-stone-600">While walk-ins are welcome, we highly recommend booking a table during weekends and evening hours to ensure your preferred time.</p>
+                </details>
+                <details class="bg-white p-6 shadow-sm cursor-pointer">
+                    <summary class="font-bold text-lg flex justify-between">What is your cuisine style? <span>+</span></summary>
+                    <p class="mt-4 text-stone-600">We specialize in a fusion of classic French, Italian, and Central European comfort dishes, crafted from seasonal local ingredients.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section id="contact" class="py-24 px-8 max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+        <div>
+            <h2 class="text-4xl mb-8">Visit Us</h2>
+            <div class="space-y-6 mb-10">
+                <p><strong>Address:</strong> 2401 PGA Blvd, Palm Beach Gardens, FL 33410</p>
+                <p><strong>Phone:</strong> +1 561-694-7945</p>
+            </div>
+            <form class="grid gap-4">
+                <input type="text" placeholder="Your Name" class="p-4 border border-stone-300 w-full">
+                <input type="email" placeholder="Your Email" class="p-4 border border-stone-300 w-full">
+                <textarea placeholder="Special Requests" class="p-4 border border-stone-300 w-full h-32"></textarea>
+                <button class="bg-stone-900 text-white py-4 hover:bg-amber-700 transition">Request Reservation</button>
+            </form>
+        </div>
+        <div class="w-full h-full min-h-[400px]">
+            <iframe class="w-full h-full rounded-xl shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.835848529267!2d-80.0766916!3d26.8378544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d8d37a5b3992b9%3A0x6e768e1a6c116c11!2s2401%20PGA%20Blvd%2C%20Palm%20Beach%20Gardens%2C%20FL%2033410!5e0!3m2!1sen!2sus!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-8 bg-stone-950 text-stone-500 text-center text-sm">
+        &copy; 2023 Angry Moon Cafe. Authentic European Flavors. All rights reserved.
+    </footer>
+
+</body>
+</html>
