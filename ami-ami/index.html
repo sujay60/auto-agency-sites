@@ -3,97 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ami ami | Coral Gables Coffee Experience</title>
+    <title>Ami ami | Coral Gables' Premier Coffee Experience</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .fade-in { animation: fadeIn 1s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .bg-coffee { background-color: #4a3728; }
+        .text-coffee { color: #4a3728; }
+        .accent-cream { color: #fdf6e3; }
         details summary::-webkit-details-marker { display: none; }
     </style>
 </head>
-<body class="bg-[#FDFBF7] text-[#3D342D]">
+<body class="bg-[#fdf6e3] text-gray-800">
 
-    <!-- Navbar -->
-    <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
-        <div class="text-2xl font-bold tracking-tighter text-[#6F4E37]">Ami ami</div>
-        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
-            <a href="#" class="hover:text-[#6F4E37] transition">About</a>
-            <a href="#" class="hover:text-[#6F4E37] transition">Menu</a>
-            <a href="#" class="hover:text-[#6F4E37] transition">Visit</a>
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-8 py-6 bg-white shadow-sm sticky top-0 z-50">
+        <div class="text-2xl font-bold text-coffee">Ami ami</div>
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="#about" class="hover:text-coffee transition">About</a>
+            <a href="#services" class="hover:text-coffee transition">Menu</a>
+            <a href="#gallery" class="hover:text-coffee transition">Gallery</a>
+            <a href="#contact" class="hover:text-coffee transition">Visit Us</a>
         </div>
         <div class="md:hidden">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </div>
     </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white p-6 space-y-4">
+        <a href="#about" class="block">About</a>
+        <a href="#services" class="block">Menu</a>
+        <a href="#contact" class="block">Visit Us</a>
+    </div>
 
     <!-- Hero Section -->
-    <header class="max-w-7xl mx-auto px-8 py-20 flex flex-col md:flex-row items-center gap-16">
-        <div class="flex-1 space-y-6 fade-in">
-            <div class="inline-block bg-[#EBE5DE] text-[#6F4E37] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
-                Rated 5.0 Stars by our community
+    <header class="relative h-[80vh] flex items-center justify-center text-center text-white">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <img src="https://loremflickr.com/1600/900/coffee" class="absolute inset-0 w-full h-full object-cover" alt="Hero Background">
+        <div class="relative z-10 px-4">
+            <div class="inline-block px-4 py-1 mb-4 bg-yellow-600 rounded-full text-sm font-bold tracking-widest shadow-lg">5.0 STARS RATED</div>
+            <h1 class="text-5xl md:text-7xl mb-6">Crafted Perfection in Every Cup</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto italic">Experience the rich, artisanal soul of Coral Gables' finest coffee retreat.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#services" class="bg-white text-coffee px-8 py-4 font-bold rounded-lg hover:bg-gray-100 transition">View Our Menu</a>
+                <a href="#contact" class="border-2 border-white px-8 py-4 font-bold rounded-lg hover:bg-white hover:text-coffee transition">Find Our Location</a>
             </div>
-            <h1 class="text-6xl md:text-7xl leading-tight text-[#2D241E]">Artisan beans, <br>crafted for you.</h1>
-            <p class="text-lg text-[#7C746E] max-w-lg">Experience the perfect brew in the heart of Coral Gables. Ami ami is where morning rituals turn into unforgettable moments.</p>
-            <button class="bg-[#6F4E37] text-white px-8 py-4 rounded-sm hover:bg-[#573E2C] transition">Explore Our Menu</button>
-        </div>
-        <div class="flex-1 w-full">
-            <img src="https://loremflickr.com/800/600/coffee" alt="Coffee" class="rounded-2xl shadow-2xl">
         </div>
     </header>
 
     <!-- About Section -->
-    <section class="bg-[#F3EFEA] py-24">
-        <div class="max-w-4xl mx-auto px-8 text-center space-y-6">
-            <h2 class="text-4xl">From bean to soul.</h2>
-            <p class="text-xl text-[#7C746E] leading-relaxed">At Ami ami, we source only the finest ethically grown beans, roasting them in small batches to preserve the delicate notes that make your morning cup truly special. Our cozy corner in Coral Gables is designed for connection, quiet reflection, and the pursuit of the perfect roast.</p>
+    <section id="about" class="py-24 px-8 max-w-5xl mx-auto">
+        <h2 class="text-4xl text-coffee mb-8 text-center">The Ami ami Philosophy</h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <img src="https://loremflickr.com/600/400/cafe" class="rounded-2xl shadow-2xl" alt="Cafe Interior">
+            <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+                <p>Welcome to Ami ami, a haven for coffee enthusiasts nestled in the heart of Coral Gables. Our mission is to bridge the gap between traditional coffee heritage and modern, artisanal brewing techniques.</p>
+                <p>We source only the finest ethically grown beans, ensuring that every sip you take supports sustainable farming communities. Our baristas are meticulously trained to respect the integrity of the bean, bringing out complex notes of chocolate, stone fruit, and earth.</p>
+                <p>More than just a coffee shop, we strive to create a "third space"—a warm, inviting environment where neighbors become friends and ideas are born over perfectly frothed lattes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Menu Section -->
+    <section id="services" class="py-24 bg-[#ede0d4] px-8">
+        <h2 class="text-4xl text-coffee mb-16 text-center">Artisanal Offerings</h2>
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:transform hover:scale-105 transition duration-300">
+                <h3 class="text-2xl mb-4 text-coffee">Single-Origin Brews</h3>
+                <p>Experience the distinct character of specific regions with our pour-over collection, highlighting unique notes from Ethiopian highlands to Colombian estates.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:transform hover:scale-105 transition duration-300">
+                <h3 class="text-2xl mb-4 text-coffee">Signature Espresso</h3>
+                <p>Our custom espresso blend is the backbone of our shop. Rich, bold, and perfectly balanced, it serves as the base for all our handcrafted milk-based drinks.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:transform hover:scale-105 transition duration-300">
+                <h3 class="text-2xl mb-4 text-coffee">House-Made Pastries</h3>
+                <p>Pair your brew with our daily selection of freshly baked croissants, scones, and artisanal cookies made in-house using premium organic ingredients.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 px-8 max-w-7xl mx-auto">
+        <h2 class="text-4xl text-coffee mb-12 text-center">Captured Moments</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <img src="https://loremflickr.com/400/400/latte" class="w-full h-64 object-cover rounded-lg" alt="Coffee Art">
+            <img src="https://loremflickr.com/400/400/pastry" class="w-full h-64 object-cover rounded-lg" alt="Pastry">
+            <img src="https://loremflickr.com/400/400/espresso" class="w-full h-64 object-cover rounded-lg" alt="Espresso">
+            <img src="https://loremflickr.com/400/400/coffeebeans" class="w-full h-64 object-cover rounded-lg" alt="Beans">
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="max-w-3xl mx-auto py-24 px-8">
-        <h2 class="text-4xl mb-12 text-center">Frequently Asked</h2>
+    <section class="py-24 px-8 bg-white max-w-3xl mx-auto">
+        <h2 class="text-4xl text-coffee mb-12 text-center">Frequently Asked</h2>
         <div class="space-y-4">
-            <details class="group bg-white p-6 rounded-xl shadow-sm border border-[#EBE5DE]">
-                <summary class="font-semibold cursor-pointer list-none flex justify-between items-center text-[#6F4E37]">Do you offer plant-based milk? <span class="group-open:rotate-180 transition">+</span></summary>
-                <p class="mt-4 text-[#7C746E]">Yes! We offer a variety of organic oat, almond, and soy alternatives to perfectly complement your coffee.</p>
+            <details class="border-b border-gray-300 pb-4">
+                <summary class="text-lg font-bold cursor-pointer">Do you offer dairy-free milk alternatives?</summary>
+                <p class="mt-4 text-gray-600">Yes! We offer a variety of premium oat, almond, and soy milks to perfectly complement your favorite beverages without compromise.</p>
             </details>
-            <details class="group bg-white p-6 rounded-xl shadow-sm border border-[#EBE5DE]">
-                <summary class="font-semibold cursor-pointer list-none flex justify-between items-center text-[#6F4E37]">Is there outdoor seating? <span class="group-open:rotate-180 transition">+</span></summary>
-                <p class="mt-4 text-[#7C746E]">We have a beautiful shaded patio that reflects the sunny spirit of Coral Gables, perfect for enjoying your espresso.</p>
+            <details class="border-b border-gray-300 pb-4">
+                <summary class="text-lg font-bold cursor-pointer">Do you have high-speed Wi-Fi?</summary>
+                <p class="mt-4 text-gray-600">Absolutely. We provide a cozy, productive environment with high-speed internet, making it the perfect spot for remote work or study.</p>
             </details>
-            <details class="group bg-white p-6 rounded-xl shadow-sm border border-[#EBE5DE]">
-                <summary class="font-semibold cursor-pointer list-none flex justify-between items-center text-[#6F4E37]">Do you host private events? <span class="group-open:rotate-180 transition">+</span></summary>
-                <p class="mt-4 text-[#7C746E]">Absolutely. Contact us via email to discuss private evening bookings for your group or gathering.</p>
+            <details class="border-b border-gray-300 pb-4">
+                <summary class="text-lg font-bold cursor-pointer">Are your coffee beans for sale?</summary>
+                <p class="mt-4 text-gray-600">We sell fresh, small-batch roasted beans by the bag so you can enjoy the Ami ami experience in the comfort of your own home.</p>
             </details>
         </div>
     </section>
 
-    <!-- Contact & Map -->
-    <section class="max-w-7xl mx-auto py-24 px-8 grid md:grid-cols-2 gap-16">
-        <div class="space-y-8">
-            <h2 class="text-4xl">Visit us today</h2>
-            <div class="space-y-4 text-[#7C746E]">
-                <p><strong>Address:</strong>  Coral Gables, FL 33134, United States</p>
-                <p><strong>Phone:</strong> No Phone</p>
-                <p><strong>Email:</strong> (Contact us via website)</p>
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-8 bg-[#4a3728] text-white">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl mb-8">Visit Us</h2>
+                <div class="space-y-4 text-lg mb-8">
+                    <p>📍 Coral Gables, FL 33134, United States</p>
+                    <p>📞 No Phone Available</p>
+                    <p>📧 reachout@amiami-coffee.com</p>
+                </div>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Name" class="w-full p-4 rounded bg-white/10 border border-white/20 placeholder-white/70">
+                    <input type="email" placeholder="Email" class="w-full p-4 rounded bg-white/10 border border-white/20 placeholder-white/70">
+                    <textarea placeholder="Message" class="w-full p-4 rounded bg-white/10 border border-white/20 placeholder-white/70 h-32"></textarea>
+                    <button class="w-full bg-white text-coffee py-4 font-bold rounded">Send Message</button>
+                </form>
             </div>
-            <form class="space-y-4">
-                <input type="text" placeholder="Your Name" class="w-full p-4 bg-[#EBE5DE] rounded-sm focus:outline-none focus:ring-2 focus:ring-[#6F4E37]">
-                <textarea placeholder="Message" class="w-full p-4 bg-[#EBE5DE] rounded-sm h-32 focus:outline-none focus:ring-2 focus:ring-[#6F4E37]"></textarea>
-                <button class="w-full bg-[#6F4E37] text-white py-4 rounded-sm uppercase tracking-widest font-bold">Send Message</button>
-            </form>
-        </div>
-        <div class="h-96 w-full rounded-2xl overflow-hidden shadow-lg">
-            <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.754854580252!2d-80.2683!3d25.7515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b7a424260277%3A0x6764a8527a296e6d!2sCoral%20Gables%2C%20FL%2033134!5e0!3m2!1sen!2sus!4v1689000000000!5m2!1sen!2sus" frameborder="0" allowfullscreen="" loading="lazy"></iframe>
+            <div class="w-full h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-2xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.633802958434!2d-80.2655!3d25.7515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b897825d1947%3A0x21c43552086e3432!2sCoral%20Gables%2C%20FL%2033134!5e0!3m2!1sen!2sus!4v1699999999999" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 text-center border-t border-[#EBE5DE] text-[#7C746E] text-sm">
-        <p>&copy; 2023 Ami ami Coffee. All rights reserved.</p>
+    <footer class="py-12 text-center text-gray-500">
+        <p>&copy; 2023 Ami ami Coffee Shop. All rights reserved.</p>
+        <div class="mt-4 space-x-6">
+            <a href="#" class="hover:text-coffee">Instagram</a>
+            <a href="#" class="hover:text-coffee">Facebook</a>
+            <a href="#" class="hover:text-coffee">Twitter</a>
+        </div>
     </footer>
 
 </body>
