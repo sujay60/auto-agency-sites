@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nonnos Cafe | Authentic Italian Coffee in Coral Gables</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .fade-in { animation: fadeIn 1s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        details summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-8 py-6 bg-white/90 backdrop-blur-sm sticky top-0 z-50 border-b border-stone-100">
+        <div class="text-2xl font-bold tracking-tighter text-stone-900">NONNOS CAFE</div>
+        <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-widest">
+            <a href="#about" class="hover:text-amber-700 transition">About</a>
+            <a href="#menu" class="hover:text-amber-700 transition">Menu</a>
+            <a href="#contact" class="hover:text-amber-700 transition">Visit Us</a>
+        </div>
+        <div class="md:hidden">
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white p-6 border-b border-stone-200">
+        <a href="#about" class="block py-2">About</a>
+        <a href="#menu" class="block py-2">Menu</a>
+        <a href="#contact" class="block py-2">Visit Us</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative py-24 px-8 bg-stone-900 text-white">
+        <div class="max-w-5xl mx-auto flex flex-col items-center text-center fade-in">
+            <span class="px-4 py-1 border border-amber-600 text-amber-500 text-xs uppercase tracking-widest rounded-full mb-6">4.9 Star Rated Excellence</span>
+            <h1 class="text-5xl md:text-7xl mb-8 leading-tight">Authentic Flavors in the Heart of Coral Gables</h1>
+            <p class="text-lg text-stone-300 max-w-2xl mb-12">Experience the perfect blend of tradition and modern luxury at Nonnos Cafe. Hand-crafted espresso, artisanal pastries, and a warm neighborhood atmosphere.</p>
+            <a href="#contact" class="px-8 py-4 bg-amber-700 hover:bg-amber-600 transition text-white font-semibold rounded-lg">Book a Table</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-8 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <img src="https://loremflickr.com/800/600/coffee" alt="Cafe Interior" class="rounded-2xl shadow-xl w-full h-[400px] object-cover">
+        <div>
+            <h2 class="text-4xl mb-6">A Legacy of Taste</h2>
+            <p class="text-stone-600 mb-6 leading-relaxed">At Nonnos, we believe coffee is more than just a drink—it's a ritual. Nestled in Coral Gables, we bring you the finest beans sourced from sustainable farms, roasted to perfection to ensure every cup tells a story of quality and passion.</p>
+            <p class="text-stone-600 leading-relaxed">Whether you're stopping by for a morning jumpstart or an afternoon escape, our welcoming staff and cozy seating make us the perfect home away from home.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 px-8 bg-stone-100">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl text-center mb-16">Commonly Asked</h2>
+            <div class="space-y-4">
+                <details class="bg-white p-6 rounded-xl shadow-sm cursor-pointer border border-stone-200">
+                    <summary class="font-bold text-lg outline-none flex justify-between">Do you offer vegan milk options? <span>+</span></summary>
+                    <p class="mt-4 text-stone-600 pl-2">Yes, we offer premium oat, almond, and soy milk alternatives to pair with any of our signature espresso drinks.</p>
+                </details>
+                <details class="bg-white p-6 rounded-xl shadow-sm cursor-pointer border border-stone-200">
+                    <summary class="font-bold text-lg outline-none flex justify-between">Is there outdoor seating available? <span>+</span></summary>
+                    <p class="mt-4 text-stone-600 pl-2">Absolutely! We have a beautiful, shaded sidewalk patio where you can enjoy the Florida breeze while sipping your coffee.</p>
+                </details>
+                <details class="bg-white p-6 rounded-xl shadow-sm cursor-pointer border border-stone-200">
+                    <summary class="font-bold text-lg outline-none flex justify-between">Are reservations required? <span>+</span></summary>
+                    <p class="mt-4 text-stone-600 pl-2">Walk-ins are always welcome. For groups of 6 or more, we recommend using our contact form to secure your spot.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section id="contact" class="py-24 px-8 max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+        <div>
+            <h2 class="text-4xl mb-8">Visit Us</h2>
+            <div class="space-y-6 mb-12">
+                <p><strong>Address:</strong> 550 Biltmore Way Suite 107, Coral Gables, FL 33134</p>
+                <p><strong>Phone:</strong> +1 305-992-9233</p>
+            </div>
+            <form class="space-y-4">
+                <input type="text" placeholder="Name" class="w-full p-4 border border-stone-300 rounded-lg focus:outline-none focus:border-amber-700">
+                <input type="email" placeholder="Email" class="w-full p-4 border border-stone-300 rounded-lg focus:outline-none focus:border-amber-700">
+                <textarea placeholder="Message" class="w-full p-4 border border-stone-300 rounded-lg h-32"></textarea>
+                <button class="w-full py-4 bg-stone-900 text-white rounded-lg hover:bg-stone-700 transition">Send Inquiry</button>
+            </form>
+        </div>
+        <div class="h-[500px] w-full bg-stone-200 rounded-2xl overflow-hidden shadow-inner">
+            <iframe class="w-full h-full grayscale" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.6828557993077!2d-80.2635955!3d25.7505378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b7365287f3b3%3A0x868b136894d3753e!2s550%20Biltmore%20Way%20Suite%20107%2C%20Coral%20Gables%2C%20FL%2033134%2C%20USA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" frameborder="0" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center border-t border-stone-200 text-stone-500 text-sm">
+        <p>&copy; 2023 Nonnos Cafe. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
