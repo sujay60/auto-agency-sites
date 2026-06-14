@@ -9,99 +9,100 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinic: {
+                            50: '#f0f9fa',
+                            900: '#0a2626',
+                            teal: '#14b8a6',
+                            slate: '#f8fafc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-[#F8F9FB] text-slate-900 selection:bg-teal-200">
+<body class="bg-clinic-50 text-clinic-900 antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-white/70 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="index.html" class="text-xl font-bold tracking-tighter text-teal-900">PARLIAMENT<span class="text-teal-600">MED</span></a>
-            <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
-                <a href="services.html" class="hover:text-teal-600 transition">Services</a>
-                <a href="doctors.html" class="hover:text-teal-600 transition">Doctors</a>
-                <a href="contact.html" class="text-teal-700">Contact</a>
+            <a href="index.html" class="text-xl font-bold tracking-tighter">PARLIAMENT<span class="text-clinic-teal">.</span></a>
+            <div class="flex gap-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-clinic-teal transition-colors">Home</a>
+                <a href="services.html" class="hover:text-clinic-teal transition-colors">Services</a>
+                <a href="doctors.html" class="hover:text-clinic-teal transition-colors">Doctors</a>
+                <a href="contact.html" class="text-clinic-teal">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="pt-32 pb-24 px-6">
-        <div class="max-w-6xl mx-auto">
-            <header class="mb-20">
-                <h1 class="text-6xl font-bold tracking-tight text-teal-950 mb-6">Get in touch.</h1>
-                <p class="text-xl text-slate-500 max-w-2xl">Expert medical care in the heart of Toronto. Reach out to schedule your consultation or visit our clinic.</p>
-            </header>
+    <main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+        <header class="mb-20">
+            <h1 class="text-6xl font-bold tracking-tight mb-6">Connect with us.</h1>
+            <p class="text-xl text-gray-500 max-w-lg">Experience premium healthcare in the heart of Toronto. Schedule your consultation today.</p>
+        </header>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <!-- Contact Form -->
-                <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-                    <form class="space-y-6">
-                        <div>
-                            <label class="block text-sm font-semibold mb-2">Full Name</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-500">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold mb-2">Email Address</label>
-                            <input type="email" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-500">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold mb-2">Message</label>
-                            <textarea rows="4" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
-                        </div>
-                        <button class="w-full bg-teal-900 text-white py-4 rounded-xl font-bold hover:bg-teal-800 transition">Send Message</button>
-                    </form>
-                </div>
-
-                <!-- Info Grid -->
-                <div class="space-y-8">
-                    <div class="bg-teal-900 text-white p-10 rounded-[2rem]">
-                        <h3 class="text-2xl font-bold mb-6">Clinic Info</h3>
-                        <p class="text-teal-100 mb-2">1 Oak St, Toronto, ON M5A 0A1</p>
-                        <p class="text-3xl font-bold mb-8">+1 416-361-5028</p>
-                        <div class="flex gap-4 text-sm uppercase tracking-widest text-teal-300">
-                            <span>4.3/5 Rating</span>
-                            <span>•</span>
-                            <span>449 Reviews</span>
-                        </div>
+        <div class="grid lg:grid-cols-2 gap-16">
+            <!-- Form Section -->
+            <section class="bg-white p-10 rounded-[2rem] shadow-sm border border-gray-100">
+                <h2 class="text-3xl font-semibold mb-8">Appointment Request</h2>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="text" placeholder="First Name" class="w-full p-4 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-clinic-teal">
+                        <input type="text" placeholder="Last Name" class="w-full p-4 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-clinic-teal">
                     </div>
+                    <input type="email" placeholder="Email Address" class="w-full p-4 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-clinic-teal">
+                    <textarea placeholder="How can we help?" rows="4" class="w-full p-4 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-clinic-teal"></textarea>
+                    <button class="w-full bg-clinic-900 text-white py-4 rounded-xl font-semibold hover:bg-clinic-teal transition-all">Request Appointment</button>
+                </form>
+            </section>
 
-                    <div class="bg-white p-8 rounded-[2rem] border border-slate-100">
-                        <h3 class="font-bold mb-4">Operating Hours</h3>
-                        <div class="text-slate-500 space-y-2">
-                            <div class="flex justify-between"><span>Mon - Fri</span><span>9:00 AM - 6:00 PM</span></div>
-                            <div class="flex justify-between"><span>Saturday</span><span>10:00 AM - 2:00 PM</span></div>
-                        </div>
-                    </div>
+            <!-- Details Section -->
+            <section class="space-y-8">
+                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100">
+                    <h3 class="text-lg font-bold mb-4 uppercase tracking-widest text-clinic-teal">Location</h3>
+                    <p class="text-xl mb-6">1 Oak St, Toronto, ON M5A 0A1</p>
+                    <iframe src="https://www.google.com/maps?q=1+Oak+St+Toronto+ON+M5A+0A1+Canada&output=embed" class="w-full h-64 rounded-3xl shadow-2xl" frameborder="0"></iframe>
                 </div>
-            </div>
-
-            <!-- Map Section -->
-            <div class="mt-16">
-                <iframe src="https://www.google.com/maps?q=1+Oak+St+Toronto+ON+M5A+0A1+Canada&output=embed" class="w-full h-96 rounded-[2rem] shadow-2xl border-0"></iframe>
-            </div>
+                <div class="bg-clinic-900 text-white p-8 rounded-[2rem]">
+                    <h3 class="text-lg font-bold mb-4 uppercase tracking-widest text-clinic-teal">Hours</h3>
+                    <div class="flex justify-between py-2 border-b border-gray-800"><span>Mon - Fri</span><span class="font-bold">9am - 6pm</span></div>
+                    <div class="flex justify-between py-2"><span>Sat - Sun</span><span class="font-bold">Closed</span></div>
+                </div>
+            </section>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-slate-400 py-16">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+    <footer class="bg-clinic-900 text-gray-400 py-16">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
             <div>
-                <h4 class="text-white font-bold mb-4">Parliament Med</h4>
-                <p class="text-sm">1 Oak St, Toronto, ON M5A 0A1</p>
+                <h4 class="text-white font-bold mb-4">Parliament Medical</h4>
+                <p class="text-sm">4.3 stars from 449 reviews</p>
             </div>
-            <div class="space-y-2 text-sm">
-                <a href="index.html" class="block hover:text-white">Home</a>
-                <a href="services.html" class="block hover:text-white">Services</a>
-                <a href="doctors.html" class="block hover:text-white">Doctors</a>
+            <div>
+                <h4 class="text-white font-bold mb-4">Navigation</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-            <div class="space-y-2 text-sm">
-                <a href="#" class="block hover:text-white">Instagram</a>
-                <a href="#" class="block hover:text-white">LinkedIn</a>
-                <a href="#" class="block hover:text-white">Twitter</a>
-            </div>
-            <div class="text-sm">
-                © 2024 Parliament Medical Clinic. All rights reserved.
+            <div>
+                <h4 class="text-white font-bold mb-4">Contact</h4>
+                <p class="text-sm mb-2">+1 416-361-5028</p>
+                <div class="flex gap-4 mt-4">
+                    <span class="cursor-pointer hover:text-clinic-teal transition-colors">Twitter</span>
+                    <span class="cursor-pointer hover:text-clinic-teal transition-colors">LinkedIn</span>
+                    <span class="cursor-pointer hover:text-clinic-teal transition-colors">Instagram</span>
+                </div>
             </div>
         </div>
     </footer>

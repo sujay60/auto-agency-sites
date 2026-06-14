@@ -3,94 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parliament Medical Clinic | Toronto</title>
+    <title>Parliament Medical Clinic | Elite Healthcare in Toronto</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinical: {
+                            50: '#F0F9F8',
+                            500: '#0D9488',
+                            900: '#0F172A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-[#F8FAFC] text-slate-900">
+<body class="bg-slate-50 text-slate-900 selection:bg-teal-200">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-6 py-6 flex justify-center">
-        <div class="backdrop-blur-md bg-white/70 border border-slate-200 shadow-sm rounded-full px-8 py-4 flex items-center gap-8">
-            <a href="index.html" class="font-bold text-teal-900">PARLIAMENT</a>
-            <div class="flex gap-6 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
-                <a href="services.html" class="hover:text-teal-600 transition">Services</a>
-                <a href="doctors.html" class="hover:text-teal-600 transition">Doctors</a>
-                <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-clinical-500">PARLIAMENT<span class="text-slate-900">MEDICAL</span></a>
+            <div class="flex gap-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-clinical-500 transition">Home</a>
+                <a href="services.html" class="hover:text-clinical-500 transition">Services</a>
+                <a href="doctors.html" class="hover:text-clinical-500 transition">Doctors</a>
+                <a href="contact.html" class="hover:text-clinical-500 transition">Contact</a>
             </div>
-            <a href="contact.html" class="bg-teal-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-teal-700 transition">Book Now</a>
+            <a href="contact.html" class="bg-clinical-900 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-clinical-500 transition">Book Appointment</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="pt-40 pb-24 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <header class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
         <div>
-            <div class="inline-flex items-center gap-2 bg-teal-50 text-teal-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
-                </span>
-                4.3/5 Star Rating from 449 Reviews
+            <div class="inline-flex items-center gap-2 bg-teal-50 text-clinical-500 px-4 py-1 rounded-full text-sm font-semibold mb-6">
+                <span>★ 4.3 / 5.0 (449 Reviews)</span>
             </div>
-            <h1 class="text-6xl font-bold tracking-tighter text-slate-900 mb-6 leading-[1.1]">Premium Healthcare in the Heart of Toronto.</h1>
-            <p class="text-xl text-slate-600 mb-8 max-w-md">Compassionate care, modern diagnostics, and expert physicians located at 1 Oak Street.</p>
+            <h1 class="text-6xl font-bold tracking-tighter leading-tight mb-8">Modern care for a healthier Toronto.</h1>
+            <p class="text-xl text-slate-600 mb-10 leading-relaxed">Precision diagnostics and compassionate medicine at 1 Oak Street. Experience a new standard of health excellence.</p>
             <div class="flex gap-4">
-                <a href="contact.html" class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-slate-800 transition">Book Appointment</a>
+                <a href="contact.html" class="bg-clinical-500 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-clinical-900 transition">Get Started</a>
             </div>
         </div>
         <img src="https://loremflickr.com/1200/800/doctors" alt="Clinic Interior" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
     </header>
 
-    <!-- Overview Section -->
-    <section class="py-24 bg-white px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-            <div class="p-8 border border-slate-100 rounded-3xl bg-slate-50">
-                <h3 class="text-xl font-bold mb-4">State of the Art</h3>
-                <p class="text-slate-600">Equipped with modern technology to provide precise diagnostics and superior patient outcomes.</p>
+    <!-- Features -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm">
+                <h3 class="text-xl font-bold mb-4">Urgent Care</h3>
+                <p class="text-slate-600">Same-day availability for acute needs with board-certified professionals.</p>
             </div>
-            <div class="p-8 border border-slate-100 rounded-3xl bg-slate-50">
-                <h3 class="text-xl font-bold mb-4">Patient Focused</h3>
-                <p class="text-slate-600">Our doctors in Albany Street prioritize your time, comfort, and long-term wellbeing.</p>
+            <div class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm">
+                <h3 class="text-xl font-bold mb-4">Wellness Exams</h3>
+                <p class="text-slate-600">Comprehensive annual screenings tailored to your unique health profile.</p>
             </div>
-            <div class="p-8 border border-slate-100 rounded-3xl bg-slate-50">
-                <h3 class="text-xl font-bold mb-4">Central Location</h3>
-                <p class="text-slate-600">Conveniently situated at 1 Oak St, easily accessible from anywhere in downtown Toronto.</p>
+            <div class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm">
+                <h3 class="text-xl font-bold mb-4">Specialized Lab</h3>
+                <p class="text-slate-600">On-site diagnostics for faster, more accurate results you can trust.</p>
             </div>
         </div>
     </section>
 
     <!-- Map Section -->
-    <section class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="w-full overflow-hidden rounded-[2rem] shadow-2xl">
-            <iframe src="https://www.google.com/maps?q=1+Oak+St+Toronto+ON+M5A+0A1+Canada&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <div class="bg-white p-4 rounded-[2rem] shadow-2xl">
+            <iframe src="https://www.google.com/maps?q=1+Oak+St+Toronto+ON+M5A+0A1+Canada&output=embed" width="100%" height="450" class="rounded-3xl border-0" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-white py-20 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+    <footer class="bg-clinical-900 text-slate-400 py-24 mt-24">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
             <div>
-                <h4 class="font-bold text-lg mb-4">Parliament Medical</h4>
-                <p class="text-slate-400 text-sm">1 Oak St, Toronto, ON M5A 0A1</p>
-                <p class="text-slate-400 text-sm mt-2">+1 416-361-5028</p>
+                <h4 class="text-white font-bold mb-6">Parliament Medical</h4>
+                <p>1 Oak St, Toronto, ON</p>
+                <p>+1 416-361-5028</p>
             </div>
-            <div class="flex flex-col gap-2">
-                <a href="index.html" class="text-slate-400 hover:text-teal-400">Home</a>
-                <a href="services.html" class="text-slate-400 hover:text-teal-400">Services</a>
-                <a href="doctors.html" class="text-slate-400 hover:text-teal-400">Doctors</a>
-                <a href="contact.html" class="text-slate-400 hover:text-teal-400">Contact</a>
+            <div class="flex flex-col gap-4">
+                <a href="index.html" class="hover:text-white">Home</a>
+                <a href="services.html" class="hover:text-white">Services</a>
+                <a href="doctors.html" class="hover:text-white">Doctors</a>
+                <a href="contact.html" class="hover:text-white">Contact</a>
             </div>
-            <div class="flex flex-col gap-2">
-                <a href="#" class="text-slate-400 hover:text-teal-400">Instagram</a>
-                <a href="#" class="text-slate-400 hover:text-teal-400">LinkedIn</a>
-                <a href="#" class="text-slate-400 hover:text-teal-400">Twitter</a>
+            <div class="flex flex-col gap-4">
+                <a href="#" class="hover:text-white">Instagram</a>
+                <a href="#" class="hover:text-white">LinkedIn</a>
+                <a href="#" class="hover:text-white">Twitter</a>
             </div>
-            <div class="text-slate-500 text-xs">
-                &copy; 2024 Parliament Medical Clinic. All rights reserved.
+            <div class="text-sm">
+                © 2024 Parliament Medical Clinic. All rights reserved.
             </div>
         </div>
     </footer>
