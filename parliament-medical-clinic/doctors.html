@@ -1,86 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Practitioners | Parliament Medical Clinic</title>
+    <title>Our Physicians | Parliament Medical Clinic</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinic: {
+                            50: '#f0fdfa',
+                            900: '#0f3a35',
+                            teal: '#14b8a6',
+                            blue: '#0ea5e9'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-slate-50 text-slate-900">
 
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-            <a href="index.html" class="text-2xl font-bold tracking-tighter text-teal-900">PARLIAMENT<span class="text-teal-500">.</span></a>
+        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-tighter text-clinic-900">PARLIAMENT<span class="text-clinic-teal">.</span></a>
             <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
-                <a href="services.html" class="hover:text-teal-600 transition">Services</a>
-                <a href="doctors.html" class="text-teal-900 border-b-2 border-teal-500 pb-1">Doctors</a>
-                <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
+                <a href="index.html" class="hover:text-clinic-teal transition">Home</a>
+                <a href="services.html" class="hover:text-clinic-teal transition">Services</a>
+                <a href="doctors.html" class="text-clinic-teal">Doctors</a>
+                <a href="contact.html" class="hover:text-clinic-teal transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
     <header class="py-24 px-6 text-center">
-        <h1 class="text-6xl font-bold tracking-tight text-slate-900 mb-6">World-Class Care.</h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Meet our multidisciplinary team of Toronto’s finest medical practitioners, dedicated to your long-term wellness.</p>
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-slate-900 mb-6">Expert Care, <br>Human Touch.</h1>
+        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Meet the elite team of physicians at Parliament Medical Clinic, dedicated to your holistic wellness in the heart of Toronto.</p>
     </header>
 
     <!-- Team Grid -->
     <main class="max-w-7xl mx-auto px-6 pb-24">
-        <div class="grid md:grid-cols-2 gap-12">
-            <!-- Doc 1 -->
-            <div class="group bg-white p-6 rounded-[2rem] shadow-sm hover:shadow-2xl transition duration-500">
-                <img src="https://loremflickr.com/800/800/doctor" alt="Dr. Sarah Chen" class="w-full h-96 object-cover rounded-3xl mb-8">
-                <h3 class="text-3xl font-bold mb-2">Dr. Sarah Chen</h3>
-                <p class="text-teal-600 font-semibold mb-4">Chief of General Medicine</p>
-                <p class="text-slate-600 leading-relaxed">Specializing in preventive cardiovascular care and diagnostic precision with over 15 years of clinical experience.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            
+            <!-- Card 1 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-2xl transition duration-500">
+                <img src="https://loremflickr.com/1200/800/doctor" alt="Doctor" class="w-full h-80 object-cover rounded-3xl mb-8">
+                <h3 class="text-2xl font-bold mb-2">Dr. Elena Thorne</h3>
+                <p class="text-clinic-teal font-semibold mb-4">General Practitioner</p>
+                <p class="text-slate-500 leading-relaxed">Specializing in preventative care and internal medicine. Dr. Thorne brings over 15 years of experience to our Albany Street practice.</p>
             </div>
-            <!-- Doc 2 -->
-            <div class="group bg-white p-6 rounded-[2rem] shadow-sm hover:shadow-2xl transition duration-500">
-                <img src="https://loremflickr.com/800/800/surgeon" alt="Dr. Marcus Thorne" class="w-full h-96 object-cover rounded-3xl mb-8">
-                <h3 class="text-3xl font-bold mb-2">Dr. Marcus Thorne</h3>
-                <p class="text-teal-600 font-semibold mb-4">Internal Medicine Specialist</p>
-                <p class="text-slate-600 leading-relaxed">Expertise in metabolic health and chronic illness management, utilizing evidence-based medicine to improve patient outcomes.</p>
+
+            <!-- Card 2 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-2xl transition duration-500">
+                <img src="https://loremflickr.com/1200/800/physician" alt="Doctor" class="w-full h-80 object-cover rounded-3xl mb-8">
+                <h3 class="text-2xl font-bold mb-2">Dr. Marcus Chen</h3>
+                <p class="text-clinic-teal font-semibold mb-4">Sports Medicine Specialist</p>
+                <p class="text-slate-500 leading-relaxed">Focusing on physical therapy and injury recovery. Dr. Chen is committed to helping patients return to peak physical health.</p>
             </div>
+
         </div>
     </main>
 
-    <!-- Location Section -->
-    <section class="bg-teal-900 py-24 px-6 text-white">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-5xl font-bold tracking-tight mb-8">Find us in the heart of Toronto.</h2>
-                <div class="space-y-4 text-teal-100 text-lg">
-                    <p>1 Oak St, Toronto, ON M5A 0A1</p>
-                    <p>Phone: +1 416-361-5028</p>
-                    <p class="pt-4 font-semibold text-white">4.3 ★ from 449 reviews</p>
-                </div>
-            </div>
-            <iframe src="https://www.google.com/maps?q=1+Oak+St+Toronto+ON+M5A+0A1+Canada&output=embed" class="w-full h-96 rounded-3xl shadow-2xl border-0"></iframe>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer class="bg-slate-950 text-slate-400 py-16 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-center md:text-left">
-                <p class="font-bold text-white mb-2">Parliament Medical Clinic</p>
-                <p class="text-sm">© 2024 All rights reserved.</p>
+    <footer class="bg-slate-900 text-slate-400 py-24">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div>
+                <h2 class="text-white text-xl font-bold mb-6">Parliament Medical</h2>
+                <p>1 Oak St, Toronto, ON M5A 0A1</p>
+                <p class="mt-2">+1 416-361-5028</p>
             </div>
-            <div class="flex gap-8 text-sm">
-                <a href="index.html" class="hover:text-white">Home</a>
-                <a href="services.html" class="hover:text-white">Services</a>
-                <a href="doctors.html" class="hover:text-white">Doctors</a>
-                <a href="contact.html" class="hover:text-white">Contact</a>
+            <div>
+                <h2 class="text-white text-xl font-bold mb-6">Links</h2>
+                <ul class="space-y-4">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-            <div class="flex gap-4">
-                <span class="text-xs uppercase tracking-widest">Instagram / LinkedIn / Twitter</span>
+            <div>
+                <h2 class="text-white text-xl font-bold mb-6">Connect</h2>
+                <p>4.3 stars from 449 reviews on Google.</p>
+                <div class="flex gap-4 mt-6">
+                    <div class="w-10 h-10 rounded-full bg-slate-800"></div>
+                    <div class="w-10 h-10 rounded-full bg-slate-800"></div>
+                    <div class="w-10 h-10 rounded-full bg-slate-800"></div>
+                </div>
             </div>
         </div>
     </footer>

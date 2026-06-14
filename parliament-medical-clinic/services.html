@@ -6,34 +6,19 @@
     <title>Services | Parliament Medical Clinic</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clinical: {
-                            50: '#f0fdfa',
-                            900: '#0f766e',
-                            teal: '#14b8a6'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 selection:bg-teal-200">
+<body class="bg-[#F8FAFC] text-slate-900 antialiased">
 
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold tracking-tighter text-teal-900">PARLIAMENT<span class="text-teal-500">.</span></a>
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-teal-900">PARLIAMENT<span class="text-teal-500">MEDICAL</span></a>
             <div class="flex gap-8 text-sm font-medium text-slate-600">
                 <a href="index.html" class="hover:text-teal-600 transition">Home</a>
-                <a href="services.html" class="text-teal-600">Services</a>
+                <a href="services.html" class="text-teal-600 font-semibold">Services</a>
                 <a href="doctors.html" class="hover:text-teal-600 transition">Doctors</a>
                 <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
             </div>
@@ -41,69 +26,73 @@
     </nav>
 
     <!-- Header -->
-    <header class="max-w-7xl mx-auto px-6 py-24">
-        <h1 class="text-6xl font-bold tracking-tighter mb-6">Expert care,<br><span class="text-teal-600">tailored to you.</span></h1>
-        <p class="text-xl text-slate-500 max-w-2xl">A comprehensive suite of medical services delivered with precision, empathy, and the latest clinical technology.</p>
+    <header class="py-24 px-6 text-center">
+        <h1 class="text-6xl font-bold tracking-tighter text-slate-900 mb-6">Clinical Excellence</h1>
+        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Precision care delivered through a modern, patient-first philosophy at our Albany Street facility.</p>
     </header>
 
     <!-- Services Grid -->
     <main class="max-w-7xl mx-auto px-6 pb-24">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-sm">
-                <div class="w-12 h-12 bg-teal-50 rounded-2xl mb-6 flex items-center justify-center text-teal-600 font-bold">01</div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all">
+                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-6 text-teal-600 font-bold">01</div>
                 <h3 class="text-2xl font-bold mb-4">General Practice</h3>
-                <p class="text-slate-500 mb-6">Annual physicals, routine wellness exams, and chronic disease management focused on your long-term vitality.</p>
+                <p class="text-slate-500 leading-relaxed">Comprehensive health assessments, routine physicals, and ongoing management of chronic conditions.</p>
             </div>
-            <div class="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-sm">
-                <div class="w-12 h-12 bg-teal-50 rounded-2xl mb-6 flex items-center justify-center text-teal-600 font-bold">02</div>
-                <h3 class="text-2xl font-bold mb-4">Specialized Diagnostics</h3>
-                <p class="text-slate-500 mb-6">Advanced in-house lab testing and cardiovascular screenings ensuring rapid results and peace of mind.</p>
+            <!-- Card 2 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all">
+                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-6 text-teal-600 font-bold">02</div>
+                <h3 class="text-2xl font-bold mb-4">Preventative Care</h3>
+                <p class="text-slate-500 leading-relaxed">Early detection screenings, vaccination programs, and lifestyle optimization strategies.</p>
             </div>
-            <div class="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-sm">
-                <div class="w-12 h-12 bg-teal-50 rounded-2xl mb-6 flex items-center justify-center text-teal-600 font-bold">03</div>
+            <!-- Card 3 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all">
+                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-6 text-teal-600 font-bold">03</div>
                 <h3 class="text-2xl font-bold mb-4">Minor Procedures</h3>
-                <p class="text-slate-500 mb-6">Surgical intervention for skin lesions, suturing, and urgent care needs within a sterile, clinical environment.</p>
+                <p class="text-slate-500 leading-relaxed">In-house clinical support for minor injuries, wound care, and specialized diagnostic tests.</p>
             </div>
-            <div class="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-sm">
-                <div class="w-12 h-12 bg-teal-50 rounded-2xl mb-6 flex items-center justify-center text-teal-600 font-bold">04</div>
-                <h3 class="text-2xl font-bold mb-4">Vaccinations</h3>
-                <p class="text-slate-500 mb-6">Travel immunizations, flu clinics, and comprehensive vaccination scheduling for all age groups.</p>
-            </div>
+        </div>
+
+        <!-- Featured Image Section -->
+        <div class="mt-24">
+            <img src="https://loremflickr.com/1200/800/doctors" alt="Clinic Staff" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
         </div>
     </main>
 
-    <!-- Location -->
-    <section class="max-w-7xl mx-auto px-6 pb-24">
-        <div class="rounded-[2rem] overflow-hidden shadow-2xl">
-            <iframe src="https://www.google.com/maps?q=1+Oak+St+Toronto+ON+M5A+0A1+Canada&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer class="bg-slate-900 text-white py-24">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16">
+    <footer class="bg-slate-900 text-slate-400 py-24">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
             <div>
-                <h4 class="text-lg font-bold mb-6">Parliament Medical</h4>
-                <p class="text-slate-400 text-sm">1 Oak St, Toronto, ON M5A 0A1</p>
-                <p class="text-teal-500 mt-2 text-sm">+1 416-361-5028</p>
+                <h4 class="text-white font-bold mb-4">Parliament Medical</h4>
+                <p class="text-sm">1 Oak St, Toronto, ON M5A 0A1</p>
+                <p class="text-sm mt-2">+1 416-361-5028</p>
             </div>
             <div>
-                <h4 class="text-lg font-bold mb-6">Navigation</h4>
-                <div class="flex flex-col gap-3 text-sm text-slate-400">
-                    <a href="index.html" class="hover:text-white">Home</a>
-                    <a href="services.html" class="hover:text-white">Services</a>
-                    <a href="doctors.html" class="hover:text-white">Doctors</a>
-                    <a href="contact.html" class="hover:text-white">Contact</a>
-                </div>
+                <h4 class="text-white font-bold mb-4">Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
             <div>
-                <h4 class="text-lg font-bold mb-6">Connect</h4>
-                <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-teal-600 transition">IG</a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-teal-600 transition">LI</a>
-                </div>
-                <p class="mt-8 text-xs text-slate-600">4.3 Stars | 449 Reviews</p>
+                <h4 class="text-white font-bold mb-4">Social</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
             </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Rating</h4>
+                <div class="text-emerald-400 text-3xl font-bold">4.3★</div>
+                <p class="text-xs mt-1">From 449 patient reviews</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-800 text-xs">
+            &copy; 2024 Parliament Medical Clinic. All rights reserved.
         </div>
     </footer>
 
