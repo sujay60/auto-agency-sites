@@ -12,9 +12,9 @@
                 extend: {
                     colors: {
                         clinical: {
-                            teal: '#0D9488',
-                            light: '#F0FDFA',
-                            slate: '#1E293B'
+                            50: '#f0fdfa',
+                            500: '#14b8a6',
+                            900: '#0f766e',
                         }
                     }
                 }
@@ -23,90 +23,84 @@
     </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); }
     </style>
 </head>
-<body class="bg-clinical-light text-clinical-slate">
+<body class="bg-slate-50 text-slate-900 selection:bg-teal-200">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 glass border-b border-teal-100 py-6 px-8 flex justify-between items-center">
-        <div class="text-xl font-bold tracking-tighter text-clinical-teal">BROADVIEW MEDICAL</div>
-        <div class="flex gap-8 text-sm font-medium">
-            <a href="index.html" class="hover:text-clinical-teal transition">Home</a>
-            <a href="services.html" class="hover:text-clinical-teal transition">Services</a>
-            <a href="doctors.html" class="hover:text-clinical-teal transition">Doctors</a>
-            <a href="contact.html" class="hover:text-clinical-teal transition">Contact</a>
+    <nav class="fixed w-full z-50 px-6 py-6">
+        <div class="max-w-7xl mx-auto backdrop-blur-md bg-white/70 border border-white/20 rounded-[2rem] px-8 py-4 flex items-center justify-between shadow-sm">
+            <a href="index.html" class="text-xl font-bold text-teal-900 tracking-tighter">BROADVIEW<span class="text-teal-500">.</span></a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
+                <a href="services.html" class="hover:text-teal-600 transition">Services</a>
+                <a href="doctors.html" class="hover:text-teal-600 transition">Doctors</a>
+                <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
+            </div>
+            <a href="contact.html" class="bg-teal-900 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-teal-800 transition">Book Appointment</a>
         </div>
-        <a href="contact.html" class="bg-clinical-teal text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-teal-700 transition">Book Appointment</a>
     </nav>
 
-    <!-- Hero -->
-    <header class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
-        <div>
-            <h1 class="text-6xl font-bold tracking-tighter leading-tight mb-6">Premium healthcare, <span class="text-clinical-teal">right in the heart of Toronto.</span></h1>
-            <p class="text-xl text-slate-600 mb-10">Providing compassionate, evidence-based care at 797 Broadview Ave. Your health, our priority.</p>
-            <div class="flex gap-4">
-                <a href="contact.html" class="bg-clinical-teal text-white px-8 py-4 rounded-2xl font-bold shadow-lg shadow-teal-200">Schedule a Visit</a>
-                <div class="flex items-center gap-2 bg-white px-6 py-4 rounded-2xl border border-slate-100 shadow-sm">
-                    <span class="font-bold text-lg">4.3/5</span>
-                    <span class="text-sm text-slate-500">from 53 reviews</span>
+    <!-- Hero Section -->
+    <header class="pt-32 pb-24 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-teal-600 font-semibold tracking-wide uppercase text-sm">Premier Healthcare in Toronto</span>
+                <h1 class="text-6xl md:text-7xl font-bold tracking-tight mt-6 mb-8 leading-[1.1]">Modern care for modern lives.</h1>
+                <p class="text-xl text-slate-500 mb-10 max-w-lg">Expert medical attention at Albany Street. Combining clinical precision with a patient-first philosophy.</p>
+                <div class="flex gap-4">
+                    <a href="contact.html" class="bg-teal-900 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-teal-800 transition">Book a Consultation</a>
                 </div>
             </div>
+            <img src="https://loremflickr.com/1200/800/doctors" alt="Clinic Interior" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
         </div>
-        <img src="https://loremflickr.com/1200/800/doctors" class="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover" alt="Medical Clinic">
     </header>
 
-    <!-- Overview -->
-    <section class="max-w-7xl mx-auto px-6 py-24">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
+    <!-- Reputation & Overview -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <div class="p-10 bg-teal-50 rounded-[2rem] border border-teal-100">
+                <div class="text-5xl font-bold text-teal-900 mb-2">4.3</div>
+                <div class="text-teal-600 font-medium mb-4">★ ★ ★ ★ ☆</div>
+                <p class="text-sm text-teal-800">Trusted by over 53+ patients in the Toronto community.</p>
+            </div>
+            <div class="p-10 bg-slate-100 rounded-[2rem]">
                 <h3 class="text-2xl font-bold mb-4">Expert Care</h3>
-                <p class="text-slate-500">Board-certified physicians dedicated to your long-term wellness and preventative health.</p>
+                <p class="text-slate-600">Our team consists of board-certified professionals dedicated to your long-term wellness.</p>
             </div>
-            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-                <h3 class="text-2xl font-bold mb-4">Modern Facility</h3>
-                <p class="text-slate-500">State-of-the-art diagnostic tools in a clean, minimal environment designed for your comfort.</p>
-            </div>
-            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-                <h3 class="text-2xl font-bold mb-4">Accessibility</h3>
-                <p class="text-slate-500">Conveniently located on Broadview Ave with easy transit access and dedicated patient parking.</p>
+            <div class="p-10 bg-slate-100 rounded-[2rem]">
+                <h3 class="text-2xl font-bold mb-4">Prime Location</h3>
+                <p class="text-slate-600">Located at 797 Broadview Ave. Easily accessible transit and parking options available.</p>
             </div>
         </div>
     </section>
 
-    <!-- Map -->
-    <section class="max-w-7xl mx-auto px-6 py-24">
-        <h2 class="text-4xl font-bold tracking-tighter mb-12">Visit Our Clinic</h2>
-        <iframe src="https://www.google.com/maps?q=797+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-96 rounded-3xl shadow-2xl" allowfullscreen="" loading="lazy"></iframe>
+    <!-- Map Section -->
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12">Visit Our Clinic</h2>
+            <iframe src="https://www.google.com/maps?q=797+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-96 rounded-[2rem] shadow-2xl border-0"></iframe>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-clinical-slate text-white py-20 mt-24">
+    <footer class="bg-teal-900 text-teal-100 py-24 mt-24">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
             <div>
-                <h4 class="font-bold mb-4">Broadview Medical</h4>
-                <p class="text-slate-400 text-sm">797 Broadview Ave, Toronto, ON M4K 2P8</p>
-                <p class="text-slate-400 text-sm mt-2">+1 416-463-3228</p>
+                <h4 class="text-white font-bold mb-6">Broadview Medical</h4>
+                <p class="text-teal-400 text-sm">797 Broadview Ave,<br>Toronto, ON M4K 2P8</p>
+                <p class="mt-4 text-sm">+1 416-463-3228</p>
             </div>
-            <div>
-                <h4 class="font-bold mb-4">Links</h4>
-                <ul class="text-slate-400 text-sm space-y-2">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="doctors.html">Doctors</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+            <div class="flex flex-col gap-4 text-sm">
+                <a href="index.html" class="hover:text-white">Home</a>
+                <a href="services.html" class="hover:text-white">Services</a>
+                <a href="doctors.html" class="hover:text-white">Our Doctors</a>
+                <a href="contact.html" class="hover:text-white">Contact</a>
             </div>
-            <div>
-                <h4 class="font-bold mb-4">Socials</h4>
-                <ul class="text-slate-400 text-sm space-y-2">
-                    <li>Instagram</li>
-                    <li>LinkedIn</li>
-                    <li>Facebook</li>
-                </ul>
-            </div>
-            <div class="text-sm text-slate-500">
-                &copy; 2023 Broadview Medical Clinic. All rights reserved.
+            <div class="flex flex-col gap-4 text-sm">
+                <a href="#" class="hover:text-white">Instagram</a>
+                <a href="#" class="hover:text-white">LinkedIn</a>
+                <a href="#" class="hover:text-white">Privacy Policy</a>
             </div>
         </div>
     </footer>
