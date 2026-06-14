@@ -3,111 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Dr. Albert J Haddad</title>
+    <title>Contact | Dr. Albert J Haddad | Toronto</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clinical: {
-                            50: '#F0F9F8',
-                            900: '#0F2A28',
-                            teal: '#1A7A75',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .fade-in-up.active { opacity: 1; transform: translateY(0); }
     </style>
 </head>
-<body class="bg-slate-50 text-clinical-900 antialiased">
+<body class="bg-[#ffffff] text-[#1a2a2d]">
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold tracking-tighter text-clinical-teal">HADDAD.MD</a>
-            <div class="flex gap-8 text-sm font-medium">
-                <a href="index.html" class="hover:text-clinical-teal transition">Home</a>
-                <a href="services.html" class="hover:text-clinical-teal transition">Services</a>
-                <a href="about.html" class="hover:text-clinical-teal transition">About</a>
-                <a href="contact.html" class="text-clinical-teal border-b-2 border-clinical-teal">Contact</a>
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#005f6b]/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-[#005f6b]">Dr. Albert J Haddad</a>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="hover:text-[#005f6b]">Home</a>
+                <a href="about.html" class="hover:text-[#005f6b]">About</a>
+                <a href="services.html" class="hover:text-[#005f6b]">Services</a>
+                <a href="contact.html" class="text-[#005f6b]">Contact</a>
             </div>
+            <a href="contact.html" class="bg-[#005f6b] text-white px-8 py-3 rounded-full hover:bg-[#003d44] transition">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="py-24 px-6 max-w-7xl mx-auto text-center">
-        <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">Schedule Your Visit</h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Experience personalized medical excellence in the heart of Toronto.</p>
-    </header>
-
-    <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-6 pb-24 grid md:grid-cols-2 gap-16">
-        
-        <!-- Contact Form -->
-        <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-            <h2 class="text-3xl font-bold mb-8">Send a Message</h2>
-            <form class="space-y-6">
-                <input type="text" placeholder="Full Name" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:ring-2 focus:ring-clinical-teal">
-                <input type="email" placeholder="Email Address" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:ring-2 focus:ring-clinical-teal">
-                <textarea placeholder="How can we help?" rows="4" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:ring-2 focus:ring-clinical-teal"></textarea>
-                <button class="w-full bg-clinical-teal text-white py-4 rounded-xl font-semibold hover:bg-clinical-900 transition">Request Appointment</button>
-            </form>
-        </div>
-
-        <!-- Details & Map -->
-        <div class="flex flex-col gap-8">
-            <div class="bg-clinical-900 text-white p-10 rounded-[2rem]">
-                <h3 class="text-xl font-semibold mb-4">Clinic Hours</h3>
-                <p class="text-slate-300">Mon-Fri: 9:00 AM – 6:00 PM</p>
-                <p class="text-slate-300 mb-6">Sat: By Appointment Only</p>
-                <h3 class="text-xl font-semibold mb-4">Location</h3>
-                <p class="text-slate-300">7 St Thomas St #705, Toronto, ON M5S 2B7</p>
-                <p class="text-clinical-teal font-bold mt-4">+1 416-792-2966</p>
+    <!-- Header Section -->
+    <section class="py-32 bg-[#f8f9fa]">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="fade-in-up">
+                <h1 class="text-7xl font-extrabold leading-tight mb-8">Get In <span class="text-[#c6a96d]">Touch</span></h1>
+                <p class="text-xl text-gray-600 mb-8">Schedule your concierge consultation today. Experience precision care at our St. Thomas Street clinic.</p>
+                <div class="space-y-4">
+                    <p class="flex items-center gap-4"><i class="fas fa-phone text-[#005f6b]"></i> +1 416-792-2966</p>
+                    <p class="flex items-center gap-4"><i class="fas fa-location-dot text-[#005f6b]"></i> 7 St Thomas St #705, Toronto, ON M5S 2B7</p>
+                </div>
             </div>
-            
-            <div class="w-full h-80 rounded-[2rem] overflow-hidden shadow-2xl">
-                <iframe src="https://www.google.com/maps?q=7+St+Thomas+St+#705+Toronto+ON+M5S+2B7+Canada&output=embed" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="fade-in-up">
+                <img src="https://loremflickr.com/800/600/doctors" class="rounded-3xl shadow-2xl" alt="Clinic Interior">
             </div>
         </div>
+    </section>
 
-    </main>
+    <!-- Contact Form Section -->
+    <section class="py-32 bg-[#ffffff]">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <div class="fade-in-up bg-[#005f6b] p-12 rounded-3xl text-white backdrop-blur-xl border border-white/10">
+                <h2 class="text-5xl font-bold mb-8 text-[#c6a96d]">Send a Message</h2>
+                <form class="space-y-6">
+                    <input type="text" placeholder="Full Name" class="w-full p-4 rounded-xl bg-white/10 border border-white/20 placeholder-white/60 text-white">
+                    <input type="email" placeholder="Email Address" class="w-full p-4 rounded-xl bg-white/10 border border-white/20 placeholder-white/60 text-white">
+                    <input type="tel" placeholder="Phone Number" class="w-full p-4 rounded-xl bg-white/10 border border-white/20 placeholder-white/60 text-white">
+                    <textarea placeholder="Your Message" class="w-full p-4 rounded-xl bg-white/10 border border-white/20 placeholder-white/60 text-white h-32"></textarea>
+                    <button class="w-full py-4 bg-gradient-to-r from-[#005f6b] to-[#008a9b] text-white font-bold rounded-xl shadow-lg border border-[#c6a96d]">Send Inquiry</button>
+                </form>
+            </div>
+            <div class="fade-in-up">
+                <iframe src="https://www.google.com/maps?q=7+St+Thomas+St+#705+Toronto+ON+M5S+2B7+Canada&output=embed" class="w-full h-full min-h-[400px] rounded-3xl shadow-2xl" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="py-16 bg-[#005f6b] text-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
+            <div><div class="text-5xl font-extrabold text-[#c6a96d]">4.9</div><div class="text-sm uppercase tracking-widest mt-2">Star Rating</div></div>
+            <div><div class="text-5xl font-extrabold text-[#c6a96d]">18+</div><div class="text-sm uppercase tracking-widest mt-2">Verified Reviews</div></div>
+            <div class="col-span-2 md:col-span-1"><div class="text-5xl font-extrabold text-[#c6a96d]">24/7</div><div class="text-sm uppercase tracking-widest mt-2">Booking Support</div></div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-clinical-900 text-white py-24 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
-            <div>
-                <h4 class="text-lg font-bold mb-4">Dr. Albert J Haddad</h4>
-                <p class="text-slate-400 text-sm">Providing world-class medical care with a focus on patient-centered outcomes.</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Navigation</h4>
-                <ul class="text-slate-400 text-sm space-y-2">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Connect</h4>
-                <ul class="text-slate-400 text-sm space-y-2">
-                    <li>Twitter</li>
-                    <li>LinkedIn</li>
-                    <li>Instagram</li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Rating</h4>
-                <p class="text-3xl font-bold text-clinical-teal">4.9 ★</p>
-                <p class="text-xs text-slate-500">18 verified patient reviews</p>
-            </div>
+    <footer class="py-20 bg-[#f8f9fa] border-t border-[#e0f2f1]">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+            <div><h3 class="text-xl font-bold mb-4">Dr. Albert J Haddad</h3><p class="text-gray-500">Excellence in clinical care for the Toronto community.</p></div>
+            <div><h4 class="font-bold mb-4">Navigate</h4><ul class="space-y-2 text-gray-500"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+            <div><h4 class="font-bold mb-4">Location</h4><p class="text-gray-500">7 St Thomas St #705<br>Toronto, ON M5S 2B7</p></div>
+            <div><h4 class="font-bold mb-4">Connect</h4><div class="flex gap-4"><i class="fab fa-facebook text-[#005f6b]"></i><i class="fab fa-instagram text-[#005f6b]"></i><i class="fab fa-linkedin text-[#005f6b]"></i></div></div>
         </div>
+        <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-gray-200 text-center text-sm text-gray-400">© 2024 Dr. Albert J Haddad. All Rights Reserved.</div>
     </footer>
 
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>

@@ -1,105 +1,133 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Dr. Albert J Haddad | Toronto Medical Excellence</title>
+    <title>Services | Dr. Albert J Haddad | Toronto</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clinic: {
-                            50: '#f0fdfa',
-                            900: '#0f514d',
-                            teal: '#14b8a6',
-                            slate: '#f8fafc'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1a2a2d; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
 </head>
-<body class="bg-clinic-slate text-slate-900 antialiased">
+<body class="bg-[#ffffff]">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-6 py-6 flex justify-center">
-        <div class="backdrop-blur-md bg-white/70 border border-white/20 shadow-lg rounded-full px-8 py-4 flex items-center gap-8 text-sm font-semibold text-clinic-900">
-            <a href="index.html" class="hover:text-clinic-teal transition">Home</a>
-            <a href="services.html" class="text-clinic-teal underline decoration-2 underline-offset-4">Services</a>
-            <a href="about.html" class="hover:text-clinic-teal transition">About</a>
-            <a href="contact.html" class="hover:text-clinic-teal transition">Contact</a>
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#005f6b]/10 py-6">
+        <div class="container mx-auto px-8 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-[#005f6b]">DR. ALBERT J HADDAD</a>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="hover:text-[#005f6b]">Home</a>
+                <a href="about.html" class="hover:text-[#005f6b]">About</a>
+                <a href="services.html" class="text-[#005f6b]">Services</a>
+                <a href="contact.html" class="hover:text-[#005f6b]">Contact</a>
+            </div>
+            <a href="contact.html" class="bg-[#005f6b] text-white px-8 py-3 rounded-full hover:bg-[#003d44] transition">Book Consultation</a>
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="pt-32 pb-24 px-6 text-center">
-        <h1 class="text-6xl font-bold tracking-tight text-clinic-900 mb-6">Expert Care. Specialized Focus.</h1>
-        <p class="text-xl text-slate-600 max-w-2xl mx-auto">Comprehensive medical consultations tailored to your unique health journey in the heart of Toronto.</p>
+    <!-- Header Section -->
+    <header class="pt-40 pb-28 bg-[#f8f9fa]">
+        <div class="container mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <h1 class="text-7xl font-extrabold text-[#1a2a2d] leading-tight mb-8">Clinical Excellence <span class="text-[#005f6b]">Defined</span></h1>
+                <p class="text-xl text-gray-600 mb-10">Providing concierge-level medical expertise at 7 St Thomas Street. We prioritize precision, patient comfort, and evidence-based treatment pathways.</p>
+            </div>
+            <img src="https://loremflickr.com/800/600/doctors" class="rounded-3xl shadow-2xl reveal" alt="Medical Office">
+        </div>
     </header>
 
-    <!-- Services Section 1 -->
-    <section class="max-w-7xl mx-auto px-6 py-16">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-4xl font-bold text-clinic-900 mb-6">Diagnostic Consultations</h2>
-                <p class="text-lg text-slate-600 mb-8 leading-relaxed">Precision-driven diagnostic assessments using modern clinical protocols. We prioritize clear communication and evidence-based medicine to ensure you understand every step of your health strategy.</p>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-clinic-teal"></span> Comprehensive Physical Exams</div>
-                    <div class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-clinic-teal"></span> Preventive Health Screening</div>
+    <!-- Services Grid -->
+    <section class="py-32 bg-[#ffffff]">
+        <div class="container mx-auto px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Bento Items -->
+                <div class="col-span-2 bg-[#f8f9fa] p-12 rounded-3xl reveal">
+                    <h2 class="text-4xl font-bold mb-6 text-[#005f6b]">Comprehensive Consultations</h2>
+                    <p class="text-lg">Our diagnostic process is rigorous and patient-centered, ensuring every concern is addressed with the utmost attention to detail and clinical standard.</p>
+                </div>
+                <div class="bg-[#005f6b] text-white p-12 rounded-3xl reveal">
+                    <i class="fas fa-stethoscope text-4xl text-[#c6a96d] mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Diagnostics</h3>
+                    <p>Advanced medical screening and diagnostic tools.</p>
+                </div>
+                <div class="bg-[#003d44] text-white p-12 rounded-3xl reveal">
+                    <h3 class="text-2xl font-bold mb-4">Specialized Care</h3>
+                    <p>Tailored treatment protocols designed for your unique health history.</p>
+                </div>
+                <div class="col-span-2 bg-[#f8f9fa] p-12 rounded-3xl reveal">
+                    <h2 class="text-4xl font-bold mb-6 text-[#005f6b]">Preventative Medicine</h2>
+                    <p class="text-lg">Proactive health management is the cornerstone of longevity. We work with you to build sustainable wellness strategies.</p>
                 </div>
             </div>
-            <img src="https://loremflickr.com/1200/800/doctors" alt="Medical Consultation" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
         </div>
     </section>
 
-    <!-- Services Section 2 -->
-    <section class="max-w-7xl mx-auto px-6 py-16">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <img src="https://loremflickr.com/1200/800/medical" alt="Treatments" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl order-2 md:order-1">
-            <div class="order-1 md:order-2">
-                <h2 class="text-4xl font-bold text-clinic-900 mb-6">Personalized Treatment</h2>
-                <p class="text-lg text-slate-600 mb-8 leading-relaxed">We develop bespoke treatment plans that integrate seamlessly with your lifestyle. From chronic condition management to acute injury support, Dr. Haddad ensures optimal patient outcomes.</p>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-clinic-teal"></span> Chronic Disease Management</div>
-                    <div class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-clinic-teal"></span> Medication Optimization</div>
-                </div>
+    <!-- Stats Bar -->
+    <section class="py-20 bg-[#005f6b] text-white">
+        <div class="container mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div class="reveal">
+                <div class="text-5xl font-extrabold mb-2 text-[#c6a96d]">4.9</div>
+                <div class="text-lg opacity-80">Google Rating</div>
+            </div>
+            <div class="reveal">
+                <div class="text-5xl font-extrabold mb-2 text-[#c6a96d]">18+</div>
+                <div class="text-lg opacity-80">Verified Reviews</div>
+            </div>
+            <div class="reveal">
+                <div class="text-5xl font-extrabold mb-2 text-[#c6a96d]">10+</div>
+                <div class="text-lg opacity-80">Years Excellence</div>
+            </div>
+            <div class="reveal">
+                <div class="text-5xl font-extrabold mb-2 text-[#c6a96d]">99%</div>
+                <div class="text-lg opacity-80">Patient Satisfaction</div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-clinic-900 text-white mt-24 py-16 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+    <footer class="bg-[#f8f9fa] py-20 border-t border-[#005f6b]/10">
+        <div class="container mx-auto px-8 grid md:grid-cols-4 gap-12">
             <div>
-                <h3 class="text-xl font-bold mb-4">Dr. Albert J Haddad</h3>
-                <p class="text-teal-200">7 St Thomas St #705, Toronto, ON M5S 2B7</p>
+                <h4 class="font-bold text-[#005f6b] mb-4">DR. ALBERT J HADDAD</h4>
+                <p class="text-sm text-gray-500">7 St Thomas St #705, Toronto, ON M5S 2B7</p>
             </div>
             <div>
-                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                <div class="flex flex-col gap-2 text-teal-200">
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
+                <h4 class="font-bold mb-4">Navigation</h4>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Contact</h4>
+                <p class="text-sm text-gray-600">+1 416-792-2966</p>
+                <p class="text-sm text-gray-600">yorkvilletds.com</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Connect</h4>
+                <div class="flex gap-4">
+                    <i class="fab fa-linkedin text-xl text-[#005f6b]"></i>
                 </div>
             </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4">Contact</h3>
-                <p class="text-teal-200">+1 416-792-2966</p>
-                <p class="text-teal-200 mt-2">Rated 4.9 Stars from 18 Reviews</p>
-            </div>
         </div>
-        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-teal-800 text-center text-teal-500 text-sm">
-            © 2023 Dr. Albert J Haddad. All rights reserved.
+        <div class="container mx-auto px-8 mt-12 pt-8 border-t text-center text-sm text-gray-400">
+            &copy; 2024 Dr. Albert J Haddad. All Rights Reserved.
         </div>
     </footer>
 
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        });
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
 </body>
 </html>
