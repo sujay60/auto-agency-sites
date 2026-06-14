@@ -3,121 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Albany Medical Building | Premium Toronto Healthcare</title>
+    <title>Albany Medical Building | Doctors in Albany Street Toronto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clinical: {
-                            teal: '#0f766e',
-                            light: '#f0fdfa',
-                            slate: '#334155'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .fade-in-up.active { opacity: 1; transform: translateY(0); }
+        .glass { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
     </style>
 </head>
-<body class="bg-[#fcfdfd] text-slate-900 antialiased">
+<body class="bg-[#F8FAFA] text-[#1B262C]">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-white/70 border-b border-teal-100">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold text-clinical-teal tracking-tighter">ALBANY MEDICAL</span>
-            <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-clinical-teal transition">Home</a>
-                <a href="doctors.html" class="hover:text-clinical-teal transition">Doctors</a>
-                <a href="services.html" class="hover:text-clinical-teal transition">Services</a>
-                <a href="contact.html" class="bg-clinical-teal text-white px-5 py-2 rounded-full hover:bg-teal-800 transition">Contact</a>
+            <div class="text-2xl font-bold text-[#006B7F]">ALBANY MEDICAL</div>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="hover:text-[#006B7F]">Home</a>
+                <a href="services.html" class="hover:text-[#006B7F]">Services</a>
+                <a href="doctors.html" class="hover:text-[#006B7F]">Doctors</a>
+                <a href="contact.html" class="hover:text-[#006B7F]">Contact</a>
             </div>
+            <a href="contact.html" class="bg-[#006B7F] text-white px-8 py-3 rounded-full hover:bg-[#004754] transition">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
+    <!-- Hero Section -->
+    <section class="py-32 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center fade-in-up">
+        <div>
+            <h1 class="text-7xl font-extrabold leading-tight mb-6">Expert Medical Care in <span class="text-[#006B7F]">Toronto</span></h1>
+            <p class="text-xl text-gray-600 mb-8">Refined architectural elegance meets precision healthcare at Albany Medical Building. Dedicated to your well-being with state-of-the-art facilities.</p>
+            <div class="flex gap-4">
+                <a href="contact.html" class="bg-[#006B7F] text-white px-10 py-4 rounded-full font-bold">Find a Doctor</a>
+                <a href="services.html" class="border-2 border-[#006B7F] text-[#006B7F] px-10 py-4 rounded-full font-bold">Our Services</a>
+            </div>
+        </div>
+        <img src="https://loremflickr.com/800/600/doctors" class="rounded-3xl shadow-2xl" alt="Medical Clinic">
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="bg-[#006B7F] text-white py-20">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div><div class="text-5xl font-bold">25+</div><p>Years Experience</p></div>
+            <div><div class="text-5xl font-bold">50+</div><p>Expert Doctors</p></div>
+            <div><div class="text-5xl font-bold">4.8</div><p>Rating</p></div>
+            <div><div class="text-5xl font-bold">12k+</div><p>Happy Patients</p></div>
+        </div>
+    </section>
+
+    <!-- Services Bento -->
+    <section class="py-32 px-6 max-w-7xl mx-auto fade-in-up">
+        <h2 class="text-6xl font-bold mb-16 text-center">Premium Clinical Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="col-span-2 bg-white p-10 rounded-3xl shadow-lg border border-gray-100">
+                <h3 class="text-3xl font-bold mb-4">Urgent Care & Walk-in</h3>
+                <p class="text-gray-600">Immediate attention for non-life-threatening conditions with zero compromise on quality or hygiene standards.</p>
+            </div>
+            <div class="bg-[#1A2526] text-white p-10 rounded-3xl">
+                <h3 class="text-2xl font-bold mb-4">Specialist Consults</h3>
+                <p class="text-gray-400">Cardiology, Dermatology, and Internal medicine experts under one roof.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Map -->
+    <section class="py-32 bg-[#1A2526] text-white fade-in-up">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <h1 class="text-6xl font-bold tracking-tighter leading-[1.1] mb-6">World-class care in the heart of Toronto.</h1>
-                <p class="text-xl text-slate-500 mb-8 max-w-md">The Albany Medical Building provides elite diagnostic, wellness, and specialist care at 807 Broadview Ave.</p>
-                <a href="contact.html" class="inline-block bg-slate-900 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-slate-700 transition">Book Consultation</a>
+                <h2 class="text-6xl font-bold mb-8">Located at <br><span class="text-[#C4A484]">Broadview Ave</span></h2>
+                <p class="text-xl mb-6">807 Broadview Ave, Toronto, ON M4K 2P8, Canada</p>
+                <p class="text-xl font-bold">Call: +1 416-366-2000</p>
             </div>
-            <img src="https://loremflickr.com/1200/800/doctors" alt="Medical Office" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="py-24 bg-teal-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <img src="https://loremflickr.com/1200/800/medicine" alt="Services" class="w-full h-[500px] object-cover rounded-[2rem] shadow-xl">
-                <div>
-                    <h2 class="text-5xl font-bold tracking-tight mb-6">Comprehensive health solutions.</h2>
-                    <p class="text-lg text-slate-600 mb-8">From preventative screening to specialized internal medicine, we prioritize your longevity through data-driven care and modern facilities.</p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="p-6 bg-white rounded-2xl shadow-sm border border-teal-100">Primary Care</div>
-                        <div class="p-6 bg-white rounded-2xl shadow-sm border border-teal-100">Diagnostics</div>
-                    </div>
-                </div>
+            <div class="h-[400px] bg-white rounded-3xl overflow-hidden">
+                <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-full" loading="lazy"></iframe>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact & Location -->
-    <section class="py-24 max-w-7xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-12">
-            <div class="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-xl">
-                <h3 class="text-3xl font-bold mb-8">Visit Us</h3>
-                <form class="space-y-4">
-                    <input type="text" placeholder="Name" class="w-full p-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-teal-500 outline-none">
-                    <input type="email" placeholder="Email" class="w-full p-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-teal-500 outline-none">
-                    <textarea placeholder="Message" class="w-full p-4 h-32 rounded-xl border border-slate-200"></textarea>
-                    <button class="w-full bg-clinical-teal text-white py-4 rounded-xl font-bold">Send Inquiry</button>
-                </form>
-            </div>
-            <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-full min-h-[400px] rounded-[2rem] shadow-2xl" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="py-24 max-w-4xl mx-auto px-6">
-        <h3 class="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h3>
-        <div class="space-y-4">
-            <details class="bg-white p-6 rounded-2xl border border-slate-200">
-                <summary class="font-bold cursor-pointer">What are your operating hours?</summary>
-                <p class="mt-4 text-slate-600">We are open Monday to Friday, 8:00 AM – 6:00 PM EST.</p>
-            </details>
-            <details class="bg-white p-6 rounded-2xl border border-slate-200">
-                <summary class="font-bold cursor-pointer">Is parking available?</summary>
-                <p class="mt-4 text-slate-600">Yes, we provide validated underground parking for all patients.</p>
-            </details>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-16">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+    <footer class="bg-[#1A2526] text-gray-400 py-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
-                <h4 class="text-white font-bold mb-4">Albany Medical Building</h4>
-                <p>807 Broadview Ave, Toronto, ON M4K 2P8</p>
+                <h4 class="text-white font-bold text-xl mb-4">Albany Medical</h4>
+                <p>Leading clinical excellence in the heart of Toronto.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Contact</h4>
+                <p>807 Broadview Ave</p>
                 <p>+1 416-366-2000</p>
             </div>
-            <div class="flex flex-col gap-2">
-                <a href="index.html">Home</a>
-                <a href="doctors.html">Doctors</a>
-                <a href="services.html">Services</a>
-            </div>
             <div>
-                <p>© 2024 Albany Medical. All rights reserved.</p>
+                <h4 class="text-white font-bold mb-4">Follow Us</h4>
+                <div class="flex gap-4 text-2xl">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
             </div>
         </div>
+        <div class="text-center mt-16 pt-8 border-t border-gray-800">© 2024 Albany Medical Building. All rights reserved.</div>
     </footer>
 
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        });
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>

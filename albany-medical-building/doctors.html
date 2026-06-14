@@ -3,108 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Physicians | Albany Medical Building</title>
+    <title>Our Doctors | Albany Medical Building | Toronto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .glass { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-[#F8FAFA] text-[#1B262C]">
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 px-8 py-6">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold tracking-tighter text-teal-900">ALBANY<span class="text-teal-600">.</span></a>
-            <div class="flex gap-8 text-sm font-semibold text-slate-600">
-                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
-                <a href="doctors.html" class="text-teal-600">Doctors</a>
-                <a href="services.html" class="hover:text-teal-600 transition">Services</a>
-                <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#006B7F]/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-extrabold text-[#006B7F]">ALBANY MEDICAL</a>
+            <div class="hidden md:flex gap-8 font-medium text-[#1B262C]">
+                <a href="index.html" class="hover:text-[#006B7F]">Home</a>
+                <a href="services.html" class="hover:text-[#006B7F]">Services</a>
+                <a href="doctors.html" class="text-[#006B7F] font-bold">Doctors</a>
+                <a href="contact.html" class="hover:text-[#006B7F]">Contact</a>
             </div>
+            <a href="contact.html" class="bg-[#006B7F] text-white px-8 py-3 rounded-full hover:bg-[#008C99] transition-all">Book Appointment</a>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="py-24 px-8 text-center">
-        <h1 class="text-6xl font-bold tracking-tight text-teal-950 mb-6">Expert Care.</h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Our team of multidisciplinary physicians dedicated to your long-term health and wellness at the heart of Toronto.</p>
+    <header class="pt-40 pb-28 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <span class="text-[#C4A484] font-bold tracking-widest uppercase">Expert Care</span>
+                <h1 class="text-7xl font-extrabold text-[#004754] mt-4 mb-6 leading-tight">Meet Our Medical Team</h1>
+                <p class="text-xl text-gray-600 leading-relaxed">Dedicated professionals committed to providing sophisticated clinical care with the precision and excellence expected at Albany Medical Building.</p>
+            </div>
+            <div class="reveal delay-200">
+                <img src="https://loremflickr.com/800/600/doctor" class="rounded-3xl shadow-2xl" alt="Medical Team">
+            </div>
+        </div>
     </header>
 
-    <!-- Doctor Grid -->
-    <main class="max-w-7xl mx-auto px-8 pb-24">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-            
-            <!-- Physician 1 -->
-            <div class="group">
-                <img src="https://loremflickr.com/800/600/doctor" class="w-full h-96 object-cover rounded-[2rem] shadow-xl group-hover:shadow-2xl transition-all duration-500" alt="Dr. Sarah Miller">
-                <div class="mt-8">
-                    <h3 class="text-2xl font-bold text-teal-900">Dr. Sarah Miller</h3>
-                    <p class="text-teal-600 font-semibold mb-4">Internal Medicine</p>
-                    <p class="text-slate-600 leading-relaxed">Specializing in preventative care and chronic condition management with a patient-first approach.</p>
-                </div>
+    <!-- Doctor Profiles -->
+    <section class="py-32 bg-[#1A2526] text-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 reveal">
+            <div>
+                <img src="https://loremflickr.com/800/600/physician" class="rounded-3xl shadow-2xl" alt="Dr. Smith">
             </div>
-
-            <!-- Physician 2 -->
-            <div class="group">
-                <img src="https://loremflickr.com/800/600/physician" class="w-full h-96 object-cover rounded-[2rem] shadow-xl group-hover:shadow-2xl transition-all duration-500" alt="Dr. James Chen">
-                <div class="mt-8">
-                    <h3 class="text-2xl font-bold text-teal-900">Dr. James Chen</h3>
-                    <p class="text-teal-600 font-semibold mb-4">Family Practice</p>
-                    <p class="text-slate-600 leading-relaxed">Dedicated to holistic family health, providing comprehensive diagnostics and routine wellness examinations.</p>
-                </div>
-            </div>
-
-            <!-- Physician 3 -->
-            <div class="group">
-                <img src="https://loremflickr.com/800/600/surgeon" class="w-full h-96 object-cover rounded-[2rem] shadow-xl group-hover:shadow-2xl transition-all duration-500" alt="Dr. Elena Rodriguez">
-                <div class="mt-8">
-                    <h3 class="text-2xl font-bold text-teal-900">Dr. Elena Rodriguez</h3>
-                    <p class="text-teal-600 font-semibold mb-4">Cardiology Specialist</p>
-                    <p class="text-slate-600 leading-relaxed">Focusing on heart health, preventative screenings, and advanced cardiac diagnostic procedures.</p>
-                </div>
-            </div>
-
-            <!-- Physician 4 -->
-            <div class="group">
-                <img src="https://loremflickr.com/800/600/clinic" class="w-full h-96 object-cover rounded-[2rem] shadow-xl group-hover:shadow-2xl transition-all duration-500" alt="Dr. Marcus Thorne">
-                <div class="mt-8">
-                    <h3 class="text-2xl font-bold text-teal-900">Dr. Marcus Thorne</h3>
-                    <p class="text-teal-600 font-semibold mb-4">Dermatology</p>
-                    <p class="text-slate-600 leading-relaxed">Providing skin health assessments, minor procedures, and comprehensive dermatological care.</p>
+            <div class="flex flex-col justify-center">
+                <h2 class="text-5xl font-bold mb-6 text-[#C4A484]">Dr. Elena Sterling</h2>
+                <p class="text-2xl font-light mb-4">Chief of Internal Medicine</p>
+                <p class="text-lg text-gray-300 mb-8 leading-relaxed">With over 20 years of experience in Toronto's leading hospitals, Dr. Sterling specializes in chronic disease management and preventive cardiology. Fluent in English and French.</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+                        <h4 class="text-[#C4A484] font-bold">Specialization</h4>
+                        <p>Internal Medicine</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+                        <h4 class="text-[#C4A484] font-bold">Languages</h4>
+                        <p>English, French</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Footer -->
-    <footer class="bg-teal-950 text-teal-100 py-24 px-8">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
-            <div>
-                <h4 class="text-xl font-bold mb-6 text-white">Albany Medical</h4>
-                <p class="text-sm text-teal-300">807 Broadview Ave<br>Toronto, ON M4K 2P8</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-6 text-white">Navigation</h4>
-                <ul class="space-y-4 text-sm">
-                    <li><a href="index.html" class="hover:text-white transition">Home</a></li>
-                    <li><a href="doctors.html" class="hover:text-white transition">Doctors</a></li>
-                    <li><a href="services.html" class="hover:text-white transition">Services</a></li>
-                    <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+    <section class="py-32 bg-[#F8FAFA]">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 reveal">
+            <div class="flex flex-col justify-center">
+                <h2 class="text-5xl font-bold mb-6 text-[#004754]">Dr. Marcus Chen</h2>
+                <p class="text-2xl font-light mb-4">General Practitioner</p>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">Dr. Chen brings a compassionate approach to family medicine. His focus is on holistic patient wellness, pediatric care, and community health integration.</p>
+                <ul class="space-y-4 text-[#006B7F]">
+                    <li><i class="fas fa-check mr-2"></i> Specialized in Pediatric Care</li>
+                    <li><i class="fas fa-check mr-2"></i> Board Certified Family Medicine</li>
+                    <li><i class="fas fa-check mr-2"></i> 15 Years of Clinical Experience</li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold mb-6 text-white">Contact</h4>
-                <p class="text-sm text-teal-300">+1 416-366-2000</p>
+                <img src="https://loremflickr.com/800/600/surgeon" class="rounded-3xl shadow-2xl" alt="Dr. Chen">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1A2526] text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <h3 class="text-xl font-bold mb-6 text-[#C4A484]">Albany Medical</h3>
+                <p class="text-gray-400">Excellence in healthcare at 807 Broadview Ave, Toronto.</p>
             </div>
             <div>
-                <h4 class="font-bold mb-6 text-white">Connect</h4>
-                <div class="flex gap-4">
-                    <!-- Social Links -->
+                <h4 class="font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Contact</h4>
+                <p class="text-gray-400">+1 416-366-2000</p>
+                <p class="text-gray-400">807 Broadview Ave, Toronto</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Follow Us</h4>
+                <div class="flex space-x-4 text-2xl">
+                    <i class="fab fa-facebook hover:text-[#C4A484] cursor-pointer"></i>
+                    <i class="fab fa-instagram hover:text-[#C4A484] cursor-pointer"></i>
+                    <i class="fab fa-linkedin hover:text-[#C4A484] cursor-pointer"></i>
                 </div>
             </div>
         </div>
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/10 text-center text-gray-500 text-sm">
+            &copy; 2024 Albany Medical Building. All rights reserved.
+        </div>
     </footer>
 
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
 </body>
 </html>
