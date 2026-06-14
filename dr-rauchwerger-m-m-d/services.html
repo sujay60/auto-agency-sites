@@ -9,59 +9,74 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinic: {
+                            50: '#f0fdfa',
+                            900: '#0f766e',
+                            navy: '#064e3b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-[#FAFAFA] text-slate-900">
 
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-            <div class="text-xl font-bold tracking-tighter">DR. RAUCHWERGER</div>
-            <div class="space-x-8 text-sm font-medium">
-                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
-                <a href="services.html" class="text-blue-600">Services</a>
-                <a href="about.html" class="hover:text-blue-600 transition">About</a>
-                <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+            <a href="index.html" class="text-xl font-bold text-clinic-900 tracking-tighter">DR. RAUCHWERGER</a>
+            <div class="flex gap-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-clinic-900 transition">Home</a>
+                <a href="services.html" class="text-clinic-900">Services</a>
+                <a href="about.html" class="hover:text-clinic-900 transition">About</a>
+                <a href="contact.html" class="hover:text-clinic-900 transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="py-24 px-6 max-w-5xl mx-auto text-center">
-        <h1 class="text-6xl font-bold tracking-tighter mb-6">Clinical Excellence</h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Providing comprehensive medical care with a focus on precision, empathy, and advanced patient outcomes.</p>
+    <header class="max-w-5xl mx-auto px-6 py-24 text-center">
+        <h1 class="text-6xl font-bold tracking-tighter text-slate-900 mb-6">Expert Medical Care</h1>
+        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Precision, empathy, and evidence-based medicine tailored to your unique health requirements.</p>
     </header>
 
     <!-- Services Grid -->
-    <section class="max-w-7xl mx-auto px-6 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section class="max-w-7xl mx-auto px-6 pb-24">
+        <div class="grid md:grid-cols-2 gap-8">
             <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-                <h3 class="text-2xl font-bold mb-4">Primary Care</h3>
-                <p class="text-slate-600 mb-6">Routine wellness exams, chronic disease management, and preventative health screenings tailored to your medical history.</p>
-                <img src="https://loremflickr.com/1200/800/doctors" class="w-full h-64 object-cover rounded-3xl" alt="Service">
+                <div class="w-12 h-12 bg-teal-50 text-clinic-900 rounded-full flex items-center justify-center mb-6 font-bold">01</div>
+                <h3 class="text-2xl font-bold mb-4">Preventative Medicine</h3>
+                <p class="text-slate-600 leading-relaxed">Comprehensive physical exams, chronic disease management, and proactive health screenings designed for long-term vitality.</p>
             </div>
             <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-                <h3 class="text-2xl font-bold mb-4">Consultations</h3>
-                <p class="text-slate-600 mb-6">In-depth specialized reviews to address complex health concerns with a multidisciplinary approach and expert guidance.</p>
-                <img src="https://loremflickr.com/1200/800/doctors" class="w-full h-64 object-cover rounded-3xl" alt="Service">
+                <div class="w-12 h-12 bg-teal-50 text-clinic-900 rounded-full flex items-center justify-center mb-6 font-bold">02</div>
+                <h3 class="text-2xl font-bold mb-4">Diagnostic Assessment</h3>
+                <p class="text-slate-600 leading-relaxed">Advanced diagnostic testing utilizing the latest technology to ensure accurate identification and rapid treatment protocols.</p>
             </div>
-            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100 md:col-span-2">
-                <h3 class="text-2xl font-bold mb-4">Health Optimization</h3>
-                <p class="text-slate-600 mb-6">Evidence-based strategies for long-term vitality, focusing on metabolic health, nutrition, and personalized wellness plans.</p>
-                <img src="https://loremflickr.com/1200/800/doctors" class="w-full h-96 object-cover rounded-3xl" alt="Service">
+            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
+                <div class="w-12 h-12 bg-teal-50 text-clinic-900 rounded-full flex items-center justify-center mb-6 font-bold">03</div>
+                <h3 class="text-2xl font-bold mb-4">Minor Procedures</h3>
+                <p class="text-slate-600 leading-relaxed">In-office minor surgical procedures performed with extreme precision in a sterile, calming, and professional clinical environment.</p>
+            </div>
+            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
+                <div class="w-12 h-12 bg-teal-50 text-clinic-900 rounded-full flex items-center justify-center mb-6 font-bold">04</div>
+                <h3 class="text-2xl font-bold mb-4">Wellness Consultations</h3>
+                <p class="text-slate-600 leading-relaxed">Holistic approaches to lifestyle, nutrition, and mental well-being integrated into your ongoing medical care plan.</p>
             </div>
         </div>
     </section>
 
-    <!-- Location -->
+    <!-- Map Section -->
     <section class="max-w-7xl mx-auto px-6 py-24">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-4xl font-bold tracking-tight mb-6">Visit Our Clinic</h2>
-                <p class="text-slate-600 mb-4">807 Broadview Ave, Toronto, ON M4K 2P8, Canada</p>
-                <p class="text-slate-600 mb-8">+1 416-461-9471</p>
-                <a href="contact.html" class="bg-slate-900 text-white px-8 py-4 rounded-full font-medium hover:bg-slate-700 transition">Book an Appointment</a>
-            </div>
-            <iframe class="w-full h-96 rounded-3xl shadow-2xl" src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" loading="lazy"></iframe>
+        <h2 class="text-4xl font-bold tracking-tight mb-12">Visit Our Clinic</h2>
+        <div class="w-full h-96">
+            <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-full rounded-[2rem] shadow-2xl" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
@@ -69,19 +84,22 @@
     <footer class="bg-slate-900 text-slate-400 py-24">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
             <div>
-                <h4 class="text-white font-bold mb-4">Dr. Rauchwerger, M.D.</h4>
-                <p class="text-sm">Modern medicine for the Toronto community.</p>
+                <h4 class="text-white font-bold mb-4">Dr. Rauchwerger</h4>
+                <p>807 Broadview Ave<br>Toronto, ON M4K 2P8</p>
+                <p class="mt-4 font-semibold text-teal-400">+1 416-461-9471</p>
             </div>
-            <div class="space-y-2">
-                <a href="index.html" class="block hover:text-white">Home</a>
-                <a href="services.html" class="block hover:text-white">Services</a>
-                <a href="about.html" class="block hover:text-white">About</a>
-                <a href="contact.html" class="block hover:text-white">Contact</a>
+            <div class="flex flex-col gap-2">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="services.html" class="hover:text-white transition">Services</a>
+                <a href="about.html" class="hover:text-white transition">About</a>
+                <a href="contact.html" class="hover:text-white transition">Contact</a>
             </div>
-            <div class="text-sm">
-                <p>807 Broadview Ave</p>
-                <p>Toronto, ON M4K 2P8</p>
-                <p class="mt-4">+1 416-461-9471</p>
+            <div>
+                <h4 class="text-white font-bold mb-4">Social</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition">LinkedIn</a>
+                    <a href="#" class="hover:text-white transition">Twitter</a>
+                </div>
             </div>
         </div>
     </footer>
