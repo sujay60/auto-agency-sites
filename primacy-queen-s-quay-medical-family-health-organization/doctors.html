@@ -3,83 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Physicians | Primacy - Queen's Quay Medical FHO</title>
+    <title>Our Physicians | Primacy Queen's Quay Medical</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinical: {
+                            50: '#F0F9F8',
+                            500: '#2D8E87',
+                            900: '#0F2C2A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); }
     </style>
 </head>
-<body class="bg-[#F8FAFC] text-slate-900">
+<body class="bg-slate-50 text-slate-900 antialiased">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-xl font-bold tracking-tighter text-teal-900">PRIMACY<span class="text-teal-500">.</span></div>
+    <nav class="fixed w-full z-50 px-6 py-6">
+        <div class="max-w-7xl mx-auto glass border border-slate-200 rounded-[2rem] px-8 py-4 flex justify-between items-center shadow-sm">
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-clinical-900">PRIMACY</a>
             <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
-                <a href="doctors.html" class="text-teal-700">Doctors</a>
-                <a href="services.html" class="hover:text-teal-600 transition">Services</a>
-                <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
+                <a href="index.html" class="hover:text-clinical-500 transition">Home</a>
+                <a href="doctors.html" class="text-clinical-900">Doctors</a>
+                <a href="services.html" class="hover:text-clinical-500 transition">Services</a>
+                <a href="contact.html" class="hover:text-clinical-500 transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="py-24 px-6 text-center">
-        <h1 class="text-6xl font-bold tracking-tight text-teal-950 mb-6">Expert Care, Personalized.</h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Meet the dedicated team of family physicians at Queen's Quay, committed to your long-term health and wellness.</p>
+    <header class="pt-40 pb-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-7xl font-bold tracking-tighter text-clinical-900 mb-6">Distinguished Care</h1>
+            <p class="text-2xl text-slate-500 max-w-2xl">Expert medical professionals at Queen's Quay dedicated to your long-term wellness.</p>
+        </div>
     </header>
 
     <!-- Doctor Grid -->
-    <section class="max-w-7xl mx-auto px-6 pb-24">
-        <div class="grid md:grid-cols-2 gap-12">
-            <!-- Profile 1 -->
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex gap-6">
-                <img src="https://loremflickr.com/400/400/doctor,portrait" alt="Doctor" class="w-32 h-32 object-cover rounded-2xl">
+    <section class="pb-24 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+            
+            <!-- Doctor Card 1 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col gap-6">
+                <img src="https://loremflickr.com/1200/800/doctor" alt="Doctor" class="w-full h-80 object-cover rounded-3xl">
                 <div>
-                    <h3 class="text-2xl font-semibold text-teal-900">Dr. Elena Thorne</h3>
-                    <p class="text-teal-600 font-medium mb-3">Family Medicine</p>
-                    <p class="text-slate-500 text-sm leading-relaxed">Specializing in preventative care and chronic disease management with a focus on patient-centered outcomes.</p>
+                    <h3 class="text-3xl font-semibold">Dr. Sarah Jenkins</h3>
+                    <p class="text-clinical-500 font-medium mb-4">Family Medicine • 15 years exp</p>
+                    <p class="text-slate-600">Specializing in preventative health and pediatric care with a focus on patient-centered outcomes.</p>
                 </div>
             </div>
-            <!-- Profile 2 -->
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex gap-6">
-                <img src="https://loremflickr.com/400/400/doctor,surgeon" alt="Doctor" class="w-32 h-32 object-cover rounded-2xl">
+
+            <!-- Doctor Card 2 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col gap-6">
+                <img src="https://loremflickr.com/1200/800/physician" alt="Doctor" class="w-full h-80 object-cover rounded-3xl">
                 <div>
-                    <h3 class="text-2xl font-semibold text-teal-900">Dr. Marcus Chen</h3>
-                    <p class="text-teal-600 font-medium mb-3">Internal Medicine</p>
-                    <p class="text-slate-500 text-sm leading-relaxed">Dr. Chen brings over 15 years of experience in diagnostic excellence and holistic family health.</p>
+                    <h3 class="text-3xl font-semibold">Dr. Marcus Thorne</h3>
+                    <p class="text-clinical-500 font-medium mb-4">Internal Medicine • 12 years exp</p>
+                    <p class="text-slate-600">Expertise in chronic disease management and diagnostic excellence for complex medical histories.</p>
                 </div>
             </div>
+
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="py-24 px-6 bg-clinical-900 text-white rounded-[3rem] mx-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-5xl font-bold tracking-tight mb-8">Our Patient Philosophy</h2>
+                <p class="text-lg opacity-80 leading-relaxed mb-6">At Primacy Queen's Quay, we believe medical care should be as seamless as it is rigorous. We prioritize active listening and evidence-based medicine to ensure you receive the highest standard of care in the heart of Toronto.</p>
+                <div class="flex gap-4">
+                    <span class="px-6 py-3 rounded-full border border-white/20 text-sm">4.7 Star Rating</span>
+                    <span class="px-6 py-3 rounded-full border border-white/20 text-sm">54 Reviews</span>
+                </div>
+            </div>
+            <img src="https://loremflickr.com/1200/800/clinic" alt="Medical Office" class="w-full h-[500px] object-cover rounded-[2rem]">
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-teal-950 text-teal-100 py-24">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-16">
+    <footer class="bg-white py-24 px-6 mt-24 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
             <div>
-                <h4 class="text-white font-bold mb-4">Primacy FHO</h4>
-                <p class="text-sm text-teal-300">Concourse Building<br>100 King St W, Toronto, ON M5K 2A1</p>
+                <h4 class="font-bold text-lg mb-4">Primacy Medical</h4>
+                <p class="text-slate-500">Concourse Building, 100 King St W<br>Toronto, ON M5K 2A1</p>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-sm text-teal-300">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="doctors.html">Doctors</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                <h4 class="font-bold text-lg mb-4">Connect</h4>
+                <a href="#" class="block text-slate-500 hover:text-clinical-500">+1 416-861-8600</a>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">Connect</h4>
-                <p class="text-sm text-teal-300">+1 416-861-8600</p>
-                <div class="mt-4 flex gap-4">
-                    <!-- Social Placeholders -->
-                    <div class="w-8 h-8 rounded-full bg-teal-800"></div>
-                    <div class="w-8 h-8 rounded-full bg-teal-800"></div>
+                <h4 class="font-bold text-lg mb-4">Navigation</h4>
+                <div class="flex flex-col gap-2">
+                    <a href="index.html" class="text-slate-500">Home</a>
+                    <a href="doctors.html" class="text-slate-500">Doctors</a>
+                    <a href="services.html" class="text-slate-500">Services</a>
+                    <a href="contact.html" class="text-slate-500">Contact</a>
                 </div>
             </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t text-center text-slate-400 text-sm">
+            © 2023 Primacy Queen's Quay Medical. All rights reserved.
         </div>
     </footer>
 
