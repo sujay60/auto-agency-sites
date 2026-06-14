@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Dr. Ruth Grossman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-6 py-6">
+        <div class="max-w-6xl mx-auto backdrop-blur-md bg-white/70 border border-slate-200/50 rounded-full py-4 px-8 flex justify-between items-center shadow-sm">
+            <a href="index.html" class="text-lg font-bold tracking-tighter">DR. GROSSMAN</a>
+            <div class="flex gap-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-black transition">Home</a>
+                <a href="services.html" class="hover:text-black transition">Services</a>
+                <a href="about.html" class="hover:text-black transition">About</a>
+                <a href="contact.html" class="text-black font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-40 pb-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            
+            <header class="mb-20 text-center">
+                <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-6">Let's connect.</h1>
+                <p class="text-xl text-slate-500 max-w-2xl mx-auto">Providing exceptional care in the heart of Toronto. Reach out to schedule your consultation.</p>
+            </header>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Contact Form -->
+                <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" placeholder="First Name" class="w-full p-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-slate-900 outline-none">
+                            <input type="text" placeholder="Last Name" class="w-full p-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-slate-900 outline-none">
+                        </div>
+                        <input type="email" placeholder="Email Address" class="w-full p-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-slate-900 outline-none">
+                        <textarea placeholder="How can we help?" rows="4" class="w-full p-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-slate-900 outline-none"></textarea>
+                        <button class="w-full py-4 bg-slate-900 text-white rounded-xl font-semibold hover:bg-slate-800 transition">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Info Cards -->
+                <div class="space-y-8">
+                    <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                        <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Visit Us</h3>
+                        <p class="text-lg font-medium">1881 Steeles Ave W #2<br>North York, ON M3H 5Y4</p>
+                    </div>
+
+                    <div class="flex gap-8">
+                        <div class="flex-1 bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                            <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Phone</h3>
+                            <p class="text-lg font-medium">+1 416-665-2900</p>
+                        </div>
+                        <div class="flex-1 bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                            <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Reputation</h3>
+                            <p class="text-lg font-medium">5.0 Star Rating<br><span class="text-sm text-slate-500">11 Verified Reviews</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                        <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Office Hours</h3>
+                        <div class="flex justify-between py-2 border-b border-slate-50"><span>Mon-Fri</span> <span class="font-semibold">9:00 - 17:00</span></div>
+                        <div class="flex justify-between py-2 border-b border-slate-50"><span>Saturday</span> <span class="font-semibold">By Appointment</span></div>
+                        <div class="flex justify-between py-2"><span>Sunday</span> <span class="font-semibold">Closed</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Placeholder -->
+            <div class="mt-12 w-full h-96 bg-slate-200 rounded-[2rem] overflow-hidden shadow-inner">
+                <img src="https://loremflickr.com/1200/800/map" alt="Location Map" class="w-full h-full object-cover opacity-80">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-12 text-slate-400 text-sm">
+        &copy; 2024 Dr. Ruth Grossman. All rights reserved.
+    </footer>
+
+</body>
+</html>
