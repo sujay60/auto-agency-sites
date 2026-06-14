@@ -9,70 +9,109 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinic: {
+                            50: '#f0fdfa',
+                            500: '#14b8a6',
+                            900: '#0f766e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-6 py-6">
-        <div class="max-w-7xl mx-auto backdrop-blur-md bg-white/70 border border-slate-200/50 rounded-[2rem] px-8 py-4 flex justify-between items-center shadow-sm">
-            <a href="index.html" class="text-xl font-bold tracking-tighter">PRIMACY</a>
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-clinic-900 tracking-tighter">PRIMACY</a>
             <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="text-slate-900">Home</a>
-                <a href="doctors.html" class="hover:text-slate-900 transition">Doctors</a>
-                <a href="services.html" class="hover:text-slate-900 transition">Services</a>
-                <a href="contact.html" class="hover:text-slate-900 transition">Contact</a>
+                <a href="index.html" class="hover:text-clinic-900">Home</a>
+                <a href="doctors.html" class="hover:text-clinic-900">Doctors</a>
+                <a href="services.html" class="hover:text-clinic-900">Services</a>
+                <a href="contact.html" class="hover:text-clinic-900">Contact</a>
             </div>
-            <a href="contact.html" class="bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-800 transition">Book Appointment</a>
+            <a href="contact.html" class="bg-clinic-900 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-teal-800 transition">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="pt-40 pb-24 px-6">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-                <div class="flex items-center gap-2 mb-6 text-slate-500 font-medium">
-                    <span class="text-yellow-500">★★★★★</span>
-                    <span>4.7/5 from 54 reviews</span>
-                </div>
-                <h1 class="text-7xl font-bold tracking-tight leading-[1.1] mb-8">Premium care for <br>modern living.</h1>
-                <p class="text-xl text-slate-600 mb-10 max-w-lg">Located in the heart of Toronto, Primacy offers elite medical family care with a focus on patient longevity and wellness.</p>
-                <div class="flex gap-4">
-                    <a href="contact.html" class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-semibold shadow-xl shadow-slate-200">Book a Visit</a>
-                    <a href="services.html" class="bg-white border border-slate-200 px-8 py-4 rounded-2xl font-semibold">Our Services</a>
-                </div>
-            </div>
-            <img src="https://loremflickr.com/1200/800/doctors" alt="Medical Office" class="w-full h-[600px] object-cover rounded-[2rem] shadow-2xl">
-        </div>
+    <!-- Hero -->
+    <header class="max-w-7xl mx-auto px-6 py-24 text-center">
+        <div class="inline-block px-4 py-1.5 rounded-full bg-teal-100 text-clinic-900 text-xs font-bold mb-6 tracking-wide uppercase">4.7 Stars from 54 Reviews</div>
+        <h1 class="text-6xl md:text-7xl font-bold tracking-tight text-slate-900 mb-8 leading-tight">Exceptional Care at <br><span class="text-clinic-500">Queen's Quay</span></h1>
+        <p class="text-xl text-slate-500 max-w-2xl mx-auto mb-12">Premier medical family health organization located in the heart of Toronto's financial district.</p>
+        <img src="https://loremflickr.com/1200/800/doctors" class="w-full h-96 object-cover rounded-[2rem] shadow-2xl" alt="Medical Clinic">
     </header>
 
-    <!-- Services Overview -->
-    <section class="py-24 px-6">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold mb-16 text-center">Excellence in every detail.</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
-                    <h3 class="text-2xl font-semibold mb-4">Family Health</h3>
-                    <p class="text-slate-600">Comprehensive primary care tailored to your family's unique health journey.</p>
-                </div>
-                <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
-                    <h3 class="text-2xl font-semibold mb-4">Preventative</h3>
-                    <p class="text-slate-600">Proactive screenings and health assessments designed for longevity.</p>
-                </div>
-                <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
-                    <h3 class="text-2xl font-semibold mb-4">Diagnostics</h3>
-                    <p class="text-slate-600">Cutting-edge diagnostic tools for rapid, accurate results in downtown Toronto.</p>
+    <!-- Map & Location Section -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <h2 class="text-4xl font-bold mb-12">Visit Our Clinic</h2>
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <p class="text-lg text-slate-600 mb-6">Located in the iconic Concourse Building, our facility provides a calm, professional sanctuary for all your medical needs in downtown Toronto.</p>
+                <div class="space-y-4">
+                    <p class="font-semibold">100 King St W, Toronto, ON M5K 2A1</p>
+                    <p class="text-clinic-900 font-bold">+1 416-861-8600</p>
                 </div>
             </div>
+            <iframe src="https://www.google.com/maps?q=Concourse+Building+100+King+St+W+Toronto+ON+M5K+2A1+Canada&output=embed" class="w-full h-96 rounded-[2rem] shadow-2xl"></iframe>
         </div>
     </section>
 
-    <!-- Footer / Contact Info -->
-    <footer class="py-24 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <p class="text-slate-400 uppercase tracking-widest text-xs font-bold mb-4">Location</p>
-            <h4 class="text-2xl font-semibold mb-2">100 King St W, Toronto, ON M5K 2A1</h4>
-            <p class="text-slate-500 mb-8">+1 416-861-8600</p>
-            <p class="text-slate-400 text-sm">© 2024 Primacy Medical FHO. All rights reserved.</p>
+    <!-- FAQ Section -->
+    <section class="max-w-3xl mx-auto px-6 py-24">
+        <h2 class="text-4xl font-bold mb-12 text-center">Common Questions</h2>
+        <div class="space-y-4">
+            <details class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+                <summary class="font-semibold cursor-pointer">How do I book an appointment?</summary>
+                <p class="mt-4 text-slate-500">Simply visit our contact page or call us directly at 416-861-8600 to speak with our scheduling team.</p>
+            </details>
+            <details class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+                <summary class="font-semibold cursor-pointer">Do you accept new patients?</summary>
+                <p class="mt-4 text-slate-500">We are currently accepting new patients based on availability. Please reach out to verify.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Contact & Feedback -->
+    <section class="max-w-4xl mx-auto px-6 py-24">
+        <div class="bg-clinic-900 rounded-[2rem] p-12 text-white">
+            <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input type="text" placeholder="Full Name" class="bg-white/10 border border-white/20 p-4 rounded-xl outline-none placeholder:text-white/50">
+                <input type="email" placeholder="Email Address" class="bg-white/10 border border-white/20 p-4 rounded-xl outline-none placeholder:text-white/50">
+                <textarea placeholder="How can we help?" class="col-span-full bg-white/10 border border-white/20 p-4 rounded-xl outline-none placeholder:text-white/50 h-32"></textarea>
+                <button class="bg-white text-clinic-900 py-4 rounded-xl font-bold hover:bg-teal-50 transition">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-16">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+            <div>
+                <h3 class="text-white font-bold text-xl mb-4">Primacy</h3>
+                <p class="text-sm">Concourse Building, 100 King St W, Toronto, ON M5K 2A1.</p>
+            </div>
+            <div class="space-y-2 text-sm">
+                <a href="index.html" class="block hover:text-white">Home</a>
+                <a href="doctors.html" class="block hover:text-white">Doctors</a>
+                <a href="services.html" class="block hover:text-white">Services</a>
+                <a href="contact.html" class="block hover:text-white">Contact</a>
+            </div>
+            <div class="text-sm">
+                <p>© 2024 Primacy Health.</p>
+                <div class="flex gap-4 mt-4">
+                    <span>Instagram</span>
+                    <span>LinkedIn</span>
+                </div>
+            </div>
         </div>
     </footer>
 
