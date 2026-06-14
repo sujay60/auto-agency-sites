@@ -3,134 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinical Services | Albany Medical Building Toronto</title>
+    <title>Services | Albany Medical Building | Toronto</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .fade-in-up { transition: all 0.8s ease-out; opacity: 0; transform: translateY(30px); }
         .is-visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
-<body class="bg-[#FAFAFA] text-[#2D3748]">
+<body class="bg-[#FAFAFA] text-[#2D3739]">
 
     <!-- Navbar -->
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-[#006B7F]">ALBANY MEDICAL</a>
-            <div class="hidden md:flex gap-8 font-medium text-sm">
+            <a href="index.html" class="text-2xl font-bold text-[#006B7F]">Albany Medical</a>
+            <div class="hidden md:flex gap-8 font-medium text-[#2D3739]">
                 <a href="index.html" class="hover:text-[#006B7F]">Home</a>
                 <a href="doctors.html" class="hover:text-[#006B7F]">Doctors</a>
-                <a href="services.html" class="text-[#006B7F] font-bold">Services</a>
+                <a href="services.html" class="text-[#006B7F]">Services</a>
                 <a href="about.html" class="hover:text-[#006B7F]">About</a>
             </div>
-            <a href="contact.html" class="bg-[#006B7F] text-white px-6 py-2.5 rounded-full hover:bg-[#004D5A] transition">Book Appointment</a>
+            <a href="contact.html" class="bg-[#006B7F] text-white px-6 py-2.5 rounded-full hover:bg-[#004855] transition">Book Appointment</a>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="py-32 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="fade-in-up">
-                <span class="text-[#C5A059] font-bold tracking-widest uppercase text-sm">Professional Wellness</span>
-                <h1 class="text-6xl md:text-7xl font-extrabold mt-4 mb-6 leading-tight text-[#1A2024]">Comprehensive <br><span class="text-[#006B7F]">Clinical Care</span></h1>
-                <p class="text-xl text-gray-600 mb-8 leading-relaxed">Albany Medical Building provides refined, precision-based healthcare tailored to the professional needs of the Toronto community.</p>
-            </div>
-            <img src="https://loremflickr.com/800/600/hospital,doctor" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover" alt="Medical Service">
-        </div>
+    <header class="pt-40 pb-28 px-6 text-center">
+        <h1 class="text-6xl md:text-7xl font-extrabold text-[#004855] mb-6">Clinical Excellence</h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Providing sophisticated medical expertise in the heart of Toronto with modern diagnostic precision.</p>
     </header>
 
-    <!-- Services Section -->
-    <section class="py-32 px-6 bg-[#1A2024] text-white">
+    <!-- Service Section 1 -->
+    <section class="py-32 px-6 fade-in-up">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="bg-white/5 backdrop-blur-xl p-12 rounded-3xl border border-white/10 fade-in-up">
-                <h2 class="text-5xl font-bold mb-8">Our Core<br>Clinical Expertise</h2>
-                <div class="space-y-6">
-                    <div class="flex gap-4">
-                        <i class="fa-solid fa-stethoscope text-[#C5A059] text-2xl"></i>
-                        <div>
-                            <h3 class="font-bold text-xl">Family Medicine</h3>
-                            <p class="text-gray-400">Comprehensive longitudinal care for patients of all ages.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <i class="fa-solid fa-syringe text-[#C5A059] text-2xl"></i>
-                        <div>
-                            <h3 class="font-bold text-xl">Vaccination Clinics</h3>
-                            <p class="text-gray-400">Up-to-date immunizations and travel health consulting.</p>
-                        </div>
-                    </div>
+            <div>
+                <span class="text-[#C5A059] font-bold tracking-widest uppercase">Primary Care</span>
+                <h2 class="text-5xl font-bold text-[#004855] my-6">Comprehensive Family Medicine</h2>
+                <p class="text-lg leading-relaxed text-gray-600 mb-8">Our primary care physicians provide personalized health management for individuals and families, focusing on long-term wellness and disease prevention through evidence-based medical practices.</p>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-[#006B7F]"></i> Annual Health Examinations</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-[#006B7F]"></i> Chronic Disease Management</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-[#006B7F]"></i> Pediatric & Adult Wellness</li>
+                </ul>
+            </div>
+            <img src="https://loremflickr.com/800/600/doctors" class="rounded-3xl shadow-2xl object-cover h-[500px] w-full" alt="Primary Care">
+        </div>
+    </section>
+
+    <!-- Service Section 2 (Dark) -->
+    <section class="py-32 px-6 bg-[#1A2224] text-white fade-in-up">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <img src="https://loremflickr.com/800/600/medical" class="rounded-3xl shadow-2xl object-cover h-[500px] w-full order-2 md:order-1" alt="Diagnostics">
+            <div class="order-1 md:order-2">
+                <span class="text-[#C5A059] font-bold tracking-widest uppercase">Specialist Care</span>
+                <h2 class="text-5xl font-bold my-6">Specialist Consultations</h2>
+                <p class="text-lg leading-relaxed text-gray-300 mb-8">Access a network of highly trained specialists within the Albany building. From cardiology to internal medicine, our referral system ensures you receive the best care available in Toronto.</p>
+                <div class="p-6 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-xl">
+                    <h4 class="font-bold text-xl text-[#C5A059] mb-2">Integrated Referral Network</h4>
+                    <p class="text-sm text-gray-400">Seamless coordination between your GP and specialists for a unified health journey.</p>
                 </div>
-            </div>
-            <img src="https://loremflickr.com/800/600/clinic,consultation" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover" alt="Consultation">
-        </div>
-    </section>
-
-    <!-- Bento Grid Section -->
-    <section class="py-32 px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="md:col-span-2 p-10 bg-[#E0F2F4] rounded-3xl fade-in-up">
-                <h3 class="text-4xl font-bold text-[#004D5A] mb-4">Preventative Health Screenings</h3>
-                <p class="text-[#004D5A]/80">Proactive diagnostics and wellness planning to ensure long-term vitality for our Toronto clients.</p>
-            </div>
-            <div class="p-10 bg-[#006B7F] rounded-3xl text-white fade-in-up">
-                <h3 class="text-2xl font-bold mb-4">Diagnostic Referrals</h3>
-                <p class="text-white/80">Streamlined access to specialized medical testing and imaging services.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Bar -->
-    <section class="py-20 bg-[#FAFAFA] border-t border-gray-200">
-        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 px-6 text-center">
-            <div class="fade-in-up">
-                <div class="text-5xl font-extrabold text-[#006B7F]">4.8</div>
-                <div class="text-[#C5A059] uppercase tracking-widest text-xs mt-2">Clinic Rating</div>
-            </div>
-            <div class="fade-in-up">
-                <div class="text-5xl font-extrabold text-[#006B7F]">25+</div>
-                <div class="text-[#C5A059] uppercase tracking-widest text-xs mt-2">Specialized Staff</div>
-            </div>
-            <div class="fade-in-up">
-                <div class="text-5xl font-extrabold text-[#006B7F]">12k+</div>
-                <div class="text-[#C5A059] uppercase tracking-widest text-xs mt-2">Patient Visits</div>
-            </div>
-            <div class="fade-in-up">
-                <div class="text-5xl font-extrabold text-[#006B7F]">30+</div>
-                <div class="text-[#C5A059] uppercase tracking-widest text-xs mt-2">Years Serving</div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#1A2024] text-white py-20 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+    <footer class="bg-[#1A2224] text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
-                <h4 class="font-bold text-lg mb-4 text-[#C5A059]">Albany Medical</h4>
-                <p class="text-gray-400 text-sm">807 Broadview Ave, Toronto, ON M4K 2P8</p>
+                <h3 class="text-xl font-bold mb-4 text-[#C5A059]">Albany Medical</h3>
+                <p class="text-sm text-gray-400">807 Broadview Ave, Toronto, ON M4K 2P8</p>
             </div>
             <div>
-                <h4 class="font-bold text-lg mb-4">Navigation</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
+                <h4 class="font-bold mb-4">Quick Links</h4>
+                <ul class="text-sm text-gray-400 space-y-2">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
                     <li><a href="services.html">Services</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold text-lg mb-4">Contact</h4>
+                <h4 class="font-bold mb-4">Contact</h4>
                 <p class="text-sm text-gray-400">+1 416-366-2000</p>
             </div>
             <div>
-                <h4 class="font-bold text-lg mb-4">Follow Us</h4>
+                <h4 class="font-bold mb-4">Social</h4>
                 <div class="flex gap-4">
-                    <i class="fa-brands fa-instagram text-2xl text-[#C5A059]"></i>
-                    <i class="fa-brands fa-linkedin text-2xl text-[#C5A059]"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin"></i>
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/10 text-center text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/10 text-center text-sm text-gray-500">
             &copy; 2024 Albany Medical Building. All rights reserved.
         </div>
     </footer>
@@ -142,7 +108,7 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+        document.querySelectorAll('.fade-in-up').forEach(section => observer.observe(section));
     </script>
 </body>
 </html>
