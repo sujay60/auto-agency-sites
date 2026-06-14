@@ -4,120 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Doctors | Albany Medical Clinic Toronto</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
-        .floating { animation: float 6s ease-in-out infinite; }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.02); }
     </style>
 </head>
-<body class="bg-[#F8FAFC] text-[#1A202C]">
+<body class="bg-[#F8FAFA] text-[#264653]">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200">
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#006D77]/10">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-[#006D77]">Albany Medical</a>
+            <a href="index.html" class="text-2xl font-extrabold text-[#006D77]">ALBANY<span class="text-[#E29578]">MED</span></a>
             <div class="hidden md:flex gap-8 font-medium">
                 <a href="index.html" class="hover:text-[#006D77]">Home</a>
-                <a href="services.html" class="hover:text-[#006D77]">Services</a>
-                <a href="doctors.html" class="text-[#006D77]">Doctors</a>
                 <a href="about.html" class="hover:text-[#006D77]">About</a>
+                <a href="services.html" class="hover:text-[#006D77]">Services</a>
+                <a href="doctors.html" class="text-[#006D77] font-bold">Doctors</a>
+                <a href="contact.html" class="hover:text-[#006D77]">Contact</a>
             </div>
-            <a href="contact.html" class="bg-[#006D77] text-white px-8 py-3 rounded-full hover:bg-[#00464D] transition">Book Appointment</a>
+            <a href="contact.html" class="bg-[#006D77] text-white px-8 py-3 rounded-full hover:bg-[#004B52] transition">Book Appointment</a>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="py-32 px-6 bg-gradient-to-br from-[#006D77] to-[#83C5BE] text-white text-center">
-        <h1 class="text-7xl font-extrabold mb-6">Our Expert Medical Team</h1>
-        <p class="text-xl opacity-90 max-w-2xl mx-auto">Dedicated professionals committed to providing compassionate, patient-centered care in the heart of Toronto.</p>
+    <header class="pt-40 pb-20 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-7xl font-extrabold text-[#1D3557] mb-6">Our Expert Physicians</h1>
+            <p class="text-xl text-[#264653] max-w-2xl mx-auto">Providing precision care with a compassionate touch at Albany Medical Clinic.</p>
+        </div>
     </header>
 
     <!-- Doctor 1 -->
-    <section class="py-32 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center fade-in-up">
-        <div>
-            <span class="text-[#E29578] font-bold tracking-widest uppercase">Chief of Medicine</span>
-            <h2 class="text-6xl font-bold text-[#1D3557] my-6">Dr. Sarah Jenkins</h2>
-            <p class="text-lg text-gray-600 mb-8">With over 20 years of experience, Dr. Jenkins specializes in preventative family medicine, focusing on holistic health strategies for all ages.</p>
-            <button class="bg-[#1D3557] text-white px-10 py-4 rounded-full">View Full Profile</button>
+    <section class="py-28 px-6 bg-[#F8FAFA] reveal">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-5xl font-bold text-[#1D3557] mb-6">Dr. Sarah Jenkins</h2>
+                <p class="text-[#E29578] font-semibold mb-4">Specialization: General Internal Medicine</p>
+                <p class="text-lg leading-relaxed mb-8">Dr. Jenkins brings over 15 years of experience to our Toronto practice. She focuses on preventative health screenings and complex diagnostic care for chronic illnesses.</p>
+                <button class="bg-[#006D77] text-white px-8 py-4 rounded-full">View Full Profile</button>
+            </div>
+            <img src="https://loremflickr.com/800/600/doctor,man" class="rounded-3xl shadow-2xl hover-scale" alt="Doctor 1">
         </div>
-        <img src="https://loremflickr.com/800/600/doctor" class="rounded-3xl shadow-2xl hover:scale-105 transition duration-500" alt="Dr. Sarah Jenkins">
     </section>
 
-    <!-- Doctor 2 (Dark Section) -->
-    <section class="py-32 px-6 bg-[#1D3557] text-[#EDF2F7] fade-in-up">
+    <!-- Doctor 2 (Dark) -->
+    <section class="py-28 px-6 bg-[#1D3557] text-white reveal">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <img src="https://loremflickr.com/800/600/surgeon" class="rounded-3xl shadow-2xl order-2 md:order-1" alt="Dr. Michael Chen">
+            <img src="https://loremflickr.com/800/600/doctor,woman" class="rounded-3xl shadow-2xl hover-scale order-2 md:order-1" alt="Doctor 2">
             <div class="order-1 md:order-2">
-                <span class="text-[#83C5BE] font-bold tracking-widest uppercase">Specialist Consultant</span>
-                <h2 class="text-6xl font-bold my-6">Dr. Michael Chen</h2>
-                <p class="text-lg opacity-80 mb-8">Dr. Chen leads our internal medicine department with a focus on chronic disease management and innovative diagnostic techniques.</p>
-                <button class="bg-[#E29578] text-[#1D3557] font-bold px-10 py-4 rounded-full">View Full Profile</button>
+                <h2 class="text-5xl font-bold mb-6">Dr. Michael Chen</h2>
+                <p class="text-[#83C5BE] font-semibold mb-4">Specialization: Cardiology & Wellness</p>
+                <p class="text-lg leading-relaxed mb-8">Dr. Chen is dedicated to heart health and vascular diagnostics. He utilizes the latest technology to ensure every patient receives high-precision cardiac assessments.</p>
+                <button class="bg-[#83C5BE] text-[#1D3557] px-8 py-4 rounded-full font-bold">View Full Profile</button>
             </div>
         </div>
     </section>
 
     <!-- Stats Bar -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div class="p-8 border border-gray-100 rounded-3xl">
-                <h3 class="text-5xl font-extrabold text-[#006D77]">2.7</h3>
-                <p class="text-gray-500 mt-2">Clinic Rating</p>
-            </div>
-            <div class="p-8 border border-gray-100 rounded-3xl">
-                <h3 class="text-5xl font-extrabold text-[#006D77]">800+</h3>
-                <p class="text-gray-500 mt-2">Verified Reviews</p>
-            </div>
-            <div class="p-8 border border-gray-100 rounded-3xl">
-                <h3 class="text-5xl font-extrabold text-[#006D77]">15</h3>
-                <p class="text-gray-500 mt-2">Specialist Doctors</p>
-            </div>
-            <div class="p-8 border border-gray-100 rounded-3xl">
-                <h3 class="text-5xl font-extrabold text-[#006D77]">40+</h3>
-                <p class="text-gray-500 mt-2">Years Serving</p>
-            </div>
+    <section class="py-20 bg-[#006D77] text-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div><div class="text-6xl font-extrabold">2.7</div><p>Rating</p></div>
+            <div><div class="text-6xl font-extrabold">800+</div><p>Reviews</p></div>
+            <div><div class="text-6xl font-extrabold">12</div><p>Specialists</p></div>
+            <div><div class="text-6xl font-extrabold">30y</div><p>In Practice</p></div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#1D3557] text-[#EDF2F7] py-20 px-6">
+    <footer class="bg-[#1D3557] text-white py-20 px-6">
         <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
             <div>
-                <h4 class="text-xl font-bold mb-4">Albany Medical Clinic</h4>
-                <p class="text-sm opacity-60">807 Broadview Ave, Toronto, ON M4K 2P8</p>
+                <h3 class="text-xl font-bold mb-4">Albany Medical</h3>
+                <p class="text-gray-400 text-sm">Providing quality care in the heart of Toronto.</p>
             </div>
             <div>
-                <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2 opacity-60">
+                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-gray-400">
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="doctors.html">Doctors</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-xl font-bold mb-4">Contact</h4>
-                <p class="opacity-60">+1 416-461-9471</p>
+                <h3 class="text-xl font-bold mb-4">Contact</h3>
+                <p class="text-gray-400">807 Broadview Ave, Toronto, ON M4K 2P8</p>
+                <p class="text-gray-400">+1 416-461-9471</p>
             </div>
-            <div class="flex gap-4">
-                <i class="fa-brands fa-facebook text-2xl"></i>
-                <i class="fa-brands fa-twitter text-2xl"></i>
-                <i class="fa-brands fa-instagram text-2xl"></i>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                <div class="flex gap-4 text-2xl">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
             </div>
         </div>
-        <div class="text-center mt-16 opacity-40 text-sm border-t border-white/10 pt-8">© 2024 Albany Medical Clinic. All rights reserved.</div>
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/10 text-center text-gray-500 text-sm">
+            &copy; 2024 Albany Medical Clinic. All rights reserved.
+        </div>
     </footer>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
+                if (entry.isIntersecting) entry.target.classList.add('active');
             });
         });
-        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
