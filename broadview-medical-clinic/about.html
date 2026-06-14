@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Broadview Medical Clinic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-[#FAFAFA] text-[#101820]">
+
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#006B7F]/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold text-[#006B7F]">Broadview Medical</a>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="hover:text-[#4DAB9A]">Home</a>
+                <a href="services.html" class="hover:text-[#4DAB9A]">Services</a>
+                <a href="doctors.html" class="hover:text-[#4DAB9A]">Doctors</a>
+                <a href="about.html" class="text-[#006B7F]">About</a>
+            </div>
+            <a href="contact.html" class="bg-[#006B7F] text-white px-8 py-3 rounded-full hover:bg-[#004754] transition">Book Appointment</a>
+        </div>
+    </nav>
+
+    <header class="py-32 mt-16 bg-[#FAFAFA]">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="fade-in-up reveal">
+                <h1 class="text-7xl font-extrabold leading-tight mb-8">Decades of Excellence in <span class="text-[#006B7F]">Toronto Healthcare</span></h1>
+                <p class="text-xl text-gray-600 mb-8">Located at 797 Broadview Ave, Broadview Medical Clinic serves as a cornerstone of health and wellness for the Toronto community, combining precision diagnostics with compassionate, patient-centered care.</p>
+            </div>
+            <img src="https://loremflickr.com/800/600/doctors" class="rounded-3xl shadow-2xl hover:scale-[1.02] transition duration-500" alt="Clinic Team">
+        </div>
+    </header>
+
+    <section class="py-32 bg-[#1A2224] text-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="fade-in-up">
+                <h2 class="text-5xl font-bold mb-8">Our Commitment to <span class="text-[#4DAB9A]">Our Community</span></h2>
+                <p class="text-lg opacity-80 mb-6">Since our inception, our mission has been to provide accessible, high-quality medical services. We pride ourselves on building lasting relationships with our patients in the heart of Toronto.</p>
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+                        <h4 class="text-4xl font-bold text-[#4DAB9A]">4.3</h4>
+                        <p class="text-sm">Patient Rating</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+                        <h4 class="text-4xl font-bold text-[#4DAB9A]">53+</h4>
+                        <p class="text-sm">Verified Reviews</p>
+                    </div>
+                </div>
+            </div>
+            <div class="h-full">
+                <iframe src="https://www.google.com/maps?q=797+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-full min-h-[400px] rounded-3xl" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#1A2224] text-white py-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Broadview Medical</h3>
+                <p class="opacity-60 text-sm">797 Broadview Ave, Toronto, ON M4K 2P8, Canada</p>
+            </div>
+            <div>
+                <h3 class="font-bold mb-4">Navigation</h3>
+                <ul class="space-y-2 text-sm opacity-60">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-4">Contact</h3>
+                <p class="text-sm opacity-60">+1 416-463-3228</p>
+            </div>
+            <div class="flex gap-4">
+                <i class="fa-brands fa-facebook text-2xl"></i>
+                <i class="fa-brands fa-instagram text-2xl"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('reveal');
+            });
+        });
+        document.querySelectorAll('.fade-in-up').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>

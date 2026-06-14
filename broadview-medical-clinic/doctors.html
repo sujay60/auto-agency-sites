@@ -3,99 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Practitioners | Broadview Medical Clinic</title>
+    <title>Our Doctors | Broadview Medical Clinic</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .show { opacity: 1; transform: translateY(0); }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
     </style>
 </head>
-<body class="bg-[#F8FAFC] text-slate-900">
+<body class="bg-[#FAFAFA] text-[#101820]">
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-            <a href="index.html" class="text-2xl font-bold tracking-tighter text-teal-900">Broadview<span class="text-teal-600">Medical</span></a>
-            <div class="flex gap-8 text-sm font-semibold text-slate-600">
-                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
-                <a href="services.html" class="hover:text-teal-600 transition">Services</a>
-                <a href="doctors.html" class="text-teal-900">Doctors</a>
-                <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#006B7F]/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-[#006B7F]">Broadview Medical</a>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="hover:text-[#4DAB9A]">Home</a>
+                <a href="services.html" class="hover:text-[#4DAB9A]">Services</a>
+                <a href="doctors.html" class="text-[#006B7F]">Doctors</a>
+                <a href="about.html" class="hover:text-[#4DAB9A]">About</a>
             </div>
+            <a href="contact.html" class="bg-[#006B7F] text-white px-6 py-2.5 rounded-full hover:bg-[#004754] transition">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="max-w-7xl mx-auto px-6 py-24">
-        <h1 class="text-6xl font-bold tracking-tighter text-teal-950 mb-6">Expert Care, <br>Personalized for You.</h1>
-        <p class="text-xl text-slate-600 max-w-2xl">Our multidisciplinary team of medical professionals combines clinical excellence with compassionate, patient-first care in the heart of Toronto.</p>
+    <!-- Header Section -->
+    <header class="py-32 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center fade-in-up">
+            <div>
+                <h1 class="text-7xl font-extrabold text-[#101820] mb-6 leading-tight">Meet Our <span class="text-[#006B7F]">Medical Experts</span></h1>
+                <p class="text-xl text-gray-600 mb-8">At Broadview Medical Clinic, our team of dedicated professionals combines clinical precision with a compassionate, patient-first philosophy.</p>
+                <div class="flex gap-4">
+                    <span class="px-4 py-2 bg-[#E0F2F4] text-[#006B7F] rounded-lg font-semibold">4.3 Rating</span>
+                    <span class="px-4 py-2 bg-[#E0F2F4] text-[#006B7F] rounded-lg font-semibold">53+ Verified Reviews</span>
+                </div>
+            </div>
+            <img src="https://loremflickr.com/800/600/doctor,professional" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover" alt="Medical Team">
+        </div>
     </header>
 
     <!-- Doctor Profiles -->
-    <main class="max-w-7xl mx-auto px-6 pb-24 space-y-24">
-        
-        <!-- Dr 1 -->
-        <section class="grid md:grid-cols-2 gap-16 items-center">
-            <img src="https://loremflickr.com/1200/800/doctor" alt="Doctor" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
-            <div>
-                <span class="text-teal-600 font-bold tracking-widest uppercase text-sm">Lead Physician</span>
-                <h2 class="text-5xl font-bold tracking-tight mt-2 mb-6 text-teal-950">Dr. Elena Rossi, MD</h2>
-                <p class="text-lg text-slate-600 mb-8">Specializing in internal medicine and preventative wellness, Dr. Rossi has been serving the Broadview community for over a decade. Her approach focuses on long-term vitality and proactive health management.</p>
-                <div class="bg-teal-50 p-6 rounded-2xl">
-                    <h4 class="font-bold text-teal-900 mb-2">Expertise</h4>
-                    <p class="text-teal-800 text-sm">Preventative Cardiology, Chronic Disease Management, Lifestyle Medicine.</p>
+    <section class="py-32 bg-[#1A2224] text-white">
+        <div class="max-w-7xl mx-auto px-6 space-y-32">
+            <!-- Profile 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center fade-in-up">
+                <img src="https://loremflickr.com/800/600/doctor,physician" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover" alt="Dr Smith">
+                <div>
+                    <h2 class="text-5xl font-bold mb-6">Dr. Sarah Jenkins</h2>
+                    <p class="text-[#4DAB9A] font-bold text-xl mb-4">General Practitioner | 15 Years Experience</p>
+                    <p class="text-gray-300 mb-6">"My philosophy is rooted in proactive health. I believe in listening to the patient, understanding their lifestyle, and crafting a plan that fits their unique needs."</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-[#4DAB9A]"></i> Chronic Disease Management</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-[#4DAB9A]"></i> Preventive Healthcare</li>
+                    </ul>
                 </div>
             </div>
-        </section>
 
-        <!-- Dr 2 -->
-        <section class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="order-2 md:order-1">
-                <span class="text-teal-600 font-bold tracking-widest uppercase text-sm">Associate Surgeon</span>
-                <h2 class="text-5xl font-bold tracking-tight mt-2 mb-6 text-teal-950">Dr. Marcus Chen, FRCSC</h2>
-                <p class="text-lg text-slate-600 mb-8">With a focus on outpatient procedures and minimally invasive techniques, Dr. Chen ensures every patient receives surgical excellence with shorter recovery times and heightened precision.</p>
-                <div class="bg-teal-50 p-6 rounded-2xl">
-                    <h4 class="font-bold text-teal-900 mb-2">Expertise</h4>
-                    <p class="text-teal-800 text-sm">Dermatological Surgery, Orthopedic Consultations, Minor Procedures.</p>
+            <!-- Profile 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center fade-in-up">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-5xl font-bold mb-6">Dr. Michael Chen</h2>
+                    <p class="text-[#4DAB9A] font-bold text-xl mb-4">Family Medicine | Sports Injury Specialist</p>
+                    <p class="text-gray-300 mb-6">"Precision meets restorative wellness. I focus on helping patients regain their strength through evidence-based medical practices and holistic recovery techniques."</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-[#4DAB9A]"></i> Musculoskeletal Care</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-[#4DAB9A]"></i> Family Health Counseling</li>
+                    </ul>
                 </div>
+                <img src="https://loremflickr.com/800/600/doctor,surgeon" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover order-1 md:order-2" alt="Dr Chen">
             </div>
-            <img src="https://loremflickr.com/1200/800/surgeon" alt="Surgeon" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl order-1 md:order-2">
-        </section>
-
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-teal-950 text-white py-24">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+    <footer class="bg-[#1A2224] text-gray-400 py-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
-                <h3 class="text-xl font-bold mb-6">Broadview Medical</h3>
-                <p class="text-teal-200/70 text-sm">797 Broadview Ave, Toronto, ON M4K 2P8</p>
-                <p class="text-teal-200/70 text-sm mt-2">+1 416-463-3228</p>
+                <h3 class="text-white font-bold text-xl mb-6">Broadview Medical</h3>
+                <p>797 Broadview Ave, Toronto, ON M4K 2P8</p>
+                <p class="mt-2 text-[#4DAB9A]">+1 416-463-3228</p>
             </div>
             <div>
-                <h4 class="font-bold mb-6">Navigate</h4>
-                <div class="flex flex-col gap-3 text-sm text-teal-200/70">
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="doctors.html">Doctors</a>
-                    <a href="contact.html">Contact</a>
+                <h4 class="text-white font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-[#4DAB9A]">Home</a></li>
+                    <li><a href="services.html" class="hover:text-[#4DAB9A]">Services</a></li>
+                    <li><a href="doctors.html" class="hover:text-[#4DAB9A]">Doctors</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Connect</h4>
+                <div class="flex gap-4 text-2xl">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin"></i>
                 </div>
             </div>
             <div>
-                <h4 class="font-bold mb-6">Socials</h4>
-                <div class="flex flex-col gap-3 text-sm text-teal-200/70">
-                    <a href="#">Instagram</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Twitter</a>
-                </div>
+                <h4 class="text-white font-bold mb-6">Hours</h4>
+                <p>Mon-Fri: 9AM - 6PM</p>
+                <p>Sat: 10AM - 2PM</p>
             </div>
-            <div>
-                <h4 class="font-bold mb-6">Trust</h4>
-                <p class="text-4xl font-bold text-teal-400">4.3★</p>
-                <p class="text-sm text-teal-200/70 mt-2">Based on 53 verified reviews.</p>
-            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/10 text-center">
+            <p>&copy; 2024 Broadview Medical Clinic. All rights reserved.</p>
         </div>
     </footer>
 
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('show');
+            });
+        });
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
