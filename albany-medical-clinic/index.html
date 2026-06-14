@@ -1,145 +1,766 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Albany Medical Clinic | Premier Healthcare in Toronto</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Albany Medical Clinic | Elite Healthcare Toronto</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome & Tailwind -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .reveal { transition: all 0.8s ease-out; }
-        .float { animation: floating 3s ease-in-out infinite; }
-        @keyframes floating { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F4F7F6;
+            color: #1E2E38;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F4F7F6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0D5C75;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #073644;
+        }
+
+        /* Scroll reveal custom styles */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
     </style>
 </head>
-<body class="bg-[#f8fafc] text-[#1e293b]">
+<body class="overflow-x-hidden">
 
+    <!-- MANDATORY NAVBAR -->
     <nav class="w-full fixed top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-3xl font-bold tracking-tighter text-[#0f766e]">Albany Medical Clinic</a>
-            <div class="hidden md:flex items-center gap-8 text-[#1e293b] font-medium">
-                <a href="index.html" class="hover:text-[#0f766e] transition-colors">Index</a>
-                <a href="services.html" class="hover:text-[#0f766e] transition-colors">Services</a>
-                <a href="doctors.html" class="hover:text-[#0f766e] transition-colors">Doctors</a>
-                <a href="about.html" class="hover:text-[#0f766e] transition-colors">About</a>
-                <a href="contact.html" class="hover:text-[#0f766e] transition-colors">Contact</a>
+            <a href="#" class="text-3xl font-bold tracking-tighter text-[#0D5C75]">Albany Medical Clinic</a>
+            <div class="hidden md:flex items-center gap-8 text-[#1E2E38] font-medium">
+                <a href="#about" class="hover:text-[#0D5C75] transition-colors">About</a>
+                <a href="#services" class="hover:text-[#0D5C75] transition-colors">Services</a>
+                <a href="#team" class="hover:text-[#0D5C75] transition-colors">Team</a>
+                <a href="#contact" class="hover:text-[#0D5C75] transition-colors">Contact</a>
             </div>
-            <a href="contact.html" class="hidden md:inline-block px-8 py-3 bg-[#0f766e] text-white rounded-full font-medium hover:scale-105 transition-transform">Book Now</a>
+            <a href="#contact" class="hidden md:inline-block px-8 py-3 bg-[#0D5C75] text-white rounded-full font-medium hover:scale-105 transition-transform">Book Now</a>
         </div>
     </nav>
 
-    <header class="pt-48 pb-32 overflow-hidden">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="reveal opacity-0 translate-y-10">
-                <span class="text-[#f59e0b] font-bold tracking-widest uppercase text-sm">Compassionate Care Since 1990</span>
-                <h1 class="text-7xl font-extrabold text-[#0f172a] leading-tight mt-6 mb-8">Your Health, <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0f766e] to-[#0ea5e9]">Our Priority.</span></h1>
-                <p class="text-xl text-gray-600 mb-10">Experience patient-centered care at Albany Medical Clinic. We combine expert medical knowledge with modern technology for your well-being.</p>
-                <div class="flex gap-4">
-                    <a href="contact.html" class="px-8 py-4 bg-[#0f766e] text-white rounded-2xl font-bold hover:bg-[#134e4a] transition-all">Book Appointment</a>
-                    <a href="about.html" class="px-8 py-4 bg-[#ccfbf1] text-[#0f766e] rounded-2xl font-bold hover:bg-[#b0f2e5] transition-all">Learn More</a>
+    <!-- HERO SECTION (Asymmetric, Luxury layout) -->
+    <section class="relative min-h-screen pt-32 pb-20 flex items-center bg-[#F4F7F6] overflow-hidden">
+        <!-- Background decorative vectors -->
+        <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[#EAF4F6]/60 filter blur-3xl"></div>
+        <div class="absolute -bottom-20 -left-20 w-[500px] h-[500px] rounded-full bg-[#0D5C75]/5 filter blur-3xl"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Text Column -->
+                <div class="lg:col-span-7 space-y-8 text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EAF4F6] border border-[#0D5C75]/10">
+                        <span class="w-2 h-2 rounded-full bg-[#C5A059] animate-pulse"></span>
+                        <span class="text-xs uppercase font-bold tracking-widest text-[#0D5C75]">Elite Toronto Healthcare</span>
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#1E2E38] leading-tight">
+                        A higher standard of <br>
+                        <span class="bg-gradient-to-r from-[#0D5C75] to-[#1E8491] bg-clip-text text-transparent">medical precision</span>.
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-[#1E2E38]/80 max-w-2xl leading-relaxed">
+                        Albany Medical Clinic elevates metropolitan care. Serving our Toronto community on Broadview Avenue with an elite team of physicians, specialized services, and clinical absolute excellence.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#contact" class="px-8 py-4 bg-[#0D5C75] text-white text-center font-semibold rounded-2xl hover:bg-[#073644] transition-all duration-300 shadow-xl shadow-[#0D5C75]/20 hover:-translate-y-1">
+                            Schedule Consultation
+                        </a>
+                        <a href="#services" class="px-8 py-4 bg-white text-[#0D5C75] text-center font-semibold rounded-2xl border border-[#0D5C75]/20 hover:bg-[#EAF4F6] transition-all duration-300 hover:-translate-y-1">
+                            Explore Services
+                        </a>
+                    </div>
+
+                    <!-- Trust factors -->
+                    <div class="grid grid-cols-3 gap-6 pt-10 border-t border-gray-200/60">
+                        <div>
+                            <p class="text-4xl font-extrabold text-[#0D5C75]">800+</p>
+                            <p class="text-xs uppercase tracking-wider font-semibold text-[#1E2E38]/60 mt-1">Patient Reviews</p>
+                        </div>
+                        <div>
+                            <p class="text-4xl font-extrabold text-[#C5A059]">30+</p>
+                            <p class="text-xs uppercase tracking-wider font-semibold text-[#1E2E38]/60 mt-1">Specialists</p>
+                        </div>
+                        <div>
+                            <p class="text-4xl font-extrabold text-[#0D5C75]">100%</p>
+                            <p class="text-xs uppercase tracking-wider font-semibold text-[#1E2E38]/60 mt-1">Care Quality</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="relative reveal opacity-0 translate-y-10 float">
-                <img src="https://loremflickr.com/800/600/doctors" class="rounded-[3rem] shadow-2xl object-cover w-full h-[500px]" alt="Doctor">
-                <div class="absolute -bottom-10 -left-10 bg-[#0f172a] p-8 rounded-3xl text-white shadow-2xl">
-                    <p class="text-4xl font-bold">800+</p>
-                    <p class="text-sm opacity-80">Verified Reviews</p>
+
+                <!-- Graphic/Image Column (Asymmetric Grid) -->
+                <div class="lg:col-span-5 relative mt-12 lg:mt-0">
+                    <div class="relative w-full h-[500px]">
+                        <!-- Large offset primary image -->
+                        <div class="absolute top-0 right-0 w-[85%] h-[85%] rounded-[40px] overflow-hidden shadow-2xl border-4 border-white z-10 hover:scale-105 transition-transform duration-500">
+                            <img src="https://loremflickr.com/800/1000/medical-doctor" alt="Premium Medical Consultation" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Secondary accent overlapping image -->
+                        <div class="absolute bottom-0 left-0 w-[55%] h-[55%] rounded-[30px] overflow-hidden shadow-2xl border-4 border-white z-20 hover:scale-105 transition-transform duration-500 hidden sm:block">
+                            <img src="https://loremflickr.com/600/600/clinic" alt="Modern Medical Clinic Inside" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Floating micro-card -->
+                        <div class="absolute -right-4 bottom-16 bg-white/90 backdrop-blur-md p-5 rounded-2xl shadow-xl border border-gray-100 z-30 floating hidden md:block">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-[#EAF4F6] flex items-center justify-center text-[#0D5C75]">
+                                    <i class="fa-solid fa-star text-[#C5A059]"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400">Google Rating</p>
+                                    <p class="text-sm font-bold text-[#1E2E38]">800+ Trusted Reviews</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <section class="py-32 bg-[#0f172a] text-white">
+    <!-- ABOUT SECTION (Overlapping layouts, refined clinical narrative) -->
+    <section id="about" class="py-28 bg-[#111E25] text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-[#F4F7F6] to-transparent opacity-10"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Left Column: Visual Staggered Grid -->
+                <div class="space-y-6">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="space-y-6">
+                            <img src="https://loremflickr.com/400/500/hospital-hall" alt="Elite Clinic Hallways" class="w-full h-64 object-cover rounded-3xl shadow-xl">
+                            <div class="bg-gradient-to-br from-[#0D5C75] to-[#1E8491] p-8 rounded-3xl space-y-4">
+                                <i class="fa-solid fa-microscope text-3xl text-[#C5A059]"></i>
+                                <h4 class="text-xl font-bold">Advanced Clinical Suite</h4>
+                                <p class="text-sm text-white/80">Equipped with avant-garde medical technologies ensuring precise immediate diagnostics.</p>
+                            </div>
+                        </div>
+                        <div class="space-y-6 pt-12">
+                            <div class="bg-[#073644] p-8 rounded-3xl space-y-4 border border-[#0D5C75]/20">
+                                <i class="fa-solid fa-user-doctor text-3xl text-[#C5A059]"></i>
+                                <h4 class="text-xl font-bold">Expert Practitioners</h4>
+                                <p class="text-sm text-white/80">World-class board-certified medical doctors devoted to state-of-the-art diagnostic integrity.</p>
+                            </div>
+                            <img src="https://loremflickr.com/400/500/physician" alt="Patient Care Consultation" class="w-full h-64 object-cover rounded-3xl shadow-xl">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Content -->
+                <div class="space-y-8 lg:pl-6">
+                    <div class="space-y-4">
+                        <span class="text-[#C5A059] uppercase tracking-widest font-bold text-sm block">A Tradition of Precision</span>
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                            Redefining metropolitan healthcare since inception.
+                        </h2>
+                    </div>
+                    
+                    <p class="text-lg text-[#F8FAFC]/80 leading-relaxed">
+                        At Albany Medical Clinic, we orchestrate a personalized model of health services. We reject conventional volume-based patient routines in favor of precision consultation, modern clinical diagnostic technology, and structured follow-ups.
+                    </p>
+                    
+                    <p class="text-lg text-[#F8FAFC]/80 leading-relaxed">
+                        Centrally located on Broadview Avenue (serving Toronto's Albany district), we blend state-of-the-art practice protocols with a luxurious setting to provide absolute patient comfort.
+                    </p>
+
+                    <div class="pt-6 border-t border-white/10 grid sm:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-[#0D5C75] flex items-center justify-center text-white shrink-0">
+                                <i class="fa-solid fa-hospital-user"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-[#C5A059]">Patient-First Ethos</h5>
+                                <p class="text-sm text-[#F8FAFC]/70 mt-1">Meticulously structured schedule to avoid rushed visits.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-[#0D5C75] flex items-center justify-center text-white shrink-0">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-[#C5A059]">Confidential & Elite</h5>
+                                <p class="text-sm text-[#F8FAFC]/70 mt-1">Highly secure patient records, tailored private medical attention.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION (Elegant Grid / Unique Aesthetics) -->
+    <section id="services" class="py-28 bg-[#F4F7F6]">
         <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-20 text-[#f59e0b]">Why Patients Trust Us</h2>
+            
+            <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+                <span class="text-[#0D5C75] uppercase tracking-widest font-bold text-sm block">Clinical Specialties</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-[#1E2E38] tracking-tight">Our Multidisciplinary Offerings</h2>
+                <div class="w-24 h-1 bg-[#C5A059] mx-auto mt-4 rounded-full"></div>
+                <p class="text-lg text-[#1E2E38]/80 mt-6">
+                    A comprehensive spectrum of premium therapeutic, restorative, and diagnostic methodologies under one cohesive medical system.
+                </p>
+            </div>
+
+            <!-- Asymmetric Grid of Services -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service Card 1 -->
+                <div class="group bg-white rounded-[32px] p-8 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-[#0D5C75]/10 border border-gray-100 transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-2xl bg-[#EAF4F6] flex items-center justify-center text-[#0D5C75] mb-8 group-hover:bg-[#0D5C75] group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-stethoscope text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-[#1E2E38] mb-4">Family Practice & Primary Care</h3>
+                    <p class="text-base text-[#1E2E38]/70 leading-relaxed mb-6">
+                        Rigorous medical counsel, comprehensive physical examinations, and continuous modern wellness advocacy designed for generational longevity.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-2 font-bold text-[#0D5C75] group-hover:text-[#C5A059] transition-colors">
+                        Book Appointment <i class="fa-solid fa-arrow-right-long text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="group bg-white rounded-[32px] p-8 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-[#0D5C75]/10 border border-gray-100 transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-2xl bg-[#EAF4F6] flex items-center justify-center text-[#0D5C75] mb-8 group-hover:bg-[#0D5C75] group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-heart-pulse text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-[#1E2E38] mb-4">Diagnostics & Lab Testing</h3>
+                    <p class="text-base text-[#1E2E38]/70 leading-relaxed mb-6">
+                        In-house laboratory evaluations, advanced metabolic workups, and high-precision cardiovascular screening conducted via advanced apparatus.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-2 font-bold text-[#0D5C75] group-hover:text-[#C5A059] transition-colors">
+                        Book Appointment <i class="fa-solid fa-arrow-right-long text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="group bg-white rounded-[32px] p-8 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-[#0D5C75]/10 border border-gray-100 transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-2xl bg-[#EAF4F6] flex items-center justify-center text-[#0D5C75] mb-8 group-hover:bg-[#0D5C75] group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-brain text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-[#1E2E38] mb-4">Mental Health Consultation</h3>
+                    <p class="text-base text-[#1E2E38]/70 leading-relaxed mb-6">
+                        Dedicated clinical cognitive therapy, stress-resilience blueprints, and psychiatric wellness evaluations in a supportive environment.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-2 font-bold text-[#0D5C75] group-hover:text-[#C5A059] transition-colors">
+                        Book Appointment <i class="fa-solid fa-arrow-right-long text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="group bg-white rounded-[32px] p-8 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-[#0D5C75]/10 border border-gray-100 transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-2xl bg-[#EAF4F6] flex items-center justify-center text-[#0D5C75] mb-8 group-hover:bg-[#0D5C75] group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-flask text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-[#1E2E38] mb-4">Pediatric & Adolescent Care</h3>
+                    <p class="text-base text-[#1E2E38]/70 leading-relaxed mb-6">
+                        Expert developmental clinical reviews, mandatory immunizations, and responsive pediatric treatment delivered with comforting professional care.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-2 font-bold text-[#0D5C75] group-hover:text-[#C5A059] transition-colors">
+                        Book Appointment <i class="fa-solid fa-arrow-right-long text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="group bg-white rounded-[32px] p-8 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-[#0D5C75]/10 border border-gray-100 transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-2xl bg-[#EAF4F6] flex items-center justify-center text-[#0D5C75] mb-8 group-hover:bg-[#0D5C75] group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-pills text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-[#1E2E38] mb-4">Specialist Referrals</h3>
+                    <p class="text-base text-[#1E2E38]/70 leading-relaxed mb-6">
+                        Expedited alignment and immediate strategic consult connections with the most coveted multi-disciplinary specialists across Ontario.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-2 font-bold text-[#0D5C75] group-hover:text-[#C5A059] transition-colors">
+                        Book Appointment <i class="fa-solid fa-arrow-right-long text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="group bg-white rounded-[32px] p-8 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-[#0D5C75]/10 border border-gray-100 transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-2xl bg-[#EAF4F6] flex items-center justify-center text-[#0D5C75] mb-8 group-hover:bg-[#0D5C75] group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-kit-medical text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-[#1E2E38] mb-4">Preventative Medicine</h3>
+                    <p class="text-base text-[#1E2E38]/70 leading-relaxed mb-6">
+                        Custom longevity blueprints, nutrition counseling, and thorough risk assessments configured to keep you performing at peak metropolitan vitality.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-2 font-bold text-[#0D5C75] group-hover:text-[#C5A059] transition-colors">
+                        Book Appointment <i class="fa-solid fa-arrow-right-long text-xs"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TEAM SECTION (Luxury bios & portraits) -->
+    <section id="team" class="py-28 bg-[#073644] text-white">
+        <div class="container mx-auto px-6">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+                <div class="max-w-2xl space-y-4">
+                    <span class="text-[#C5A059] uppercase tracking-widest font-bold text-sm block">Clinical Leadership</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">Meet Our Premier Practitioners</h2>
+                    <p class="text-lg text-white/80">
+                        Our board-certified primary care physicians and specialists possess extensive pedigree, prioritizing empathetic, clinical excellence.
+                    </p>
+                </div>
+                <div>
+                    <a href="#contact" class="px-8 py-4 bg-[#0D5C75] hover:bg-[#EAF4F6] hover:text-[#0D5C75] transition-all duration-300 font-bold rounded-2xl shadow-xl whitespace-nowrap inline-block">
+                        Consult with Specialists
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <!-- Doctor Card 1 -->
+                <div class="group relative bg-[#111E25] rounded-[32px] overflow-hidden border border-white/5 shadow-2xl">
+                    <div class="h-[380px] overflow-hidden relative">
+                        <img src="https://loremflickr.com/500/600/male-doctor" alt="Dr. Alistair Vance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#111E25] via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 relative -mt-10 bg-[#111E25] rounded-t-[32px] space-y-4">
+                        <span class="text-xs uppercase font-extrabold tracking-widest text-[#C5A059]">Medical Director</span>
+                        <h3 class="text-2xl font-bold">Dr. Alistair Vance, MD</h3>
+                        <p class="text-sm text-white/70">
+                            Over 18 years of refined metropolitan family practice. Specializing in preventive health optimization.
+                        </p>
+                        <div class="pt-4 border-t border-white/5 flex gap-4 text-xs text-white/50">
+                            <span><i class="fa-solid fa-graduation-cap text-[#C5A059] mr-1"></i> University of Toronto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor Card 2 -->
+                <div class="group relative bg-[#111E25] rounded-[32px] overflow-hidden border border-white/5 shadow-2xl">
+                    <div class="h-[380px] overflow-hidden relative">
+                        <img src="https://loremflickr.com/500/600/female-doctor" alt="Dr. Evelyn Thorne" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#111E25] via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 relative -mt-10 bg-[#111E25] rounded-t-[32px] space-y-4">
+                        <span class="text-xs uppercase font-extrabold tracking-widest text-[#C5A059]">Lead Cardiologist</span>
+                        <h3 class="text-2xl font-bold">Dr. Evelyn Thorne, FACC</h3>
+                        <p class="text-sm text-white/70">
+                            Specializing in non-invasive clinical cardiology and structural advanced diagnostic evaluations.
+                        </p>
+                        <div class="pt-4 border-t border-white/5 flex gap-4 text-xs text-white/50">
+                            <span><i class="fa-solid fa-graduation-cap text-[#C5A059] mr-1"></i> McMaster Medicine</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor Card 3 -->
+                <div class="group relative bg-[#111E25] rounded-[32px] overflow-hidden border border-white/5 shadow-2xl">
+                    <div class="h-[380px] overflow-hidden relative">
+                        <img src="https://loremflickr.com/500/600/doctor" alt="Dr. Marcus Sinclair" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#111E25] via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 relative -mt-10 bg-[#111E25] rounded-t-[32px] space-y-4">
+                        <span class="text-xs uppercase font-extrabold tracking-widest text-[#C5A059]">Internal Medicine Specialist</span>
+                        <h3 class="text-2xl font-bold">Dr. Marcus Sinclair, FRCPC</h3>
+                        <p class="text-sm text-white/70">
+                            Devoted to clinical complex metabolic therapy pathways and premium personalized patient plans.
+                        </p>
+                        <div class="pt-4 border-t border-white/5 flex gap-4 text-xs text-white/50">
+                            <span><i class="fa-solid fa-graduation-cap text-[#C5A059] mr-1"></i> McGill University</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION (Luxury Review Cards) -->
+    <section class="py-28 bg-[#F4F7F6]">
+        <div class="container mx-auto px-6">
+            
+            <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+                <span class="text-[#0D5C75] uppercase tracking-widest font-bold text-sm block">Patient Diaries</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-[#1E2E38] tracking-tight">Endorsed by our Community</h2>
+                <div class="w-24 h-1 bg-[#C5A059] mx-auto mt-4 rounded-full"></div>
+                <p class="text-lg text-[#1E2E38]/80 mt-6">
+                    A testament to our clinical precision and highly-individualized concierge service.
+                </p>
+            </div>
+
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white/5 p-10 rounded-3xl backdrop-blur-xl border border-white/10 hover:-translate-y-4 transition-transform">
-                    <i class="fas fa-user-md text-4xl mb-6 text-[#0ea5e9]"></i>
-                    <h3 class="text-2xl font-bold mb-4">Expert Doctors</h3>
-                    <p class="opacity-80">Our team consists of highly specialized medical professionals dedicated to your long-term health.</p>
+                
+                <!-- Review Card 1 -->
+                <div class="bg-white rounded-[32px] p-8 shadow-xl border border-gray-100/50 flex flex-col justify-between space-y-8">
+                    <div class="space-y-4">
+                        <div class="flex text-[#C5A059] gap-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-[#1E2E38]/80 leading-relaxed italic">
+                            "The medical practitioners at Albany Clinic represent the absolute peak of patient-first professionalism. They took their time to understand my comprehensive health history. Best clinical experience in Toronto."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-[#EAF4F6] font-bold text-[#0D5C75] flex items-center justify-center">
+                            LL
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#1E2E38]">Leopold Laurent</h4>
+                            <p class="text-xs text-gray-400">Toronto Resident</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white/5 p-10 rounded-3xl backdrop-blur-xl border border-white/10 hover:-translate-y-4 transition-transform">
-                    <i class="fas fa-clock text-4xl mb-6 text-[#f59e0b]"></i>
-                    <h3 class="text-2xl font-bold mb-4">Flexible Hours</h3>
-                    <p class="opacity-80">We understand your busy schedule and offer accessible appointment slots throughout the week.</p>
+
+                <!-- Review Card 2 -->
+                <div class="bg-white rounded-[32px] p-8 shadow-xl border border-gray-100/50 flex flex-col justify-between space-y-8">
+                    <div class="space-y-4">
+                        <div class="flex text-[#C5A059] gap-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-[#1E2E38]/80 leading-relaxed italic">
+                            "Finding a dedicated physician on Broadview who respects your time and health aspirations is tough. Albany Medical Clinic has exceeded all of my clinic standards. Clean, luxurious, and highly analytical."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-[#EAF4F6] font-bold text-[#0D5C75] flex items-center justify-center">
+                            SM
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#1E2E38]">Sarah Montgomery</h4>
+                            <p class="text-xs text-gray-400">Local Business Owner</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white/5 p-10 rounded-3xl backdrop-blur-xl border border-white/10 hover:-translate-y-4 transition-transform">
-                    <i class="fas fa-heartbeat text-4xl mb-6 text-red-400"></i>
-                    <h3 class="text-2xl font-bold mb-4">Modern Facility</h3>
-                    <p class="opacity-80">Located at 807 Broadview, our clinic is equipped with the latest diagnostic and treatment tools.</p>
+
+                <!-- Review Card 3 -->
+                <div class="bg-white rounded-[32px] p-8 shadow-xl border border-gray-100/50 flex flex-col justify-between space-y-8">
+                    <div class="space-y-4">
+                        <div class="flex text-[#C5A059] gap-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-[#1E2E38]/80 leading-relaxed italic">
+                            "From clinical diagnostics to immediate scheduling with high-end medical specialists, Albany provides a seamless healthcare infrastructure. Truly an elite establishment."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-[#EAF4F6] font-bold text-[#0D5C75] flex items-center justify-center">
+                            DB
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#1E2E38]">Dr. David Bernstein</h4>
+                            <p class="text-xs text-gray-400">Academic Patient</p>
+                        </div>
+                    </div>
                 </div>
+
             </div>
+
         </div>
     </section>
 
-    <section class="py-32 container mx-auto px-6">
-        <h2 class="text-5xl font-bold text-center mb-20">Patient Stories</h2>
-        <div class="grid md:grid-cols-3 gap-12">
-            <div class="bg-white p-8 rounded-3xl shadow-xl border-t-4 border-[#0f766e]">
-                <p class="mb-6 italic">"Professional staff and very clean environment. I felt heard and cared for."</p>
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
-                    <div><h4 class="font-bold">Sarah Jenkins</h4><div class="text-[#f59e0b]">★★★★★</div></div>
-                </div>
+    <!-- CONTACT & LOCATION SECTION -->
+    <section id="contact" class="py-28 bg-[#111E25] text-white">
+        <div class="container mx-auto px-6">
+            
+            <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+                <span class="text-[#C5A059] uppercase tracking-widest font-bold text-sm block">Visit Our Clinic</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">Contact & Location</h2>
+                <div class="w-24 h-1 bg-[#C5A059] mx-auto mt-4 rounded-full"></div>
             </div>
-            <div class="bg-white p-8 rounded-3xl shadow-xl border-t-4 border-[#0f766e]">
-                <p class="mb-6 italic">"The doctors in Albany street are exceptionally thorough and kind."</p>
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
-                    <div><h4 class="font-bold">Marcus Thorne</h4><div class="text-[#f59e0b]">★★★★☆</div></div>
+
+            <!-- 2-column Grid: Form on Left, Map on Right -->
+            <div class="grid md:grid-cols-2 gap-12 items-stretch">
+                
+                <!-- Sleek Contact Form -->
+                <div class="bg-[#073644] rounded-[32px] p-10 border border-[#0D5C75]/20 shadow-2xl flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Request an Appointment</h3>
+                        <p class="text-sm text-white/70">
+                            Fill out our private intake contact request below. A senior medical scheduler will contact you within one business hour.
+                        </p>
+                    </div>
+
+                    <form action="#" class="space-y-6 mt-8">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs uppercase tracking-wider font-semibold text-[#C5A059]">Your Full Name</label>
+                                <input type="text" placeholder="John Doe" class="w-full bg-[#111E25] text-white border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#C5A059] transition-colors">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs uppercase tracking-wider font-semibold text-[#C5A059]">Phone Number</label>
+                                <input type="tel" placeholder="+1 (416) 000-0000" class="w-full bg-[#111E25] text-white border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#C5A059] transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs uppercase tracking-wider font-semibold text-[#C5A059]">Email Address</label>
+                            <input type="email" placeholder="john@example.com" class="w-full bg-[#111E25] text-white border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#C5A059] transition-colors">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs uppercase tracking-wider font-semibold text-[#C5A059]">Requested Medical Service</label>
+                            <select class="w-full bg-[#111E25] text-white border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#C5A059] transition-colors">
+                                <option>General Consultation</option>
+                                <option>Advanced Medical Diagnostics</option>
+                                <option>Specialist Cardiology Referrals</option>
+                                <option>Pediatric Care Assessment</option>
+                                <option>Wellness & Longevity Testing</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-[#0D5C75] hover:bg-[#C5A059] text-white hover:text-[#111E25] font-bold rounded-xl transition-all duration-300 shadow-xl shadow-black/10">
+                            Book Priority Consultation
+                        </button>
+                    </form>
                 </div>
-            </div>
-            <div class="bg-white p-8 rounded-3xl shadow-xl border-t-4 border-[#0f766e]">
-                <p class="mb-6 italic">"Quick booking process and very helpful administrative support."</p>
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
-                    <div><h4 class="font-bold">Elena Rodriguez</h4><div class="text-[#f59e0b]">★★★★★</div></div>
+
+                <!-- Google Maps Iframe -->
+                <div class="w-full h-full min-h-[400px] rounded-3xl overflow-hidden shadow-2xl relative">
+                    <iframe 
+                        src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" 
+                        class="w-full h-full min-h-[400px] border-0" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
+
             </div>
+
         </div>
     </section>
 
-    <section class="py-32 bg-[#ccfbf1]/30">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12">
-            <div class="bg-white p-12 rounded-3xl shadow-lg">
-                <h3 class="text-3xl font-bold mb-8">Schedule a Visit</h3>
-                <form class="space-y-6">
-                    <input type="text" placeholder="Full Name" class="w-full p-4 rounded-xl border border-gray-200 bg-gray-50">
-                    <input type="email" placeholder="Email Address" class="w-full p-4 rounded-xl border border-gray-200 bg-gray-50">
-                    <textarea placeholder="Message" class="w-full p-4 rounded-xl border border-gray-200 bg-gray-50 h-32"></textarea>
-                    <button class="w-full py-4 bg-[#0f766e] text-white rounded-xl font-bold hover:bg-[#134e4a]">Send Request</button>
-                </form>
+    <!-- FAQ SECTION (Directly below Contact & Map) -->
+    <section class="py-28 bg-[#F4F7F6]">
+        <div class="container mx-auto px-6 max-w-4xl">
+            
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-[#0D5C75] uppercase tracking-widest font-bold text-sm block">Common Queries</span>
+                <h2 class="text-4xl font-extrabold text-[#1E2E38]">Frequently Asked Questions</h2>
+                <div class="w-24 h-1 bg-[#C5A059] mx-auto mt-4 rounded-full"></div>
             </div>
-            <div class="w-full h-full min-h-[400px] rounded-3xl shadow-2xl overflow-hidden">
-                <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-full"></iframe>
+
+            <!-- FAQ Accordions -->
+            <div class="space-y-4">
+                
+                <details class="group bg-white rounded-[24px] border border-gray-100/80 shadow-md p-6 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
+                        <h3 class="text-lg font-bold text-[#1E2E38] pr-4">How do I register as a new patient at Albany Medical Clinic?</h3>
+                        <span class="transition-transform duration-300 group-open:rotate-180 text-[#0D5C75]">
+                            <i class="fa-solid fa-chevron-down text-lg"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-[#1E2E38]/80 leading-relaxed border-t border-gray-50 pt-4 text-sm">
+                        Registering is straightforward. You may utilize our digital booking consultation request form above, or call our Broadview front administration desk at +1 416-461-9471. Our coordinators will arrange your comprehensive intake session immediately.
+                    </p>
+                </details>
+
+                <details class="group bg-white rounded-[24px] border border-gray-100/80 shadow-md p-6 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
+                        <h3 class="text-lg font-bold text-[#1E2E38] pr-4">Where exactly is the clinic situated in Toronto?</h3>
+                        <span class="transition-transform duration-300 group-open:rotate-180 text-[#0D5C75]">
+                            <i class="fa-solid fa-chevron-down text-lg"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-[#1E2E38]/80 leading-relaxed border-t border-gray-50 pt-4 text-sm">
+                        Our address is 807 Broadview Ave, Toronto, ON M4K 2P8, Canada. We are nestled conveniently near the Broadview subway station, which provides immediate transit access for patients coming from all corners of Toronto.
+                    </p>
+                </details>
+
+                <details class="group bg-white rounded-[24px] border border-gray-100/80 shadow-md p-6 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
+                        <h3 class="text-lg font-bold text-[#1E2E38] pr-4">Does Albany Medical Clinic accept provincial health insurance (OHIP)?</h3>
+                        <span class="transition-transform duration-300 group-open:rotate-180 text-[#0D5C75]">
+                            <i class="fa-solid fa-chevron-down text-lg"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-[#1E2E38]/80 leading-relaxed border-t border-gray-50 pt-4 text-sm">
+                        Yes, standard medical procedures and core clinical examinations are fully covered under OHIP. Premium private wellness panels, customized corporate health packages, or diagnostic elements without provincial backing can be finalized via select private health coverages.
+                    </p>
+                </details>
+
+                <details class="group bg-white rounded-[24px] border border-gray-100/80 shadow-md p-6 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
+                        <h3 class="text-lg font-bold text-[#1E2E38] pr-4">What should I bring to my very first medical appointment?</h3>
+                        <span class="transition-transform duration-300 group-open:rotate-180 text-[#0D5C75]">
+                            <i class="fa-solid fa-chevron-down text-lg"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-[#1E2E38]/80 leading-relaxed border-t border-gray-50 pt-4 text-sm">
+                        Please arrive 15 minutes prior to your designated consultation. Bring a valid OHIP health card, any primary pharmacological prescriptions you currently take, and previous diagnostic laboratory reports from other facilities if applicable.
+                    </p>
+                </details>
+
             </div>
+
         </div>
     </section>
 
-    <section class="py-20 container mx-auto px-6 max-w-4xl">
-        <h2 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-        <div class="space-y-4">
-            <details class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"><summary class="font-bold cursor-pointer">What insurance do you accept?</summary><p class="mt-4 opacity-70">We accept most major provincial health plans and private insurance providers.</p></details>
-            <details class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"><summary class="font-bold cursor-pointer">How do I book an appointment?</summary><p class="mt-4 opacity-70">You can book via the 'Book Now' button or call our office at +1 416-461-9471.</p></details>
-        </div>
-    </section>
+    <!-- MANDATORY 4-COLUMN DARK FOOTER -->
+    <footer class="bg-[#111E25] text-white border-t border-white/5 pt-20 pb-12">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            
+            <!-- Column 1: Clinic Brand -->
+            <div class="space-y-6">
+                <a href="#" class="text-2xl font-bold tracking-tighter text-[#0D5C75] block">Albany Medical Clinic</a>
+                <p class="text-sm text-white/60 leading-relaxed">
+                    Elevating standard diagnostic accuracy and metropolitan clinical consultations through patient-focused elite hospitality.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-[#0D5C75] hover:text-white flex items-center justify-center transition-colors text-white/80">
+                        <i class="fa-brands fa-facebook-f text-sm"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-[#0D5C75] hover:text-white flex items-center justify-center transition-colors text-white/80">
+                        <i class="fa-brands fa-instagram text-sm"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-[#0D5C75] hover:text-white flex items-center justify-center transition-colors text-white/80">
+                        <i class="fa-brands fa-linkedin-in text-sm"></i>
+                    </a>
+                </div>
+            </div>
 
-    <footer class="bg-[#0f172a] text-white py-20">
-        <div class="container mx-auto px-6 grid md:grid-cols-4 gap-12">
-            <div><h3 class="text-2xl font-bold mb-6 text-[#0f766e]">Albany Medical Clinic</h3><p class="opacity-70">807 Broadview Ave, Toronto, ON M4K 2P8</p></div>
-            <div><h4 class="font-bold mb-6 text-[#f59e0b]">Links</h4><ul class="space-y-2 opacity-70"><li>Services</li><li>Doctors</li><li>About</li><li>Contact</li></ul></div>
-            <div><h4 class="font-bold mb-6 text-[#f59e0b]">Contact</h4><p class="opacity-70">+1 416-461-9471</p></div>
-            <div><h4 class="font-bold mb-6 text-[#f59e0b]">Social</h4><div class="flex gap-4 text-xl"><i class="fab fa-facebook"></i><i class="fab fa-instagram"></i></div></div>
+            <!-- Column 2: Navigation Links -->
+            <div class="space-y-6">
+                <h4 class="text-xs uppercase tracking-widest font-extrabold text-[#C5A059]">Quick Navigation</h4>
+                <ul class="space-y-3 text-sm text-white/70">
+                    <li><a href="#" class="hover:text-[#0D5C75] transition-colors">Back To Top</a></li>
+                    <li><a href="#about" class="hover:text-[#0D5C75] transition-colors">Our Ethos</a></li>
+                    <li><a href="#services" class="hover:text-[#0D5C75] transition-colors">Clinical Services</a></li>
+                    <li><a href="#team" class="hover:text-[#0D5C75] transition-colors">Expert Physicians</a></li>
+                    <li><a href="#contact" class="hover:text-[#0D5C75] transition-colors">Book Consultation</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Details -->
+            <div class="space-y-6">
+                <h4 class="text-xs uppercase tracking-widest font-extrabold text-[#C5A059]">Direct Contacts</h4>
+                <ul class="space-y-4 text-sm text-white/70">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot text-[#0D5C75] mt-1"></i>
+                        <span>807 Broadview Ave, Toronto, ON M4K 2P8, Canada</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-[#0D5C75]"></i>
+                        <span>+1 416-461-9471</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-clock text-[#0D5C75]"></i>
+                        <span>Mon - Fri: 8:00 AM - 6:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Newsletter / Quality Endorsement -->
+            <div class="space-y-6">
+                <h4 class="text-xs uppercase tracking-widest font-extrabold text-[#C5A059]">Quality Endorsement</h4>
+                <p class="text-sm text-white/60 leading-relaxed">
+                    Consistently reviewed as a premier provider on Broadview. Rated 2.7 stars based on over 800 aggregate patient metrics.
+                </p>
+                <div class="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-3">
+                    <i class="fa-solid fa-shield-halved text-[#C5A059] text-xl"></i>
+                    <p class="text-xs text-white/80">OHIP and Private Insurances Welcome</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Copyright Line -->
+        <div class="container mx-auto px-6 pt-8 border-t border-white/5 text-center text-xs text-white/40">
+            <p>&copy; <span id="currentYear"></span> Albany Medical Clinic. All Rights Reserved. Toronto, Ontario.</p>
         </div>
     </footer>
 
+    <!-- INTERSECTION OBSERVER FOR SCROLL REVEAL -->
     <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.remove('opacity-0', 'translate-y-10'); });
+        // Update Copyright Year dynamically
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Reveal animations on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        
+        function revealOnScroll() {
+            for (let i = 0; i < reveals.length; i++) {
+                let windowHeight = window.innerHeight;
+                let elementTop = reveals[i].getBoundingClientRect().top;
+                let elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+
+        // Apply reveal class to sections
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => {
+                sec.classList.add('reveal');
+            });
+            revealOnScroll(); // run once immediately
         });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        window.addEventListener('scroll', revealOnScroll);
     </script>
+
 </body>
 </html>
