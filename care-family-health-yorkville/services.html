@@ -6,99 +6,89 @@
     <title>Services | Care & Family Health Yorkville</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clinical: {
-                            teal: '#0F766E',
-                            light: '#F0FDFB',
-                            slate: '#1E293B',
-                            accent: '#14B8A6'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
     </style>
 </head>
-<body class="bg-white text-clinical-slate antialiased selection:bg-clinical-teal selection:text-white">
+<body class="bg-[#F8FAFC] text-slate-900">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-clinical-teal/10">
-        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold tracking-tighter text-clinical-teal">CARE&<span class="text-clinical-slate">YORKVILLE</span></a>
-            <div class="flex gap-8 text-sm font-medium">
-                <a href="index.html" class="hover:text-clinical-teal transition">Home</a>
-                <a href="services.html" class="text-clinical-teal">Services</a>
-                <a href="doctors.html" class="hover:text-clinical-teal transition">Doctors</a>
-                <a href="contact.html" class="hover:text-clinical-teal transition">Contact</a>
+    <nav class="fixed w-full z-50 glass border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-teal-900">CARE&YORKVILLE</a>
+            <div class="flex gap-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
+                <a href="services.html" class="text-teal-600">Services</a>
+                <a href="doctors.html" class="hover:text-teal-600 transition">Doctors</a>
+                <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="py-24 px-6 max-w-5xl mx-auto text-center">
-        <h1 class="text-6xl font-bold tracking-tighter mb-6">Premium Medical Care</h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Precision diagnostics, preventative wellness, and specialized family care in the heart of Yorkville.</p>
+    <header class="pt-32 pb-24 px-6 text-center">
+        <h1 class="text-6xl md:text-7xl font-bold tracking-tight text-teal-900 mb-6">Medical Excellence.</h1>
+        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Comprehensive family health services curated for your wellbeing in the heart of Yorkville.</p>
     </header>
 
     <!-- Services Grid -->
-    <section class="max-w-7xl mx-auto px-6 pb-24">
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Service Card 1 -->
-            <div class="bg-clinical-light p-10 rounded-[2rem] border border-clinical-teal/10">
-                <div class="w-12 h-12 bg-clinical-teal/10 rounded-2xl mb-8 flex items-center justify-center text-clinical-teal font-bold">01</div>
-                <h3 class="text-2xl font-bold mb-4">Family Medicine</h3>
-                <p class="text-slate-600 leading-relaxed">Comprehensive care for every generation. From routine check-ups to managing chronic conditions with ease.</p>
+    <main class="max-w-7xl mx-auto px-6 py-12 space-y-24">
+        
+        <!-- Service 1 -->
+        <section class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+                <span class="text-teal-600 font-semibold uppercase tracking-widest text-sm">Primary Care</span>
+                <h2 class="text-5xl font-bold tracking-tight text-slate-900">Preventive Wellness</h2>
+                <p class="text-lg text-slate-600 leading-relaxed">Routine check-ups, comprehensive screenings, and personalized health strategies to ensure you remain at your peak, year after year.</p>
             </div>
-            <!-- Service Card 2 -->
-            <div class="bg-clinical-light p-10 rounded-[2rem] border border-clinical-teal/10">
-                <div class="w-12 h-12 bg-clinical-teal/10 rounded-2xl mb-8 flex items-center justify-center text-clinical-teal font-bold">02</div>
-                <h3 class="text-2xl font-bold mb-4">Preventative Health</h3>
-                <p class="text-slate-600 leading-relaxed">Proactive screenings and personalized health plans designed to keep you performing at your absolute peak.</p>
-            </div>
-            <!-- Service Card 3 -->
-            <div class="bg-clinical-light p-10 rounded-[2rem] border border-clinical-teal/10">
-                <div class="w-12 h-12 bg-clinical-teal/10 rounded-2xl mb-8 flex items-center justify-center text-clinical-teal font-bold">03</div>
-                <h3 class="text-2xl font-bold mb-4">Specialized Treatments</h3>
-                <p class="text-slate-600 leading-relaxed">Targeted therapeutic interventions backed by the latest medical research and clinical excellence.</p>
-            </div>
-        </div>
-    </section>
+            <img src="https://loremflickr.com/1200/800/doctors" alt="Medical Consultation" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
+        </section>
 
-    <!-- Feature Image -->
-    <section class="max-w-7xl mx-auto px-6 pb-24">
-        <img src="https://loremflickr.com/1200/600/doctors" alt="Medical Office" class="w-full h-[500px] object-cover rounded-[3rem] shadow-2xl">
-    </section>
+        <!-- Service 2 -->
+        <section class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <img src="https://loremflickr.com/1200/800/clinic" alt="Advanced Treatment" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
+            </div>
+            <div class="space-y-6 order-1 md:order-2">
+                <span class="text-teal-600 font-semibold uppercase tracking-widest text-sm">Diagnostics</span>
+                <h2 class="text-5xl font-bold tracking-tight text-slate-900">Specialized Treatments</h2>
+                <p class="text-lg text-slate-600 leading-relaxed">Leveraging advanced diagnostic imaging and clinical pathology to provide precise insights and targeted recovery plans.</p>
+            </div>
+        </section>
+
+        <!-- Service 3 -->
+        <section class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+                <span class="text-teal-600 font-semibold uppercase tracking-widest text-sm">Chronic Care</span>
+                <h2 class="text-5xl font-bold tracking-tight text-slate-900">Long-term Health</h2>
+                <p class="text-lg text-slate-600 leading-relaxed">Empathetic, evidence-based management for chronic conditions, ensuring consistent support and improved quality of life.</p>
+            </div>
+            <img src="https://loremflickr.com/1200/800/stethoscopes" alt="Chronic Care" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-clinical-slate text-white py-24">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+    <footer class="bg-teal-900 text-teal-100 mt-24 py-24">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
             <div>
-                <h4 class="font-bold mb-6">Care & Family Health</h4>
-                <p class="text-slate-400 text-sm">162 Cumberland St #200<br>Toronto, ON M5R 3N5</p>
+                <h3 class="text-2xl font-bold mb-4">Care& Yorkville</h3>
+                <p class="text-teal-300">162 Cumberland St #200<br>Toronto, ON M5R 3N5</p>
+            </div>
+            <div class="space-y-2">
+                <a href="index.html" class="block hover:text-white">Home</a>
+                <a href="services.html" class="block hover:text-white">Services</a>
+                <a href="doctors.html" class="block hover:text-white">Doctors</a>
+                <a href="contact.html" class="block hover:text-white">Contact</a>
             </div>
             <div>
-                <h4 class="font-bold mb-6">Connect</h4>
-                <p class="text-slate-400 text-sm">+1 647-951-4770</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-6">Links</h4>
-                <div class="flex flex-col gap-2 text-sm text-slate-400">
-                    <a href="index.html" class="hover:text-white">Home</a>
-                    <a href="services.html" class="hover:text-white">Services</a>
-                    <a href="doctors.html" class="hover:text-white">Doctors</a>
-                    <a href="contact.html" class="hover:text-white">Contact</a>
+                <p class="font-bold mb-2">Connect</p>
+                <p>+1 647-951-4770</p>
+                <div class="flex gap-4 mt-4 text-sm">
+                    <a href="#" class="hover:underline">Instagram</a>
+                    <a href="#" class="hover:underline">LinkedIn</a>
                 </div>
-            </div>
-            <div>
-                <h4 class="font-bold mb-6">Social</h4>
-                <div class="text-sm text-slate-400 italic">4.5 Stars from 599 Reviews</div>
             </div>
         </div>
     </footer>
