@@ -3,123 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Care & Family Health Yorkville | Elite Medical Care</title>
+    <title>Care & Family Health Yorkville | Premium Medical Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clinical: {
-                            50: '#f0fdfa',
-                            900: '#0f766e',
-                            teal: '#14b8a6'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        .glass { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-[#FAFAFA] text-[#2D3436]">
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 glass border-b border-slate-200">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-clinical-900 tracking-tighter">CARE&<span class="text-clinical-teal">YORKVILLE</span></a>
-            <div class="space-x-8 font-medium text-sm">
-                <a href="index.html" class="text-clinical-900">Home</a>
-                <a href="services.html" class="hover:text-clinical-teal transition">Services</a>
-                <a href="doctors.html" class="hover:text-clinical-teal transition">Doctors</a>
-                <a href="contact.html" class="bg-clinical-900 text-white px-5 py-2 rounded-full hover:bg-teal-800 transition">Book Visit</a>
+            <a href="index.html" class="text-2xl font-bold text-[#006B70]">Care&<span class="text-[#C5A059]">Family</span></a>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="hover:text-[#006B70]">Home</a>
+                <a href="about.html" class="hover:text-[#006B70]">About</a>
+                <a href="services.html" class="hover:text-[#006B70]">Services</a>
+                <a href="doctors.html" class="hover:text-[#006B70]">Doctors</a>
+                <a href="contact.html" class="hover:text-[#006B70]">Contact</a>
             </div>
+            <a href="contact.html" class="bg-[#006B70] text-white px-8 py-3 rounded-full hover:bg-[#004D40] transition">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
-        <div>
-            <div class="inline-flex items-center gap-2 bg-teal-100 text-clinical-900 px-4 py-1 rounded-full text-sm font-semibold mb-6">
-                <span class="text-yellow-500">★★★★★</span> 4.5/5 from 599 reviews
+    <!-- Hero -->
+    <header class="pt-40 pb-32 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="fade-in-up">
+                <span class="text-[#C5A059] font-semibold tracking-widest uppercase">Yorkville's Premier Healthcare</span>
+                <h1 class="text-7xl font-extrabold text-[#2D3436] mt-6 leading-tight">Elevated Care for <span class="text-[#006B70]">Modern Families</span></h1>
+                <p class="text-xl text-gray-600 mt-8 mb-10">Experience a refined approach to medicine at our 162 Cumberland St location. Compassionate expertise meets timeless elegance.</p>
+                <div class="flex gap-4">
+                    <a href="contact.html" class="bg-[#006B70] text-white px-10 py-4 rounded-full text-lg font-bold hover:shadow-xl transition">Schedule Visit</a>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-star text-[#C5A059]"></i>
+                        <span class="font-bold text-[#2D3436]">4.5 Rating (599 Reviews)</span>
+                    </div>
+                </div>
             </div>
-            <h1 class="text-6xl md:text-7xl font-bold tracking-tight mb-8">Premium care in the heart of Yorkville.</h1>
-            <p class="text-xl text-slate-600 mb-10 leading-relaxed">Experience a new standard of healthcare. Personalized attention, world-class diagnostics, and professional wellness, all located at 162 Cumberland St.</p>
-            <div class="flex gap-4">
-                <a href="contact.html" class="bg-clinical-900 text-white px-8 py-4 rounded-2xl font-semibold">Schedule Consultation</a>
-            </div>
+            <img src="https://loremflickr.com/800/600/doctors" alt="Medical Team" class="rounded-3xl shadow-2xl w-full">
         </div>
-        <img src="https://loremflickr.com/1200/800/doctors" alt="Clinic Interior" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
     </header>
 
-    <!-- Mission Section -->
-    <section class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
-        <img src="https://loremflickr.com/1200/800/doctor" alt="Consultation" class="w-full h-[500px] object-cover rounded-[2rem] shadow-sm">
-        <div>
-            <h2 class="text-5xl font-bold tracking-tight mb-6">Patient-Centric Excellence.</h2>
-            <p class="text-lg text-slate-600">We believe in healthcare that fits your lifestyle. Our Yorkville clinic provides modern, efficient, and compassionate medical services tailored to your individual health journey.</p>
+    <!-- Stats -->
+    <section class="py-20 bg-[#006B70] text-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div><h3 class="text-5xl font-bold">599+</h3><p>Patient Reviews</p></div>
+            <div><h3 class="text-5xl font-bold">15+</h3><p>Expert Doctors</p></div>
+            <div><h3 class="text-5xl font-bold">4.5</h3><p>Star Rating</p></div>
+            <div><h3 class="text-5xl font-bold">10+</h3><p>Specialties</p></div>
         </div>
     </section>
 
-    <!-- Contact & Location -->
-    <section class="max-w-7xl mx-auto px-6 py-24">
-        <h2 class="text-4xl font-bold mb-12">Visit Our Clinic</h2>
-        <div class="grid md:grid-cols-2 gap-12">
-            <div class="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-xl">
-                <h3 class="text-2xl font-bold mb-6">Get in touch</h3>
-                <form class="space-y-4">
-                    <input type="text" placeholder="Name" class="w-full p-4 rounded-xl border border-slate-200">
-                    <input type="email" placeholder="Email" class="w-full p-4 rounded-xl border border-slate-200">
-                    <textarea placeholder="Message" class="w-full p-4 rounded-xl border border-slate-200 h-32"></textarea>
-                    <button class="w-full bg-clinical-900 text-white py-4 rounded-xl font-bold">Send Request</button>
-                </form>
+    <!-- Map Section -->
+    <section class="py-32 bg-[#FAFAFA] px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="fade-in-up">
+                <h2 class="text-6xl font-bold text-[#2D3436]">Located in the Heart of <span class="text-[#006B70]">Yorkville</span></h2>
+                <p class="text-xl mt-6 text-gray-600">162 Cumberland St #200, Toronto, ON M5R 3N5. Accessible, modern, and dedicated to your well-being.</p>
             </div>
-            <iframe src="https://www.google.com/maps?q=162+Cumberland+St+#200+Toronto+ON+M5R+3N5+Canada&output=embed" class="w-full h-full min-h-[400px] rounded-[2rem] shadow-2xl border-0"></iframe>
+            <div class="h-full w-full min-h-[400px]">
+                <iframe src="https://www.google.com/maps?q=162+Cumberland+St+#200+Toronto+ON+M5R+3N5+Canada&output=embed" class="w-full h-full min-h-[400px] rounded-3xl shadow-2xl" loading="lazy"></iframe>
+            </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="max-w-4xl mx-auto px-6 py-24">
-        <h2 class="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
-        <div class="space-y-4">
-            <details class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <summary class="font-bold cursor-pointer">What are your clinic hours?</summary>
-                <p class="mt-4 text-slate-600">We are open Monday to Friday, 9:00 AM – 6:00 PM EST.</p>
-            </details>
-            <details class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <summary class="font-bold cursor-pointer">Do you accept walk-ins?</summary>
-                <p class="mt-4 text-slate-600">To maintain our premium service levels, we operate primarily by appointment.</p>
-            </details>
+    <section class="py-32 bg-[#1A1A1A] text-white px-6">
+        <div class="max-w-4xl mx-auto fade-in-up">
+            <h2 class="text-5xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <details class="p-6 bg-white/5 rounded-2xl border border-white/10"><summary class="font-bold cursor-pointer">What are your operating hours?</summary><p class="mt-4 opacity-70">We are open Monday to Friday, 9:00 AM to 6:00 PM, and Saturday by appointment.</p></details>
+                <details class="p-6 bg-white/5 rounded-2xl border border-white/10"><summary class="font-bold cursor-pointer">Do you accept new patients?</summary><p class="mt-4 opacity-70">Yes, we are currently accepting new families at our Yorkville clinic.</p></details>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#1A1A1A] text-slate-400 py-16 mt-24">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-sm">
-            <div>
-                <h4 class="text-white font-bold mb-4">Care & Family Health</h4>
-                <p>162 Cumberland St #200<br>Toronto, ON M5R 3N5</p>
-                <p class="mt-2">+1 647-951-4770</p>
-            </div>
-            <div class="space-y-2">
-                <a href="index.html" class="block hover:text-white">Home</a>
-                <a href="services.html" class="block hover:text-white">Services</a>
-                <a href="doctors.html" class="block hover:text-white">Doctors</a>
-                <a href="contact.html" class="block hover:text-white">Contact</a>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-4">Connect</h4>
-                <div class="flex gap-4">
-                    <span>Instagram</span>
-                    <span>LinkedIn</span>
-                    <span>Twitter</span>
-                </div>
-            </div>
+    <footer class="bg-[#1A1A1A] text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div><h4 class="text-xl font-bold text-[#C5A059] mb-4">Care & Family</h4><p>162 Cumberland St #200<br>Toronto, ON M5R 3N5</p></div>
+            <div><h4 class="font-bold mb-4">Navigation</h4><ul class="space-y-2 opacity-70"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li></ul></div>
+            <div><h4 class="font-bold mb-4">Contact</h4><p>+1 647-951-4770</p></div>
+            <div><h4 class="font-bold mb-4">Follow Us</h4><div class="flex gap-4"><i class="fa-brands fa-instagram text-2xl"></i><i class="fa-brands fa-linkedin text-2xl"></i></div></div>
         </div>
     </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
+        });
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
