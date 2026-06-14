@@ -3,126 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Albany Medical Building | Premium Care in Toronto</title>
+    <title>Albany Medical Building | Premium Healthcare in Toronto</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
-    </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        clinical: {
-                            50: '#F0F9FA',
-                            900: '#0F5156',
-                            primary: '#0D7B82'
+                        clinic: {
+                            50: '#f0fdfa',
+                            900: '#0f766e',
+                            teal: '#14b8a6',
+                            slate: '#f8fafc'
                         }
                     }
                 }
             }
         }
     </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-6 py-4">
-        <div class="max-w-7xl mx-auto glass border border-slate-200/50 rounded-full px-8 py-4 flex justify-between items-center shadow-lg">
-            <span class="text-xl font-bold tracking-tighter text-clinical-900">ALBANY MED</span>
-            <div class="hidden md:flex gap-8 text-sm font-medium">
-                <a href="index.html" class="text-clinical-primary">Home</a>
-                <a href="doctors.html" class="hover:text-clinical-primary transition">Doctors</a>
-                <a href="services.html" class="hover:text-clinical-primary transition">Services</a>
-                <a href="contact.html" class="hover:text-clinical-primary transition">Contact</a>
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-bold text-clinic-900 tracking-tighter">ALBANY<span class="text-clinic-teal">MED</span></a>
+            <div class="flex gap-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-clinic-teal transition">Home</a>
+                <a href="doctors.html" class="hover:text-clinic-teal transition">Doctors</a>
+                <a href="services.html" class="hover:text-clinic-teal transition">Services</a>
+                <a href="contact.html" class="hover:text-clinic-teal transition">Contact</a>
             </div>
-            <a href="contact.html" class="bg-clinical-900 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-clinical-primary transition">Book Appointment</a>
         </div>
     </nav>
 
     <!-- Hero -->
-    <header class="pt-32 pb-24 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <h1 class="text-6xl md:text-7xl font-bold tracking-tighter leading-[1.1] mb-6 text-slate-900">
-                    Elevated Care at <br><span class="text-clinical-primary">807 Broadview.</span>
-                </h1>
-                <p class="text-xl text-slate-600 mb-8 max-w-lg">Premium medical services in the heart of Toronto. Experienced practitioners, state-of-the-art facilities, and a patient-first approach.</p>
-                <div class="flex gap-4">
-                    <a href="contact.html" class="bg-clinical-900 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-clinical-primary transition">Schedule a Visit</a>
-                </div>
+                <span class="text-clinic-teal font-semibold tracking-widest uppercase text-sm">Premier Healthcare</span>
+                <h1 class="text-6xl font-bold tracking-tight text-slate-900 mt-4 mb-6">Exceptional care at 807 Broadview.</h1>
+                <p class="text-xl text-slate-500 mb-8 leading-relaxed">Modern medicine meeting refined comfort. Our Toronto facility offers specialized care tailored to your wellness journey.</p>
+                <a href="contact.html" class="bg-clinic-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-teal-800 transition shadow-lg">Book an Appointment</a>
             </div>
-            <img src="https://loremflickr.com/1200/800/doctors" alt="Clinic" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
+            <img src="https://loremflickr.com/1200/800/doctors" alt="Medical facility" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
         </div>
-    </header>
+    </section>
 
-    <!-- Facility Overview -->
-    <section class="py-24 bg-white">
+    <!-- Help & Location Section -->
+    <section class="bg-white py-24 border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-bold tracking-tight mb-16 text-center">Modern Healthcare Environment</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 bg-clinical-50 rounded-3xl">
-                    <h3 class="text-xl font-bold mb-4">State-of-the-art</h3>
-                    <p class="text-slate-600">Equipped with the latest medical diagnostic tools and comfortable patient recovery spaces.</p>
+            <div class="grid md:grid-cols-2 gap-12 mb-24">
+                <!-- FAQ -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-8">Frequently Asked</h2>
+                    <div class="space-y-4">
+                        <details class="bg-slate-50 p-6 rounded-3xl cursor-pointer">
+                            <summary class="font-semibold">Do you accept new patients?</summary>
+                            <p class="mt-4 text-slate-600">Yes, our facility at 807 Broadview is currently accepting new registrations.</p>
+                        </details>
+                        <details class="bg-slate-50 p-6 rounded-3xl cursor-pointer">
+                            <summary class="font-semibold">What are your hours?</summary>
+                            <p class="mt-4 text-slate-600">We operate Monday through Friday, 8:00 AM to 6:00 PM.</p>
+                        </details>
+                    </div>
                 </div>
-                <div class="p-8 bg-clinical-50 rounded-3xl">
-                    <h3 class="text-xl font-bold mb-4">Expert Doctors</h3>
-                    <p class="text-slate-600">A curated network of specialist physicians dedicated to your long-term health outcomes.</p>
-                </div>
-                <div class="p-8 bg-clinical-50 rounded-3xl">
-                    <h3 class="text-xl font-bold mb-4">Patient Focused</h3>
-                    <p class="text-slate-600">Designed for efficiency and comfort, ensuring minimal wait times and maximum care.</p>
+                <!-- Contact Form -->
+                <div class="bg-clinic-900 p-8 rounded-[2rem] text-white">
+                    <h2 class="text-2xl font-bold mb-6">Get in Touch</h2>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Full Name" class="w-full p-4 rounded-xl bg-teal-800 border-none text-white placeholder-teal-300">
+                        <input type="email" placeholder="Email Address" class="w-full p-4 rounded-xl bg-teal-800 border-none text-white placeholder-teal-300">
+                        <textarea placeholder="How can we help?" class="w-full p-4 rounded-xl bg-teal-800 border-none text-white placeholder-teal-300 h-32"></textarea>
+                        <button class="w-full bg-white text-clinic-900 py-4 rounded-xl font-bold">Send Message</button>
+                    </form>
                 </div>
             </div>
+            
+            <!-- Map -->
+            <div class="w-full">
+                <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" 
+                        class="w-full h-96 rounded-[2rem] shadow-2xl border-0" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="py-24 max-w-4xl mx-auto px-6">
-        <h2 class="text-4xl font-bold mb-12">Frequently Asked Questions</h2>
-        <div class="space-y-4">
-            <details class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <summary class="font-semibold cursor-pointer list-none flex justify-between">How do I book an appointment? <span class="group-open:rotate-180 transition">+</span></summary>
-                <p class="mt-4 text-slate-600">You can book via our contact page or by calling +1 416-366-2000.</p>
-            </details>
-            <details class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <summary class="font-semibold cursor-pointer list-none flex justify-between">Do you accept new patients? <span class="group-open:rotate-180 transition">+</span></summary>
-                <p class="mt-4 text-slate-600">Yes, we are currently accepting new patient registrations.</p>
-            </details>
-        </div>
-    </section>
-
-    <!-- Contact & Feedback -->
-    <section class="py-24 bg-clinical-900 text-white rounded-[3rem] mx-6">
-        <div class="max-w-3xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
-            <form class="space-y-4">
-                <input type="text" placeholder="Name" class="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50">
-                <input type="email" placeholder="Email" class="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50">
-                <textarea placeholder="Message" class="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 h-32"></textarea>
-                <button class="w-full bg-white text-clinical-900 font-bold py-4 rounded-xl">Send Inquiry</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Map -->
-    <section class="py-24 px-6 max-w-7xl mx-auto">
-        <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-96 rounded-[2rem] shadow-2xl" frameborder="0"></iframe>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-16 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
-            <div class="col-span-2">
-                <h4 class="text-white font-bold text-lg mb-4">Albany Medical Building</h4>
+    <footer class="bg-slate-900 text-slate-400 py-16">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-sm">
+            <div>
+                <h4 class="text-white font-bold mb-4">Albany Medical Building</h4>
                 <p>807 Broadview Ave, Toronto, ON M4K 2P8</p>
-                <p class="mt-2 font-semibold text-white">+1 416-366-2000</p>
+                <p class="mt-2">+1 416-366-2000</p>
             </div>
             <div>
-                <h5 class="text-white font-bold mb-4">Navigation</h5>
-                <ul class="space-y-2 text-sm">
+                <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="doctors.html">Doctors</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -130,12 +110,12 @@
                 </ul>
             </div>
             <div>
-                <h5 class="text-white font-bold mb-4">Social</h5>
-                <ul class="space-y-2 text-sm">
-                    <li>Twitter</li>
-                    <li>LinkedIn</li>
-                    <li>Instagram</li>
-                </ul>
+                <h4 class="text-white font-bold mb-4">Social</h4>
+                <div class="flex gap-4">
+                    <span>Twitter</span>
+                    <span>LinkedIn</span>
+                    <span>Instagram</span>
+                </div>
             </div>
         </div>
     </footer>

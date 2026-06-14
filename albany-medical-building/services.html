@@ -13,8 +13,8 @@
                     colors: {
                         clinical: {
                             50: '#f0fdfa',
-                            500: '#14b8a6',
                             900: '#0f766e',
+                            950: '#064e3b',
                         }
                     }
                 }
@@ -28,67 +28,68 @@
 <body class="bg-slate-50 text-slate-900">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold tracking-tighter text-clinical-900">ALBANY<span class="text-clinical-500">MED</span></a>
-            <div class="flex gap-8 text-sm font-medium">
-                <a href="index.html" class="hover:text-clinical-500 transition">Home</a>
-                <a href="doctors.html" class="hover:text-clinical-500 transition">Doctors</a>
-                <a href="services.html" class="text-clinical-500">Services</a>
-                <a href="contact.html" class="hover:text-clinical-500 transition">Contact</a>
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-clinical-900">ALBANY MEDICAL</a>
+            <div class="space-x-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-clinical-900 transition">Home</a>
+                <a href="doctors.html" class="hover:text-clinical-900 transition">Doctors</a>
+                <a href="services.html" class="text-clinical-900 border-b-2 border-clinical-900 pb-1">Services</a>
+                <a href="contact.html" class="hover:text-clinical-900 transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="py-24 px-6 text-center">
-        <h1 class="text-6xl font-bold tracking-tighter mb-6">Our Expertise</h1>
-        <p class="text-xl text-slate-600 max-w-2xl mx-auto">Precision diagnostic care and specialized treatments designed for your long-term wellness.</p>
+    <header class="pt-32 pb-24 px-6 text-center">
+        <h1 class="text-6xl font-bold tracking-tighter mb-6 text-slate-950">Clinical Excellence.</h1>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto">Comprehensive medical solutions tailored to your health journey in the heart of Toronto.</p>
     </header>
 
     <!-- Services Grid -->
     <main class="max-w-7xl mx-auto px-6 pb-24">
         <div class="grid md:grid-cols-3 gap-8">
             
-            <!-- Service Card 1 -->
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all">
-                <div class="w-12 h-12 bg-clinical-50 text-clinical-600 rounded-2xl flex items-center justify-center mb-6 text-2xl">⚡</div>
-                <h3 class="text-2xl font-semibold mb-3">General Diagnostics</h3>
-                <p class="text-slate-500 leading-relaxed">Comprehensive health screenings using state-of-the-art imaging and lab technologies for accurate results.</p>
+            <!-- Card 1 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                <div class="w-12 h-12 bg-clinical-50 text-clinical-900 rounded-2xl flex items-center justify-center mb-6 font-bold">01</div>
+                <h3 class="text-2xl font-semibold mb-4">General Practice</h3>
+                <p class="text-slate-600">Holistic primary care focusing on preventive medicine, annual check-ups, and chronic disease management.</p>
             </div>
 
-            <!-- Service Card 2 -->
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all">
-                <div class="w-12 h-12 bg-clinical-50 text-clinical-600 rounded-2xl flex items-center justify-center mb-6 text-2xl">🔬</div>
-                <h3 class="text-2xl font-semibold mb-3">Preventative Care</h3>
-                <p class="text-slate-500 leading-relaxed">Proactive health management plans customized to your unique medical history and lifestyle goals.</p>
+            <!-- Card 2 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                <div class="w-12 h-12 bg-clinical-50 text-clinical-900 rounded-2xl flex items-center justify-center mb-6 font-bold">02</div>
+                <h3 class="text-2xl font-semibold mb-4">Diagnostics</h3>
+                <p class="text-slate-600">On-site lab services including blood work, EKG, and rapid point-of-care testing for immediate results.</p>
             </div>
 
-            <!-- Service Card 3 -->
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all">
-                <div class="w-12 h-12 bg-clinical-50 text-clinical-600 rounded-2xl flex items-center justify-center mb-6 text-2xl">🩺</div>
-                <h3 class="text-2xl font-semibold mb-3">Chronic Management</h3>
-                <p class="text-slate-500 leading-relaxed">Ongoing, supportive care for patients managing long-term conditions with a focus on quality of life.</p>
+            <!-- Card 3 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                <div class="w-12 h-12 bg-clinical-50 text-clinical-900 rounded-2xl flex items-center justify-center mb-6 font-bold">03</div>
+                <h3 class="text-2xl font-semibold mb-4">Specialized Care</h3>
+                <p class="text-slate-600">Access to our network of cardiologists, dermatologists, and mental health professionals on-site.</p>
             </div>
 
         </div>
 
-        <!-- Hero image placeholder -->
-        <section class="mt-24">
-            <img src="https://loremflickr.com/1200/800/doctors" alt="Medical team" class="w-full h-96 object-cover rounded-[2rem] shadow-2xl">
-        </section>
+        <!-- Featured Image -->
+        <div class="mt-24">
+            <img src="https://loremflickr.com/1200/800/doctors" alt="Clinic Care" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-white py-24 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16">
+    <footer class="bg-slate-950 text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
             <div>
-                <h2 class="text-2xl font-bold mb-4">Albany Medical</h2>
+                <h4 class="text-lg font-bold mb-4">Albany Medical Building</h4>
                 <p class="text-slate-400">807 Broadview Ave, Toronto, ON M4K 2P8</p>
+                <p class="text-slate-400">+1 416-366-2000</p>
             </div>
             <div>
-                <h4 class="font-bold mb-4">Navigation</h4>
-                <ul class="text-slate-400 space-y-2">
+                <h4 class="text-lg font-bold mb-4">Navigation</h4>
+                <ul class="space-y-2 text-slate-400">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="doctors.html">Doctors</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -96,9 +97,16 @@
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold mb-4">Contact</h4>
-                <p class="text-clinical-400 font-semibold">+1 416-366-2000</p>
+                <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                <div class="flex space-x-4">
+                    <div class="w-10 h-10 bg-slate-800 rounded-full"></div>
+                    <div class="w-10 h-10 bg-slate-800 rounded-full"></div>
+                    <div class="w-10 h-10 bg-slate-800 rounded-full"></div>
+                </div>
             </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+            &copy; 2024 Albany Medical Building. All rights reserved.
         </div>
     </footer>
 
