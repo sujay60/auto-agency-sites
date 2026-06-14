@@ -3,83 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Doctors | Care& Family Health Yorkville</title>
+    <title>Our Physicians | Care & Family Health Yorkville</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-[#F8FAFC] text-slate-900">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold tracking-tighter">CARE&<span class="text-blue-600 font-light">YORKVILLE</span></a>
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-teal-900">CARE& <span class="font-light">YORKVILLE</span></a>
             <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
-                <a href="services.html" class="hover:text-blue-600 transition">Services</a>
-                <a href="doctors.html" class="text-blue-600 font-semibold">Doctors</a>
-                <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+                <a href="index.html" class="hover:text-teal-700 transition">Home</a>
+                <a href="services.html" class="hover:text-teal-700 transition">Services</a>
+                <a href="doctors.html" class="text-teal-900 border-b-2 border-teal-900">Doctors</a>
+                <a href="contact.html" class="hover:text-teal-700 transition">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <header class="pt-40 pb-24 px-6 text-center">
-        <h1 class="text-6xl font-bold tracking-tight mb-6">World-Class Care</h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Meet our team of specialized practitioners dedicated to your long-term health and wellness in the heart of Yorkville.</p>
+    <!-- Header -->
+    <header class="max-w-7xl mx-auto px-6 pt-24 pb-12">
+        <h1 class="text-6xl font-bold tracking-tighter text-teal-950 mb-6">Expert Care.<br>Clinical Precision.</h1>
+        <p class="text-xl text-slate-500 max-w-2xl">Meet our team of board-certified physicians dedicated to your long-term wellness in the heart of Toronto.</p>
     </header>
 
     <!-- Doctors Grid -->
-    <main class="max-w-7xl mx-auto px-6 pb-24">
+    <main class="max-w-7xl mx-auto px-6 py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <!-- Doctor 1 -->
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col gap-6">
-                <img src="https://loremflickr.com/800/800/doctor,professional" alt="Doctor" class="w-full h-80 object-cover rounded-3xl">
-                <div>
-                    <h3 class="text-2xl font-semibold">Dr. Sarah Jenkins</h3>
-                    <p class="text-blue-600 font-medium mb-4">Chief Medical Officer, MD</p>
-                    <p class="text-slate-500 text-sm leading-relaxed">Specializing in internal medicine with over 15 years of experience in patient-centered primary care.</p>
-                </div>
+            
+            <!-- Doctor Card 1 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-2xl transition duration-500">
+                <img src="https://loremflickr.com/800/800/doctor" alt="Dr. Sarah" class="w-full h-80 object-cover rounded-3xl mb-8">
+                <h3 class="text-3xl font-bold mb-2">Dr. Sarah Jenkins</h3>
+                <p class="text-teal-600 font-semibold mb-4">Chief of Family Medicine</p>
+                <p class="text-slate-600 mb-6 text-sm leading-relaxed">Specializing in preventative care and chronic disease management with over 15 years of experience in the Yorkville area.</p>
+                <div class="bg-slate-50 p-4 rounded-xl text-xs uppercase tracking-widest font-bold text-slate-400">MD, CCFP, FCFP</div>
             </div>
-            <!-- Doctor 2 -->
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col gap-6">
-                <img src="https://loremflickr.com/800/800/doctor,surgeon" alt="Doctor" class="w-full h-80 object-cover rounded-3xl">
-                <div>
-                    <h3 class="text-2xl font-semibold">Dr. Marcus Thorne</h3>
-                    <p class="text-blue-600 font-medium mb-4">Family Wellness Specialist, MD</p>
-                    <p class="text-slate-500 text-sm leading-relaxed">Expert in preventative family medicine and cardiovascular health management for all ages.</p>
-                </div>
+
+            <!-- Doctor Card 2 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-2xl transition duration-500">
+                <img src="https://loremflickr.com/800/800/surgeon" alt="Dr. Marcus" class="w-full h-80 object-cover rounded-3xl mb-8">
+                <h3 class="text-3xl font-bold mb-2">Dr. Marcus Thorne</h3>
+                <p class="text-teal-600 font-semibold mb-4">Internal Medicine Specialist</p>
+                <p class="text-slate-600 mb-6 text-sm leading-relaxed">Expertise in diagnostic medicine and metabolic health. Committed to evidence-based, patient-centric outcomes.</p>
+                <div class="bg-slate-50 p-4 rounded-xl text-xs uppercase tracking-widest font-bold text-slate-400">MD, FRCPC</div>
             </div>
         </div>
-
-        <!-- Location Section -->
-        <section class="mt-24">
-            <div class="bg-white p-8 md:p-16 rounded-[2rem] shadow-2xl">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 class="text-4xl font-bold tracking-tight mb-6">Visit Our Clinic</h2>
-                        <p class="text-lg text-slate-600 mb-8">162 Cumberland St #200, Toronto, ON M5R 3N5</p>
-                        <div class="text-blue-600 font-semibold text-xl">+1 647-951-4770</div>
-                        <p class="text-slate-400 mt-2 italic">Rated 4.5/5 by 599 patients</p>
-                    </div>
-                    <iframe src="https://www.google.com/maps?q=162+Cumberland+St+#200+Toronto+ON+M5R+3N5+Canada&output=embed" class="w-full h-96 rounded-3xl shadow-2xl border-0"></iframe>
-                </div>
-            </div>
-        </section>
     </main>
 
+    <!-- Map Section -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <h2 class="text-4xl font-bold tracking-tighter mb-12">Visit Our Clinic</h2>
+        <iframe src="https://www.google.com/maps?q=162+Cumberland+St+#200+Toronto+ON+M5R+3N5+Canada&output=embed" class="w-full h-96 rounded-[2rem] shadow-2xl border-none"></iframe>
+    </section>
+
     <!-- Footer -->
-    <footer class="bg-slate-900 text-white py-20 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+    <footer class="bg-teal-950 text-white py-24">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
-                <h4 class="text-lg font-bold mb-6">CARE& YORKVILLE</h4>
-                <p class="text-slate-400 text-sm">Elevating standard of care in the heart of Toronto.</p>
+                <h4 class="text-lg font-bold mb-4">Care & Family Health</h4>
+                <p class="text-teal-200/60 text-sm">162 Cumberland St #200<br>Toronto, ON M5R 3N5</p>
             </div>
             <div>
-                <h4 class="text-sm font-semibold mb-6 uppercase tracking-widest text-slate-500">Navigation</h4>
-                <ul class="space-y-4 text-slate-300">
+                <h4 class="text-lg font-bold mb-4">Navigation</h4>
+                <ul class="text-teal-200/60 space-y-2 text-sm">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="doctors.html">Doctors</a></li>
@@ -87,11 +78,16 @@
                 </ul>
             </div>
             <div>
-                <h4 class="text-sm font-semibold mb-6 uppercase tracking-widest text-slate-500">Connect</h4>
-                <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center">IG</a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center">LN</a>
-                </div>
+                <h4 class="text-lg font-bold mb-4">Connect</h4>
+                <ul class="text-teal-200/60 space-y-2 text-sm">
+                    <li>Instagram</li>
+                    <li>LinkedIn</li>
+                    <li>Twitter</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4">+1 647-951-4770</h4>
+                <div class="inline-block bg-teal-800 px-4 py-2 rounded-full text-xs font-bold text-teal-100">4.5 Stars / 599 Reviews</div>
             </div>
         </div>
     </footer>
