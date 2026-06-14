@@ -3,101 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Albany Medical Clinic | Premier Healthcare in Toronto</title>
+    <title>Albany Medical Clinic | Modern Healthcare in Toronto</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-[#F8FAFC] text-slate-900 antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-6 py-6">
-        <div class="max-w-7xl mx-auto backdrop-blur-md bg-white/70 border border-slate-200/60 rounded-[2rem] px-8 py-4 flex items-center justify-between shadow-sm">
-            <div class="text-xl font-bold tracking-tighter text-teal-900">ALBANY<span class="text-teal-500">.</span></div>
-            <div class="flex items-center gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="text-teal-600">Home</a>
+    <nav class="fixed w-full z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto glass rounded-full shadow-sm border border-slate-200 px-8 py-4 flex items-center justify-between">
+            <span class="text-xl font-bold tracking-tighter text-teal-900">ALBANY.</span>
+            <div class="flex gap-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="text-teal-700">Home</a>
                 <a href="services.html" class="hover:text-teal-600 transition">Services</a>
                 <a href="doctors.html" class="hover:text-teal-600 transition">Doctors</a>
-                <a href="feedback.html" class="hover:text-teal-600 transition">Feedback</a>
-                <a href="contact.html" class="bg-teal-600 text-white px-5 py-2 rounded-full hover:bg-teal-700 transition">Book Now</a>
+                <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
             </div>
+            <a href="contact.html" class="bg-teal-900 text-white px-6 py-2 rounded-full text-sm hover:bg-teal-800 transition">Book Visit</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <header class="pt-40 pb-24 px-6">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <h1 class="text-7xl font-bold tracking-tighter text-teal-950 mb-6 leading-[0.9]">Exceptional Care<br>on Broadview.</h1>
-                <p class="text-xl text-slate-500 mb-10 max-w-lg">Your health is our priority. Providing integrated, high-standard medical services in the heart of Toronto.</p>
-                <div class="flex gap-4">
-                    <a href="contact.html" class="bg-teal-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-teal-700 transition">Schedule Visit</a>
-                    <a href="#location" class="border border-slate-200 bg-white px-8 py-4 rounded-full font-semibold text-slate-700 hover:bg-slate-50 transition">View Location</a>
-                </div>
+                <h1 class="text-7xl font-bold tracking-tight text-teal-950 mb-6">Modern care for a healthier Toronto.</h1>
+                <p class="text-xl text-slate-600 mb-8 leading-relaxed">Experience a new standard of primary care at 807 Broadview Ave. Precision, compassion, and speed—redefined.</p>
+                <a href="#" class="inline-block bg-teal-600 text-white px-10 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition">Schedule Appointment</a>
             </div>
-            <img src="https://loremflickr.com/1200/800/doctors" alt="Clinic" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
+            <img src="https://loremflickr.com/1200/800/doctors" alt="Medical Clinic" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
         </div>
     </header>
 
-    <!-- Urgent Care Info -->
+    <!-- Overview -->
     <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="bg-teal-50 border border-teal-100 p-12 rounded-[2rem]">
-                <h2 class="text-4xl font-bold tracking-tight text-teal-950 mb-4">Urgent Care Availability</h2>
-                <p class="text-slate-600 text-lg max-w-2xl mx-auto">We offer same-day appointments for urgent concerns. Please call us at <span class="font-bold text-teal-700">+1 416-461-9471</span> to confirm physician availability.</p>
-            </div>
+            <h2 class="text-sm font-bold tracking-widest uppercase text-teal-600 mb-4">Our Mission</h2>
+            <p class="text-4xl md:text-5xl font-bold tracking-tight max-w-3xl mx-auto leading-tight">Patient-centered excellence. We prioritize clarity, efficiency, and clinical accuracy for every individual.</p>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="py-24 bg-slate-50">
-        <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-5xl font-bold tracking-tight text-teal-950 mb-16 text-center">Common Questions</h2>
-            <div class="space-y-4">
-                <details class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                    <summary class="font-semibold text-lg cursor-pointer">What are your operating hours?</summary>
-                    <p class="mt-4 text-slate-500">We are open Monday to Friday, 9:00 AM – 6:00 PM and Saturday mornings by appointment.</p>
-                </details>
-                <details class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                    <summary class="font-semibold text-lg cursor-pointer">Do you accept walk-ins?</summary>
-                    <p class="mt-4 text-slate-500">Priority is given to booked appointments, but we accommodate emergencies when possible.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact & Feedback -->
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
-            <div>
-                <h2 class="text-5xl font-bold tracking-tight text-teal-950 mb-8">Reach Out</h2>
-                <form class="space-y-6">
-                    <input type="text" placeholder="Name" class="w-full p-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-teal-500 outline-none">
-                    <input type="email" placeholder="Email" class="w-full p-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-teal-500 outline-none">
-                    <textarea placeholder="Message" class="w-full p-4 rounded-xl border border-slate-200 h-32 focus:ring-2 focus:ring-teal-500 outline-none"></textarea>
-                    <button class="w-full bg-teal-900 text-white py-4 rounded-xl font-bold hover:bg-teal-800 transition">Send Inquiry</button>
+    <!-- Help & Location Section -->
+    <section class="py-24 bg-[#F1F5F9]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <!-- FAQ -->
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-bold text-teal-950">Patient Support</h3>
+                    <details class="bg-white p-6 rounded-2xl shadow-sm cursor-pointer">
+                        <summary class="font-semibold text-teal-800">What are your hours?</summary>
+                        <p class="mt-4 text-slate-600">We are open Monday through Friday, 8:00 AM to 6:00 PM.</p>
+                    </details>
+                    <details class="bg-white p-6 rounded-2xl shadow-sm cursor-pointer">
+                        <summary class="font-semibold text-teal-800">Do you accept walk-ins?</summary>
+                        <p class="mt-4 text-slate-600">Yes, though appointments are highly recommended for faster service.</p>
+                    </details>
+                </div>
+                <!-- Contact Form -->
+                <form class="bg-teal-900 p-10 rounded-[2rem] shadow-2xl space-y-6">
+                    <h3 class="text-2xl font-bold text-white">Get in Touch</h3>
+                    <input type="text" placeholder="Name" class="w-full p-4 rounded-xl bg-teal-800 border-none text-white placeholder-teal-400">
+                    <input type="email" placeholder="Email" class="w-full p-4 rounded-xl bg-teal-800 border-none text-white placeholder-teal-400">
+                    <textarea placeholder="Message" class="w-full p-4 rounded-xl bg-teal-800 border-none text-white placeholder-teal-400 h-32"></textarea>
+                    <button class="w-full bg-white text-teal-900 font-bold py-4 rounded-xl">Send Message</button>
                 </form>
             </div>
-            <div id="location" class="flex flex-col gap-6">
-                <h3 class="text-3xl font-bold text-teal-950">Find Us</h3>
-                <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-96 rounded-[2rem] shadow-2xl"></iframe>
-                <p class="text-slate-500">807 Broadview Ave, Toronto, ON M4K 2P8</p>
-            </div>
+            <!-- Map -->
+            <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-96 rounded-[2rem] shadow-2xl border-none"></iframe>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-teal-950 text-white py-16 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+    <footer class="bg-slate-950 text-slate-400 py-16 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
             <div>
-                <div class="text-2xl font-bold tracking-tighter mb-4">ALBANY.</div>
-                <p class="text-teal-200 text-sm">Serving the Toronto community with excellence and integrity.</p>
+                <h4 class="text-white font-bold text-lg mb-4">Albany Medical</h4>
+                <p>807 Broadview Ave, Toronto, ON M4K 2P8</p>
+                <p class="mt-2">+1 416-461-9471</p>
             </div>
             <div>
-                <h4 class="font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-sm text-teal-200">
+                <h4 class="text-white font-bold mb-4">Navigation</h4>
+                <ul class="space-y-2">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="doctors.html">Doctors</a></li>
@@ -105,9 +95,15 @@
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold mb-4">Connect</h4>
-                <p class="text-sm text-teal-200">+1 416-461-9471</p>
-                <p class="text-sm text-teal-200">807 Broadview Ave, Toronto</p>
+                <h4 class="text-white font-bold mb-4">Social</h4>
+                <ul class="space-y-2">
+                    <li>Twitter</li>
+                    <li>LinkedIn</li>
+                    <li>Instagram</li>
+                </ul>
+            </div>
+            <div class="text-teal-500 font-semibold text-lg">
+                Rating: 2.7 ★ (800+ reviews)
             </div>
         </div>
     </footer>
