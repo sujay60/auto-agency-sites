@@ -3,96 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Broadview Medical Clinic</title>
+    <title>Services | Broadview Medical Clinic | Toronto</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clinic: {
-                            50: '#f0f9f8',
-                            900: '#0f3a35',
-                            teal: '#14b8a6',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-[#F8FAFC] text-slate-900">
 
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold tracking-tighter text-clinic-900 uppercase">Broadview Medical</a>
+            <div class="text-2xl font-bold tracking-tighter text-teal-900">BROADVIEW<span class="text-teal-600">.</span></div>
             <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-clinic-teal transition">Home</a>
-                <a href="services.html" class="text-clinic-teal">Services</a>
-                <a href="doctors.html" class="hover:text-clinic-teal transition">Doctors</a>
-                <a href="contact.html" class="hover:text-clinic-teal transition">Contact</a>
+                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
+                <a href="services.html" class="text-teal-600">Services</a>
+                <a href="doctors.html" class="hover:text-teal-600 transition">Doctors</a>
+                <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="py-24 px-6 max-w-5xl mx-auto text-center">
-        <h1 class="text-6xl font-bold tracking-tight text-clinic-900 mb-6">Premium Care, Closer to Home.</h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Comprehensive medical services tailored to your wellbeing in the heart of Toronto.</p>
-    </header>
+    <section class="max-w-5xl mx-auto px-6 py-24 text-center">
+        <span class="text-teal-600 font-semibold tracking-widest uppercase text-sm">Our Care</span>
+        <h1 class="text-6xl font-bold tracking-tight text-slate-900 mt-6 mb-8">Modern Healthcare. <br>Refined for You.</h1>
+        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Comprehensive medical solutions delivered with precision and empathy in the heart of Toronto.</p>
+    </section>
 
     <!-- Services Grid -->
-    <section class="max-w-7xl mx-auto px-6 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-                <h3 class="text-2xl font-semibold mb-4">Primary Care</h3>
-                <p class="text-slate-600 mb-6">Routine check-ups, physicals, and ongoing management of chronic health conditions with a focus on long-term wellness.</p>
-                <img src="https://loremflickr.com/800/400/stethoscope" alt="Care" class="w-full h-64 object-cover rounded-3xl">
+    <section class="max-w-7xl mx-auto px-6 pb-24">
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300">
+                <div class="w-12 h-12 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center mb-6 font-bold text-xl">01</div>
+                <h3 class="text-2xl font-bold mb-4">General Practice</h3>
+                <p class="text-slate-500">Holistic primary care, routine check-ups, and preventative health screenings tailored to your lifestyle.</p>
             </div>
-            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-                <h3 class="text-2xl font-semibold mb-4">Preventative Health</h3>
-                <p class="text-slate-600 mb-6">Personalized screenings, immunizations, and health counseling to help you stay ahead of potential health challenges.</p>
-                <img src="https://loremflickr.com/800/400/doctor" alt="Care" class="w-full h-64 object-cover rounded-3xl">
+            <!-- Card 2 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300">
+                <div class="w-12 h-12 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center mb-6 font-bold text-xl">02</div>
+                <h3 class="text-2xl font-bold mb-4">Specialized Care</h3>
+                <p class="text-slate-500">Expert consultations in cardiology, dermatology, and mental wellness with board-certified specialists.</p>
             </div>
-            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-                <h3 class="text-2xl font-semibold mb-4">Minor Procedures</h3>
-                <p class="text-slate-600 mb-6">In-clinic minor surgical procedures and wound care performed in a pristine, comfortable, and safe environment.</p>
-                <img src="https://loremflickr.com/800/400/clinic" alt="Care" class="w-full h-64 object-cover rounded-3xl">
-            </div>
-            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-                <h3 class="text-2xl font-semibold mb-4">Mental Wellbeing</h3>
-                <p class="text-slate-600 mb-6">Supportive counseling and holistic management for mental health concerns in a private, confidential setting.</p>
-                <img src="https://loremflickr.com/800/400/wellness" alt="Care" class="w-full h-64 object-cover rounded-3xl">
+            <!-- Card 3 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300">
+                <div class="w-12 h-12 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center mb-6 font-bold text-xl">03</div>
+                <h3 class="text-2xl font-bold mb-4">Diagnostic Tests</h3>
+                <p class="text-slate-500">On-site lab services, blood work, and rapid diagnostic imaging for efficient, accurate results.</p>
             </div>
         </div>
     </section>
 
-    <!-- Location -->
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-bold tracking-tight mb-12">Visit Our Clinic</h2>
-            <div class="rounded-3xl overflow-hidden shadow-2xl">
-                <iframe class="w-full h-96" src="https://www.google.com/maps?q=797+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
+    <!-- Image Break -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <img src="https://loremflickr.com/1200/400/doctors" alt="Clinic Interior" class="w-full h-96 object-cover rounded-[2rem] shadow-2xl">
     </section>
 
     <!-- Footer -->
-    <footer class="bg-clinic-900 text-white py-20">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+    <footer class="bg-slate-900 text-white py-24 mt-24">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
             <div>
-                <h4 class="font-bold text-xl mb-4">Broadview Medical</h4>
-                <p class="text-slate-400">797 Broadview Ave, Toronto, ON M4K 2P8</p>
-                <p class="text-clinic-teal mt-2">+1 416-463-3228</p>
+                <h4 class="font-bold text-lg mb-6">Broadview Medical</h4>
+                <p class="text-slate-400 text-sm">797 Broadview Ave, Toronto, ON M4K 2P8</p>
+                <p class="text-slate-400 text-sm mt-2">+1 416-463-3228</p>
             </div>
             <div>
-                <h4 class="font-bold mb-4">Navigation</h4>
-                <ul class="text-slate-400 space-y-2">
+                <h4 class="font-bold text-lg mb-6">Pages</h4>
+                <ul class="space-y-4 text-slate-400 text-sm">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="doctors.html">Doctors</a></li>
@@ -100,15 +79,20 @@
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold mb-4">Socials</h4>
-                <div class="flex gap-4 text-slate-400">
-                    <a href="#">Instagram</a>
-                    <a href="#">LinkedIn</a>
+                <h4 class="font-bold text-lg mb-6">Social</h4>
+                <ul class="space-y-4 text-slate-400 text-sm">
+                    <li>Instagram</li>
+                    <li>LinkedIn</li>
+                    <li>Twitter</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-6">Status</h4>
+                <div class="flex items-center gap-2 text-emerald-400 text-sm">
+                    <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                    Clinic Open Today
                 </div>
             </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-800 text-slate-500 text-sm">
-            © 2024 Broadview Medical Clinic. 4.3 Stars from 53 Reviews.
         </div>
     </footer>
 

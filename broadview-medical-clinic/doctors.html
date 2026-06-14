@@ -3,94 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Doctors | Broadview Medical Clinic</title>
+    <title>Our Practitioners | Broadview Medical Clinic</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clinical: {
-                            50: '#F0F9FA',
-                            500: '#2D8A94',
-                            900: '#14464B',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-[#F8FAFC] text-slate-900 selection:bg-teal-200">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold text-clinical-900 tracking-tight">BROADVIEW.</a>
+    <nav class="fixed w-full z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto backdrop-blur-md bg-white/70 border border-slate-200/50 rounded-full py-4 px-8 flex justify-between items-center shadow-lg">
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-teal-900">BROADVIEW.</a>
             <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-clinical-500 transition">Home</a>
-                <a href="services.html" class="hover:text-clinical-500 transition">Services</a>
-                <a href="doctors.html" class="text-clinical-900">Doctors</a>
-                <a href="contact.html" class="hover:text-clinical-500 transition">Contact</a>
+                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
+                <a href="services.html" class="hover:text-teal-600 transition">Services</a>
+                <a href="doctors.html" class="text-teal-700 underline underline-offset-8">Doctors</a>
+                <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <section class="max-w-7xl mx-auto px-6 py-24 text-center">
-        <h1 class="text-6xl font-bold tracking-tighter text-slate-900 mb-6">World-class care, <br/>built in Toronto.</h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Meet the experts behind Broadview Medical. Compassionate, experienced, and dedicated to your longevity.</p>
-    </section>
+    <header class="pt-40 pb-24 px-6 text-center">
+        <h1 class="text-6xl md:text-7xl font-bold tracking-tight text-teal-950 mb-6">Expert Care.</h1>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto">Meet our dedicated team of medical professionals committed to your health in the heart of Toronto.</p>
+    </header>
 
-    <!-- Doctor Profiles -->
-    <section class="max-w-7xl mx-auto px-6 pb-24 grid md:grid-cols-2 gap-12">
-        <!-- Profile 1 -->
-        <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col gap-6">
-            <img src="https://loremflickr.com/1200/800/doctor" alt="Dr. Sarah Chen" class="w-full h-80 object-cover rounded-3xl">
-            <div>
-                <h3 class="text-2xl font-bold text-slate-900">Dr. Sarah Chen</h3>
-                <p class="text-clinical-500 font-semibold mb-4">Internal Medicine</p>
-                <p class="text-slate-600 leading-relaxed">Dr. Chen specializes in preventative cardiology and chronic disease management. With over 15 years in clinical practice, she believes in a data-driven, holistic approach to patient health.</p>
+    <!-- Doctor Profiles Section -->
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Profile 1 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                <img src="https://loremflickr.com/800/800/doctor,man" alt="Doctor" class="w-full h-80 object-cover rounded-3xl mb-8">
+                <h3 class="text-3xl font-bold text-teal-950">Dr. Sarah Jenkins</h3>
+                <p class="text-teal-600 font-medium mb-4">General Practitioner, MD</p>
+                <p class="text-slate-500 leading-relaxed">With over 15 years in family medicine, Dr. Jenkins specializes in preventative care and chronic disease management with a patient-first philosophy.</p>
+            </div>
+
+            <!-- Profile 2 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                <img src="https://loremflickr.com/800/800/doctor,woman" alt="Doctor" class="w-full h-80 object-cover rounded-3xl mb-8">
+                <h3 class="text-3xl font-bold text-teal-950">Dr. Marcus Thorne</h3>
+                <p class="text-teal-600 font-medium mb-4">Internal Medicine Specialist</p>
+                <p class="text-slate-500 leading-relaxed">Dr. Thorne brings global experience to Toronto, focusing on diagnostic precision and integrative wellness strategies for all ages.</p>
             </div>
         </div>
-
-        <!-- Profile 2 -->
-        <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col gap-6">
-            <img src="https://loremflickr.com/1200/800/physician" alt="Dr. Marcus Thorne" class="w-full h-80 object-cover rounded-3xl">
-            <div>
-                <h3 class="text-2xl font-bold text-slate-900">Dr. Marcus Thorne</h3>
-                <p class="text-clinical-500 font-semibold mb-4">Family Practice</p>
-                <p class="text-slate-600 leading-relaxed">Dedicated to community wellness in the heart of Toronto. Dr. Thorne focuses on comprehensive family care, integrating modern wellness protocols with empathetic bedside manner.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Location -->
-    <section class="max-w-7xl mx-auto px-6 pb-24">
-        <div class="bg-white p-8 rounded-[2rem] shadow-xl">
-            <div class="mb-8">
-                <h2 class="text-3xl font-bold tracking-tight text-slate-900">Find us on Albany St.</h2>
-                <p class="text-slate-500">797 Broadview Ave, Toronto, ON M4K 2P8</p>
-            </div>
-            <iframe src="https://www.google.com/maps?q=797+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-96 rounded-3xl" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-clinical-900 text-white py-24">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+    <footer class="bg-teal-950 text-white mt-24 py-20 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
             <div>
-                <h4 class="font-bold text-lg mb-4">Broadview Medical</h4>
-                <p class="text-clinical-500 text-sm">797 Broadview Ave, Toronto</p>
-                <p class="text-clinical-500 text-sm">+1 416-463-3228</p>
+                <h4 class="text-xl font-bold mb-4">Broadview Medical</h4>
+                <p class="text-teal-200/70">797 Broadview Ave, Toronto, ON M4K 2P8</p>
+                <p class="text-teal-200/70">+1 416-463-3228</p>
             </div>
             <div>
-                <h4 class="font-bold text-lg mb-4">Navigation</h4>
-                <ul class="text-clinical-500 text-sm space-y-2">
+                <h4 class="text-xl font-bold mb-4">Links</h4>
+                <ul class="space-y-2 text-teal-200/70">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="doctors.html">Doctors</a></li>
@@ -98,15 +70,12 @@
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold text-lg mb-4">Socials</h4>
-                <ul class="text-clinical-500 text-sm space-y-2">
-                    <li>Instagram</li>
-                    <li>LinkedIn</li>
-                    <li>Twitter</li>
-                </ul>
-            </div>
-            <div class="text-clinical-500 text-sm">
-                <p>Rated 4.3 stars from 53 reviews. Providing premier medical excellence to the Toronto community.</p>
+                <h4 class="text-xl font-bold mb-4">Connect</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-teal-400">Instagram</a>
+                    <a href="#" class="hover:text-teal-400">LinkedIn</a>
+                </div>
+                <p class="mt-6 text-sm text-teal-200/50">4.3 stars from 53 reviews</p>
             </div>
         </div>
     </footer>
