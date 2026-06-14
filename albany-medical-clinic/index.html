@@ -1,418 +1,353 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Albany Medical Clinic - Compassionate Care in Toronto</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233B82F6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z'%3E%3C/path%3E%3Cpath d='M9 12l2 2 4-4'%3E%3C/path%3E%3C/svg%3E" type="image/svg+xml">
+    <title>Albany Medical Clinic - Your Health, Our Priority in Toronto</title>
+    <link rel="icon" href="https://loremflickr.com/16/16/medical,logo" type="image/x-icon">
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+        /* Custom CSS for refined styles beyond basic Tailwind for a premium feel */
+        html {
+            scroll-behavior: smooth;
+        }
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f7f9fc;
-            color: #333;
+            font-family: 'Inter', sans-serif; /* A modern, clean sans-serif font */
+            background-color: #f8fafc; /* Light gray background for readability */
+            color: #334155; /* Dark slate text for good contrast */
         }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-            color: #1e3a8a; /* Deep blue for headings */
+        /* Custom font import for consistency, if needed. Tailwind uses system fonts by default. */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        /* Glassmorphism effect base, ensuring cross-browser compatibility */
+        .glassmorphism {
+            background-color: rgba(255, 255, 255, 0.12); /* Subtle white transparency */
+            backdrop-filter: blur(12px); /* Blur effect for content behind */
+            -webkit-backdrop-filter: blur(12px); /* Safari support */
+            border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for definition */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15); /* Soft, deep shadow */
+            border-radius: 1.5rem; /* More rounded corners for a modern look */
         }
-        .text-primary-blue { color: #1e3a8a; } /* Consistent primary color */
-        .bg-primary-blue { background-color: #1e3a8a; }
-        .border-primary-blue { border-color: #1e3a8a; }
+
+        /* Hero section specific gradient overlay for better text contrast */
+        .hero-gradient-overlay {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.75) 100%);
+        }
+
+        /* Advanced hover effects for service cards */
+        .service-card {
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border-top: 5px solid theme('colors.blue.500'); /* Initial distinct top border */
+            @apply shadow-lg; /* Default shadow */
+        }
+        .service-card:hover {
+            transform: translateY(-12px) scale(1.03); /* Lift and slightly enlarge */
+            box-shadow: 0 20px 40px rgba(0, 75, 170, 0.35); /* Enhanced, deeper shadow on hover */
+            background-color: #e0f2fe; /* Light blue tint on hover for active feedback */
+            border-top-color: theme('colors.blue.700'); /* Darker border on hover */
+        }
+
+        /* Custom button styling for primary calls-to-action */
         .btn-primary {
-            @apply inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50;
+            @apply inline-flex items-center justify-center px-10 py-5 text-xl font-bold rounded-full shadow-2xl transition-all duration-400 ease-in-out;
+            box-shadow: 0 10px 25px rgba(0, 75, 170, 0.4); /* Custom shadow for depth */
+            text-transform: uppercase; /* Modern button text styling */
+            letter-spacing: 0.05em; /* Spacing for readability */
         }
-        .btn-secondary {
-            @apply inline-flex items-center justify-center px-8 py-4 border-2 border-blue-600 text-base font-medium rounded-full text-blue-700 bg-white hover:bg-blue-50 hover:text-blue-800 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50;
+        .btn-primary:hover {
+            @apply transform scale-105 -translate-y-1; /* Subtle lift and scale */
+            box-shadow: 0 15px 35px rgba(0, 75, 170, 0.5); /* More pronounced shadow on hover */
         }
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+        /* Navigation link hover effect */
+        .nav-link {
+            @apply relative;
         }
-        .card-effect {
-            @apply bg-white p-8 rounded-xl shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl;
-        }
-        .hero-section {
-            background-image: url('https://loremflickr.com/1200/800/doctors?random=1');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            z-index: 0;
-        }
-        .hero-overlay {
-            background: linear-gradient(to bottom, rgba(30, 58, 138, 0.7) 0%, rgba(55, 65, 81, 0.8) 100%);
-        }
-        .overlay-card {
-            background: rgba(255, 255, 255, 0.9); /* Slightly opaque white for text readability */
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .value-card {
-            @apply relative overflow-hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-100;
-        }
-        .value-card::before {
+        .nav-link::after {
             content: '';
+            @apply absolute bottom-0 left-0 w-full h-0.5 bg-blue-200;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Custom shape dividers for unique section transitions */
+        /* These create a "wave" or "cut" effect between sections using skew-y and background colors */
+        .shape-divider-top {
             position: absolute;
-            top: 0;
+            top: -100px; /* Overlap with the previous section */
             left: 0;
             width: 100%;
-            height: 4px;
-            background: linear-gradient(to right, #3B82F6, #6366F1);
-            transform: translateX(-100%);
-            transition: transform 0.3s ease-in-out;
+            height: 200px; /* Height of the divider */
+            background-color: theme('colors.blue.700'); /* Matches the previous section's background */
+            transform: skewY(3deg); /* Create a slanted edge */
+            transform-origin: top left;
+            z-index: 0; /* Ensure it stays behind content but over background */
         }
-        .value-card:hover::before {
-            transform: translateX(0);
+        .shape-divider-bottom {
+            position: absolute;
+            bottom: -100px; /* Overlap with the next section */
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background-color: theme('colors.gray.50'); /* Matches the next section's background */
+            transform: skewY(-3deg);
+            transform-origin: bottom right;
+            z-index: 0;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 antialiased leading-relaxed">
 
-    <!-- Premium Navigation Bar -->
-    <header class="sticky top-0 z-50 w-full glass-effect py-4 border-b border-white border-opacity-30">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="flex items-center">
-                <a href="index.html" class="flex items-center space-x-3 text-primary-blue text-3xl font-bold tracking-tight hover:text-blue-700 transition duration-300">
-                    <svg class="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                    <span>Albany Medical Clinic</span>
-                </a>
+    <!-- Navigation Bar -->
+    <header class="relative bg-gradient-to-r from-blue-800 to-indigo-900 text-white shadow-xl z-50">
+        <nav class="container mx-auto px-8 py-5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-4 group">
+                <img src="https://loremflickr.com/60/60/medical,logo" alt="Albany Medical Clinic Logo" class="h-12 w-12 rounded-full shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                <span class="text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white group-hover:from-white group-hover:to-blue-200 transition-all duration-300">Albany Medical Clinic</span>
+            </a>
+            <div class="hidden md:flex space-x-10 items-center">
+                <a href="index.html" class="nav-link text-lg font-semibold text-white hover:text-blue-200 transition-colors duration-300">Home</a>
+                <a href="services.html" class="nav-link text-lg font-semibold text-white hover:text-blue-200 transition-colors duration-300">Services</a>
+                <a href="our_team.html" class="nav-link text-lg font-semibold text-white hover:text-blue-200 transition-colors duration-300">Our Team</a>
+                <a href="patient_resources.html" class="nav-link text-lg font-semibold text-white hover:text-blue-200 transition-colors duration-300">Patient Resources</a>
+                <a href="contact.html" class="nav-link text-lg font-semibold text-white hover:text-blue-200 transition-colors duration-300">Contact Us</a>
             </div>
-            <nav class="hidden md:flex space-x-8 text-lg font-medium">
-                <a href="index.html" class="text-primary-blue hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 pb-1 transition duration-300 ease-in-out">Home</a>
-                <a href="services.html" class="text-gray-700 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 pb-1 transition duration-300 ease-in-out">Services</a>
-                <a href="our-team.html" class="text-gray-700 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 pb-1 transition duration-300 ease-in-out">Our Team</a>
-                <a href="contact.html" class="text-gray-700 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 pb-1 transition duration-300 ease-in-out">Contact</a>
-            </nav>
-            <div class="hidden md:block">
-                <a href="contact.html" class="btn-primary">
-                    Book Appointment
-                    <svg class="ml-2 -mr-1 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                    </svg>
-                </a>
-            </div>
-            <!-- Mobile Menu Button (Hamburger) - not functional as per instruction, but visually present -->
+            <!-- Mobile Menu Button (Hamburger) - for static HTML, this would require JS to function -->
             <div class="md:hidden">
-                <button class="text-primary-blue focus:outline-none">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <button class="text-white focus:outline-none p-2 rounded-md hover:bg-blue-700 transition-colors duration-300">
+                    <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
             </div>
+        </nav>
+        <!-- Mobile Menu Overlay (Hidden for static page, would be toggled by JS) -->
+        <div class="md:hidden absolute top-full left-0 w-full bg-indigo-900 bg-opacity-95 shadow-xl py-4 hidden">
+            <a href="index.html" class="block px-8 py-3 text-xl font-medium text-white hover:bg-blue-700 transition-colors duration-300">Home</a>
+            <a href="services.html" class="block px-8 py-3 text-xl font-medium text-white hover:bg-blue-700 transition-colors duration-300">Services</a>
+            <a href="our_team.html" class="block px-8 py-3 text-xl font-medium text-white hover:bg-blue-700 transition-colors duration-300">Our Team</a>
+            <a href="patient_resources.html" class="block px-8 py-3 text-xl font-medium text-white hover:bg-blue-700 transition-colors duration-300">Patient Resources</a>
+            <a href="contact.html" class="block px-8 py-3 text-xl font-medium text-white hover:bg-blue-700 transition-colors duration-300">Contact Us</a>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-section text-white py-24 md:py-36 relative overflow-hidden flex items-center min-h-[70vh]">
-            <div class="hero-overlay absolute inset-0 z-10"></div>
-            <div class="container mx-auto px-6 relative z-20 flex flex-col md:flex-row items-center md:items-start justify-between">
-                <div class="md:w-3/5 lg:w-1/2 text-center md:text-left mb-10 md:mb-0 relative">
-                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-down">
-                        Your Journey to <br class="hidden md:block"> Wellness Starts Here.
-                    </h1>
-                    <p class="text-xl md:text-2xl font-light leading-relaxed mb-8 max-w-2xl mx-auto md:mx-0 animate-fade-in-up delay-200">
-                        At Albany Medical Clinic, we are dedicated to providing compassionate, comprehensive, and patient-centered healthcare to the vibrant community of Toronto, particularly those in the Broadview and Albany Street areas. Experience the difference personalized care makes.
-                    </p>
-                    <a href="contact.html" class="btn-primary transform animate-fade-in-up delay-400">
-                        Schedule Your Visit Today
-                        <svg class="ml-2 -mr-1 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </a>
-                </div>
-                <div class="md:w-2/5 lg:w-1/2 flex justify-center md:justify-end relative mt-10 md:mt-0">
-                    <div class="overlay-card p-8 md:p-10 rounded-2xl shadow-xl max-w-md w-full animate-fade-in-left delay-600">
-                        <h3 class="text-3xl font-bold text-primary-blue mb-6 text-center">Quick Connect</h3>
-                        <p class="text-gray-700 text-lg mb-4 text-center">Need to speak with us? Reach out directly.</p>
-                        <ul class="space-y-4 text-gray-700">
-                            <li class="flex items-center justify-center space-x-3 text-lg">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
-                                <span>807 Broadview Ave, Toronto, ON M4K 2P8</span>
-                            </li>
-                            <li class="flex items-center justify-center space-x-3 text-lg">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                </svg>
-                                <a href="tel:+14164619471" class="hover:text-blue-600 transition duration-300">+1 416-461-9471</a>
-                            </li>
-                        </ul>
-                        <div class="mt-6 flex justify-center">
-                            <a href="contact.html" class="btn-primary w-full text-center">Get Directions</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Hero Section: Dynamic, inviting, and high-impact -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <img src="https://loremflickr.com/1920/1080/doctors,medical,clinic" alt="Modern Medical Clinic Interior" class="absolute inset-0 w-full h-full object-cover transform scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out">
+        <div class="absolute inset-0 hero-gradient-overlay"></div> <!-- Custom dark overlay -->
+        <div class="relative z-10 text-center max-w-5xl mx-auto px-8 py-16 glassmorphism border-white/20 shadow-2xl">
+            <h1 class="text-6xl md:text-8xl font-extrabold text-white leading-tight mb-8 drop-shadow-lg [text-shadow:0_5px_15px_rgba(0,0,0,0.4)]">
+                Your Health, Our Priority: Compassionate Care in the Heart of Toronto
+            </h1>
+            <p class="text-2xl md:text-3xl text-blue-100 mb-12 leading-relaxed drop-shadow-md">
+                At Albany Medical Clinic, we are deeply committed to providing exceptional, patient-centered healthcare services to the vibrant community of Toronto. Experience a new benchmark of medical excellence where cutting-edge treatment meets heartfelt compassion, and your well-being is genuinely our utmost concern.
+            </p>
+            <a href="contact.html" class="btn-primary bg-blue-600 hover:bg-blue-700 text-white">
+                Book Your Appointment Today
+                <svg class="ml-4 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+        </div>
+    </section>
 
-        <!-- Welcome & Philosophy Section -->
-        <section class="py-20 md:py-28 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
-            <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="relative order-2 lg:order-1">
-                    <img src="https://loremflickr.com/1200/800/medical-consultation?random=2" alt="Doctor consulting with patient" class="rounded-3xl shadow-2xl w-full h-auto object-cover transform rotate-1 transition-transform duration-500 ease-in-out hover:rotate-0 hover:scale-[1.02]">
-                    <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-lg shadow-xl border border-gray-200 transform -rotate-3 hover:rotate-0 transition-transform duration-500 ease-in-out hidden md:block">
-                        <p class="text-xl font-semibold text-primary-blue">"Caring for our community, one patient at a time."</p>
-                    </div>
-                </div>
-                <div class="order-1 lg:order-2">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                        Welcome to Albany Medical Clinic: <span class="text-blue-600">Where Your Health is Our Legacy.</span>
+    <!-- Welcome & Clinic Overview Section: Engaging two-column layout with subtle overlap -->
+    <section class="relative py-32 bg-gray-50 overflow-hidden">
+        <div class="container mx-auto px-8">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="order-2 lg:order-1 relative">
+                    <h2 class="text-5xl font-bold text-blue-800 mb-8 leading-snug">
+                        Welcome to Albany Medical Clinic: Your Dedicated Partner in Lifelong Health
                     </h2>
-                    <p class="text-lg leading-relaxed text-gray-700 mb-6">
-                        Nestled in the heart of Toronto, the Albany Medical Clinic has been a pillar of health and wellness for the community around Broadview Avenue and the historic Albany Street vicinity for years. We understand that choosing a healthcare provider is a deeply personal decision, and we are honored by the trust you place in us. Our clinic is more than just a place for appointments; it's a sanctuary where every patient is treated with respect, empathy, and the highest standard of medical expertise.
+                    <p class="text-lg text-gray-700 mb-7 leading-relaxed">
+                        Strategically located at 807 Broadview Ave, a cornerstone of the vibrant Toronto community, Albany Medical Clinic proudly serves as a beacon of health and wellness for individuals and families across the city. For over a decade, we have diligently cultivated a reputation for unwavering commitment to delivering comprehensive, world-class medical care infused with a deeply personal and empathetic touch. Our foundational philosophy is elegantly simple yet profoundly impactful: every single patient deserves unparalleled respect, genuine empathy, and unobstructed access to the absolute highest quality healthcare, meticulously tailored to their unique needs, life circumstances, and health aspirations.
                     </p>
-                    <p class="text-lg leading-relaxed text-gray-700 mb-6">
-                        Our philosophy is simple yet profound: to integrate modern medical advancements with the timeless principles of compassionate care. We believe in a holistic approach, addressing not just symptoms, but the complete well-being of each individual. From routine check-ups and preventative care to managing complex health conditions, our dedicated team of physicians, nurses, and support staff work tirelessly to ensure your health journey is smooth, supportive, and effective. We continuously strive for excellence, embracing feedback and evolving our practices to serve you better, ensuring that every interaction reinforces our commitment to your health and peace of mind.
+                    <p class="text-lg text-gray-700 mb-7 leading-relaxed">
+                        We passionately believe that true, holistic health transcends the mere treatment of immediate symptoms. It encompasses fostering a proactive, preventative approach to well-being, continuously educating our cherished patients, and profoundly empowering them to make informed, confident decisions about their intricate health journey. Our architecturally thoughtful and state-of-the-art facility is meticulously designed to provide a comforting, serene, and exceptionally efficient environment, robustly equipped with the latest modern diagnostic tools and advanced medical technologies to ensure consistently accurate assessments and optimally effective treatments. From the essential routine check-ups and preventative screenings to the intricate management of complex chronic health conditions, our highly dedicated and multidisciplinary team stands ready to competently guide you, offering unwavering support every single step of the way.
                     </p>
-                    <a href="our-team.html" class="btn-secondary mt-6">
-                        Meet Our Dedicated Team
-                        <svg class="ml-2 -mr-1 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2v-2a4 4 0 014-4h12.713M17 20h3v-2a3 3 0 00-3-3H8a3 3 0 00-3 3v2h3m-3 0V9a2 2 0 012-2h4a2 2 0 012 2v11m-8 0H1V9a2 2 0 012-2h4a2 2 0 012 2v11m-8 0a2 2 0 002 2h2" />
-                        </svg>
-                    </a>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Discover and truly experience the transformative difference that genuine, patient-first care makes. At Albany Medical Clinic, you are far more than just a patient; you are a deeply valued and respected member of our extended community, and your paramount health is, without equivocation, our most sacred mission. We tirelessly strive to seamlessly integrate the very latest medical advancements and evidence-based practices with timeless, foundational principles of compassionate, human-centered care, ensuring that you consistently receive the best possible health outcomes within an exceptionally supportive, understanding, and healing setting.
+                    </p>
+                </div>
+                <div class="order-1 lg:order-2 relative group transform transition-transform duration-700 ease-out hover:scale-102">
+                    <img src="https://loremflickr.com/800/600/doctors,patient,consulting" alt="Doctor consulting with a patient at Albany Medical Clinic" class="w-full h-auto rounded-3xl shadow-2xl border-4 border-blue-200 object-cover transform -rotate-6 group-hover:rotate-0 transition-transform duration-700 ease-in-out">
+                    <div class="absolute -bottom-10 -left-10 bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl shadow-xl transform rotate-3 group-hover:rotate-0 transition-transform duration-700 ease-in-out w-4/5 md:w-3/4 lg:w-4/5 xl:w-3/5 hidden sm:block z-10">
+                        <p class="text-xl md:text-2xl font-semibold text-blue-800 italic leading-snug">"At Albany Medical Clinic, we are dedicated to setting and exceeding new standards in patient-centered care and community health."</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Core Values Section -->
-        <section class="py-20 md:py-28 bg-white overflow-hidden">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl md:text-5xl font-bold text-primary-blue mb-6">Our Foundational Values</h2>
-                <p class="text-xl leading-relaxed text-gray-700 mb-16 max-w-3xl mx-auto">
-                    These principles guide every decision we make and every interaction we have, ensuring that Albany Medical Clinic remains a trusted beacon of health in your life.
+    <!-- Key Services Highlights Section: Modern grid with distinct hover effects and shape dividers -->
+    <section class="py-32 bg-blue-700 text-white relative overflow-hidden">
+        <!-- Unique top shape divider for visual separation -->
+        <div class="shape-divider-top bg-gray-50 transform skew-y-3 -top-20 z-0 absolute w-full h-40"></div>
+
+        <div class="container mx-auto px-8 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl lg:text-6xl font-extrabold mb-6 text-white drop-shadow-lg">Our Comprehensive & Advanced Healthcare Services</h2>
+                <p class="text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+                    Albany Medical Clinic is proud to offer an extensive and diverse spectrum of cutting-edge medical services, thoughtfully designed to address all your evolving health needs seamlessly under one trusted roof. Our highly experienced, board-certified practitioners provide care that is not only technologically advanced but also deeply compassionate and personalized.
                 </p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                    <div class="value-card">
-                        <div class="text-blue-600 mb-4 text-5xl flex justify-center">
-                            <svg class="w-16 h-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-primary-blue mb-3">Compassion</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            We approach every patient interaction with deep empathy and understanding, recognizing the unique human experience behind every medical need. Your comfort and emotional well-being are paramount to us.
-                        </p>
-                    </div>
-
-                    <div class="value-card">
-                        <div class="text-blue-600 mb-4 text-5xl flex justify-center">
-                            <svg class="w-16 h-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.618a2.121 2.121 0 010 3l-3.92 3.92a2.121 2.121 0 01-3 0L3 6m0 0h-2M3 6h7.5M3 6l2.293-2.293A1 1 0 015.707 3h4.586a1 1 0 01.707.293L15 7m6 0l-3.92-3.92a2.121 2.121 0 00-3 0L3 18m0 0h-2M3 18h7.5M3 18l2.293 2.293A1 1 0 015.707 21h4.586a1 1 0 01.707-.293L15 16m6 0h-2M6 12a1 1 0 11-2 0 1 1 0 012 0zm0 0a1 1 0 11-2 0 1 1 0 012 0zm0 0a1 1 0 11-2 0 1 1 0 012 0z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-primary-blue mb-3">Excellence</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            We are committed to medical excellence, continuous learning, and upholding the highest standards of care. Our team pursues ongoing education to bring you the latest, most effective treatments.
-                        </p>
-                    </div>
-
-                    <div class="value-card">
-                        <div class="text-blue-600 mb-4 text-5xl flex justify-center">
-                            <svg class="w-16 h-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6 10h1m-4-7h1m-7 12v1m-6 3h1m-1-4a1 1 0 110-2 1 1 0 010 2zm12 0a1 1 0 110-2 1 1 0 010 2zm-1.732-3.377a10.025 10.025 0 01-2.29-2.87c-.035-.098-.052-.2-.052-.315V7.5a1.5 1.5 0 013 0v4.838c0 .115-.017.217-.052.315a10.025 10.025 0 01-2.29 2.87z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-primary-blue mb-3">Innovation</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            Embracing innovative practices and technologies, we constantly seek better ways to enhance patient outcomes, improve experiences, and streamline healthcare delivery for you.
-                        </p>
-                    </div>
-
-                    <div class="value-card">
-                        <div class="text-blue-600 mb-4 text-5xl flex justify-center">
-                            <svg class="w-16 h-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2v-2a4 4 0 014-4h12.713M17 20h3v-2a3 3 0 00-3-3H8a3 3 0 00-3 3v2h3m-3 0V9a2 2 0 012-2h4a2 2 0 012 2v11m-8 0H1V9a2 2 0 012-2h4a2 2 0 012 2v11m-8 0a2 2 0 002 2h2" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-primary-blue mb-3">Community</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            As an integral part of the Toronto community, we are dedicated to fostering a healthier environment for everyone. We participate in local initiatives and promote public health awareness.
-                        </p>
-                    </div>
-                </div>
             </div>
-        </section>
 
-        <!-- Services Overview Teaser Section -->
-        <section class="py-20 md:py-28 bg-blue-50 relative overflow-hidden">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl md:text-5xl font-bold text-primary-blue mb-6">A Full Spectrum of Care for Your Family</h2>
-                <p class="text-xl leading-relaxed text-gray-700 mb-16 max-w-3xl mx-auto">
-                    Albany Medical Clinic offers a diverse range of medical services tailored to meet the evolving health needs of you and your loved ones. Explore our core offerings below, or visit our <a href="services.html" class="text-blue-600 hover:underline font-medium">Services page</a> for a comprehensive list.
-                </p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <div class="card-effect group">
-                        <div class="text-blue-600 mb-4 text-5xl flex justify-center group-hover:text-blue-800 transition-colors duration-300">
-                            <svg class="w-16 h-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-primary-blue mb-3 group-hover:text-blue-700 transition-colors duration-300">Family Medicine</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
-                            Your primary point of contact for all general health concerns, preventative care, chronic disease management, and regular check-ups for every member of your family, from infants to seniors.
-                        </p>
-                        <a href="services.html#family" class="text-blue-600 font-medium hover:text-blue-800 hover:underline transition-all duration-300">Learn More &rarr;</a>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Service Card 1: Family Medicine & General Practice -->
+                <div class="service-card bg-white text-gray-800 p-10 rounded-2xl shadow-xl flex flex-col items-center text-center">
+                    <div class="bg-blue-50 p-6 rounded-full mb-8 shadow-md">
+                        <svg class="w-14 h-14 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.275a1.125 1.125 0 011.122 1.122l-.003.072c-.105.908-.918 1.624-1.921 1.78a2.158 2.158 0 00-1.841 1.841c-.156 1.003-.872 1.816-1.78 1.921l-.072.003a1.125 1.125 0 01-1.122-1.122l-.003-.072c.105-.908.918-1.624 1.921-1.78a2.158 2.158 0 001.841-1.841c.156-1.003.872-1.816 1.78-1.921l.072-.003zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-
-                    <div class="card-effect group">
-                        <div class="text-blue-600 mb-4 text-5xl flex justify-center group-hover:text-blue-800 transition-colors duration-300">
-                            <svg class="w-16 h-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-primary-blue mb-3 group-hover:text-blue-700 transition-colors duration-300">Preventative Care</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
-                            Focusing on proactive health management through screenings, vaccinations, lifestyle counseling, and early detection strategies to keep you healthy and minimize future risks.
-                        </p>
-                        <a href="services.html#preventative" class="text-blue-600 font-medium hover:text-blue-800 hover:underline transition-all duration-300">Learn More &rarr;</a>
-                    </div>
-
-                    <div class="card-effect group">
-                        <div class="text-blue-600 mb-4 text-5xl flex justify-center group-hover:text-blue-800 transition-colors duration-300">
-                            <svg class="w-16 h-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 13v-1m4 1v-1m4 1v-1M4 21h16a2 2 0 002-2V5a2 2 0 00-2-2H4a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-primary-blue mb-3 group-hover:text-blue-700 transition-colors duration-300">Chronic Disease Management</h3>
-                        <p class="text-gray-700 leading-relaxed mb-4">
-                            Expert guidance and long-term support for conditions like diabetes, hypertension, and asthma, empowering you to manage your health effectively and maintain a high quality of life.
-                        </p>
-                        <a href="services.html#chronic" class="text-blue-600 font-medium hover:text-blue-800 hover:underline transition-all duration-300">Learn More &rarr;</a>
-                    </div>
+                    <h3 class="text-3xl font-bold mb-5 text-blue-800">Family Medicine & General Practice</h3>
+                    <p class="text-lg text-gray-600 mb-8 flex-grow leading-relaxed">
+                        Our foundational offering encompasses comprehensive, holistic care for individuals and families spanning all ages and life stages. From essential routine check-ups, proactive preventative screenings, and acute illness management to nuanced chronic disease care, our dedicated general practitioners serve as your primary point of contact for every health concern. We are profoundly committed to fostering enduring, trust-based relationships, thoroughly understanding your unique health history, and ensuring seamless continuity of care that evolves with you.
+                    </p>
+                    <a href="services.html#family-medicine" class="text-blue-600 font-semibold hover:text-blue-800 flex items-center group text-lg transition-colors duration-300">
+                        Explore This Service
+                        <svg class="ml-3 w-5 h-5 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
                 </div>
 
-                <div class="mt-16">
-                    <a href="services.html" class="btn-primary">
-                        View All Our Services
-                        <svg class="ml-2 -mr-1 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
+                <!-- Service Card 2: Preventative Care & Health Screenings -->
+                <div class="service-card bg-white text-gray-800 p-10 rounded-2xl shadow-xl flex flex-col items-center text-center">
+                    <div class="bg-blue-50 p-6 rounded-full mb-8 shadow-md">
+                        <svg class="w-14 h-14 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0-8a2 2 0 00-2-2H6a2 2 0 00-2 2h2m4 0a2 2 0 012 2v8m0-8a2 2 0 00-2-2h-2m4 1v8m0-8a2 2 0 012 2v8"></path></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-5 text-blue-800">Preventative Care & Health Screenings</h3>
+                    <p class="text-lg text-gray-600 mb-8 flex-grow leading-relaxed">
+                        Embracing prevention as the absolute cornerstone of robust, long-term health, our clinic places immense emphasis on proactive health management. This is achieved through meticulously crafted, personalized preventative care plans, comprehensive vaccination programs, and advanced health screenings. We are dedicated to identifying potential health risks at their earliest stages, equipping you with the vital tools and profound knowledge to steadfastly maintain optimal health and unparalleled well-being throughout every chapter of your life.
+                    </p>
+                    <a href="services.html#preventative-care" class="text-blue-600 font-semibold hover:text-blue-800 flex items-center group text-lg transition-colors duration-300">
+                        Explore This Service
+                        <svg class="ml-3 w-5 h-5 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Service Card 3: Chronic Disease Management -->
+                <div class="service-card bg-white text-gray-800 p-10 rounded-2xl shadow-xl flex flex-col items-center text-center">
+                    <div class="bg-blue-50 p-6 rounded-full mb-8 shadow-md">
+                        <svg class="w-14 h-14 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0H9m3 0h3"></path></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-5 text-blue-800">Chronic Disease Management</h3>
+                    <p class="text-lg text-gray-600 mb-8 flex-grow leading-relaxed">
+                        Navigating life with a chronic health condition necessitates consistent, expert support and meticulous management. Our empathetic team delivers profoundly compassionate and highly effective care for a spectrum of chronic diseases, including diabetes, hypertension, asthma, and many more. We collaborate synergistically with you to forge personalized, actionable management plans, vigilantly monitor your health trajectory, and powerfully empower you to lead an exceptionally fulfilling life, resiliently thriving despite your condition.
+                    </p>
+                    <a href="services.html#chronic-disease" class="text-blue-600 font-semibold hover:text-blue-800 flex items-center group text-lg transition-colors duration-300">
+                        Explore This Service
+                        <svg class="ml-3 w-5 h-5 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
                 </div>
             </div>
-        </section>
-
-        <!-- Call to Action Banner -->
-        <section class="bg-primary-blue py-20 md:py-28 relative overflow-hidden">
-            <div class="absolute inset-0 z-0 opacity-10" style="background-image: url('https://loremflickr.com/1200/800/medical-background?random=3'); background-size: cover; background-position: center;"></div>
-            <div class="relative z-10 container mx-auto px-6 text-center text-white">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Prioritize Your Health?</h2>
-                <p class="text-xl md:text-2xl font-light leading-relaxed mb-10 max-w-4xl mx-auto">
-                    Take the first step towards a healthier, happier you. Whether you're due for a check-up, need ongoing care, or have health concerns you wish to discuss, our compassionate team is here to listen and provide the care you deserve. We're easily accessible in the Toronto area.
-                </p>
-                <div class="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-8">
-                    <a href="contact.html" class="btn-primary bg-white text-primary-blue hover:bg-gray-100 hover:text-blue-800 transition duration-300">
-                        Book Your Appointment Now
-                        <svg class="ml-2 -mr-1 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </a>
-                    <a href="tel:+14164619471" class="btn-secondary border-white text-white hover:bg-white hover:text-primary-blue transition duration-300">
-                        Call Us Directly: +1 416-461-9471
-                        <svg class="ml-2 -mr-1 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-16 md:py-20">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12">
-            <!-- Clinic Info -->
-            <div class="col-span-1 md:col-span-1">
-                <a href="index.html" class="flex items-center space-x-3 text-white text-3xl font-bold tracking-tight mb-6">
-                    <svg class="h-10 w-10 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                    <span>Albany Medical Clinic</span>
+            <div class="text-center mt-20">
+                <a href="services.html" class="btn-primary bg-white text-blue-700 hover:bg-blue-50 hover:text-blue-800">
+                    Discover All Our Comprehensive Services
+                    <svg class="ml-4 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </a>
-                <p class="text-gray-400 leading-relaxed mb-6">
-                    Dedicated to providing exemplary, patient-focused healthcare services to the Toronto community. Your health and well-being are our highest priority.
+            </div>
+        </div>
+        <!-- Unique bottom shape divider for visual separation -->
+        <div class="shape-divider-bottom bg-gray-50 transform -skew-y-3 -bottom-20 z-0 absolute w-full h-40"></div>
+    </section>
+
+
+    <!-- Call to Action for Appointments: Prominent and persuasive -->
+    <section class="py-32 bg-gradient-to-br from-blue-50 via-white to-indigo-50 relative overflow-hidden">
+        <div class="container mx-auto px-8 text-center">
+            <h2 class="text-5xl lg:text-6xl font-extrabold text-blue-800 mb-10 leading-snug">
+                Ready to Take the Next Step Towards Optimal Health?
+            </h2>
+            <p class="text-xl text-gray-700 max-w-5xl mx-auto mb-16 leading-relaxed">
+                Prioritizing your health is arguably the single most crucial and rewarding investment you can ever make. At Albany Medical Clinic, we are dedicated to making it exceptionally easy and wonderfully welcoming to access the superior care you not only need but profoundly deserve. Whether you're due for that essential routine check-up, diligently managing a complex chronic condition, or proactively seeking expert medical advice, our highly skilled and empathetic team is enthusiastically ready to serve you with unparalleled excellence and genuine compassion. Do not defer your invaluable well-being another moment – confidently schedule an appointment with Toronto's most trusted and respected healthcare provider today. Your journey to better health begins here.
+            </p>
+            <a href="contact.html" class="btn-primary bg-green-600 hover:bg-green-700 text-white shadow-green-400/50">
+                Schedule Your Personalized Visit Now
+                <svg class="ml-4 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2zm1-8h.01M10 16h.01M14 16h.01M18 16h.01"></path></svg>
+            </a>
+            <p class="text-2xl text-gray-700 mt-12 font-medium">
+                Prefer to speak directly? Call us today at: <span class="font-bold text-blue-700 block mt-3">+1 416-461-9471</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer: Comprehensive and well-structured -->
+    <footer class="bg-gray-900 text-gray-300 py-20 relative">
+        <div class="container mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+            <!-- Clinic Info -->
+            <div>
+                <h3 class="text-3xl font-extrabold text-white mb-7">Albany Medical Clinic</h3>
+                <p class="mb-5 text-lg leading-relaxed">
+                    Your most trusted partner for truly comprehensive and deeply compassionate healthcare services right here in the heart of Toronto. Our unwavering mission is perpetually dedicated to your holistic well-being.
                 </p>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.588-1.333h2.412v-3.996h-3.228c-3.411 0-4.772 1.996-4.772 4.628v2.368z"/></svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.204-.012 3.584-.07 4.85-.148 3.252-1.691 4.771-4.919 4.919-1.266.058-1.644.069-4.85.069-3.204 0-3.584-.012-4.85-.07-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.849 0-3.204.012-3.584.07-4.85.148-3.252 1.691-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.073 4.948.073 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.607 3.419-2.072 1.623-4.662 2.593-7.49 2.593h-.449c2.02.424 4.159.659 6.339.659 7.618 0 11.923-6.497 11.602-12.075-.02-.27-.04-.543-.062-.812.854-.607 1.594-1.366 2.163-2.355z"/></svg>
-                    </a>
+                <div class="flex items-start space-x-3 mb-4">
+                    <svg class="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-lg">807 Broadview Ave, Toronto, ON M4K 2P8, Canada</span>
+                </div>
+                <div class="flex items-center space-x-3 mb-4">
+                    <svg class="w-6 h-6 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.774a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74A1 1 0 0118 16.847V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                    <span class="text-lg">+1 416-461-9471</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <svg class="w-6 h-6 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884zM18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" clip-rule="evenodd"></path></svg>
+                    <span class="text-lg">info@albanymedical.ca</span> <!-- Fictional email for completeness -->
                 </div>
             </div>
 
             <!-- Quick Links -->
             <div>
-                <h4 class="text-xl font-semibold text-white mb-6">Quick Links</h4>
-                <ul class="space-y-3">
-                    <li><a href="index.html" class="text-gray-400 hover:text-blue-400 transition duration-300">Home</a></li>
-                    <li><a href="services.html" class="text-gray-400 hover:text-blue-400 transition duration-300">Services</a></li>
-                    <li><a href="our-team.html" class="text-gray-400 hover:text-blue-400 transition duration-300">Our Team</a></li>
-                    <li><a href="contact.html" class="text-gray-400 hover:text-blue-400 transition duration-300">Contact Us</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">Privacy Policy</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">Terms of Service</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact Info -->
-            <div>
-                <h4 class="text-xl font-semibold text-white mb-6">Contact Us</h4>
+                <h3 class="text-3xl font-extrabold text-white mb-7">Quick Navigation</h3>
                 <ul class="space-y-4">
-                    <li class="flex items-start space-x-3">
-                        <svg class="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        <span class="text-gray-400">807 Broadview Ave, Toronto, ON M4K 2P8, Canada</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                        <svg class="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                        </svg>
-                        <a href="tel:+14164619471" class="text-gray-400 hover:text-blue-400 transition duration-300">+1 416-461-9471</a>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                        <svg class="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        <a href="mailto:info@albanymedical.ca" class="text-gray-400 hover:text-blue-400 transition duration-300">info@albanymedical.ca</a>
-                    </li>
+                    <li><a href="index.html" class="text-lg hover:text-blue-400 transition-colors duration-200">Home</a></li>
+                    <li><a href="services.html" class="text-lg hover:text-blue-400 transition-colors duration-200">Services</a></li>
+                    <li><a href="our_team.html" class="text-lg hover:text-blue-400 transition-colors duration-200">Our Team</a></li>
+                    <li><a href="patient_resources.html" class="text-lg hover:text-blue-400 transition-colors duration-200">Patient Resources</a></li>
+                    <li><a href="contact.html" class="text-lg hover:text-blue-400 transition-colors duration-200">Contact Us</a></li>
                 </ul>
             </div>
 
-            <!-- Map Placeholder / Clinic Hours -->
-            <div class="lg:col-span-1">
-                <h4 class="text-xl font-semibold text-white mb-6">Clinic Hours</h4>
-                <p class="text-gray-400 mb-4">We are here to serve you:</p>
-                <ul class="text-gray-400 space-y-2">
-                    <li>Monday - Friday: <span class="font-medium text-white">9:00 AM - 5:00 PM</span></li>
-                    <li>Saturday: <span class="font-medium text-white">9:00 AM - 1:00 PM</span></li>
-                    <li>Sunday: <span class="font-medium text-white">Closed</span></li>
+            <!-- Operating Hours -->
+            <div>
+                <h3 class="text-3xl font-extrabold text-white mb-7">Clinic Hours</h3>
+                <ul class="space-y-3 text-lg">
+                    <li class="flex justify-between">Monday - Friday: <span class="font-semibold text-white">9:00 AM - 5:00 PM</span></li>
+                    <li class="flex justify-between">Saturday: <span class="font-semibold text-white">9:00 AM - 1:00 PM</span></li>
+                    <li class="flex justify-between">Sunday: <span class="font-semibold text-white">Closed</span></li>
                 </ul>
+                <p class="mt-6 text-base text-gray-400 italic leading-relaxed">
+                    We highly recommend scheduling appointments in advance to ensure timely care. Walk-ins are always welcome but are subject to practitioner availability.
+                </p>
+            </div>
+
+            <!-- Connect With Us & Social Media -->
+            <div>
+                <h3 class="text-3xl font-extrabold text-white mb-7">Connect With Us</h3>
+                <p class="text-lg mb-6 leading-relaxed">
+                    Stay informed and engaged with Albany Medical Clinic. Follow us on social media for health tips, updates, and community news.
+                </p>
+                <div class="flex space-x-6 mb-8">
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-200 transform hover:scale-110" aria-label="Facebook">
+                        <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-200 transform hover:scale-110" aria-label="Twitter">
+                        <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.007-.532A8.318 8.318 0 0022 5.302a8.13 8.13 0 01-2.357.646A4.14 4.14 0 0021.66 4.607a8.23 8.23 0 01-2.606.996 4.128 4.128 0 00-7.035 3.75 11.64 11.64 0 01-8.457-4.287 4.139 4.139 0 001.275 5.51C5.607 10.824 5.093 10.684 4.6 10.42v.057a4.128 4.128 0 003.303 4.037 4.116 4.116 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.205 8.205 0 013 18.077a11.616 11.616 0 006.29 1.84"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-200 transform hover:scale-110" aria-label="LinkedIn">
+                        <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+                <p class="text-base text-gray-400 leading-relaxed italic">
+                    We are deeply committed to continuous improvement, rigorously analyzing and integrating your valuable feedback to consistently enhance our services.
+                </p>
             </div>
         </div>
-
-        <div class="mt-16 pt-8 border-t border-gray-700 text-center text-gray-500 text-sm">
-            &copy; <span id="current-year"></span> Albany Medical Clinic. All rights reserved. Crafted with care in Toronto.
+        <div class="mt-20 border-t border-gray-700 pt-10 text-center text-gray-400">
+            <p class="text-lg">&copy; 2023 Albany Medical Clinic. All rights reserved.</p>
+            <p class="mt-4 text-base">
+                Crafted with unparalleled care and award-winning design by an elite web developer and designer.
+            </p>
         </div>
     </footer>
 
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>

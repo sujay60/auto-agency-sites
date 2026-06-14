@@ -3,383 +3,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Albany Medical Clinic</title>
-    <!-- Google Fonts for premium typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Contact Us - Albany Medical Clinic | Your Health Journey Starts Here</title>
+    <meta name="description" content="Reach out to Albany Medical Clinic for compassionate care in Toronto. Find our location, operating hours, and easily book an appointment online or by phone.">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Inter for a modern, professional look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
-        /* Custom styles to enhance unique design elements */
         body {
             font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            background-color: #f8fafc; /* Tailwind 'slate-50' */
+            color: #334155; /* Tailwind 'slate-700' */
         }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
+        .text-gradient-gold {
+            background-image: linear-gradient(to right, #facc15, #f59e0b); /* Tailwind yellow-400 to amber-500 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        /* Glassmorphism effect */
-        .glass-effect {
-            background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
-            backdrop-filter: blur(15px); /* Blur the background */
-            -webkit-backdrop-filter: blur(15px); /* Safari support */
-            border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle white border */
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        .glassmorphism-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1.5rem; /* rounded-3xl */
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
         }
-        /* Gradient backgrounds for subtle depth if needed, not heavily used on this page to keep glassmorphism prominent */
-        .bg-gradient-blue-light {
-            background: linear-gradient(to bottom right, #e0f2fe, #bfdbfe);
+        .glassmorphism-nav {
+            background-color: rgba(255, 255, 255, 0.05); /* Lighter background for nav */
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        .input-field {
+            background-color: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #1e293b; /* slate-900 */
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.75rem; /* rounded-xl */
+            transition: all 0.2s ease-in-out;
+        }
+        .input-field::placeholder {
+            color: #64748b; /* slate-500 */
+        }
+        .input-field:focus {
+            outline: none;
+            border-color: #3b82f6; /* blue-500 */
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3); /* blue-500 with opacity */
+            background-color: rgba(255, 255, 255, 0.25);
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 antialiased leading-relaxed">
 
     <!-- Premium Navigation Bar -->
-    <header class="sticky top-0 z-50 w-full bg-white shadow-lg">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-3 group">
-                <img src="https://loremflickr.com/60/60/medical-logo,clinic-logo,health-logo?random=1" alt="Albany Medical Clinic Logo" class="rounded-full w-12 h-12 shadow-md transition-transform duration-300 group-hover:scale-105">
-                <span class="text-3xl font-playfair-display font-extrabold text-blue-800 group-hover:text-blue-600 transition-colors duration-300">Albany Medical Clinic</span>
+    <header class="glassmorphism-nav fixed top-0 left-0 w-full z-50 py-4 px-8 md:px-12 lg:px-24 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+            <a href="index.html" class="text-3xl font-extrabold text-blue-800 hover:text-blue-600 transition duration-300 ease-in-out">
+                Albany Medical Clinic
             </a>
-            <div class="hidden md:flex space-x-10">
-                <a href="index.html" class="text-lg font-medium text-gray-700 hover:text-blue-600 transition duration-300 relative group py-2">
-                    Home
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="services.html" class="text-lg font-medium text-gray-700 hover:text-blue-600 transition duration-300 relative group py-2">
-                    Services
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="our-team.html" class="text-lg font-medium text-gray-700 hover:text-blue-600 transition duration-300 relative group py-2">
-                    Our Team
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="contact.html" class="text-lg font-bold text-blue-600 border-b-3 border-blue-600 pb-1.5 transform scale-105">
-                    Contact Us
-                </a>
-            </div>
-            <!-- Mobile Menu Button - Visual only as per instructions, no JS allowed -->
-            <button class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none">
-                <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path>
-                </svg>
-            </button>
+        </div>
+        <nav>
+            <ul class="flex space-x-6 md:space-x-10 text-lg font-medium">
+                <li><a href="index.html" class="text-slate-700 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition duration-300 ease-in-out pb-1">Home</a></li>
+                <li><a href="services.html" class="text-slate-700 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition duration-300 ease-in-out pb-1">Services</a></li>
+                <li><a href="our_team.html" class="text-slate-700 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition duration-300 ease-in-out pb-1">Our Team</a></li>
+                <li><a href="patient_resources.html" class="text-slate-700 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition duration-300 ease-in-out pb-1">Patient Resources</a></li>
+                <li><a href="contact.html" class="text-blue-600 border-b-2 border-blue-600 font-semibold pb-1">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
-        <!-- Hero Section: Dynamic Image with Glassmorphism Overlay -->
-        <section class="relative bg-cover bg-center h-[550px] flex items-center justify-center text-white p-6"
-            style="background-image: url('https://loremflickr.com/1200/800/medical-consultation,clinic-reception?random=2');">
-            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-blue-600/60"></div>
-            <div class="container mx-auto px-6 py-16 text-center z-10 glass-effect rounded-3xl max-w-4xl border-white/30 p-10 backdrop-blur-md">
-                <h1 class="text-6xl font-playfair-display font-extrabold mb-6 drop-shadow-lg leading-tight">
-                    Your Direct Connection to Compassionate Care
-                </h1>
-                <p class="text-xl md:text-2xl leading-relaxed font-light drop-shadow-md max-w-2xl mx-auto">
-                    At Albany Medical Clinic, we believe that exceptional healthcare begins with clear and accessible communication. Whether you're seeking to book an appointment, inquire about our services, or simply have a question, our dedicated team is here to provide you with prompt and thoughtful assistance. We are deeply committed to the well-being of the Toronto community, and we invite you to connect with us – your journey to optimal health starts here.
-                </p>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-screen flex items-center justify-center pt-24" style="background-image: url('https://loremflickr.com/1200/800/doctors');">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-blue-700/60 z-10"></div>
+        <div class="relative z-20 text-center text-white px-6 max-w-4xl">
+            <h1 class="text-6xl font-extrabold mb-6 drop-shadow-lg leading-tight">
+                Connect with Compassionate Care at Albany Medical Clinic
+            </h1>
+            <p class="text-xl md:text-2xl font-light mb-8 drop-shadow">
+                Your health journey is important to us. Whether you have a question, need to schedule an appointment, or simply want to learn more about our services, our dedicated team is here to assist you with warmth and professionalism. Reach out today and experience the difference of patient-centered care right here in the heart of Toronto.
+            </p>
+            <a href="#appointment-booking" class="inline-block bg-white text-blue-700 hover:bg-blue-100 px-10 py-4 rounded-full text-lg font-semibold cta-button transition duration-300 ease-in-out">
+                Book Your Appointment Now
+            </a>
+        </div>
+    </section>
 
-        <!-- Main Content Area: Sophisticated Overlapping Grid Layout -->
-        <section class="container mx-auto px-6 py-20 relative -mt-32 z-20">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20">
-
-                <!-- Left Column: Clinic Information & Hours -->
-                <div class="lg:col-span-1 space-y-12">
-                    <!-- Contact Details Card with Overlap Visual -->
-                    <div class="p-10 rounded-3xl shadow-3xl glass-effect border-blue-100 relative bg-white/20 transform hover:scale-[1.01] transition-transform duration-300 ease-in-out">
-                        <h2 class="text-4xl font-playfair-display font-bold text-blue-800 mb-8 leading-tight">
-                            Essential Clinic Information: Reach Out to Us
-                        </h2>
-                        <p class="text-lg text-gray-700 mb-10 leading-relaxed">
-                            Finding reliable healthcare should never be a challenge. We've compiled all the crucial contact details you need to easily get in touch with Albany Medical Clinic. Our friendly staff are prepared to guide you, answer your inquiries, and ensure you receive the personalized attention you deserve. We're proud to be a cornerstone of health in the Broadview community of Toronto.
-                        </p>
-
-                        <div class="space-y-8">
-                            <div>
-                                <h3 class="text-2xl font-playfair-display font-semibold text-blue-700 mb-3 flex items-center">
-                                    <svg class="w-7 h-7 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
-                                    Our Esteemed Location
-                                </h3>
-                                <address class="text-xl text-gray-800 not-italic pl-10 leading-relaxed">
-                                    807 Broadview Ave,<br>
-                                    Toronto, ON M4K 2P8, Canada
-                                </address>
-                            </div>
-
-                            <div>
-                                <h3 class="text-2xl font-playfair-display font-semibold text-blue-700 mb-3 flex items-center">
-                                    <svg class="w-7 h-7 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.774a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
-                                    Speak Directly With Us
-                                </h3>
-                                <a href="tel:+14164619471" class="text-2xl text-blue-600 hover:text-blue-800 hover:underline transition duration-300 pl-10 block">
-                                    +1 416-461-9471
-                                </a>
-                            </div>
-
-                            <div>
-                                <h3 class="text-2xl font-playfair-display font-semibold text-blue-700 mb-3 flex items-center">
-                                    <svg class="w-7 h-7 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-                                    Send Us an Email
-                                </h3>
-                                <a href="mailto:info@albanymedical.com" class="text-2xl text-blue-600 hover:text-blue-800 hover:underline transition duration-300 pl-10 block">
-                                    info@albanymedical.com
-                                </a>
-                            </div>
-
-                            <div>
-                                <h3 class="text-2xl font-playfair-display font-semibold text-blue-700 mb-3 flex items-center">
-                                    <svg class="w-7 h-7 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.24.195 2.24.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
-                                    Connect with Us on Social Media
-                                </h3>
-                                <div class="flex space-x-6 mt-4 pl-10">
-                                    <a href="https://facebook.com/AlbanyMedicalClinic" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition transform hover:scale-125">
-                                        <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.24.195 2.24.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
-                                    </a>
-                                    <a href="https://twitter.com/AlbanyMedical" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition transform hover:scale-125">
-                                        <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c1.803 0 3.533-.642 4.907-1.85a9.89 9.89 0 00-3.353-.923 4.956 4.956 0 01-3.693-2.14 4.935 4.935 0 00-.915-.658 4.912 4.912 0 01-1.397-1.834c.46-.086.892-.128 1.346-.128a4.915 4.915 0 00-3.953 2.155A9.878 9.878 0 0010 21c7.368 0 11.362-6.102 11.362-11.362 0-.173-.004-.347-.012-.52.78-.564 1.458-1.272 2-2.09-.724.322-1.503.537-2.327.632.839-.502 1.472-1.291 1.77-2.241-.785.465-1.662.8-2.597.978-.745-.79-1.807-1.286-3.004-1.286-2.273 0-4.113 1.84-4.113 4.113 0 .322.036.635.105.937-3.42-.171-6.452-1.808-8.48-4.288-.354.606-.557 1.305-.557 2.055 0 1.428.724 2.686 1.823 3.428-.67-.02-1.298-.205-1.847-.508v.05a4.11 4.11 0 003.29 4.027 4.981 4.981 0 01-1.858.07c.483 1.492 1.884 2.587 3.538 2.618-1.488 1.164-3.364 1.859-5.412 1.859-.353 0-.703-.021-1.047-.065.733 2.235 2.215 4.08 4.088 5.166z" /></svg>
-                                    </a>
-                                    <a href="https://instagram.com/AlbanyMedicalClinic" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition transform hover:scale-125">
-                                        <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C8.95 2 7.74 2.04 6.78 2.37c-.77.26-1.39.69-1.95 1.25s-.99 1.18-1.25 1.95C2.04 7.74 2 8.95 2 12s.04 4.26.37 5.22c.26.77.69 1.39 1.25 1.95s1.18.99 1.95 1.25c.96.33 2.17.37 5.22.37s4.26-.04 5.22-.37c.77-.26 1.39-.69 1.95-1.25s.99-1.18 1.25-1.95c.33-.96.37-2.17.37-5.22s-.04-4.26-.37-5.22c-.26-.77-.69-1.39-1.25-1.95s-1.18-.99-1.95-1.25C16.26 2.04 15.05 2 12 2zm0 1.6c3.08 0 4.14.01 5.02.3s1.58.21 2.21.46c.55.21.92.42 1.2.7s.49.65.7.92c.25.63.46 1.28.46 2.21.29.88.3 1.94.3 5.02s-.01 4.14-.3 5.02c-.21.88-.42 1.58-.46 2.21-.28.55-.49.92-.7 1.2s-.65.49-.92.7c-.63.25-1.28.46-2.21.46-.88.29-1.94.3-5.02.3s-4.14-.01-5.02-.3c-.88-.21-1.58-.42-2.21-.46-.55-.28-.92-.49-1.2-.7s-.49-.65-.7-.92c-.25-.63-.46-1.28-.46-2.21-.29-.88-.3-1.94-.3-5.02s.01-4.14.3-5.02c.21-.88.42-1.58.46-2.21.28-.55.49-.92.7-1.2s.65-.49.92-.7c.63-.25 1.28-.46 2.21-.46.88-.29 1.94-.3 5.02-.3zm0 2.4c-3.32 0-6 2.68-6 6s2.68 6 6 6 6-2.68 6-6-2.68-6-6-6zm0 10.4c-2.43 0-4.4-1.97-4.4-4.4s1.97-4.4 4.4-4.4 4.4 1.97 4.4 4.4-1.97 4.4-4.4 4.4zM18.4 5.6c-.66 0-1.2.54-1.2 1.2s.54 1.2 1.2 1.2 1.2-.54 1.2-1.2-.54-1.2-1.2-1.2z" clip-rule="evenodd" /></svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Operating Hours Card -->
-                    <div class="p-10 rounded-3xl shadow-3xl glass-effect border-blue-100 relative bg-white/20 transform hover:scale-[1.01] transition-transform duration-300 ease-in-out">
-                        <h3 class="text-4xl font-playfair-display font-bold text-blue-800 mb-8 leading-tight">
-                            Dedicated Operating Hours for Your Convenience
-                        </h3>
-                        <p class="text-lg text-gray-700 mb-10 leading-relaxed">
-                            We understand the importance of accessible medical care that fits into your busy life. Our clinic maintains robust operating hours throughout the week to ensure you can receive timely attention. While we always recommend scheduling an appointment in advance, we strive to be flexible and responsive to your needs. Please review our hours below and plan your visit accordingly.
-                        </p>
-                        <div class="overflow-x-auto">
-                            <table class="min-w-full bg-white/70 rounded-xl shadow-inner divide-y divide-blue-200">
-                                <thead class="bg-blue-100">
-                                    <tr>
-                                        <th scope="col" class="px-8 py-4 text-left text-sm font-semibold text-blue-700 uppercase tracking-wider">Day</th>
-                                        <th scope="col" class="px-8 py-4 text-left text-sm font-semibold text-blue-700 uppercase tracking-wider">Hours of Operation</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-gray-200">
-                                    <tr>
-                                        <td class="px-8 py-5 whitespace-nowrap text-lg font-medium text-gray-900">Monday - Friday</td>
-                                        <td class="px-8 py-5 whitespace-nowrap text-lg text-gray-700">8:00 AM - 5:00 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="px-8 py-5 whitespace-nowrap text-lg font-medium text-gray-900">Saturday</td>
-                                        <td class="px-8 py-5 whitespace-nowrap text-lg text-gray-700">9:00 AM - 1:00 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="px-8 py-5 whitespace-nowrap text-lg font-medium text-gray-900 bg-blue-50/50">Sunday</td>
-                                        <td class="px-8 py-5 whitespace-nowrap text-lg text-red-600 font-semibold bg-blue-50/50">Closed</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="px-8 py-5 whitespace-nowrap text-lg font-medium text-gray-900">Public Holidays</td>
-                                        <td class="px-8 py-5 whitespace-nowrap text-lg text-red-600 font-semibold">Closed</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <p class="text-sm text-gray-500 mt-8 leading-relaxed">
-                            <span class="font-semibold text-red-500">*</span> Kindly note: Our operating hours are subject to occasional adjustments, especially during public holidays or unforeseen circumstances. We highly recommend contacting our reception team by phone for the most up-to-date schedule, particularly if you're planning a visit close to a holiday. Your understanding is greatly appreciated.
-                        </p>
+    <!-- Main Content Area -->
+    <main class="relative z-30 -mt-20 md:-mt-32">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Contact Details and Operating Hours Section -->
+            <section class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-white -z-10 rounded-3xl"></div>
+                
+                <div class="glassmorphism-card p-6 md:p-8 flex flex-col items-start space-y-4 col-span-1">
+                    <h2 class="text-4xl font-bold text-blue-700 mb-4 tracking-tight">Our Location</h2>
+                    <p class="text-lg text-slate-800 leading-relaxed">
+                        Strategically located for your convenience in a vibrant part of Toronto, Albany Medical Clinic is easily accessible by public transit and car. We strive to provide a welcoming environment from the moment you step through our doors, ensuring your visit is as stress-free as possible. Our address places us at the heart of the community we are proud to serve.
+                    </p>
+                    <div class="flex items-center space-x-3 text-lg text-slate-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-blue-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <address class="not-italic font-medium">
+                            807 Broadview Ave, <br> Toronto, ON M4K 2P8, <br> Canada
+                        </address>
                     </div>
                 </div>
 
-                <!-- Right Column: Appointment Form & Map -->
-                <div class="lg:col-span-1 space-y-12">
-                    <!-- Online Appointment Request Form -->
-                    <div class="p-10 rounded-3xl shadow-3xl glass-effect border-blue-100 relative bg-white/20 transform hover:scale-[1.01] transition-transform duration-300 ease-in-out">
-                        <h2 class="text-4xl font-playfair-display font-bold text-blue-800 mb-8 leading-tight">
-                            Effortless Appointment Request: Book Your Visit
+                <div class="glassmorphism-card p-6 md:p-8 flex flex-col items-start space-y-4 col-span-1">
+                    <h2 class="text-4xl font-bold text-blue-700 mb-4 tracking-tight">Speak With Us</h2>
+                    <p class="text-lg text-slate-800 leading-relaxed">
+                        Your questions and concerns are important. Our friendly administrative team is available during operating hours to answer your calls, assist with inquiries, and help you navigate our services. We believe in clear, direct communication to ensure you always feel supported and informed. Please do not hesitate to reach out.
+                    </p>
+                    <div class="flex items-center space-x-3 text-lg text-slate-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-blue-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        <a href="tel:+14164619471" class="font-medium hover:underline">+1 416-461-9471</a>
+                    </div>
+                </div>
+
+                <div class="glassmorphism-card p-6 md:p-8 flex flex-col items-start space-y-4 col-span-1">
+                    <h2 class="text-4xl font-bold text-blue-700 mb-4 tracking-tight">Operating Hours</h2>
+                    <p class="text-lg text-slate-800 leading-relaxed">
+                        We understand that life can be busy, which is why we offer flexible hours to accommodate your schedule. Our clinic is open at convenient times throughout the week, including extended hours on certain days, to ensure you can access the care you need without unnecessary delays. We are closed on all major statutory holidays.
+                    </p>
+                    <ul class="text-lg text-slate-700 space-y-2 w-full">
+                        <li class="flex justify-between items-center py-1 border-b border-gray-200">
+                            <span class="font-medium text-blue-600">Monday:</span> <span class="text-right">8:00 AM - 5:00 PM</span>
+                        </li>
+                        <li class="flex justify-between items-center py-1 border-b border-gray-200">
+                            <span class="font-medium text-blue-600">Tuesday:</span> <span class="text-right">8:00 AM - 7:00 PM</span>
+                        </li>
+                        <li class="flex justify-between items-center py-1 border-b border-gray-200">
+                            <span class="font-medium text-blue-600">Wednesday:</span> <span class="text-right">8:00 AM - 5:00 PM</span>
+                        </li>
+                        <li class="flex justify-between items-center py-1 border-b border-gray-200">
+                            <span class="font-medium text-blue-600">Thursday:</span> <span class="text-right">8:00 AM - 7:00 PM</span>
+                        </li>
+                        <li class="flex justify-between items-center py-1 border-b border-gray-200">
+                            <span class="font-medium text-blue-600">Friday:</span> <span class="text-right">8:00 AM - 4:00 PM</span>
+                        </li>
+                        <li class="flex justify-between items-center py-1">
+                            <span class="font-medium text-blue-600">Saturday & Sunday:</span> <span class="text-right text-red-500 font-semibold">Closed</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Appointment Booking Section -->
+            <section id="appointment-booking" class="bg-gradient-to-br from-blue-700 to-blue-900 text-white p-8 md:p-12 rounded-3xl shadow-2xl mb-16 relative overflow-hidden">
+                <div class="absolute inset-0 z-0 opacity-10" style="background-image: url('https://loremflickr.com/1200/800/doctors?random=1'); background-size: cover; background-position: center;"></div>
+                <div class="absolute inset-0 z-0 bg-blue-800/70"></div>
+
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="lg:pr-8">
+                        <h2 class="text-5xl font-extrabold mb-6 leading-tight text-white">
+                            Ready to Schedule Your Visit?
                         </h2>
-                        <p class="text-lg text-gray-700 mb-10 leading-relaxed">
-                            Streamline your healthcare journey by requesting an appointment online. Our secure and user-friendly form allows you to submit your preferred date and time at your convenience. Once received, a member of our diligent administrative team will review your request and contact you promptly to finalize the details. We're committed to making your access to quality care as seamless as possible.
+                        <p class="text-lg md:text-xl font-light mb-8 opacity-90">
+                            At Albany Medical Clinic, we make booking an appointment as straightforward and convenient as possible. Whether you prefer the ease of our online form or a personal touch over the phone, our team is ready to help you find a time that fits your busy schedule. Take the first step towards exceptional health care by connecting with us today. We are committed to providing timely access to our services, ensuring you receive the attention and treatment you need when you need it most.
                         </p>
-                        <form action="#" method="POST" class="space-y-7">
+                        <p class="text-lg md:text-xl font-light opacity-90">
+                            Filling out our secure online form allows us to gather preliminary information, streamlining your check-in process upon arrival. Alternatively, a direct call lets you speak with our experienced staff who can answer specific questions and guide you through our offerings. Choose the method that best suits your comfort and urgency, and let us show you why so many in Toronto trust Albany Medical Clinic with their well-being.
+                        </p>
+                    </div>
+
+                    <div class="glassmorphism-card p-6 md:p-8 rounded-3xl border border-white/20 shadow-xl">
+                        <h3 class="text-3xl font-bold text-white mb-6">Book Your Appointment Online</h3>
+                        <form action="#" method="POST" class="space-y-6">
                             <div>
-                                <label for="full_name" class="block text-sm font-medium text-gray-700 mb-2">Full Name <span class="text-red-500">*</span></label>
-                                <input type="text" name="full_name" id="full_name" required
-                                    class="w-full px-5 py-3 rounded-xl border-2 border-blue-200 focus:ring-blue-500 focus:border-blue-500 transition duration-300 shadow-sm bg-white/70 text-gray-900 placeholder-gray-500">
-                            </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
-                                <div>
-                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address <span class="text-red-500">*</span></label>
-                                    <input type="email" name="email" id="email" required
-                                        class="w-full px-5 py-3 rounded-xl border-2 border-blue-200 focus:ring-blue-500 focus:border-blue-500 transition duration-300 shadow-sm bg-white/70 text-gray-900 placeholder-gray-500">
-                                </div>
-                                <div>
-                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                                    <input type="tel" name="phone" id="phone"
-                                        class="w-full px-5 py-3 rounded-xl border-2 border-blue-200 focus:ring-blue-500 focus:border-blue-500 transition duration-300 shadow-sm bg-white/70 text-gray-900 placeholder-gray-500">
-                                </div>
-                            </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
-                                <div>
-                                    <label for="preferred_date" class="block text-sm font-medium text-gray-700 mb-2">Preferred Date <span class="text-red-500">*</span></label>
-                                    <input type="date" name="preferred_date" id="preferred_date" required
-                                        class="w-full px-5 py-3 rounded-xl border-2 border-blue-200 focus:ring-blue-500 focus:border-blue-500 transition duration-300 shadow-sm bg-white/70 text-gray-900 placeholder-gray-500">
-                                </div>
-                                <div>
-                                    <label for="preferred_time" class="block text-sm font-medium text-gray-700 mb-2">Preferred Time <span class="text-red-500">*</span></label>
-                                    <input type="time" name="preferred_time" id="preferred_time" required
-                                        class="w-full px-5 py-3 rounded-xl border-2 border-blue-200 focus:ring-blue-500 focus:border-blue-500 transition duration-300 shadow-sm bg-white/70 text-gray-900 placeholder-gray-500">
-                                </div>
+                                <label for="name" class="block text-sm font-medium text-white mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" required class="input-field w-full text-slate-900" placeholder="John Doe">
                             </div>
                             <div>
-                                <label for="reason" class="block text-sm font-medium text-gray-700 mb-2">Primary Reason for Visit <span class="text-red-500">*</span></label>
-                                <select name="reason" id="reason" required
-                                    class="w-full px-5 py-3 rounded-xl border-2 border-blue-200 focus:ring-blue-500 focus:border-blue-500 transition duration-300 shadow-sm bg-white/70 text-gray-900">
-                                    <option value="">-- Please select a reason --</option>
-                                    <option value="general_checkup">Routine General Check-up</option>
-                                    <option value="follow_up">Follow-up Appointment / Existing Condition</option>
-                                    <option value="new_symptoms">New Symptoms or Health Concern</option>
-                                    <option value="vaccination">Immunization / Vaccination</option>
-                                    <option value="consultation">Specialized Consultation</option>
-                                    <option value="other">Other (Please detail in notes below)</option>
-                                </select>
+                                <label for="email" class="block text-sm font-medium text-white mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" required class="input-field w-full text-slate-900" placeholder="john.doe@example.com">
                             </div>
                             <div>
-                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Additional Notes or Specific Requests (Optional)</label>
-                                <textarea name="message" id="message" rows="5"
-                                    class="w-full px-5 py-3 rounded-xl border-2 border-blue-200 focus:ring-blue-500 focus:border-blue-500 transition duration-300 shadow-sm bg-white/70 text-gray-900 placeholder-gray-500"
-                                    placeholder="Please provide any relevant details to help us prepare for your visit."></textarea>
+                                <label for="phone" class="block text-sm font-medium text-white mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required class="input-field w-full text-slate-900" placeholder="+1 (416) 123-4567">
                             </div>
                             <div>
-                                <button type="submit"
-                                    class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-xl shadow-xl transform transition duration-300 hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-blue-300">
-                                    Submit Appointment Request
-                                </button>
+                                <label for="preferred-date" class="block text-sm font-medium text-white mb-2">Preferred Appointment Date</label>
+                                <input type="date" id="preferred-date" name="preferred-date" class="input-field w-full text-slate-900">
                             </div>
-                            <p class="text-xs text-gray-500 mt-4 leading-relaxed">
-                                <span class="font-semibold text-red-500">*</span> Required fields. Your submission is a request only and does not confirm an appointment. A dedicated member of our clinic staff will contact you shortly to confirm and finalize your booking. We appreciate your patience.
-                            </p>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-white mb-2">Brief Reason for Visit</label>
+                                <textarea id="message" name="message" rows="4" class="input-field w-full text-slate-900" placeholder="e.g., General check-up, specific symptom, follow-up..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-green-400 to-emerald-500 text-white py-4 rounded-full text-xl font-semibold cta-button hover:from-green-500 hover:to-emerald-600 transition duration-300 ease-in-out">
+                                Submit Appointment Request
+                            </button>
                         </form>
                     </div>
+                </div>
+            </section>
 
-                    <!-- Map Section with Detailed Directions -->
-                    <div class="p-10 rounded-3xl shadow-3xl glass-effect border-blue-100 relative bg-white/20 transform hover:scale-[1.01] transition-transform duration-300 ease-in-out">
-                        <h2 class="text-4xl font-playfair-display font-bold text-blue-800 mb-8 leading-tight">
-                            Locate Our Clinic: Your Path to Accessible Healthcare
+            <!-- Clinic Location Map -->
+            <section class="mb-16 relative">
+                <div class="relative z-10 text-center mb-12">
+                    <h2 class="text-5xl font-extrabold text-blue-800 mb-4 drop-shadow-md">
+                        Visit Our Clinic
+                    </h2>
+                    <p class="text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed">
+                        Easily find your way to Albany Medical Clinic using the interactive map below. We are conveniently situated in a thriving part of Toronto, making your journey to our clinic smooth and hassle-free. Detailed directions and nearby landmarks are just a click away, ensuring you arrive punctually for your consultation.
+                    </p>
+                </div>
+                
+                <div class="relative w-full overflow-hidden rounded-3xl shadow-2xl border-4 border-white aspect-video" style="padding-bottom: 56.25%;">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.5030432321285!2d-79.3564903233866!3d43.67980307110052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb7c126d42e9%3A0x6b872c3b8e7261a8!2s807%20Broadview%20Ave%2C%20Toronto%2C%20ON%20M4K%202P8%2C%20Canada!5e0!3m2!1sen!2sus!4v1709405295128!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; position:absolute; top:0; left:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="mt-8 text-center text-lg text-slate-600">
+                    <p>
+                        Need help with directions? Don't hesitate to call us at <a href="tel:+14164619471" class="text-blue-600 hover:underline font-semibold">+1 416-461-9471</a>.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Overlapping Grid Section: Commitment to Care -->
+            <section class="relative py-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="relative z-10 glassmorphism-card p-8 md:p-10 rounded-3xl border border-white/20 shadow-xl lg:col-start-1 lg:col-end-2 lg:row-start-1">
+                        <h2 class="text-4xl font-bold text-blue-700 mb-6 leading-tight">
+                            Our Unwavering Commitment to Your Health
                         </h2>
-                        <p class="text-lg text-gray-700 mb-10 leading-relaxed">
-                            Albany Medical Clinic is strategically positioned at 807 Broadview Ave, making it a highly accessible destination for residents across Toronto, especially those in the East York, Riverdale, and Danforth communities. We’ve ensured our location is easily reachable by various modes of transport. Use the dynamic map below to pinpoint our exact location and generate personalized directions from your starting point.
+                        <p class="text-lg text-slate-800 mb-6 leading-relaxed">
+                            At Albany Medical Clinic, every interaction is an opportunity to demonstrate our deep commitment to your well-being. We understand that choosing a healthcare provider is a significant decision, and we are dedicated to earning your trust through transparent communication, expert medical advice, and a genuinely caring approach. Our clinic isn't just a place for treatment; it's a partner in your long-term health journey. We continuously strive to enhance our patient experience, embracing feedback and implementing improvements to ensure every visit meets the high standards you deserve.
                         </p>
-                        <div class="w-full h-[400px] rounded-2xl overflow-hidden shadow-2xl border-2 border-blue-200 mb-10">
-                            <!-- Google Maps Embed - using the provided address -->
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.647502444391!2d-79.35574512361876!3d43.67817477109253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb70678f5ae3%3A0xcb1b6f00a424e16d!2s807%20Broadview%20Ave%2C%20Toronto%2C%20ON%20M4K%202P8%2C%20Canada!5e0!3m2!1sen!2sus!4v1701386400000!5m2!1sen!2sus"
-                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
-
-                        <div>
-                            <h3 class="text-2xl font-playfair-display font-semibold text-blue-700 mb-5">
-                                Comprehensive Directions to Our Door
-                            </h3>
-                            <ul class="list-disc list-inside text-lg text-gray-700 space-y-4">
-                                <li>
-                                    <strong>By TTC (Toronto Public Transit):</strong> Our clinic is exceptionally well-served by public transportation. We are conveniently located just a five-minute walk north of Broadview Subway Station, which is on the Bloor-Danforth (Line 2) subway line. Upon exiting the station, simply head north on Broadview Avenue, and you will find our building on your right-hand side. Several key streetcar routes, including the 504 King and 505 Dundas, also have stops within close proximity.
-                                </li>
-                                <li>
-                                    <strong>By Car:</strong> If you are driving, Albany Medical Clinic is easily reachable from major arterial roads. From the Don Valley Parkway (DVP), take the Bloor Street East exit. Proceed west on Bloor Street, then make a right turn onto Broadview Avenue. Continue heading north, and our clinic will be visible on the east side of the street. Please note that while limited street parking may be available, we recommend exploring nearby paid parking lots for extended visits.
-                                </li>
-                                <li>
-                                    <strong>Accessibility Features:</strong> We are deeply committed to ensuring that our clinic is accessible to everyone. Our facility features barrier-free entry points, including ramp access, and elevators are readily available to transport patients to all clinic levels. If you have any specific mobility requirements or require special assistance during your visit, please do not hesitate to inform our reception staff when booking your appointment or upon your arrival.
-                                </li>
-                            </ul>
-                        </div>
+                        <p class="text-lg text-slate-800 mb-8 leading-relaxed">
+                            We pride ourselves on fostering a warm and respectful environment where every patient feels heard, valued, and understood. From the initial point of contact to comprehensive follow-up care, our entire team works in unison to provide seamless and supportive healthcare solutions tailored to your individual needs. We invite you to experience the dedicated, patient-first philosophy that defines Albany Medical Clinic. Your health, comfort, and peace of mind are our highest priorities, and we look forward to welcoming you into our clinic family.
+                        </p>
+                        <a href="index.html" class="inline-block bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 rounded-full text-lg font-semibold cta-button transition duration-300 ease-in-out">
+                            Learn More About Our Values
+                        </a>
+                    </div>
+                    <div class="lg:col-start-2 lg:col-end-3 lg:row-start-1 flex justify-center lg:justify-end">
+                        <img src="https://loremflickr.com/1200/800/doctors?random=2" alt="Doctors collaborating at Albany Medical Clinic" class="rounded-3xl shadow-2xl transform lg:translate-x-12 lg:translate-y-12 w-full max-w-md lg:max-w-none object-cover h-[400px] border-4 border-white hover:scale-105 transition duration-500 ease-in-out">
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Final Call to Action Section -->
-        <section class="bg-blue-900 text-white py-20 text-center relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-950 to-blue-700 opacity-90"></div>
-            <div class="container mx-auto px-6 relative z-10">
-                <h2 class="text-5xl font-playfair-display font-extrabold mb-6 drop-shadow-lg leading-tight">
-                    Embark on Your Journey to Better Health Today
-                </h2>
-                <p class="text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto mb-10 font-light">
-                    Your health and well-being are paramount, and the Albany Medical Clinic is here to support you every step of the way. With a team of dedicated professionals, state-of-the-art facilities, and a patient-first approach, we are ready to provide the exemplary care you deserve. Don't let questions linger – reach out and let us partner with you in achieving your health goals.
-                </p>
-                <a href="contact.html" class="inline-block bg-white text-blue-800 hover:bg-blue-100 font-extrabold py-5 px-12 rounded-full shadow-2xl transform transition duration-400 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300 text-xl uppercase tracking-wider">
-                    Initiate Your Consultation
-                </a>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
-    <!-- Comprehensive Footer -->
-    <footer class="bg-gray-950 text-gray-300 py-16">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            <!-- Clinic Overview -->
-            <div>
-                <h3 class="text-3xl font-playfair-display font-bold text-white mb-6">Albany Medical Clinic</h3>
-                <p class="text-gray-400 leading-relaxed mb-6">
-                    A beacon of health in Toronto, Albany Medical Clinic is committed to delivering comprehensive, compassionate, and cutting-edge healthcare services. Our mission is to foster a healthier community through dedicated patient care and clinical excellence.
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12 px-4 md:px-8 lg:px-24 mt-16">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-4">
+                <h4 class="text-2xl font-bold text-gradient-gold">Albany Medical Clinic</h4>
+                <p class="text-gray-300">
+                    Dedicated to providing exceptional healthcare with a personal touch in Toronto. Your health is our priority.
                 </p>
-                <div class="flex space-x-5 mt-6">
-                    <a href="https://facebook.com/AlbanyMedicalClinic" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition transform hover:scale-125">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.24.195 2.24.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
-                    </a>
-                    <a href="https://twitter.com/AlbanyMedical" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition transform hover:scale-125">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c1.803 0 3.533-.642 4.907-1.85a9.89 9.89 0 00-3.353-.923 4.956 4.956 0 01-3.693-2.14 4.935 4.935 0 00-.915-.658 4.912 4.912 0 01-1.397-1.834c.46-.086.892-.128 1.346-.128a4.915 4.915 0 00-3.953 2.155A9.878 9.878 0 0010 21c7.368 0 11.362-6.102 11.362-11.362 0-.173-.004-.347-.012-.52.78-.564 1.458-1.272 2-2.09-.724.322-1.503.537-2.327.632.839-.502 1.472-1.291 1.77-2.241-.785.465-1.662.8-2.597.978-.745-.79-1.807-1.286-3.004-1.286-2.273 0-4.113 1.84-4.113 4.113 0 .322.036.635.105.937-3.42-.171-6.452-1.808-8.48-4.288-.354.606-.557 1.305-.557 2.055 0 1.428.724 2.686 1.823 3.428-.67-.02-1.298-.205-1.847-.508v.05a4.11 4.11 0 003.29 4.027 4.981 4.981 0 01-1.858.07c.483 1.492 1.884 2.587 3.538 2.618-1.488 1.164-3.364 1.859-5.412 1.859-.353 0-.703-.021-1.047-.065.733 2.235 2.215 4.08 4.088 5.166z" /></svg>
-                    </a>
-                    <a href="https://instagram.com/AlbanyMedicalClinic" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition transform hover:scale-125">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C8.95 2 7.74 2.04 6.78 2.37c-.77.26-1.39.69-1.95 1.25s-.99 1.18-1.25 1.95C2.04 7.74 2 8.95 2 12s.04 4.26.37 5.22c.26.77.69 1.39 1.25 1.95s1.18.99 1.95 1.25c.96.33 2.17.37 5.22.37s4.26-.04 5.22-.37c.77-.26 1.39-.69 1.95-1.25s.99-1.18 1.25-1.95c.33-.96.37-2.17.37-5.22s-.04-4.26-.37-5.22c-.26-.77-.69-1.39-1.25-1.95s-1.18-.99-1.95-1.25C16.26 2.04 15.05 2 12 2zm0 1.6c3.08 0 4.14.01 5.02.3s1.58.21 2.21.46c.55.21.92.42 1.2.7s.49.65.7.92c.25.63.46 1.28.46 2.21.29.88.3 1.94.3 5.02s-.01 4.14-.3 5.02c-.21.88-.42 1.58-.46 2.21-.28.55-.49.92-.7 1.2s-.65.49-.92.7c-.63.25-1.28.46-2.21.46-.88.29-1.94.3-5.02.3s-4.14-.01-5.02-.3c-.88-.21-1.58-.42-2.21-.46-.55-.28-.92-.49-1.2-.7s-.49-.65-.7-.92c-.25-.63-.46-1.28-.46-2.21-.29-.88-.3-1.94-.3-5.02s.01-4.14.3-5.02c.21-.88.42-1.58.46-2.21.28-.55.49-.92.7-1.2s.65-.49.92-.7c.63-.25 1.28-.46 2.21-.46.88-.29 1.94-.3 5.02-.3zm0 2.4c-3.32 0-6 2.68-6 6s2.68 6 6 6 6-2.68 6-6-2.68-6-6-6zm0 10.4c-2.43 0-4.4-1.97-4.4-4.4s1.97-4.4 4.4-4.4 4.4 1.97 4.4 4.4-1.97 4.4-4.4 4.4zM18.4 5.6c-.66 0-1.2.54-1.2 1.2s.54 1.2 1.2 1.2 1.2-.54 1.2-1.2-.54-1.2-1.2-1.2z" clip-rule="evenodd" /></svg>
-                    </a>
-                </div>
+                <address class="not-italic text-gray-400">
+                    807 Broadview Ave, Toronto, ON M4K 2P8, Canada
+                </address>
+                <p class="text-gray-400">
+                    Phone: <a href="tel:+14164619471" class="text-blue-300 hover:underline">+1 416-461-9471</a>
+                </p>
             </div>
-
-            <!-- Quick Links -->
-            <div>
-                <h3 class="text-3xl font-playfair-display font-bold text-white mb-6">Explore Our Site</h3>
-                <ul class="space-y-4 text-lg">
-                    <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300 relative group">Home<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span></a></li>
-                    <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300 relative group">Our Services<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span></a></li>
-                    <li><a href="our-team.html" class="text-gray-400 hover:text-white transition duration-300 relative group">Meet Our Team<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span></a></li>
-                    <li><a href="contact.html" class="text-white font-semibold border-b-2 border-blue-500">Contact Us</a></li>
+            
+            <div class="space-y-4">
+                <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-300 hover:text-white transition duration-200">Home</a></li>
+                    <li><a href="services.html" class="text-gray-300 hover:text-white transition duration-200">Services</a></li>
+                    <li><a href="our_team.html" class="text-gray-300 hover:text-white transition duration-200">Our Team</a></li>
+                    <li><a href="patient_resources.html" class="text-gray-300 hover:text-white transition duration-200">Patient Resources</a></li>
+                    <li><a href="contact.html" class="text-blue-300 font-medium">Contact Us</a></li>
                 </ul>
             </div>
-
-            <!-- Clinic Contact -->
-            <div>
-                <h3 class="text-3xl font-playfair-display font-bold text-white mb-6">Connect Directly</h3>
-                <p class="text-gray-400 text-lg mb-4 leading-relaxed">
-                    <strong>Address:</strong><br>
-                    807 Broadview Ave, <br>Toronto, ON M4K 2P8, Canada
-                </p>
-                <p class="text-gray-400 text-lg mb-4">
-                    <strong>Phone:</strong> <a href="tel:+14164619471" class="hover:text-white transition duration-300">+1 416-461-9471</a>
-                </p>
-                <p class="text-gray-400 text-lg mb-6">
-                    <strong>Email:</strong> <a href="mailto:info@albanymedical.com" class="hover:text-white transition duration-300">info@albanymedical.com</a>
-                </p>
-            </div>
-
-            <!-- Operating Hours -->
-            <div>
-                <h3 class="text-3xl font-playfair-display font-bold text-white mb-6">Our Clinic Hours</h3>
-                <ul class="space-y-2 text-lg text-gray-400">
-                    <li>Monday - Friday: <span class="font-medium text-white">8:00 AM - 5:00 PM</span></li>
-                    <li>Saturday: <span class="font-medium text-white">9:00 AM - 1:00 PM</span></li>
-                    <li>Sunday: <span class="font-medium text-red-400">Closed</span></li>
-                    <li>Public Holidays: <span class="font-medium text-red-400">Closed</span></li>
-                </ul>
-                <p class="text-sm text-gray-500 mt-6 leading-relaxed">
-                    *Please call in advance for holiday hours or any immediate inquiries to ensure our team can assist you.
+            
+            <div class="space-y-4">
+                <h4 class="text-xl font-semibold mb-4">Our Mission</h4>
+                <p class="text-gray-300 leading-relaxed">
+                    To deliver compassionate, comprehensive, and patient-centered medical care, fostering lasting health and well-being for every individual in our community. We are committed to excellence, innovation, and unwavering support for your journey to optimal health.
                 </p>
             </div>
         </div>
-        <div class="border-t border-gray-800 mt-16 pt-10 text-center text-gray-500 text-md">
-            &copy; 2023 Albany Medical Clinic. All Rights Reserved. Designed with dedication for your well-being.
+        
+        <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-500 text-sm">
+            &copy; 2023 Albany Medical Clinic. All rights reserved.
         </div>
     </footer>
 

@@ -3,314 +3,423 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Albany Medical Clinic - Comprehensive Healthcare in Toronto</title>
-    <meta name="description" content="Discover the comprehensive range of premium medical services offered by Albany Medical Clinic in Toronto. From family medicine to specialized care, we provide exceptional healthcare tailored to your needs.">
+    <title>Our Services - Albany Medical Clinic</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
-        
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f7fafc; /* light gray background */
+    <!-- Custom Tailwind Configuration for unique design elements -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0A2E36', // Deep Green-Blue, almost teal-dark
+                        secondary: '#4A90E2', // Bright Sky Blue
+                        accent: '#F5A623', // Warm Gold/Orange
+                        light: '#EBF4F5', // Off-white/Light Grey-Blue
+                        dark: '#1C1C1C', // Very dark grey for text
+                        lightBg: '#F8FAFC', // A soft background grey
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'], // For headings to add elegance
+                    },
+                    boxShadow: {
+                        'card': '0 10px 30px rgba(0, 0, 0, 0.08)',
+                        'xl': '0 20px 40px rgba(0, 0, 0, 0.15)',
+                        '2xl': '0 25px 50px rgba(0, 0, 0, 0.25)',
+                    },
+                }
+            }
         }
+    </script>
+    <style>
+        /* Optional custom styles not easily achieved with Tailwind or for overrides */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1C1C1C; /* dark */
+            background-color: #F8FAFC; /* lightBg */
+        }
+
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Playfair Display', serif;
         }
-        .glassmorphism {
-            background-color: rgba(255, 255, 255, 0.15); /* Slightly visible white */
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px); /* Safari support */
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
+
+        .gradient-bg-1 {
+            background: linear-gradient(135deg, var(--tw-colors-primary) 0%, var(--tw-colors-secondary) 100%);
         }
-        .gradient-overlay-dark {
-            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%);
+        .gradient-bg-2 {
+            background: linear-gradient(135deg, var(--tw-colors-secondary) 0%, var(--tw-colors-primary) 100%);
         }
-        .gradient-overlay-light {
-            background: linear-gradient(to top, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 50%);
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+
+        /* Apply animations */
+        .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+        .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards; }
+        .animate-delay-200 { animation-delay: 0.2s; }
+        .animate-delay-400 { animation-delay: 0.4s; }
+        .animate-blob { animation: blob 7s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55); } /* Slower, more organic blob */
+        .animation-delay-2000 { animation-delay: 2s; } /* For the second blob */
     </style>
 </head>
-<body class="text-gray-900 leading-relaxed antialiased">
-
+<body class="antialiased text-dark">
     <!-- Premium Navigation Bar -->
-    <header class="fixed top-0 left-0 right-0 z-50 py-4 px-8 md:px-16 glassmorphism">
-        <nav class="flex justify-between items-center max-w-7xl mx-auto">
-            <a href="index.html" class="text-2xl font-bold text-gray-800 hover:text-blue-700 transition duration-300 ease-in-out">
-                Albany <span class="text-blue-600">Medical</span> Clinic
+    <header class="bg-primary shadow-lg relative z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Clinic Logo/Name -->
+            <a href="index.html" class="flex items-center space-x-3">
+                <svg class="h-10 w-10 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m0-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-3xl font-display font-bold text-light">Albany Medical Clinic</span>
             </a>
-            <ul class="flex space-x-6 md:space-x-10">
-                <li><a href="index.html" class="text-gray-700 hover:text-blue-700 text-lg font-medium transition duration-300 ease-in-out relative group">
+
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-light text-lg font-medium hover:text-accent relative group transition-all duration-300">
                     Home
-                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
-                </a></li>
-                <li><a href="services.html" class="text-blue-700 hover:text-blue-700 text-lg font-medium transition duration-300 ease-in-out relative group">
+                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                </a>
+                <a href="services.html" class="text-accent text-lg font-medium relative group transition-all duration-300">
                     Services
-                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transform scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
-                </a></li>
-                <li><a href="our-team.html" class="text-gray-700 hover:text-blue-700 text-lg font-medium transition duration-300 ease-in-out relative group">
+                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-accent scale-x-100 transition-transform duration-300 origin-left"></span>
+                </a>
+                <a href="our_team.html" class="text-light text-lg font-medium hover:text-accent relative group transition-all duration-300">
                     Our Team
-                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
-                </a></li>
-                <li><a href="contact.html" class="text-gray-700 hover:text-blue-700 text-lg font-medium transition duration-300 ease-in-out relative group">
+                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                </a>
+                <a href="patient_resources.html" class="text-light text-lg font-medium hover:text-accent relative group transition-all duration-300">
+                    Patient Resources
+                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                </a>
+                <a href="contact.html" class="text-light text-lg font-medium hover:text-accent relative group transition-all duration-300">
                     Contact Us
-                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
-                </a></li>
-            </ul>
+                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button (Hamburger - non-functional as JS is prohibited) -->
+            <div class="md:hidden flex items-center">
+                <button class="text-light focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
         </nav>
+        <!-- Mobile Menu (hidden by default) -->
+        <div class="md:hidden absolute top-full left-0 w-full bg-primary shadow-lg py-2 hidden" id="mobile-menu">
+            <a href="index.html" class="block px-4 py-2 text-light hover:bg-secondary transition-colors duration-200">Home</a>
+            <a href="services.html" class="block px-4 py-2 text-accent bg-secondary hover:bg-secondary-dark transition-colors duration-200">Services</a>
+            <a href="our_team.html" class="block px-4 py-2 text-light hover:bg-secondary transition-colors duration-200">Our Team</a>
+            <a href="patient_resources.html" class="block px-4 py-2 text-light hover:bg-secondary transition-colors duration-200">Patient Resources</a>
+            <a href="contact.html" class="block px-4 py-2 text-light hover:bg-secondary transition-colors duration-200">Contact Us</a>
+        </div>
     </header>
 
     <main>
-        <!-- Hero Section for Services -->
-        <section class="relative h-screen bg-cover bg-center flex items-center justify-center pt-20" style="background-image: url('https://loremflickr.com/1200/800/doctors');">
-            <div class="absolute inset-0 bg-black opacity-50"></div>
-            <div class="relative z-10 text-center max-w-4xl mx-auto px-6 py-12 glassmorphism backdrop-blur-sm text-white">
-                <h1 class="text-6xl font-extrabold mb-6 drop-shadow-lg leading-tight">Our Comprehensive Medical Services</h1>
-                <p class="text-xl md:text-2xl font-light mb-8 opacity-90 drop-shadow-md">
-                    At Albany Medical Clinic, we are dedicated to providing a full spectrum of high-quality healthcare services designed to meet the diverse needs of individuals and families in Toronto. Our commitment is to your health, wellness, and peace of mind, delivered with compassion and expertise.
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
+            <img src="https://loremflickr.com/1200/800/doctors,medical,clinic" alt="Doctors collaborating in a modern clinic" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-primary opacity-60"></div> <!-- Dark overlay -->
+
+            <div class="relative z-10 text-center text-light px-6 max-w-4xl">
+                <h1 class="text-4xl md:text-6xl font-display font-extrabold leading-tight drop-shadow-lg mb-4 animate-fade-in-up">
+                    Comprehensive Care Tailored to You
+                </h1>
+                <p class="text-lg md:text-xl font-light leading-relaxed drop-shadow-md animate-fade-in-up animate-delay-200">
+                    At Albany Medical Clinic, we are dedicated to providing a wide spectrum of advanced medical services, ensuring your health and well-being are always prioritized. Explore how our expert team can support your journey to optimal health.
                 </p>
-                <a href="#services-list" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    Explore Our Expertise
+                <a href="#service-list" class="mt-8 inline-block bg-accent text-primary px-8 py-4 rounded-full text-lg font-semibold shadow-xl hover:bg-light hover:text-primary transition-all duration-300 transform hover:scale-105 animate-fade-in-up animate-delay-400">
+                    Discover Our Services
                 </a>
             </div>
         </section>
 
         <!-- Introduction to Services -->
-        <section id="services-list" class="py-16 md:py-24 bg-gradient-to-br from-white to-blue-50">
-            <div class="max-w-7xl mx-auto px-6 text-center">
-                <h2 class="text-5xl font-extrabold text-blue-800 mb-8 leading-tight">Excellence in Every Aspect of Your Care</h2>
-                <p class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
-                    Our clinic is built on a foundation of trust, expertise, and patient-centered care. We understand that health is a deeply personal journey, and our extensive range of services reflects our holistic approach to well-being. From routine check-ups and preventative screenings to complex disease management and specialized consultations, our dedicated team of medical professionals is here to guide you every step of the way, ensuring you receive the highest standard of medical attention.
+        <section class="py-20 bg-lightBg text-center px-4">
+            <div class="container mx-auto max-w-5xl">
+                <h2 class="text-4xl font-display font-bold text-primary mb-6 animate-fade-in">
+                    Your Health, Our Priority: A Spectrum of Expert Care
+                </h2>
+                <p class="text-lg text-dark leading-relaxed animate-fade-in animate-delay-200">
+                    The Albany Medical Clinic stands as a pillar of health and wellness within the Toronto community. Our commitment extends beyond simple consultations; we aim to foster long-term health partnerships, empowering you with knowledge and providing compassionate, state-of-the-art medical care. Our diverse range of services is designed to meet the evolving healthcare needs of individuals and families at every stage of life. From routine check-ups and preventative screenings to specialized care and chronic disease management, our team of dedicated professionals is here to guide you with expertise and empathy.
+                </p>
+                <p class="text-lg text-dark leading-relaxed mt-4 animate-fade-in animate-delay-300">
+                    We believe in a holistic approach to health, understanding that true well-being encompasses physical, mental, and emotional aspects. Each service we offer is meticulously crafted to deliver the highest standards of medical practice, ensuring comfort, confidentiality, and effective outcomes. Explore the comprehensive care options available to you and discover how Albany Medical Clinic can be your trusted partner in health.
                 </p>
             </div>
         </section>
 
-        <!-- Service Sections -->
+        <!-- Detailed Services Section -->
+        <section id="service-list" class="py-20 bg-white relative overflow-hidden">
+            <div class="container mx-auto px-4">
+                <h2 class="text-5xl font-display font-bold text-center text-primary mb-16 relative">
+                    Our Core Medical Services
+                    <span class="absolute left-1/2 -bottom-4 transform -translate-x-1/2 w-24 h-2 bg-accent rounded-full"></span>
+                </h2>
 
-        <!-- 1. General Practice & Family Medicine -->
-        <section class="relative py-16 md:py-24 bg-white overflow-hidden">
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1 relative">
-                    <img src="https://loremflickr.com/1200/800/doctors?random=1" alt="Family Doctor Consultation" class="rounded-xl shadow-2xl transform hover:scale-102 transition duration-500 ease-in-out w-full h-auto object-cover border-4 border-blue-100">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 rounded-xl"></div>
-                    <p class="absolute bottom-4 left-4 text-white text-sm font-light italic">Dedicated family care</p>
+                <!-- Service Item 1: Family Medicine & Primary Care -->
+                <div id="family-medicine" class="grid md:grid-cols-2 gap-12 items-center mb-24 group">
+                    <div class="relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-2xl">
+                        <img src="https://loremflickr.com/1200/800/family,doctor" alt="Family consulting with a doctor" class="w-full h-96 object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6 relative z-10 bg-white rounded-xl shadow-card transform transition-all duration-500 group-hover:translate-y-[-10px]">
+                        <h3 class="text-3xl font-display font-bold text-primary mb-4">Family Medicine & Comprehensive Primary Care</h3>
+                        <p class="text-dark leading-relaxed mb-4 text-lg">
+                            At Albany Medical Clinic, family medicine is at the heart of our practice. We offer continuous, comprehensive healthcare for individuals and families of all ages, from newborns to seniors. Our dedicated family physicians serve as your primary point of contact for all your health concerns, focusing on long-term wellness and preventative care. We build lasting relationships based on trust and understanding, ensuring personalized medical attention that adapts to your evolving health needs. Whether it's routine check-ups, acute illness management, chronic disease prevention, or health counseling, our team is equipped to provide expert guidance and support every step of the way. We believe in empowering our patients with knowledge, helping you make informed decisions about your health.
+                        </p>
+                        <ul class="list-disc list-inside text-dark text-lg space-y-2">
+                            <li>Routine physical examinations and preventative screenings.</li>
+                            <li>Management of acute illnesses and minor injuries.</li>
+                            <li>Chronic disease management (diabetes, hypertension, asthma).</li>
+                            <li>Vaccinations and immunizations for all age groups.</li>
+                            <li>Health education and lifestyle counseling.</li>
+                            <li>Coordination of care with specialists.</li>
+                        </ul>
+                        <a href="contact.html" class="mt-6 inline-block bg-secondary text-light px-6 py-3 rounded-full font-semibold hover:bg-primary transition-colors duration-300">
+                            Learn More & Book
+                        </a>
+                    </div>
                 </div>
-                <div class="order-1 md:order-2">
-                    <h3 class="text-4xl font-bold text-blue-700 mb-6 leading-snug">Empowering Health Through General Practice & Family Medicine</h3>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        At the heart of Albany Medical Clinic lies our robust General Practice and Family Medicine department. We believe in fostering long-term relationships with our patients, providing continuous, comprehensive care for individuals and families across all ages. From infants to seniors, our family physicians serve as your primary point of contact for all health concerns, offering everything from routine physical examinations and vaccinations to managing acute illnesses and coordinating complex care. We are committed to understanding your unique health history, lifestyle, and goals to provide personalized medical advice and treatment plans that evolve with your life. Trust us to be your consistent and compassionate healthcare partners.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-600 text-md pl-4 space-y-2">
-                        <li>Annual Physicals & Preventative Screenings</li>
-                        <li>Acute & Chronic Illness Management</li>
-                        <li>Child & Adolescent Health</li>
-                        <li>Health Education & Lifestyle Counseling</li>
-                    </ul>
+
+                <!-- Service Item 2: Urgent Care & Walk-In Clinic -->
+                <div id="walk-in-clinic" class="grid md:grid-cols-2 gap-12 items-center mb-24 group">
+                    <div class="md:order-2 relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-2xl">
+                        <img src="https://loremflickr.com/1200/800/urgent,care,clinic" alt="Patients at a busy walk-in clinic reception" class="w-full h-96 object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-b from-primary/70 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="md:order-1 p-6 relative z-10 bg-white rounded-xl shadow-card transform transition-all duration-500 group-hover:translate-y-[-10px]">
+                        <h3 class="text-3xl font-display font-bold text-primary mb-4">Prompt Urgent Care & Convenient Walk-In Clinic</h3>
+                        <p class="text-dark leading-relaxed mb-4 text-lg">
+                            For those times when unexpected health issues arise, our Urgent Care & Walk-In Clinic provides timely access to quality medical attention without the need for an appointment. We understand that health concerns don't always adhere to a schedule, which is why we offer a convenient solution for non-life-threatening conditions that require immediate care. Our experienced physicians and nurses are here to address a wide range of acute illnesses and injuries, ensuring you receive prompt diagnosis and effective treatment. While we cannot replace emergency services for severe conditions, we are a vital resource for accessible and efficient care when you need it most.
+                        </p>
+                        <ul class="list-disc list-inside text-dark text-lg space-y-2">
+                            <li>Treatment for colds, flu, and other respiratory infections.</li>
+                            <li>Assessment and treatment of minor cuts, sprains, and bruises.</li>
+                            <li>Urinary tract infections (UTIs) and other common infections.</li>
+                            <li>Allergies, rashes, and other skin conditions.</li>
+                            <li>Prescription refills (under specific conditions).</li>
+                            <li>Initial assessment for various non-emergency complaints.</li>
+                        </ul>
+                        <a href="contact.html" class="mt-6 inline-block bg-secondary text-light px-6 py-3 rounded-full font-semibold hover:bg-primary transition-colors duration-300">
+                            Visit Our Walk-In
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Service Item 3: Preventative Health & Immunizations -->
+                <div id="immunizations" class="grid md:grid-cols-2 gap-12 items-center mb-24 group">
+                    <div class="relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-2xl">
+                        <img src="https://loremflickr.com/1200/800/vaccination,immunization,clinic" alt="Nurse preparing a vaccine" class="w-full h-96 object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-secondary/70 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6 relative z-10 bg-white rounded-xl shadow-card transform transition-all duration-500 group-hover:translate-y-[-10px]">
+                        <h3 class="text-3xl font-display font-bold text-primary mb-4">Proactive Preventative Health & Essential Immunizations</h3>
+                        <p class="text-dark leading-relaxed mb-4 text-lg">
+                            Prevention is the cornerstone of lifelong health, and at Albany Medical Clinic, we are fervent advocates for proactive wellness. Our preventative health services are designed to keep you healthy, detect potential issues early, and mitigate risks before they become significant concerns. From comprehensive health screenings tailored to your age and risk factors to a full spectrum of immunizations and vaccinations, we provide the tools and guidance necessary to protect yourself and your loved ones from preventable diseases. Invest in your future health with our expert advice and accessible services, ensuring a robust and resilient immune system.
+                        </p>
+                        <ul class="list-disc list-inside text-dark text-lg space-y-2">
+                            <li>Routine vaccinations for children and adults (flu, MMR, Tdap, HPV).</li>
+                            <li>Travel vaccinations and health advice for international travelers.</li>
+                            <li>Cancer screenings (Pap tests, mammogram referrals, prostate exams).</li>
+                            <li>Cardiovascular risk assessments and cholesterol checks.</li>
+                            <li>Diabetes screening and early intervention programs.</li>
+                            <li>Bone density screenings and osteoporosis prevention.</li>
+                        </ul>
+                        <a href="patient_resources.html" class="mt-6 inline-block bg-secondary text-light px-6 py-3 rounded-full font-semibold hover:bg-primary transition-colors duration-300">
+                            View Immunization Schedule
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Item 4: Chronic Disease Management -->
+                <div id="chronic-care" class="grid md:grid-cols-2 gap-12 items-center mb-24 group">
+                    <div class="md:order-2 relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-2xl">
+                        <img src="https://loremflickr.com/1200/800/diabetes,heart,disease" alt="Doctor explaining a chart to a patient" class="w-full h-96 object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-b from-secondary/70 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="md:order-1 p-6 relative z-10 bg-white rounded-xl shadow-card transform transition-all duration-500 group-hover:translate-y-[-10px]">
+                        <h3 class="text-3xl font-display font-bold text-primary mb-4">Dedicated Chronic Disease Management</h3>
+                        <p class="text-dark leading-relaxed mb-4 text-lg">
+                            Living with a chronic condition requires ongoing support, meticulous management, and a compassionate healthcare team. At Albany Medical Clinic, we specialize in providing comprehensive and individualized care plans for patients managing chronic diseases such as diabetes, hypertension, asthma, thyroid disorders, and more. Our approach integrates regular monitoring, medication management, lifestyle counseling, and patient education to empower you to live a full and healthy life despite your condition. We work collaboratively with you, setting realistic goals and providing the resources and encouragement needed to achieve optimal health outcomes and prevent complications.
+                        </p>
+                        <ul class="list-disc list-inside text-dark text-lg space-y-2">
+                            <li>Personalized care plans for various chronic conditions.</li>
+                            <li>Regular monitoring, lab work, and medication adjustments.</li>
+                            <li>Nutritional guidance and lifestyle modification support.</li>
+                            <li>Patient education on self-management techniques.</li>
+                            <li>Referrals to dietitians, specialists, and support groups.</li>
+                            <li>Ongoing communication and follow-up to ensure continuity of care.</li>
+                        </ul>
+                        <a href="contact.html" class="mt-6 inline-block bg-secondary text-light px-6 py-3 rounded-full font-semibold hover:bg-primary transition-colors duration-300">
+                            Discuss Your Care Plan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Item 5: Women's Health & Specialized Care -->
+                <div id="womens-health" class="grid md:grid-cols-2 gap-12 items-center mb-24 group">
+                    <div class="relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-2xl">
+                        <img src="https://loremflickr.com/1200/800/womens,health,doctor" alt="Female doctor talking to a patient" class="w-full h-96 object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6 relative z-10 bg-white rounded-xl shadow-card transform transition-all duration-500 group-hover:translate-y-[-10px]">
+                        <h3 class="text-3xl font-display font-bold text-primary mb-4">Empowering Women's Health & Specialized Care</h3>
+                        <p class="text-dark leading-relaxed mb-4 text-lg">
+                            Albany Medical Clinic is proud to offer comprehensive and compassionate women's health services designed to support women through every stage of life. From adolescence to post-menopause, our female-focused care addresses a wide range of unique health needs with sensitivity and expertise. We provide essential preventative screenings, family planning advice, prenatal support, and management of gynecological concerns. Our goal is to create a comfortable and confidential environment where women can openly discuss their health and receive personalized care that empowers them to lead healthy, fulfilling lives.
+                        </p>
+                        <ul class="list-disc list-inside text-dark text-lg space-y-2">
+                            <li>Routine gynecological exams, including Pap tests and breast exams.</li>
+                            <li>Contraceptive counseling and family planning.</li>
+                            <li>Prenatal and postnatal care support and referrals.</li>
+                            <li>Menopause management and hormone therapy discussions.</li>
+                            <li>Screening for sexually transmitted infections (STIs).</li>
+                            <li>Addressing common women's health concerns like UTIs, yeast infections.</li>
+                        </ul>
+                        <a href="contact.html" class="mt-6 inline-block bg-secondary text-light px-6 py-3 rounded-full font-semibold hover:bg-primary transition-colors duration-300">
+                            Book Your Women's Health Appointment
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Item 6: Minor Procedures & Referrals -->
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-24 group">
+                    <div class="md:order-2 relative overflow-hidden rounded-3xl shadow-xl transform transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-2xl">
+                        <img src="https://loremflickr.com/1200/800/minor,surgery,clinic" alt="Doctor performing a minor procedure" class="w-full h-96 object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-b from-primary/70 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="md:order-1 p-6 relative z-10 bg-white rounded-xl shadow-card transform transition-all duration-500 group-hover:translate-y-[-10px]">
+                        <h3 class="text-3xl font-display font-bold text-primary mb-4">Efficient Minor Procedures & Specialist Referrals</h3>
+                        <p class="text-dark leading-relaxed mb-4 text-lg">
+                            For certain medical needs, timely in-clinic procedures can save you a trip to the hospital and provide immediate relief. Albany Medical Clinic offers a range of minor surgical procedures performed by our experienced physicians in a sterile and comfortable environment. Furthermore, when your condition requires specialized expertise, our extensive network allows us to provide efficient referrals to trusted specialists across various medical fields. We ensure a seamless transition of care, communicating directly with specialists and monitoring your progress to guarantee continuity and comprehensive treatment.
+                        </p>
+                        <ul class="list-disc list-inside text-dark text-lg space-y-2">
+                            <li>Skin lesion removal (warts, moles, skin tags).</li>
+                            <li>Suture of minor lacerations and wound care.</li>
+                            <li>Incision and drainage of abscesses.</li>
+                            <li>Joint injections for pain management.</li>
+                            <li>Ear syringing and foreign body removal.</li>
+                            <li>Expedited referrals to specialists (dermatologists, orthopedists, etc.).</li>
+                        </ul>
+                        <a href="contact.html" class="mt-6 inline-block bg-secondary text-light px-6 py-3 rounded-full font-semibold hover:bg-primary transition-colors duration-300">
+                            Enquire About Procedures
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- 2. Preventative Care & Wellness Programs -->
-        <section class="relative py-16 md:py-24 bg-blue-50 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-4xl font-bold text-blue-700 mb-6 leading-snug">Proactive Health: Preventative Care & Wellness Programs</h3>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        Prevention is the cornerstone of lifelong health. Our Preventative Care and Wellness Programs are meticulously designed to empower you to take an active role in maintaining your health and preventing disease before it starts. We offer comprehensive health assessments, risk factor screenings, personalized wellness plans, and proactive health guidance tailored to your individual needs. Our approach extends beyond treating illness to promoting vibrant health through nutrition advice, exercise recommendations, stress management techniques, and smoking cessation support. Invest in your future well-being with our expert team, dedicated to helping you achieve and sustain optimal health.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-600 text-md pl-4 space-y-2">
-                        <li>Comprehensive Health Risk Assessments</li>
-                        <li>Vaccinations & Immunizations</li>
-                        <li>Weight Management & Nutritional Guidance</li>
-                        <li>Stress Reduction & Mental Wellness Strategies</li>
-                    </ul>
-                </div>
-                <div class="relative">
-                    <img src="https://loremflickr.com/1200/800/doctors?random=2" alt="Wellness Programs" class="rounded-xl shadow-2xl transform hover:scale-102 transition duration-500 ease-in-out w-full h-auto object-cover border-4 border-blue-100">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 rounded-xl"></div>
-                    <p class="absolute bottom-4 right-4 text-white text-sm font-light italic">Investing in your future health</p>
-                </div>
-            </div>
-        </section>
+        <!-- CTA Section -->
+        <section class="gradient-bg-1 py-20 text-light text-center px-4 relative overflow-hidden">
+            <!-- Background element for visual interest -->
+            <div class="absolute -top-20 -left-20 w-80 h-80 bg-accent opacity-10 rounded-full mix-blend-screen filter blur-3xl animate-blob"></div>
+            <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-secondary opacity-10 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-2000"></div>
 
-        <!-- 3. Chronic Disease Management -->
-        <section class="relative py-16 md:py-24 bg-white overflow-hidden">
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1 relative">
-                    <img src="https://loremflickr.com/1200/800/doctors?random=3" alt="Chronic Disease Management" class="rounded-xl shadow-2xl transform hover:scale-102 transition duration-500 ease-in-out w-full h-auto object-cover border-4 border-blue-100">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 rounded-xl"></div>
-                    <p class="absolute bottom-4 left-4 text-white text-sm font-light italic">Expert support for lasting health</p>
-                </div>
-                <div class="order-1 md:order-2">
-                    <h3 class="text-4xl font-bold text-blue-700 mb-6 leading-snug">Navigating Life with Chronic Conditions: Expert Management</h3>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        Living with a chronic condition requires ongoing support, meticulous management, and a compassionate medical team. Albany Medical Clinic specializes in providing comprehensive and integrated care for a wide range of chronic diseases, including diabetes, hypertension, asthma, arthritis, and heart conditions. Our approach focuses on not just treating symptoms, but empowering you to manage your condition effectively, minimize complications, and improve your overall quality of life. We offer regular monitoring, medication management, lifestyle counseling, and patient education, ensuring you have the knowledge and tools to thrive. Our goal is to provide stability and support, allowing you to live your fullest life.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-600 text-md pl-4 space-y-2">
-                        <li>Diabetes & Hypertension Management</li>
-                        <li>Asthma & COPD Care</li>
-                        <li>Arthritis & Pain Management</li>
-                        <li>Coordinated Care with Specialists</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. Women's Health Services -->
-        <section class="relative py-16 md:py-24 bg-blue-50 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-4xl font-bold text-blue-700 mb-6 leading-snug">Dedicated Care for Every Stage: Women's Health Services</h3>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        Women's health needs are unique and evolve throughout every stage of life. Albany Medical Clinic offers a full spectrum of sensitive and comprehensive women's health services, delivered with the utmost discretion and understanding. From routine gynecological exams and contraception management to prenatal care support, menopause management, and breast cancer screenings, our compassionate team provides personalized care tailored to your specific requirements. We are committed to fostering an environment where you feel heard, respected, and empowered to make informed decisions about your health. Prioritize your well-being with our expert and supportive care.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-600 text-md pl-4 space-y-2">
-                        <li>Annual Gynecological Exams & Pap Tests</li>
-                        <li>Contraception Counseling & Management</li>
-                        <li>Pre-natal and Post-natal Support</li>
-                        <li>Menopause Management & Hormonal Health</li>
-                    </ul>
-                </div>
-                <div class="relative">
-                    <img src="https://loremflickr.com/1200/800/doctors?random=4" alt="Women's Health" class="rounded-xl shadow-2xl transform hover:scale-102 transition duration-500 ease-in-out w-full h-auto object-cover border-4 border-blue-100">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 rounded-xl"></div>
-                    <p class="absolute bottom-4 right-4 text-white text-sm font-light italic">Comprehensive care for women</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 5. Men's Health Services -->
-        <section class="relative py-16 md:py-24 bg-white overflow-hidden">
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1 relative">
-                    <img src="https://loremflickr.com/1200/800/doctors?random=5" alt="Men's Health" class="rounded-xl shadow-2xl transform hover:scale-102 transition duration-500 ease-in-out w-full h-auto object-cover border-4 border-blue-100">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 rounded-xl"></div>
-                    <p class="absolute bottom-4 left-4 text-white text-sm font-light italic">Proactive health for men</p>
-                </div>
-                <div class="order-1 md:order-2">
-                    <h3 class="text-4xl font-bold text-blue-700 mb-6 leading-snug">Empowering Wellness: Focused Men's Health Services</h3>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        Recognizing the distinct health challenges men face, Albany Medical Clinic offers specialized Men's Health Services focused on proactive care and early detection. Our comprehensive approach includes routine physical examinations, cardiovascular screenings, prostate health evaluations, testosterone level assessments, and mental health support. We encourage open discussions about lifestyle choices, stress management, and preventative strategies to ensure optimal physical and mental well-being. Our experienced physicians provide a confidential and comfortable environment, empowering you to address health concerns directly and maintain peak health throughout all stages of life.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-600 text-md pl-4 space-y-2">
-                        <li>Annual Physicals & Health Screenings</li>
-                        <li>Prostate Health Evaluations</li>
-                        <li>Cardiovascular Disease Prevention</li>
-                        <li>Testosterone & Hormonal Health</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. Pediatric Care -->
-        <section class="relative py-16 md:py-24 bg-blue-50 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-4xl font-bold text-blue-700 mb-6 leading-snug">Nurturing Tomorrow's Health: Compassionate Pediatric Care</h3>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        The health and development of your children are paramount. Albany Medical Clinic is proud to offer comprehensive and compassionate pediatric care, dedicated to supporting the growth and well-being of infants, children, and adolescents. Our services encompass routine well-child check-ups, immunizations, developmental screenings, management of childhood illnesses, and guidance for parents on nutrition, safety, and behavioral issues. Our pediatric team creates a friendly and reassuring environment, ensuring that both children and parents feel comfortable and confident in the care they receive. Partner with us to lay a strong foundation for your child's healthy future.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-600 text-md pl-4 space-y-2">
-                        <li>Well-Child Check-ups & Immunizations</li>
-                        <li>Developmental Screenings</li>
-                        <li>Acute & Chronic Childhood Illness Management</li>
-                        <li>Parental Guidance & Support</li>
-                    </ul>
-                </div>
-                <div class="relative">
-                    <img src="https://loremflickr.com/1200/800/doctors?random=6" alt="Pediatric Care" class="rounded-xl shadow-2xl transform hover:scale-102 transition duration-500 ease-in-out w-full h-auto object-cover border-4 border-blue-100">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 rounded-xl"></div>
-                    <p class="absolute bottom-4 right-4 text-white text-sm font-light italic">Caring for our youngest patients</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. Minor Procedures & Urgent Care -->
-        <section class="relative py-16 md:py-24 bg-white overflow-hidden">
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1 relative">
-                    <img src="https://loremflickr.com/1200/800/doctors?random=7" alt="Minor Procedures" class="rounded-xl shadow-2xl transform hover:scale-102 transition duration-500 ease-in-out w-full h-auto object-cover border-4 border-blue-100">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 rounded-xl"></div>
-                    <p class="absolute bottom-4 left-4 text-white text-sm font-light italic">Timely and efficient treatment</p>
-                </div>
-                <div class="order-1 md:order-2">
-                    <h3 class="text-4xl font-bold text-blue-700 mb-6 leading-snug">Immediate Attention: Minor Procedures & Urgent Care</h3>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        For immediate, non-life-threatening medical needs, Albany Medical Clinic provides prompt and efficient Minor Procedures and Urgent Care services. Our clinic is equipped to handle a variety of urgent issues, saving you a trip to the emergency room. This includes treatment for minor cuts and lacerations, wound care, removal of foreign bodies, basic fracture assessment, and immediate attention for sudden illnesses like colds, flu, infections, and allergic reactions. Our skilled medical team ensures you receive timely diagnosis and effective treatment in a comfortable clinic setting, getting you back to health sooner.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-600 text-md pl-4 space-y-2">
-                        <li>Laceration Repair & Wound Care</li>
-                        <li>Foreign Body Removal</li>
-                        <li>Treatment for Infections & Minor Illnesses</li>
-                        <li>Basic Fracture & Sprain Assessment</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call to Action Section -->
-        <section class="py-20 md:py-28 bg-blue-700 text-white text-center relative overflow-hidden">
-            <div class="absolute inset-0 z-0 opacity-10" style="background-image: url('https://loremflickr.com/1200/800/medical'); background-size: cover; background-position: center;"></div>
-            <div class="relative z-10 max-w-4xl mx-auto px-6">
-                <h2 class="text-5xl font-extrabold mb-8 leading-tight drop-shadow-md">Ready to Experience Exceptional Care?</h2>
-                <p class="text-xl md:text-2xl font-light mb-10 drop-shadow-sm">
-                    Your health is our priority. Schedule an appointment today and discover the difference personalized, comprehensive healthcare can make. Our team at Albany Medical Clinic is eager to welcome you and support your journey to optimal wellness.
+            <div class="relative z-10 container mx-auto max-w-4xl">
+                <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+                    Ready to Experience Exceptional Care?
+                </h2>
+                <p class="text-xl leading-relaxed mb-8">
+                    Your health journey is important to us. Contact Albany Medical Clinic today to schedule an appointment, inquire about our services, or speak with our friendly team. We're here to provide the support and care you deserve.
                 </p>
-                <a href="contact.html" class="inline-block bg-white text-blue-700 hover:bg-blue-100 font-semibold py-4 px-10 rounded-full text-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
-                    Book Your Appointment
-                </a>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="contact.html" class="bg-accent text-primary px-10 py-4 rounded-full text-xl font-semibold shadow-xl hover:bg-light hover:text-primary transition-all duration-300 transform hover:scale-105">
+                        Book An Appointment
+                    </a>
+                    <a href="tel:+14164619471" class="border-2 border-light text-light px-10 py-4 rounded-full text-xl font-semibold shadow-xl hover:bg-light hover:text-primary transition-all duration-300 transform hover:scale-105">
+                        Call Us Today
+                    </a>
+                </div>
             </div>
         </section>
-
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300 py-12 md:py-16">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer class="bg-primary text-light py-16 px-4">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
             <!-- Clinic Info -->
-            <div>
-                <h4 class="text-2xl font-bold text-white mb-4">Albany Medical Clinic</h4>
-                <p class="text-gray-400 mb-2">807 Broadview Ave,</p>
-                <p class="text-gray-400 mb-2">Toronto, ON M4K 2P8, Canada</p>
-                <p class="text-gray-400 mb-2">Phone: <a href="tel:+14164619471" class="hover:text-blue-400 transition duration-300">+1 416-461-9471</a></p>
-                <p class="text-gray-400 text-sm mt-4">Committed to your health and well-being.</p>
+            <div class="col-span-full md:col-span-1">
+                <a href="index.html" class="flex items-center space-x-3 mb-4">
+                    <svg class="h-10 w-10 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m0-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="text-2xl font-display font-bold">Albany Medical Clinic</span>
+                </a>
+                <p class="text-light opacity-80 text-sm leading-relaxed mb-4">
+                    Committed to providing premium, compassionate, and comprehensive healthcare services to the Toronto community. Your health is our utmost priority.
+                </p>
+                <p class="text-light opacity-80 text-sm">
+                    <span class="font-semibold">Address:</span> 807 Broadview Ave, Toronto, ON M4K 2P8, Canada
+                </p>
+                <p class="text-light opacity-80 text-sm mt-1">
+                    <span class="font-semibold">Phone:</span> <a href="tel:+14164619471" class="hover:text-accent transition-colors duration-200">+1 416-461-9471</a>
+                </p>
             </div>
 
             <!-- Quick Links -->
             <div>
-                <h4 class="text-xl font-semibold text-white mb-4">Quick Links</h4>
-                <ul class="space-y-2">
-                    <li><a href="index.html" class="hover:text-blue-400 transition duration-300">Home</a></li>
-                    <li><a href="services.html" class="hover:text-blue-400 transition duration-300">Our Services</a></li>
-                    <li><a href="our-team.html" class="hover:text-blue-400 transition duration-300">Meet Our Team</a></li>
-                    <li><a href="contact.html" class="hover:text-blue-400 transition duration-300">Contact Us</a></li>
+                <h4 class="text-xl font-semibold text-accent mb-6">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="text-light hover:text-accent transition-colors duration-200">Home</a></li>
+                    <li><a href="services.html" class="text-light hover:text-accent transition-colors duration-200">Services</a></li>
+                    <li><a href="our_team.html" class="text-light hover:text-accent transition-colors duration-200">Our Team</a></li>
+                    <li><a href="patient_resources.html" class="text-light hover:text-accent transition-colors duration-200">Patient Resources</a></li>
+                    <li><a href="contact.html" class="text-light hover:text-accent transition-colors duration-200">Contact Us</a></li>
                 </ul>
             </div>
 
-            <!-- Our Mission -->
-            <div class="md:col-span-2">
-                <h4 class="text-xl font-semibold text-white mb-4">Our Mission</h4>
-                <p class="text-gray-400 leading-relaxed">
-                    Albany Medical Clinic is dedicated to delivering patient-centered, evidence-based medical care with compassion and excellence. We strive to be a trusted healthcare partner for the Toronto community, promoting health, preventing illness, and providing comprehensive medical services for all ages.
-                </p>
-                <div class="flex space-x-4 mt-6">
-                    <!-- Social Icons - placeholder for actual links -->
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300 text-2xl" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300 text-2xl" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300 text-2xl" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300 text-2xl" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <!-- Our Services (summary) -->
+            <div>
+                <h4 class="text-xl font-semibold text-accent mb-6">Popular Services</h4>
+                <ul class="space-y-3">
+                    <li><a href="services.html#family-medicine" class="text-light hover:text-accent transition-colors duration-200">Family Medicine</a></li>
+                    <li><a href="services.html#walk-in-clinic" class="text-light hover:text-accent transition-colors duration-200">Walk-In Clinic</a></li>
+                    <li><a href="services.html#immunizations" class="text-light hover:text-accent transition-colors duration-200">Immunizations</a></li>
+                    <li><a href="services.html#chronic-care" class="text-light hover:text-accent transition-colors duration-200">Chronic Disease Mgmt.</a></li>
+                    <li><a href="services.html#womens-health" class="text-light hover:text-accent transition-colors duration-200">Women's Health</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media & Newsletter (Placeholder) -->
+            <div>
+                <h4 class="text-xl font-semibold text-accent mb-6">Connect With Us</h4>
+                <div class="flex space-x-4 mb-6">
+                    <a href="#" class="text-light hover:text-accent transition-colors duration-200" aria-label="Facebook">
+                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.505 1.492-3.89 3.776-3.89 1.094 0 2.24.195 2.24.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" class="text-light hover:text-accent transition-colors duration-200" aria-label="Instagram">
+                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c-1.105 0-1.85-.413-2.618-1.266C4.94 17.95 4.3 16.993 4.12 15.65h1.908c.178.966.52 1.637.914 2.062.394.425.96.643 1.632.643.518 0 .9-.115 1.144-.344.244-.23.366-.566.366-.998 0-.4-.112-.727-.34-.985-.228-.258-.57-.495-1.026-.71.558-.293.996-.583 1.314-.87.318-.287.568-.58.75-.879.182-.3.273-.615.273-.946 0-.67-.2-1.2-.596-1.59-.396-.39-1.002-.585-1.817-.585-1.12 0-2.028.47-2.723 1.41-.695.94-.97 2.21-.92 3.81h1.908c.026-.76.22-1.35.582-1.772.362-.422.9-.633 1.616-.633.472 0 .814.11.102.327.288.217.432.53.432.93 0 .346-.08.66-.239.94-.158.28-.403.55-.733.81.446.22.822.46 1.127.72.305.26.54.52.705.78.165.26.248.54.248.823 0 .61-.19 1.1-.57 1.48-.38.38-.908.57-1.58.57zM20 12c0-4.411-3.589-8-8-8S4 7.589 4 12s3.589 8 8 8 8-3.589 8-8zm-2 0c0 3.314-2.686 6-6 6s-6-2.686-6-6 2.686-6 6-6 6 2.686 6 6z" /></svg>
+                    </a>
+                    <a href="#" class="text-light hover:text-accent transition-colors duration-200" aria-label="Twitter">
+                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.3 12.7L12 18.3l-4.3-4.3L5.7 12l4.3-4.3L12 5.7l4.3 4.3L18.3 12z" /></svg>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-500 text-sm">
-            &copy; 2023 Albany Medical Clinic. All rights reserved.
+        <div class="text-center text-sm opacity-70 mt-12 border-t border-light/20 pt-8">
+            <p>&copy; 2023 Albany Medical Clinic. All rights reserved.</p>
+            <p class="mt-2">Designed and Developed by an Award-Winning Web Developer.</p>
         </div>
     </footer>
-
-    <!-- FontAwesome for social icons - if needed in footer -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
 </body>
 </html>
