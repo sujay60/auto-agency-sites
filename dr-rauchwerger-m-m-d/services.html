@@ -3,110 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Dr. Rauchwerger, M.D. | Toronto Healthcare</title>
+    <title>Services | Dr. Rauchwerger, M.D. | Toronto Clinic</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         clinical: {
-                            50: '#F0F9F8',
-                            900: '#0F2A28',
-                            teal: '#1A5F5A',
-                            accent: '#4AB5AD'
+                            50: '#f0f9f8',
+                            900: '#0f3a36',
+                            teal: '#14b8a6',
                         }
                     }
                 }
             }
         }
     </script>
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-6 py-6 backdrop-blur-md bg-white/70">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
             <a href="index.html" class="text-xl font-bold tracking-tighter text-clinical-900">DR. RAUCHWERGER</a>
             <div class="space-x-8 text-sm font-medium text-slate-600">
                 <a href="index.html" class="hover:text-clinical-teal transition">Home</a>
-                <a href="services.html" class="text-clinical-teal font-semibold">Services</a>
+                <a href="services.html" class="text-clinical-teal">Services</a>
                 <a href="about.html" class="hover:text-clinical-teal transition">About</a>
-                <a href="contact.html" class="hover:text-clinical-teal transition bg-clinical-900 text-white px-5 py-2 rounded-full">Book Visit</a>
+                <a href="contact.html" class="bg-clinical-900 text-white px-5 py-2 rounded-full hover:bg-clinical-teal transition">Book Visit</a>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="pt-40 pb-24 px-6 text-center">
-        <h1 class="text-6xl font-bold tracking-tighter text-clinical-900 mb-6">Expert Medical Care.</h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Precision diagnostics and personalized treatment plans in the heart of Toronto.</p>
+    <header class="py-24 px-6 text-center">
+        <h1 class="text-6xl font-bold tracking-tight text-clinical-900 mb-6">Expert Medical Care</h1>
+        <p class="max-w-2xl mx-auto text-xl text-slate-500">Precision, empathy, and evidence-based solutions tailored to your unique health journey in the heart of Toronto.</p>
     </header>
 
     <!-- Services Grid -->
-    <section class="max-w-6xl mx-auto px-6 pb-24">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
                 <div class="w-12 h-12 bg-clinical-50 text-clinical-teal rounded-2xl flex items-center justify-center mb-6 font-bold">01</div>
-                <h3 class="text-2xl font-semibold mb-4">Preventative Exams</h3>
-                <p class="text-slate-500 text-sm leading-relaxed">Comprehensive physicals and health screenings tailored to your long-term wellness goals.</p>
+                <h3 class="text-2xl font-bold mb-4">General Consultations</h3>
+                <p class="text-slate-600">Comprehensive health assessments focusing on preventive medicine and long-term wellness planning.</p>
             </div>
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
                 <div class="w-12 h-12 bg-clinical-50 text-clinical-teal rounded-2xl flex items-center justify-center mb-6 font-bold">02</div>
-                <h3 class="text-2xl font-semibold mb-4">Acute Care</h3>
-                <p class="text-slate-500 text-sm leading-relaxed">Swift, effective treatment for sudden illnesses and injuries with state-of-the-art diagnostic support.</p>
+                <h3 class="text-2xl font-bold mb-4">Specialized Diagnostics</h3>
+                <p class="text-slate-600">Advanced monitoring and testing protocols using the latest clinical technology for accurate reporting.</p>
             </div>
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
                 <div class="w-12 h-12 bg-clinical-50 text-clinical-teal rounded-2xl flex items-center justify-center mb-6 font-bold">03</div>
-                <h3 class="text-2xl font-semibold mb-4">Chronic Management</h3>
-                <p class="text-slate-500 text-sm leading-relaxed">Ongoing support for lifestyle-related and persistent conditions with a focus on patient education.</p>
+                <h3 class="text-2xl font-bold mb-4">Chronic Care Management</h3>
+                <p class="text-slate-600">Dedicated oversight for ongoing conditions, ensuring your treatment plan adapts to your evolving needs.</p>
+            </div>
+            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
+                <div class="w-12 h-12 bg-clinical-50 text-clinical-teal rounded-2xl flex items-center justify-center mb-6 font-bold">04</div>
+                <h3 class="text-2xl font-bold mb-4">Preventive Wellness</h3>
+                <p class="text-slate-600">Proactive screenings and personalized health strategies to maintain peak performance and health.</p>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="max-w-4xl mx-auto px-6 py-24">
-        <h2 class="text-4xl font-bold tracking-tight mb-12 text-center">Common Questions</h2>
-        <div class="space-y-6">
-            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                <h4 class="font-bold text-lg mb-2">Do you accept new patients?</h4>
-                <p class="text-slate-500">Yes, we are currently accepting new patient registrations at our Broadview Ave clinic.</p>
-            </div>
-            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                <h4 class="font-bold text-lg mb-2">What should I bring to my first visit?</h4>
-                <p class="text-slate-500">Please bring your OHIP card, a list of current medications, and any recent medical records.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="max-w-6xl mx-auto px-6 py-24">
-        <div class="rounded-[2rem] overflow-hidden shadow-2xl h-96">
-            <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-full border-0"></iframe>
-        </div>
+    <!-- Visual Divider -->
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <img src="https://loremflickr.com/1200/800/doctors" alt="Medical Office" class="w-full h-96 object-cover rounded-[2rem] shadow-2xl">
     </section>
 
     <!-- Footer -->
-    <footer class="bg-clinical-900 text-slate-300 py-20 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-12">
+    <footer class="bg-clinical-900 text-slate-300 py-24">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-16">
             <div>
-                <h5 class="text-white font-bold mb-4">Dr. Rauchwerger</h5>
-                <p class="text-sm">807 Broadview Ave, Toronto, ON M4K 2P8</p>
-            </div>
-            <div class="space-y-2 text-sm">
-                <a href="index.html" class="block hover:text-white">Home</a>
-                <a href="services.html" class="block hover:text-white">Services</a>
-                <a href="about.html" class="block hover:text-white">About</a>
-                <a href="contact.html" class="block hover:text-white">Contact</a>
+                <h4 class="text-white font-bold mb-6">Clinic Info</h4>
+                <p>807 Broadview Ave</p>
+                <p>Toronto, ON M4K 2P8</p>
+                <p class="mt-4 font-semibold text-white">+1 416-461-9471</p>
             </div>
             <div>
-                <p class="font-bold text-white mb-4">Connect</p>
-                <a href="tel:+14164619471" class="block hover:text-white text-sm">+1 416-461-9471</a>
+                <h4 class="text-white font-bold mb-6">Navigation</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Professional</h4>
+                <p>Providing evidence-based, compassionate medical care for the Toronto community.</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-800 text-sm">
+            &copy; 2024 Dr. Rauchwerger, M.D. All rights reserved.
         </div>
     </footer>
 
