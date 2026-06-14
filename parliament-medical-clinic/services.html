@@ -10,71 +10,96 @@
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-[#F8FAFC] text-slate-900 antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-6 py-6 flex justify-center">
-        <div class="backdrop-blur-md bg-white/70 border border-slate-200/50 shadow-sm rounded-full px-8 py-4 flex items-center gap-8">
-            <a href="index.html" class="text-sm font-semibold hover:text-blue-600 transition-colors">Home</a>
-            <a href="services.html" class="text-sm font-bold text-blue-600">Services</a>
-            <a href="doctors.html" class="text-sm font-semibold hover:text-blue-600 transition-colors">Doctors</a>
-            <a href="contact.html" class="text-sm font-semibold hover:text-blue-600 transition-colors">Contact</a>
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-tighter text-teal-900">PARLIAMENT<span class="text-teal-600">.</span></a>
+            <div class="space-x-8 font-medium text-sm tracking-wide">
+                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
+                <a href="services.html" class="text-teal-600 font-bold">Services</a>
+                <a href="doctors.html" class="hover:text-teal-600 transition">Doctors</a>
+                <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
+            </div>
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <header class="pt-32 pb-16 px-6 text-center">
-        <h1 class="text-6xl font-bold tracking-tighter mb-6">Expert Care.</h1>
-        <p class="text-slate-500 max-w-xl mx-auto text-lg">Comprehensive medical services delivered with precision, empathy, and the highest standards of care in Toronto.</p>
+    <!-- Header -->
+    <header class="py-24 max-w-5xl mx-auto px-6 text-center">
+        <h1 class="text-6xl md:text-7xl font-bold tracking-tight text-teal-950 mb-6">Premium Care Services</h1>
+        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Clinical excellence meets comfort in the heart of Toronto. Personalized care tailored to your unique health journey.</p>
     </header>
 
     <!-- Services Grid -->
-    <main class="max-w-7xl mx-auto px-6 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <!-- Service Card 1 -->
-            <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
-                <div class="h-48 w-full overflow-hidden rounded-2xl mb-6">
-                    <img src="https://loremflickr.com/1200/800/doctors" alt="General Practice" class="w-full h-full object-cover">
-                </div>
-                <h3 class="text-2xl font-bold mb-2">General Practice</h3>
-                <p class="text-slate-600">Routine check-ups, preventative care, and management of chronic health conditions for all ages.</p>
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all">
+                <div class="h-12 w-12 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-6">🩺</div>
+                <h3 class="text-2xl font-semibold mb-3">General Check-ups</h3>
+                <p class="text-slate-600 leading-relaxed">Comprehensive annual physicals and routine health screenings to keep you at your peak performance.</p>
             </div>
-
-            <!-- Service Card 2 -->
-            <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
-                <div class="h-48 w-full overflow-hidden rounded-2xl mb-6">
-                    <img src="https://loremflickr.com/1200/800/medical" alt="Diagnostic" class="w-full h-full object-cover">
-                </div>
-                <h3 class="text-2xl font-bold mb-2">Diagnostic Services</h3>
-                <p class="text-slate-600">On-site rapid assessments, blood work, and health screenings using modern medical technology.</p>
+            <!-- Card 2 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all">
+                <div class="h-12 w-12 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-6">🔬</div>
+                <h3 class="text-2xl font-semibold mb-3">Diagnostic Lab</h3>
+                <p class="text-slate-600 leading-relaxed">State-of-the-art onsite blood work and diagnostic testing with rapid results for efficient treatment.</p>
             </div>
-
-            <!-- Service Card 3 -->
-            <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
-                <div class="h-48 w-full overflow-hidden rounded-2xl mb-6">
-                    <img src="https://loremflickr.com/1200/800/health" alt="Wellness" class="w-full h-full object-cover">
-                </div>
-                <h3 class="text-2xl font-bold mb-2">Preventative Wellness</h3>
-                <p class="text-slate-600">Tailored wellness plans, vaccinations, and lifestyle health coaching for a healthier future.</p>
+            <!-- Card 3 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all">
+                <div class="h-12 w-12 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-6">✨</div>
+                <h3 class="text-2xl font-semibold mb-3">Preventative Health</h3>
+                <p class="text-slate-600 leading-relaxed">Specialized immunization programs, lifestyle counseling, and chronic disease management.</p>
             </div>
-
-            <!-- Service Card 4 -->
-            <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
-                <div class="h-48 w-full overflow-hidden rounded-2xl mb-6">
-                    <img src="https://loremflickr.com/1200/800/clinic" alt="Pediatrics" class="w-full h-full object-cover">
-                </div>
-                <h3 class="text-2xl font-bold mb-2">Family Health</h3>
-                <p class="text-slate-600">Pediatric care and family-oriented medical support designed for the Toronto community.</p>
+            <!-- Card 4 -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all">
+                <div class="h-12 w-12 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-6">⚖️</div>
+                <h3 class="text-2xl font-semibold mb-3">Urgent Consults</h3>
+                <p class="text-slate-600 leading-relaxed">Dedicated time slots for acute concerns to ensure you receive attention when it matters most.</p>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- Location & CTA -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold tracking-tight mb-6">Visit our Toronto clinic</h2>
+                <p class="text-lg text-slate-600 mb-8">Located at 1 Oak St. We invite you to experience medical care defined by precision and patience.</p>
+                <div class="space-y-4">
+                    <p class="font-semibold text-teal-900">+1 416-361-5028</p>
+                    <p class="text-slate-500">1 Oak St, Toronto, ON M5A 0A1</p>
+                    <div class="flex items-center gap-2 text-amber-500">
+                        ★★★★☆ <span class="text-slate-400 text-sm">4.3 rating from 449 reviews</span>
+                    </div>
+                </div>
+            </div>
+            <iframe src="https://www.google.com/maps?q=1+Oak+St+Toronto+ON+M5A+0A1+Canada&output=embed" class="w-full h-96 rounded-[2rem] shadow-2xl" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="py-24 text-center">
-        <p class="text-slate-400 text-sm">© 2024 Parliament Medical Clinic • 1 Oak St, Toronto, ON</p>
-        <div class="mt-4">
-            <a href="tel:+14163615028" class="text-blue-600 font-bold">+1 416-361-5028</a>
+    <footer class="bg-teal-950 text-white py-20 mt-24">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+            <div>
+                <h4 class="text-xl font-bold mb-4">Parliament Medical</h4>
+                <p class="text-teal-200/60 text-sm leading-relaxed">Exceptional care, refined for the modern patient.</p>
+            </div>
+            <div class="space-y-2">
+                <a href="index.html" class="block hover:text-teal-400 transition">Home</a>
+                <a href="services.html" class="block hover:text-teal-400 transition">Services</a>
+                <a href="doctors.html" class="block hover:text-teal-400 transition">Doctors</a>
+                <a href="contact.html" class="block hover:text-teal-400 transition">Contact</a>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Connect</h4>
+                <div class="flex space-x-4">
+                    <span class="opacity-60">Instagram</span>
+                    <span class="opacity-60">LinkedIn</span>
+                    <span class="opacity-60">Twitter</span>
+                </div>
+            </div>
         </div>
     </footer>
 
