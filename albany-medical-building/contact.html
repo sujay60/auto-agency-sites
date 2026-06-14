@@ -10,79 +10,79 @@
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-50 text-slate-900 antialiased">
 
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-xl font-bold tracking-tighter">ALBANY<span class="text-slate-400">MED</span></div>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-6 py-6">
+        <div class="max-w-6xl mx-auto backdrop-blur-md bg-white/70 border border-white/50 rounded-full px-8 py-4 flex justify-between items-center shadow-sm">
+            <span class="font-bold text-lg tracking-tighter">ALBANY MEDICAL</span>
             <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
-                <a href="services.html" class="hover:text-blue-600 transition">Services</a>
-                <a href="doctors.html" class="hover:text-blue-600 transition">Doctors</a>
-                <a href="contact.html" class="text-blue-600">Contact</a>
+                <a href="index.html" class="hover:text-black transition">Home</a>
+                <a href="services.html" class="hover:text-black transition">Services</a>
+                <a href="doctors.html" class="hover:text-black transition">Doctors</a>
+                <a href="contact.html" class="text-black font-semibold">Contact</a>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 pt-32 pb-24">
-        <header class="mb-24">
-            <h1 class="text-6xl font-bold tracking-tight mb-6">Get in touch.</h1>
-            <p class="text-xl text-slate-500 max-w-2xl">Centrally located on Broadview Avenue. Expert care, just steps away.</p>
-        </header>
+    <!-- Main Content -->
+    <main class="pt-40 pb-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <header class="mb-20">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">Get in touch.</h1>
+                <p class="text-xl text-slate-500 max-w-xl">We are located at 807 Broadview Ave. Reach out to book an appointment or inquire about our specialized care.</p>
+            </header>
 
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div class="space-y-12">
-                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
-                    <h2 class="text-2xl font-semibold mb-6">Visit Us</h2>
-                    <p class="text-slate-600 leading-relaxed mb-4">807 Broadview Ave<br>Toronto, ON M4K 2P8</p>
-                    <a href="#" class="text-blue-600 font-medium hover:underline">Get directions &rarr;</a>
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Info Section -->
+                <div class="space-y-12">
+                    <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                        <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Visit Us</h3>
+                        <p class="text-lg font-medium">807 Broadview Ave,<br>Toronto, ON M4K 2P8</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                        <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Hours</h3>
+                        <div class="flex justify-between py-2 border-b border-slate-50"><span>Mon–Fri</span><span class="font-semibold">8am – 6pm</span></div>
+                        <div class="flex justify-between py-2"><span>Sat–Sun</span><span class="font-semibold">Closed</span></div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                        <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Patient Intake</h3>
+                        <a href="#" class="inline-block bg-black text-white px-6 py-3 rounded-full hover:bg-slate-800 transition">Download Forms</a>
+                    </div>
                 </div>
 
-                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
-                    <h2 class="text-2xl font-semibold mb-6">Hours</h2>
-                    <div class="flex justify-between py-2 border-b border-slate-50">
-                        <span class="text-slate-500">Mon - Fri</span>
-                        <span class="font-semibold">8:00 AM - 6:00 PM</span>
-                    </div>
-                    <div class="flex justify-between py-2">
-                        <span class="text-slate-500">Sat - Sun</span>
-                        <span class="font-semibold">Closed</span>
-                    </div>
-                </div>
-
-                <div class="bg-blue-600 p-8 rounded-3xl text-white">
-                    <h2 class="text-2xl font-semibold mb-2">Need an appointment?</h2>
-                    <p class="opacity-90 mb-6">Call our reception directly to schedule your visit.</p>
-                    <a href="tel:+14163662000" class="text-3xl font-bold tracking-tight">+1 416-366-2000</a>
+                <!-- Map -->
+                <div class="h-full">
+                    <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" 
+                            class="w-full h-full min-h-[400px] rounded-[2rem] shadow-2xl border-0" 
+                            allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
-
-            <div class="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-xl">
-                <form class="space-y-6">
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Name</label>
-                        <input type="text" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Email</label>
-                        <input type="email" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Message</label>
-                        <textarea rows="4" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                    </div>
-                    <button class="w-full py-4 bg-slate-900 text-white rounded-xl font-semibold hover:bg-slate-800 transition">Send Inquiry</button>
-                </form>
-            </div>
-        </section>
-
-        <section class="mt-24">
-            <img src="https://loremflickr.com/1200/800/doctors" alt="Medical Office" class="w-full h-96 object-cover rounded-[2rem] shadow-2xl">
-        </section>
+        </div>
     </main>
 
-    <footer class="text-center py-12 text-slate-400 text-sm">
-        &copy; 2024 Albany Medical Building. All rights reserved.
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-20 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+            <div>
+                <h4 class="text-white font-bold mb-4">Albany Medical</h4>
+                <p class="text-sm">807 Broadview Ave, Toronto</p>
+            </div>
+            <div class="space-y-2">
+                <a href="index.html" class="block hover:text-white">Home</a>
+                <a href="services.html" class="block hover:text-white">Services</a>
+                <a href="doctors.html" class="block hover:text-white">Doctors</a>
+            </div>
+            <div>
+                <p class="text-sm">Contact: +1 416-366-2000</p>
+                <div class="flex gap-4 mt-6">
+                    <div class="w-10 h-10 rounded-full bg-slate-800"></div>
+                    <div class="w-10 h-10 rounded-full bg-slate-800"></div>
+                </div>
+            </div>
+        </div>
     </footer>
 
 </body>
