@@ -3,140 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Care & Family Health Yorkville</title>
+    <title>Contact | Care & Family Health Yorkville</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        clinic: {
-                            50: '#f0fdfa',
-                            900: '#0f766e',
-                            primary: '#0d9488',
-                            dark: '#0f172a'
+                        clinical: {
+                            50: '#f0f9f8',
+                            900: '#0f3a35',
+                            teal: '#2d8a80',
+                            accent: '#4cc9c0'
                         }
                     }
                 }
             }
         }
     </script>
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
 </head>
-<body class="bg-slate-50 text-slate-900 selection:bg-teal-200">
+<body class="bg-clinical-50 text-clinical-900">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-6 py-4">
-        <div class="max-w-7xl mx-auto backdrop-blur-md bg-white/70 rounded-full border border-slate-200 shadow-sm flex items-center justify-between px-8 py-4">
-            <div class="text-xl font-bold text-teal-900 tracking-tight">CARE & FAMILY</div>
-            <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
-                <a href="services.html" class="hover:text-teal-600 transition">Services</a>
-                <a href="doctors.html" class="hover:text-teal-600 transition">Doctors</a>
-                <a href="contact.html" class="text-teal-900 border-b-2 border-teal-900">Contact</a>
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-clinical-50/80 border-b border-clinical-900/10 px-8 py-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-tighter uppercase text-clinical-900">Care& Family Health</h1>
+            <div class="flex gap-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-clinical-teal transition">Home</a>
+                <a href="services.html" class="hover:text-clinical-teal transition">Services</a>
+                <a href="doctors.html" class="hover:text-clinical-teal transition">Doctors</a>
+                <a href="contact.html" class="text-clinical-teal font-semibold">Contact</a>
             </div>
-            <a href="#booking" class="bg-teal-900 text-white px-6 py-2 rounded-full hover:bg-teal-800 transition text-sm font-semibold">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-48 pb-24 px-6">
-        <div class="max-w-5xl mx-auto text-center">
-            <h1 class="text-7xl font-bold tracking-tighter text-teal-900 mb-8">Get in Touch.</h1>
-            <p class="text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">Located in the heart of Yorkville, our clinic is dedicated to providing premium, accessible family healthcare. Reach out today for inquiries or to schedule your visit.</p>
-        </div>
-    </section>
+    <main class="max-w-7xl mx-auto px-8 py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            
+            <!-- Contact Info -->
+            <div class="space-y-12">
+                <div>
+                    <h2 class="text-6xl font-bold tracking-tight mb-6">Let's connect.</h2>
+                    <p class="text-xl text-gray-600 max-w-md">Experience healthcare redefined in the heart of Yorkville. Our team is ready to assist you.</p>
+                </div>
 
-    <!-- Contact & Map Grid -->
-    <section class="py-24 px-6 bg-white">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="space-y-8">
-                <h2 class="text-5xl font-bold tracking-tighter">Find Our Clinic</h2>
-                <div class="space-y-6">
-                    <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
-                        <h4 class="font-bold text-teal-900">Visit Us</h4>
-                        <p class="text-slate-600">162 Cumberland St #200, Toronto, ON M5R 3N5, Canada</p>
+                <div class="space-y-8">
+                    <div class="p-8 bg-white rounded-[2rem] shadow-sm border border-gray-100">
+                        <h4 class="font-bold mb-2">Visit Us</h4>
+                        <p class="text-gray-600">162 Cumberland St #200<br>Toronto, ON M5R 3N5</p>
                     </div>
-                    <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
-                        <h4 class="font-bold text-teal-900">Reach Out</h4>
-                        <p class="text-slate-600">+1 647-951-4770</p>
+                    <div class="p-8 bg-white rounded-[2rem] shadow-sm border border-gray-100">
+                        <h4 class="font-bold mb-2">Reach Out</h4>
+                        <p class="text-clinical-teal font-semibold text-2xl">+1 647-951-4770</p>
                     </div>
                 </div>
             </div>
-            <div class="w-full">
-                <iframe src="https://www.google.com/maps?q=162+Cumberland+St+#200+Toronto+ON+M5R+3N5+Canada&output=embed" class="w-full h-96 rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition duration-700"></iframe>
-            </div>
-        </div>
-    </section>
 
-    <!-- Hours & Booking Section -->
-    <section id="booking" class="py-24 px-6 bg-teal-900 text-white">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+            <!-- Booking/Map Section -->
             <div class="space-y-8">
-                <h3 class="text-4xl font-bold">Clinical Hours</h3>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="text-teal-200">Mon - Fri</div><div>08:00 AM - 07:00 PM</div>
-                    <div class="text-teal-200">Saturday</div><div>09:00 AM - 03:00 PM</div>
-                    <div class="text-teal-200">Sunday</div><div>Closed</div>
+                <div class="w-full h-96 bg-gray-200 rounded-[2rem] shadow-2xl overflow-hidden">
+                    <iframe src="https://www.google.com/maps?q=162+Cumberland+St+#200+Toronto+ON+M5R+3N5+Canada&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
-                <div class="bg-teal-800 p-8 rounded-3xl border border-teal-700">
-                    <p class="text-3xl font-bold text-white mb-2">4.5 Stars</p>
-                    <p class="text-teal-200">Based on 599+ reviews from our community members.</p>
+                <div class="bg-clinical-900 text-white p-10 rounded-[2rem]">
+                    <h3 class="text-2xl font-semibold mb-6">Office Hours</h3>
+                    <div class="flex justify-between py-2 border-b border-clinical-800"><span>Mon - Fri</span> <span class="font-bold">8:00 - 18:00</span></div>
+                    <div class="flex justify-between py-2 border-b border-clinical-800"><span>Saturday</span> <span class="font-bold">9:00 - 14:00</span></div>
+                    <div class="flex justify-between py-2"><span>Accessibility</span> <span class="text-clinical-accent">Fully Wheelchair Accessible</span></div>
                 </div>
-            </div>
-            <div class="bg-white p-10 rounded-[2rem] text-slate-900 shadow-2xl">
-                <h3 class="text-3xl font-bold mb-8">Schedule a Consultation</h3>
-                <form class="space-y-4">
-                    <input type="text" placeholder="Full Name" class="w-full p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                    <input type="email" placeholder="Email Address" class="w-full p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                    <textarea placeholder="How can we help?" class="w-full p-4 bg-slate-50 rounded-2xl border border-slate-200 h-32"></textarea>
-                    <button class="w-full py-4 bg-teal-900 text-white rounded-2xl font-bold hover:bg-teal-700 transition">Request Appointment</button>
-                </form>
             </div>
         </div>
-    </section>
-
-    <!-- Visual Gallery Section -->
-    <section class="py-24 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <img src="https://loremflickr.com/800/800/doctors" class="h-96 w-full object-cover rounded-3xl" alt="Clinic Interior">
-                <img src="https://loremflickr.com/800/800/medicine" class="h-96 w-full object-cover rounded-3xl" alt="Clinic Tools">
-                <img src="https://loremflickr.com/800/800/hospital" class="h-96 w-full object-cover rounded-3xl" alt="Yorkville Street">
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-white py-24 px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-slate-800 pb-16">
-            <div class="col-span-1 md:col-span-2">
-                <h2 class="text-2xl font-bold mb-6">Care & Family Health</h2>
-                <p class="text-slate-400 max-w-sm">Premier healthcare services in Yorkville. Bringing top-tier medical expertise to your doorstep with compassion and precision.</p>
-            </div>
+    <footer class="bg-clinical-900 text-white py-20 px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
-                <h4 class="font-bold mb-6">Links</h4>
-                <ul class="space-y-4 text-slate-400">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="doctors.html">Doctors</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                <h3 class="text-xl font-bold mb-4">Care& Family Health</h3>
+                <p class="text-clinical-800 text-sm">4.5 Stars from 599 Reviews</p>
             </div>
-            <div>
-                <h4 class="font-bold mb-6">Socials</h4>
-                <ul class="space-y-4 text-slate-400">
-                    <li>LinkedIn</li>
-                    <li>Instagram</li>
-                    <li>Twitter</li>
-                </ul>
+            <div class="flex flex-col gap-2">
+                <a href="index.html" class="hover:text-clinical-accent transition">Index</a>
+                <a href="services.html" class="hover:text-clinical-accent transition">Services</a>
+                <a href="doctors.html" class="hover:text-clinical-accent transition">Doctors</a>
             </div>
-        </div>
-        <div class="max-w-7xl mx-auto pt-12 text-slate-600 text-sm">
-            © 2024 Care & Family Health Yorkville. All rights reserved.
+            <div class="flex flex-col gap-2">
+                <a href="#" class="hover:text-clinical-accent transition">Instagram</a>
+                <a href="#" class="hover:text-clinical-accent transition">LinkedIn</a>
+                <p class="mt-4 text-xs text-gray-500">© 2024 Yorkville Medical. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
