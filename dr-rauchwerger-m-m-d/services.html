@@ -3,133 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Dr. Rauchwerger, M.D. | Toronto Premium Care</title>
+    <title>Services | Dr. Rauchwerger, M.D. | Albany Street Toronto</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        clinical: {
-                            50: '#f0f9f8',
-                            900: '#0f3a38',
-                            teal: '#14b8a6',
-                            blue: '#0ea5e9'
+                        clinic: {
+                            primary: '#0f766e',
+                            secondary: '#ccfbf1',
+                            accent: '#115e59',
+                            bg: '#f8fafc'
                         }
                     }
                 }
             }
         }
     </script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #FAFAFA; color: #1f2937; }
-        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); }
-    </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass border-b border-gray-100 py-6">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <div class="text-xl font-bold text-clinical-900 tracking-tight">DR. RAUCHWERGER, M.D.</div>
-            <div class="space-x-8 text-sm font-medium text-gray-600 uppercase tracking-widest">
-                <a href="index.html" class="hover:text-clinical-teal transition">Home</a>
-                <a href="services.html" class="text-clinical-teal font-bold">Services</a>
-                <a href="patient-info.html" class="hover:text-clinical-teal transition">Patient Info</a>
-                <a href="contact.html" class="hover:text-clinical-teal transition">Contact</a>
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-clinic-primary">DR. RAUCHWERGER</a>
+            <div class="space-x-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-clinic-primary transition">Home</a>
+                <a href="services.html" class="text-clinic-primary font-semibold">Services</a>
+                <a href="about.html" class="hover:text-clinic-primary transition">About</a>
+                <a href="contact.html" class="hover:text-clinic-primary transition">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <header class="pt-48 pb-24 px-6 text-center">
-        <h1 class="text-6xl md:text-8xl font-light text-clinical-900 mb-6">Our Services</h1>
-        <p class="max-w-2xl mx-auto text-xl text-gray-500 leading-relaxed">Precision diagnostics meets compassionate care. We offer a comprehensive suite of medical services tailored to your unique health trajectory.</p>
+    <!-- Header -->
+    <header class="py-24 px-6 text-center">
+        <h1 class="text-6xl font-bold tracking-tight mb-6">Clinical Excellence.</h1>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto">Tailored medical consultations and treatments designed for your long-term wellness in the heart of Toronto.</p>
     </header>
 
-    <!-- Section 1: Core Philosophy -->
-    <section class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
-        <div>
-            <h2 class="text-4xl font-semibold text-clinical-900 mb-6">A New Standard of Primary Care</h2>
-            <p class="text-lg text-gray-600 mb-8 leading-relaxed">At our Broadview Avenue clinic, we believe medicine is not just about treating symptoms, but understanding the intricate biological systems that govern your long-term wellness. Our approach is evidence-based, proactive, and deeply human.</p>
-            <ul class="space-y-4">
-                <li class="flex items-center gap-3 text-clinical-900 font-medium">✓ Advanced Diagnostic Screenings</li>
-                <li class="flex items-center gap-3 text-clinical-900 font-medium">✓ Personalized Wellness Optimization</li>
-                <li class="flex items-center gap-3 text-clinical-900 font-medium">✓ Chronic Disease Management</li>
-            </ul>
+    <!-- Services Bento Grid -->
+    <section class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+            <div class="w-12 h-12 bg-teal-50 rounded-2xl mb-6"></div>
+            <h3 class="text-2xl font-semibold mb-3">General Consultations</h3>
+            <p class="text-slate-500">Comprehensive health assessments focusing on preventative care and personalized wellness plans.</p>
         </div>
-        <img src="https://loremflickr.com/1200/800/doctors" class="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover" alt="Medical Consultation">
+        <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+            <div class="w-12 h-12 bg-teal-50 rounded-2xl mb-6"></div>
+            <h3 class="text-2xl font-semibold mb-3">Specialized Treatments</h3>
+            <p class="text-slate-500">Advanced diagnostic procedures and evidence-based therapeutic interventions.</p>
+        </div>
+        <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+            <div class="w-12 h-12 bg-teal-50 rounded-2xl mb-6"></div>
+            <h3 class="text-2xl font-semibold mb-3">Patient Wellness</h3>
+            <p class="text-slate-500">Ongoing health monitoring, chronic disease management, and mental wellness support.</p>
+        </div>
     </section>
 
-    <!-- Section 2: Service Grid (Bento Style) -->
-    <section class="bg-white py-24">
-        <div class="max-w-7xl mx-auto px-6">
-            <h3 class="text-center text-3xl font-light mb-16">Clinical Specializations</h3>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-clinical-50 p-10 rounded-3xl">
-                    <h4 class="text-2xl font-semibold mb-4 text-clinical-900">Preventative Exams</h4>
-                    <p class="text-gray-600">Annual checkups designed to detect anomalies early. Utilizing high-fidelity diagnostic equipment.</p>
-                </div>
-                <div class="bg-clinical-50 p-10 rounded-3xl">
-                    <h4 class="text-2xl font-semibold mb-4 text-clinical-900">Chronic Care</h4>
-                    <p class="text-gray-600">Ongoing support for hypertension, diabetes, and autoimmune conditions with a focus on quality of life.</p>
-                </div>
-                <div class="bg-clinical-50 p-10 rounded-3xl">
-                    <h4 class="text-2xl font-semibold mb-4 text-clinical-900">Minor Procedures</h4>
-                    <p class="text-gray-600">State-of-the-art in-office minor surgeries and dermatological procedures performed with sterile precision.</p>
-                </div>
+    <!-- Image & Feature -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <img src="https://loremflickr.com/1200/800/doctors" alt="Medical Clinic" class="w-full h-96 object-cover rounded-[2rem] shadow-2xl mb-16">
+        
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold mb-6">Precision at 807 Broadview.</h2>
+                <p class="text-lg text-slate-600">Our facility is equipped with the latest technology, ensuring that every patient receives accurate diagnostics and world-class care in a serene, professional environment.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Section 3: The Patient Experience -->
-    <section class="py-24 max-w-7xl mx-auto px-6">
-        <div class="bg-clinical-900 rounded-[3rem] p-16 text-white flex flex-col md:flex-row gap-12 items-center">
-            <div class="md:w-1/2">
-                <h2 class="text-4xl font-bold mb-8">Modern Diagnostics</h2>
-                <p class="text-clinical-50/80 mb-6 text-lg leading-relaxed">We leverage cutting-edge laboratory technology integrated directly with our patient portals. Your results, analyzed by Dr. Rauchwerger, are delivered with clear, actionable insights directly to your device.</p>
-            </div>
-            <img src="https://loremflickr.com/1200/800/medical" class="md:w-1/2 rounded-2xl shadow-xl h-[400px] object-cover" alt="Diagnostics">
-        </div>
-    </section>
-
-    <!-- Section 4: Location Map -->
-    <section class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-center text-3xl font-light mb-12">Visit Us in Toronto</h2>
-            <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-96 rounded-[3rem] shadow-2xl" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-96 rounded-[2rem] shadow-2xl border-0"></iframe>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-clinical-900 text-white py-24">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+    <footer class="bg-slate-900 text-white py-24 px-6 mt-24">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
             <div>
-                <h5 class="font-bold mb-4">Dr. Rauchwerger, M.D.</h5>
-                <p class="text-gray-400 text-sm">807 Broadview Ave, Toronto, ON M4K 2P8</p>
-                <p class="text-gray-400 text-sm">+1 416-461-9471</p>
+                <h4 class="font-bold text-lg mb-4">Dr. Rauchwerger, M.D.</h4>
+                <p class="text-slate-400 text-sm">807 Broadview Ave<br>Toronto, ON M4K 2P8</p>
+                <p class="text-slate-400 text-sm mt-4">+1 416-461-9471</p>
             </div>
-            <div>
-                <h6 class="font-bold mb-4 uppercase tracking-widest text-xs">Navigation</h6>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="patient-info.html">Patient Info</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+            <div class="space-y-2">
+                <a href="index.html" class="block text-slate-400 hover:text-white transition">Home</a>
+                <a href="services.html" class="block text-slate-400 hover:text-white transition">Services</a>
+                <a href="about.html" class="block text-slate-400 hover:text-white transition">About</a>
+                <a href="contact.html" class="block text-slate-400 hover:text-white transition">Contact</a>
             </div>
-            <div>
-                <h6 class="font-bold mb-4 uppercase tracking-widest text-xs">Clinic Hours</h6>
-                <p class="text-gray-400 text-sm">Mon-Fri: 9am - 6pm</p>
-                <p class="text-gray-400 text-sm">Sat: By appointment only</p>
+            <div class="space-y-2">
+                <a href="#" class="block text-slate-400 hover:text-white transition">LinkedIn</a>
+                <a href="#" class="block text-slate-400 hover:text-white transition">Twitter</a>
+                <a href="#" class="block text-slate-400 hover:text-white transition">Instagram</a>
             </div>
-            <div>
-                <h6 class="font-bold mb-4 uppercase tracking-widest text-xs">Social</h6>
-                <div class="flex gap-4">
-                    <div class="w-10 h-10 rounded-full bg-white/10"></div>
-                    <div class="w-10 h-10 rounded-full bg-white/10"></div>
-                </div>
+            <div class="text-sm text-slate-500">
+                &copy; 2023 Dr. Rauchwerger. All rights reserved.
             </div>
         </div>
     </footer>

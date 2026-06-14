@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Dr. Rauchwerger, M.D. | Toronto Medical Excellence</title>
+    <title>Contact | Dr. Rauchwerger, M.D. | Toronto Clinical Excellence</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -17,8 +17,7 @@
                         clinic: {
                             50: '#f0fdfa',
                             900: '#0f3a35',
-                            teal: '#14b8a6',
-                            slate: '#f8fafc'
+                            accent: '#0d9488'
                         }
                     }
                 }
@@ -26,114 +25,85 @@
         }
     </script>
 </head>
-<body class="bg-clinic-slate text-slate-800 antialiased">
+<body class="bg-slate-50 text-slate-900 antialiased">
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-            <div class="text-xl font-bold tracking-tighter text-clinic-900">DR. RAUCHWERGER</div>
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-clinic-900">DR. RAUCHWERGER</a>
             <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-clinic-teal transition">Home</a>
-                <a href="services.html" class="hover:text-clinic-teal transition">Services</a>
-                <a href="patient-info.html" class="hover:text-clinic-teal transition">Patient Info</a>
-                <a href="contact.html" class="text-clinic-teal font-semibold">Contact</a>
+                <a href="index.html" class="hover:text-clinic-accent transition">Home</a>
+                <a href="services.html" class="hover:text-clinic-accent transition">Services</a>
+                <a href="about.html" class="hover:text-clinic-accent transition">About</a>
+                <a href="contact.html" class="text-clinic-accent font-semibold">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <section class="py-24 px-6 max-w-7xl mx-auto">
-        <h1 class="text-6xl md:text-8xl font-bold text-clinic-900 tracking-tighter mb-8">Get in Touch</h1>
-        <p class="text-2xl text-slate-500 max-w-2xl leading-relaxed">Personalized care begins with a conversation. Reach out to our Broadview Avenue clinic to schedule your consultation.</p>
-    </section>
+    <main class="max-w-7xl mx-auto px-6 py-24">
+        <header class="mb-24">
+            <h1 class="text-6xl md:text-7xl font-bold tracking-tight text-clinic-900 mb-6">Let's connect.</h1>
+            <p class="text-xl text-slate-500 max-w-2xl">Expert medical consultation in the heart of Toronto. Reach out to schedule your visit or address any inquiries.</p>
+        </header>
 
-    <!-- Contact Bento Grid -->
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16">
-            <!-- Form Card -->
-            <div class="bg-slate-50 p-12 rounded-[2rem] border border-slate-100 shadow-sm">
-                <h2 class="text-3xl font-bold mb-8">Patient Inquiry Form</h2>
-                <form class="space-y-6">
-                    <input type="text" placeholder="Full Name" class="w-full p-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-clinic-teal outline-none">
-                    <input type="email" placeholder="Email Address" class="w-full p-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-clinic-teal outline-none">
-                    <textarea placeholder="How can we help?" rows="4" class="w-full p-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-clinic-teal outline-none"></textarea>
-                    <button class="w-full bg-clinic-900 text-white py-4 rounded-xl font-semibold hover:bg-clinic-teal transition">Send Message</button>
-                </form>
-            </div>
-
-            <!-- Details Side -->
+        <section class="grid md:grid-cols-2 gap-16">
             <div class="space-y-12">
-                <div>
-                    <h3 class="text-xl font-semibold text-clinic-teal mb-4 uppercase tracking-widest text-sm">Location</h3>
-                    <p class="text-lg">807 Broadview Ave, Toronto, ON M4K 2P8, Canada</p>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                    <h3 class="text-lg font-semibold mb-4 text-clinic-900">Visit Our Clinic</h3>
+                    <p class="text-slate-600 mb-2">807 Broadview Ave</p>
+                    <p class="text-slate-600">Toronto, ON M4K 2P8, Canada</p>
                 </div>
-                <div>
-                    <h3 class="text-xl font-semibold text-clinic-teal mb-4 uppercase tracking-widest text-sm">Appointments</h3>
-                    <p class="text-3xl font-bold">+1 416-461-9471</p>
+
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                    <h3 class="text-lg font-semibold mb-4 text-clinic-900">Office Hours</h3>
+                    <div class="flex justify-between py-2 border-b border-slate-50">
+                        <span class="text-slate-500">Mon - Fri</span>
+                        <span class="font-medium text-clinic-900">9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div class="flex justify-between py-2">
+                        <span class="text-slate-500">Sat - Sun</span>
+                        <span class="font-medium text-clinic-900">Closed</span>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="text-xl font-semibold text-clinic-teal mb-4 uppercase tracking-widest text-sm">Hours</h3>
-                    <ul class="space-y-2 text-slate-600">
-                        <li>Mon - Fri: 9:00 AM - 5:00 PM</li>
-                        <li>Sat: By Appointment Only</li>
-                        <li>Sun: Closed</li>
-                    </ul>
+
+                <div class="bg-clinic-900 p-8 rounded-3xl text-white">
+                    <h3 class="text-lg font-semibold mb-4">Urgent Inquiries</h3>
+                    <p class="text-4xl font-bold mb-2">+1 416-461-9471</p>
+                    <p class="text-teal-200 text-sm">Available for booking and triage.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Map Section -->
-    <section class="py-24 bg-clinic-slate">
-        <div class="max-w-7xl mx-auto px-6">
-            <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" 
-                    class="w-full h-96 rounded-[2rem] shadow-2xl grayscale hover:grayscale-0 transition duration-700"></iframe>
-        </div>
-    </section>
-
-    <!-- Brand Story / Philosophy Section -->
-    <section class="py-32 bg-clinic-900 text-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-24 items-center">
-            <div>
-                <h2 class="text-5xl font-bold mb-8">Our Philosophy of Care</h2>
-                <p class="text-lg text-teal-100 mb-6 leading-relaxed">At Dr. Rauchwerger's practice, we believe that modern medicine should be as intuitive as it is effective. We bridge the gap between clinical precision and human-centric empathy.</p>
-                <ul class="space-y-4 text-teal-200">
-                    <li>• Evidence-based diagnostic approach</li>
-                    <li>• Bespoke patient wellness journeys</li>
-                    <li>• Advanced technological integration</li>
-                </ul>
+            <div class="h-full">
+                <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-full min-h-[500px] rounded-[2rem] shadow-2xl" frameborder="0" allowfullscreen></iframe>
             </div>
-            <img src="https://loremflickr.com/1200/800/doctors" alt="Clinic Interior" class="rounded-[2rem] shadow-2xl h-[500px] object-cover">
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="bg-black text-slate-400 py-24">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 text-sm">
+    <footer class="bg-[#1A1A1A] text-slate-400 py-24">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
             <div class="col-span-2">
-                <div class="text-white font-bold text-lg mb-6">DR. RAUCHWERGER, M.D.</div>
-                <p class="max-w-xs">Serving the Toronto community with excellence at our Broadview Avenue facility.</p>
+                <h4 class="text-white font-bold mb-4">Dr. Rauchwerger, M.D.</h4>
+                <p class="text-sm max-w-sm">Providing compassionate, evidence-based care in Toronto. Committed to your long-term health and wellbeing.</p>
             </div>
             <div>
-                <h4 class="text-white font-semibold mb-6">Navigation</h4>
-                <ul class="space-y-4">
+                <h4 class="text-white font-semibold mb-4">Navigation</h4>
+                <ul class="space-y-2 text-sm">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="patient-info.html">Patient Info</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-white font-semibold mb-6">Connect</h4>
-                <ul class="space-y-4">
-                    <li>LinkedIn</li>
-                    <li>Toronto Medical Directory</li>
-                    <li>Privacy Policy</li>
+                <h4 class="text-white font-semibold mb-4">Social</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">HealthPortal</a></li>
                 </ul>
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-800 text-xs text-slate-600">
-            &copy; 2024 Dr. Rauchwerger, M.D. All Rights Reserved. 807 Broadview Ave, Toronto.
+            © 2023 Dr. Rauchwerger. All rights reserved.
         </div>
     </footer>
 
