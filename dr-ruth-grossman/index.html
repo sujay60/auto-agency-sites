@@ -3,69 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Ruth Grossman | Premium Medical Care</title>
+    <title>Dr. Ruth Grossman | Premium Medical Care in North York</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 selection:bg-teal-100">
+<body class="bg-[#F8F9FA] text-slate-900 selection:bg-teal-200">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-6 py-4">
-        <div class="max-w-7xl mx-auto backdrop-blur-md bg-white/70 border border-slate-200/50 rounded-2xl px-8 py-4 flex justify-between items-center shadow-sm">
-            <a href="index.html" class="text-xl font-bold tracking-tighter">DR. GROSSMAN</a>
+    <nav class="sticky top-0 z-50 backdrop-blur-lg bg-white/70 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-teal-900">DR. GROSSMAN</a>
             <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="text-slate-900">Home</a>
-                <a href="services.html" class="hover:text-teal-600 transition">Services</a>
-                <a href="about.html" class="hover:text-teal-600 transition">About</a>
-                <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
+                <a href="index.html" class="hover:text-teal-700 transition">Home</a>
+                <a href="services.html" class="hover:text-teal-700 transition">Services</a>
+                <a href="about.html" class="hover:text-teal-700 transition">About</a>
+                <a href="contact.html" class="hover:text-teal-700 transition">Contact</a>
             </div>
-            <a href="contact.html" class="bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-slate-700 transition">Book Now</a>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <header class="pt-40 pb-24 px-6">
-        <div class="max-w-5xl mx-auto text-center">
-            <span class="text-teal-600 font-semibold tracking-wide uppercase text-sm">Elite Medical Care in Toronto</span>
-            <h1 class="text-6xl md:text-7xl font-bold tracking-tight mt-6 mb-8 leading-[1.1]">Excellence in patient health and wellness.</h1>
-            <p class="text-xl text-slate-500 max-w-2xl mx-auto mb-12">Dr. Ruth Grossman combines clinical precision with a compassionate approach, ensuring you receive the highest standard of care in North York.</p>
-            <img src="https://loremflickr.com/1200/800/doctors" alt="Medical Clinic" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
+    <!-- Hero Section -->
+    <header class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
+        <div>
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50 text-teal-800 text-xs font-semibold mb-6">
+                <span class="w-2 h-2 rounded-full bg-teal-500"></span> 5.0 Star Rated Care
+            </div>
+            <h1 class="text-6xl font-bold tracking-tighter text-slate-900 mb-6 leading-tight">Elevated Medical Care in North York.</h1>
+            <p class="text-xl text-slate-600 mb-10 leading-relaxed">Providing patient-centric, clinical excellence at 1881 Steeles Ave W. Your health, prioritized.</p>
+            <a href="contact.html" class="px-8 py-4 bg-teal-900 text-white rounded-2xl font-semibold hover:bg-teal-800 transition shadow-lg">Schedule Consultation</a>
         </div>
+        <img src="https://loremflickr.com/1200/800/doctors" alt="Medical Clinic" class="w-full h-full object-cover rounded-[2rem] shadow-2xl">
     </header>
 
-    <!-- Stats / Bento Grid -->
-    <section class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-            <h3 class="text-5xl font-bold text-teal-600 mb-2">5.0</h3>
-            <p class="font-semibold text-xl">Patient Rating</p>
-            <p class="text-slate-500 mt-2 text-sm">Based on 11 verified reviews across major platforms.</p>
-        </div>
-        <div class="bg-slate-900 p-10 rounded-[2rem] text-white">
-            <h3 class="text-5xl font-bold mb-2">1881</h3>
-            <p class="font-semibold text-xl">Steeles Ave W</p>
-            <p class="text-slate-400 mt-2 text-sm">North York, ON M3H 5Y4. Located conveniently for all GTA patients.</p>
-        </div>
-        <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-            <h3 class="text-5xl font-bold text-slate-900 mb-2">+1</h3>
-            <p class="font-semibold text-xl">416-665-2900</p>
-            <p class="text-slate-500 mt-2 text-sm">Contact our clinical coordinators to schedule your consultation.</p>
+    <!-- FAQ Section -->
+    <section class="max-w-3xl mx-auto px-6 py-24">
+        <h2 class="text-4xl font-bold tracking-tighter mb-12 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            <details class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <summary class="font-semibold cursor-pointer list-none flex justify-between">Do you accept new patients? <span class="group-open:rotate-180 transition">▼</span></summary>
+                <p class="mt-4 text-slate-600">Yes, we are currently welcoming new patients from the North York and Toronto area.</p>
+            </details>
+            <details class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <summary class="font-semibold cursor-pointer list-none flex justify-between">Where is the clinic located? <span class="group-open:rotate-180 transition">▼</span></summary>
+                <p class="mt-4 text-slate-600">We are located at 1881 Steeles Ave W #2, North York, ON M3H 5Y4.</p>
+            </details>
         </div>
     </section>
 
-    <!-- Mission -->
-    <section class="py-24 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-6">Our Patient-Centered Mission</h2>
-            <p class="text-lg text-slate-600 leading-relaxed">We believe healthcare should be transparent, accessible, and deeply personal. Dr. Grossman is dedicated to a preventative, evidence-based approach that puts your longevity and quality of life at the forefront of every visit.</p>
+    <!-- Contact & Feedback -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="bg-teal-900 rounded-[2rem] p-12 text-white grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl font-bold mb-4">Get in touch.</h2>
+                <p class="text-teal-100">Call us at +1 416-665-2900 or use the form to request an appointment.</p>
+            </div>
+            <form class="space-y-4">
+                <input type="text" placeholder="Full Name" class="w-full p-4 rounded-xl bg-teal-800 border border-teal-700 placeholder:text-teal-400">
+                <input type="email" placeholder="Email Address" class="w-full p-4 rounded-xl bg-teal-800 border border-teal-700 placeholder:text-teal-400">
+                <button class="w-full py-4 bg-white text-teal-900 font-bold rounded-xl hover:bg-teal-50 transition">Send Inquiry</button>
+            </form>
         </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <h2 class="text-4xl font-bold mb-12 text-center">Our Location</h2>
+        <iframe src="https://www.google.com/maps?q=1881+Steeles+Ave+W+#2+North+York+ON+M3H+5Y4+Canada&output=embed" class="w-full h-96 rounded-[2rem] shadow-2xl" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 border-t border-slate-200 text-center text-slate-400 text-sm">
-        <p>© 2023 Dr. Ruth Grossman. All rights reserved.</p>
+    <footer class="bg-slate-900 text-slate-400 py-16">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+            <div>
+                <h3 class="text-white font-bold mb-4">Dr. Ruth Grossman</h3>
+                <p>1881 Steeles Ave W #2<br>North York, ON M3H 5Y4</p>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-4">Navigation</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-4">Connect</h3>
+                <p>+1 416-665-2900</p>
+                <div class="mt-4 flex gap-4">
+                    <span>Twitter</span>
+                    <span>LinkedIn</span>
+                </div>
+            </div>
+        </div>
     </footer>
 
 </body>

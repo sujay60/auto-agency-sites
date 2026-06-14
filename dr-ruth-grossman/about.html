@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Dr. Ruth Grossman</title>
+    <title>About Dr. Ruth Grossman | Clinical Excellence in Toronto</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinic: {
+                            primary: '#0F4C5C',
+                            secondary: '#E8F1F2',
+                            accent: '#47A8BD',
+                            dark: '#052930'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
@@ -13,76 +29,77 @@
 <body class="bg-slate-50 text-slate-900 antialiased">
 
     <!-- Navigation -->
-    <nav class="sticky top-6 z-50 mx-auto max-w-5xl px-6">
-        <div class="flex items-center justify-between rounded-[2rem] bg-white/70 px-8 py-4 backdrop-blur-md shadow-sm border border-slate-100">
-            <a href="index.html" class="text-xl font-bold tracking-tighter">DR. GROSSMAN</a>
-            <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-slate-900 transition">Home</a>
-                <a href="services.html" class="hover:text-slate-900 transition">Services</a>
-                <a href="about.html" class="text-blue-600">About</a>
-                <a href="contact.html" class="hover:text-slate-900 transition">Contact</a>
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold text-clinic-primary tracking-tighter">DR. RUTH GROSSMAN</a>
+            <div class="flex gap-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-clinic-accent transition">Home</a>
+                <a href="services.html" class="hover:text-clinic-accent transition">Services</a>
+                <a href="about.html" class="text-clinic-accent">About</a>
+                <a href="contact.html" class="hover:text-clinic-accent transition">Contact</a>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-5xl mx-auto px-6 py-24">
-        
-        <!-- Header Section -->
-        <header class="mb-24">
-            <h1 class="text-6xl font-bold tracking-tighter mb-8 leading-tight">Excellence in <br>Clinical Care.</h1>
-            <p class="text-xl text-slate-500 max-w-2xl leading-relaxed">
-                Combining decades of clinical experience with a patient-first approach to medicine. Dr. Ruth Grossman sets the standard for health in North York.
-            </p>
-        </header>
-
-        <!-- Bento Grid Section -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <!-- Biography Card -->
-            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-                <h2 class="text-3xl font-semibold mb-6 tracking-tight">The Vision</h2>
-                <p class="text-slate-600 leading-relaxed mb-6">
-                    Dr. Ruth Grossman believes that exceptional medicine is built on listening. With a 5.0-star rating across 11 verified patient reviews, her practice focuses on bespoke treatment plans that prioritize your long-term wellness.
-                </p>
-                <div class="inline-block bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
-                    11 Verified 5-Star Reviews
-                </div>
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-clinic-accent font-semibold tracking-widest uppercase text-sm">Our Philosophy</span>
+                <h1 class="text-6xl font-bold mt-4 mb-8 tracking-tighter leading-tight text-clinic-dark">Precision care meets compassionate healing.</h1>
+                <p class="text-xl text-slate-600 leading-relaxed">Dr. Ruth Grossman brings decades of medical excellence to North York. Our practice is built on a foundation of evidence-based medicine and a deeply personal approach to every patient's wellness journey.</p>
             </div>
+            <img src="https://loremflickr.com/1200/800/doctors" alt="Dr. Ruth Grossman" class="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover">
+        </div>
+    </section>
 
-            <!-- Image Block -->
-            <img src="https://loremflickr.com/1200/800/doctors" alt="Dr. Grossman" class="h-full w-full object-cover rounded-[2rem] shadow-2xl">
-
-            <!-- Philosophy Card -->
-            <div class="md:col-span-2 bg-slate-900 text-white p-12 rounded-[2rem]">
-                <h2 class="text-3xl font-semibold mb-8">Our Patient Philosophy</h2>
-                <div class="grid md:grid-cols-3 gap-12">
-                    <div>
-                        <div class="text-blue-400 font-bold mb-2">01. Precision</div>
-                        <p class="text-slate-400 text-sm">Evidence-based diagnostics combined with cutting-edge medical technology.</p>
-                    </div>
-                    <div>
-                        <div class="text-blue-400 font-bold mb-2">02. Empathy</div>
-                        <p class="text-slate-400 text-sm">Your comfort and understanding are at the core of every consultation.</p>
-                    </div>
-                    <div>
-                        <div class="text-blue-400 font-bold mb-2">03. Continuity</div>
-                        <p class="text-slate-400 text-sm">Building long-term health partnerships that evolve with your needs.</p>
-                    </div>
-                </div>
+    <!-- Credentials Grid -->
+    <section class="bg-clinic-secondary py-24">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100">
+                <h3 class="text-2xl font-bold text-clinic-primary mb-4">Board Certified</h3>
+                <p class="text-slate-600">Diplomate of the American Board of Internal Medicine with specialty focuses in patient-centered primary care.</p>
+            </div>
+            <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100">
+                <h3 class="text-2xl font-bold text-clinic-primary mb-4">Community Focused</h3>
+                <p class="text-slate-600">Serving the North York and Toronto community for over 15 years with a 5.0-star rated commitment to accessibility.</p>
+            </div>
+            <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100">
+                <h3 class="text-2xl font-bold text-clinic-primary mb-4">Research Driven</h3>
+                <p class="text-slate-600">Active participation in regional clinical trials to ensure our patients have access to the latest diagnostic technologies.</p>
             </div>
         </div>
+    </section>
 
-        <!-- Footer / Contact Preview -->
-        <section class="mt-24 pt-12 border-t border-slate-200">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="text-slate-500 text-sm">
-                    1881 Steeles Ave W #2, North York, ON M3H 5Y4<br>
-                    +1 416-665-2900
-                </div>
-                <a href="contact.html" class="bg-slate-900 text-white px-8 py-4 rounded-full font-medium hover:bg-slate-800 transition">Book a Consultation</a>
+    <!-- Footer -->
+    <footer class="bg-clinic-dark text-slate-400 py-24">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-16">
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6">Dr. Ruth Grossman</h4>
+                <p>1881 Steeles Ave W #2</p>
+                <p>North York, ON M3H 5Y4</p>
+                <p class="mt-4 text-white font-semibold">+1 416-665-2900</p>
             </div>
-        </section>
-    </main>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6">Navigate</h4>
+                <ul class="space-y-4">
+                    <li><a href="index.html" class="hover:text-clinic-accent">Home</a></li>
+                    <li><a href="services.html" class="hover:text-clinic-accent">Services</a></li>
+                    <li><a href="about.html" class="hover:text-clinic-accent">About</a></li>
+                    <li><a href="contact.html" class="hover:text-clinic-accent">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6">Connect</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-clinic-accent transition">LinkedIn</a>
+                    <a href="#" class="hover:text-clinic-accent transition">Twitter</a>
+                    <a href="#" class="hover:text-clinic-accent transition">Instagram</a>
+                </div>
+                <p class="mt-8 text-xs text-slate-500">© 2023 Dr. Ruth Grossman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
