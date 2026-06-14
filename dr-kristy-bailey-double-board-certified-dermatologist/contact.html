@@ -3,87 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Dr. Kristy Bailey | Dermatology</title>
+    <title>Contact | Dr. Kristy Bailey, Dermatologist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinical: {
+                            50: '#F0F9F8',
+                            900: '#0F2A28',
+                            teal: '#4A7C7A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-slate-50 text-clinical-900">
 
-    <nav class="fixed top-0 left-0 right-0 z-50 px-8 py-6 backdrop-blur-md bg-white/70 border-b border-slate-100">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-clinical-900/10">
+        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
             <a href="index.html" class="text-xl font-bold tracking-tighter">DR. KRISTY BAILEY</a>
-            <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-black transition">Home</a>
-                <a href="treatments.html" class="hover:text-black transition">Treatments</a>
-                <a href="about.html" class="hover:text-black transition">About</a>
-                <a href="contact.html" class="text-black">Contact</a>
+            <div class="space-x-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-clinical-teal transition">Home</a>
+                <a href="treatments.html" class="hover:text-clinical-teal transition">Treatments</a>
+                <a href="about.html" class="hover:text-clinical-teal transition">About</a>
+                <a href="contact.html" class="text-clinical-teal">Contact</a>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-8 pt-32 pb-24">
-        <header class="mb-20">
-            <h1 class="text-6xl font-bold tracking-tight mb-6">Let's connect.</h1>
-            <p class="text-xl text-slate-500 max-w-lg">Excellence in dermatological care at the heart of Toronto's Financial District.</p>
-        </header>
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <h1 class="text-6xl font-light tracking-tighter mb-6">Let's connect.</h1>
+        <p class="text-xl text-clinical-900/60 max-w-xl">Precision dermatology in the heart of Toronto’s Financial District. Schedule your consultation below.</p>
+    </section>
 
-        <div class="grid md:grid-cols-2 gap-16">
-            <!-- Contact Form -->
-            <section class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-                <h2 class="text-2xl font-semibold mb-8">Request an Appointment</h2>
-                <form class="space-y-6">
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-slate-400 mb-2">Full Name</label>
-                        <input type="text" class="w-full p-4 bg-slate-50 rounded-xl outline-none focus:ring-2 ring-slate-200">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-slate-400 mb-2">Email Address</label>
-                        <input type="email" class="w-full p-4 bg-slate-50 rounded-xl outline-none focus:ring-2 ring-slate-200">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-slate-400 mb-2">Treatment Interest</label>
-                        <select class="w-full p-4 bg-slate-50 rounded-xl outline-none focus:ring-2 ring-slate-200">
-                            <option>General Dermatology</option>
-                            <option>Cosmetic Consultation</option>
-                            <option>Skin Cancer Screening</option>
-                        </select>
-                    </div>
-                    <button class="w-full bg-slate-900 text-white py-4 rounded-xl font-medium hover:bg-slate-800 transition">Send Request</button>
-                </form>
-            </section>
-
-            <!-- Info Bento Grid -->
-            <div class="space-y-8">
-                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
-                    <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Location</h3>
-                    <p class="text-lg font-medium">Concourse Building</p>
-                    <p class="text-slate-600">100 King St W, Toronto, ON M5K 2A1</p>
-                    <div class="mt-6 h-48 bg-slate-100 rounded-2xl overflow-hidden grayscale">
-                        <img src="https://loremflickr.com/1200/800/map" alt="Location Map" class="w-full h-full object-cover">
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
-                        <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Hours</h3>
-                        <p class="text-slate-600">Mon–Fri: 9am – 5pm</p>
-                        <p class="text-slate-600">Sat: By appointment</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
-                        <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Contact</h3>
-                        <p class="text-lg font-semibold">+1 416-861-8600</p>
-                        <p class="text-slate-600 text-sm">4.7 stars (54 reviews)</p>
-                    </div>
+    <!-- Contact Grid -->
+    <main class="max-w-7xl mx-auto px-6 pb-24 grid grid-cols-1 lg:grid-cols-2 gap-16">
+        
+        <!-- Info Column -->
+        <div class="space-y-12">
+            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-clinical-900/5">
+                <h3 class="text-sm uppercase tracking-widest font-semibold text-clinical-teal mb-4">Location</h3>
+                <p class="text-2xl font-light leading-snug">Concourse Building<br>100 King St W, Suite 400<br>Toronto, ON M5K 2A1</p>
+                <div class="mt-8 pt-8 border-t border-clinical-900/10">
+                    <p class="text-xl">+1 416-861-8600</p>
+                    <p class="text-clinical-900/60">Mon–Fri: 9:00am – 6:00pm</p>
                 </div>
             </div>
+
+            <div class="bg-clinical-900 text-white p-10 rounded-[2rem]">
+                <h3 class="text-sm uppercase tracking-widest font-semibold text-clinical-teal mb-4">Client Portal</h3>
+                <p class="text-lg opacity-80 mb-6">Registered patients can manage appointments via our secure portal.</p>
+                <button class="bg-white text-clinical-900 px-8 py-3 rounded-full font-medium hover:bg-clinical-teal hover:text-white transition">Book Appointment</button>
+            </div>
+        </div>
+
+        <!-- Map Column -->
+        <div class="h-full">
+            <iframe 
+                src="https://www.google.com/maps?q=Concourse+Building+100+King+St+W+Toronto+ON+M5K+2A1+Canada&output=embed" 
+                class="w-full h-full min-h-[500px] rounded-[2rem] shadow-2xl"
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
         </div>
     </main>
 
-    <footer class="py-12 border-t border-slate-100 text-center">
-        <p class="text-slate-400 text-sm">&copy; 2024 Dr. Kristy Bailey. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-clinical-900 text-white py-24">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-2">
+                <h2 class="text-2xl font-bold mb-4">DR. KRISTY BAILEY</h2>
+                <p class="opacity-60 max-w-sm">Double-Board Certified Dermatologist, specializing in medical and aesthetic precision.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-clinical-teal">Menu</h4>
+                <ul class="space-y-2 opacity-60">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="treatments.html">Treatments</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-clinical-teal">Connect</h4>
+                <ul class="space-y-2 opacity-60">
+                    <li>Instagram</li>
+                    <li>LinkedIn</li>
+                    <li>Patient Portal</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 text-xs opacity-40">
+            © 2023 Dr. Kristy Bailey. 4.7 stars from 54 reviews.
+        </div>
     </footer>
 
 </body>

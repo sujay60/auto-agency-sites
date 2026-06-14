@@ -9,87 +9,99 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinic: {
+                            50: '#f0f9f8',
+                            900: '#0f3a36',
+                            teal: '#1a5f5a',
+                            light: '#e0efee'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-slate-50 text-slate-900 selection:bg-teal-100">
+<body class="bg-clinic-50 text-clinic-900 antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-6 py-6">
-        <div class="max-w-6xl mx-auto backdrop-blur-md bg-white/70 border border-slate-200 rounded-[2rem] px-8 py-4 flex justify-between items-center shadow-sm">
-            <a href="index.html" class="text-xl font-bold tracking-tighter">DR. BAILEY</a>
-            <div class="flex gap-8 text-sm font-medium">
-                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
-                <a href="treatments.html" class="text-teal-600">Treatments</a>
-                <a href="about.html" class="hover:text-teal-600 transition">About</a>
-                <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-white/70 border-b border-clinic-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tighter">DR. KRISTY BAILEY</a>
+            <div class="space-x-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-clinic-teal transition">Home</a>
+                <a href="treatments.html" class="text-clinic-teal">Treatments</a>
+                <a href="about.html" class="hover:text-clinic-teal transition">About</a>
+                <a href="contact.html" class="hover:text-clinic-teal transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="pt-40 pb-24 px-6 text-center">
-        <h1 class="text-6xl md:text-7xl font-bold tracking-tighter mb-6">Clinical Excellence.</h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Double-board certified dermatological care in the heart of Toronto’s Financial District.</p>
-    </header>
+    <section class="pt-32 pb-16 px-6 max-w-7xl mx-auto">
+        <h1 class="text-6xl md:text-7xl font-bold tracking-tight mb-8">Clinical Excellence.<br>Tailored Results.</h1>
+        <p class="text-xl text-gray-600 max-w-2xl">A curated suite of medical and aesthetic procedures designed to elevate your skin health and confidence.</p>
+    </section>
 
     <!-- Treatments Grid -->
-    <main class="max-w-6xl mx-auto px-6 pb-24">
-        <div class="grid md:grid-cols-2 gap-8">
-            
-            <!-- Service 1 -->
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-shadow duration-500">
-                <img src="https://loremflickr.com/1200/800/skincare" class="w-full h-64 object-cover rounded-3xl mb-8" alt="Medical Dermatology">
-                <h2 class="text-3xl font-semibold mb-4">Medical Dermatology</h2>
-                <p class="text-slate-600 mb-6">Evidence-based treatments for acne, rosacea, eczema, and skin cancer surveillance. Precision care for long-term health.</p>
-                <div class="flex gap-2">
-                    <span class="px-4 py-2 bg-slate-100 rounded-full text-xs font-semibold">Diagnosis</span>
-                    <span class="px-4 py-2 bg-slate-100 rounded-full text-xs font-semibold">Treatment</span>
-                </div>
-            </div>
-
-            <!-- Service 2 -->
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-shadow duration-500">
-                <img src="https://loremflickr.com/1200/800/face" class="w-full h-64 object-cover rounded-3xl mb-8" alt="Cosmetic Enhancement">
-                <h2 class="text-3xl font-semibold mb-4">Cosmetic Enhancement</h2>
-                <p class="text-slate-600 mb-6">Subtle, sophisticated injectables and resurfacing techniques designed to refresh your natural aesthetic.</p>
-                <div class="flex gap-2">
-                    <span class="px-4 py-2 bg-slate-100 rounded-full text-xs font-semibold">Botox/Fillers</span>
-                    <span class="px-4 py-2 bg-slate-100 rounded-full text-xs font-semibold">Lasers</span>
-                </div>
-            </div>
-
-            <!-- Service 3 -->
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-shadow duration-500">
-                <img src="https://loremflickr.com/1200/800/microscope" class="w-full h-64 object-cover rounded-3xl mb-8" alt="Skin Cancer Screening">
-                <h2 class="text-3xl font-semibold mb-4">Skin Cancer Screening</h2>
-                <p class="text-slate-600 mb-6">Advanced full-body mapping and mole analysis utilizing high-resolution dermoscopy for early detection.</p>
-            </div>
-
-            <!-- Service 4 -->
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-shadow duration-500">
-                <img src="https://loremflickr.com/1200/800/beauty" class="w-full h-64 object-cover rounded-3xl mb-8" alt="Rejuvenation">
-                <h2 class="text-3xl font-semibold mb-4">Clinical Rejuvenation</h2>
-                <p class="text-slate-600 mb-6">Medical-grade chemical peels and microneedling therapies to address texture, tone, and collagen production.</p>
-            </div>
+    <section class="py-16 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-clinic-100">
+            <span class="text-clinic-teal font-semibold">Medical Dermatology</span>
+            <h3 class="text-3xl font-bold mt-4 mb-6">Clinical Care</h3>
+            <ul class="space-y-4 text-gray-600">
+                <li>• Acne & Rosacea Management</li>
+                <li>• Mole Mapping & Skin Cancer Screening</li>
+                <li>• Eczema & Psoriasis Therapy</li>
+                <li>• Medical Grade Consultations</li>
+            </ul>
         </div>
-    </main>
+        
+        <!-- Card 2 -->
+        <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-clinic-100">
+            <span class="text-clinic-teal font-semibold">Aesthetic Services</span>
+            <h3 class="text-3xl font-bold mt-4 mb-6">Skin Rejuvenation</h3>
+            <ul class="space-y-4 text-gray-600">
+                <li>• Injectables & Dermal Fillers</li>
+                <li>• Laser Skin Resurfacing</li>
+                <li>• Chemical Peels</li>
+                <li>• Advanced Microneedling</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Visual Highlight -->
+    <section class="py-16 px-6 max-w-7xl mx-auto">
+        <img src="https://loremflickr.com/1200/800/doctors" alt="Clinic Interior" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-white border-t py-16 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 text-sm">
+    <footer class="bg-clinic-900 text-white py-20 mt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
             <div>
-                <h4 class="font-bold mb-4">Location</h4>
-                <p class="text-slate-500">Concourse Building<br>100 King St W, Toronto<br>ON M5K 2A1, Canada</p>
+                <h4 class="text-2xl font-bold mb-4">Dr. Kristy Bailey</h4>
+                <p class="text-clinic-light/60">Concourse Building, 100 King St W<br>Toronto, ON M5K 2A1, Canada</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Navigation</h4>
+                <ul class="space-y-2 text-clinic-light/60">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="treatments.html">Treatments</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
             <div>
                 <h4 class="font-bold mb-4">Contact</h4>
-                <p class="text-slate-500">+1 416-861-8600<br>hello@drbailey.ca</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Social</h4>
-                <p class="text-slate-500">Instagram / LinkedIn</p>
-                <p class="mt-4 font-semibold text-teal-600">4.7 Stars from 54 Reviews</p>
+                <p class="text-clinic-light/60">+1 416-861-8600</p>
+                <p class="text-clinic-light/60 mt-2">4.7 Stars from 54 Reviews</p>
             </div>
         </div>
     </footer>
+
 </body>
 </html>
