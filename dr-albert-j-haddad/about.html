@@ -9,79 +9,107 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinical: {
+                            50: '#F0F9F8',
+                            900: '#0F3D3E',
+                            teal: '#1A7474',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold tracking-tighter">DR. ALBERT J HADDAD</a>
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-clinical-900">Dr. Haddad</a>
             <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-slate-900 transition">Home</a>
-                <a href="services.html" class="hover:text-slate-900 transition">Services</a>
-                <a href="about.html" class="text-slate-900">About</a>
-                <a href="contact.html" class="hover:text-slate-900 transition">Contact</a>
+                <a href="index.html" class="hover:text-clinical-teal transition">Home</a>
+                <a href="services.html" class="hover:text-clinical-teal transition">Services</a>
+                <a href="about.html" class="text-clinical-teal">About</a>
+                <a href="contact.html" class="hover:text-clinical-teal transition">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Header -->
-    <main class="max-w-5xl mx-auto px-6 py-24">
-        <header class="mb-24">
-            <h1 class="text-6xl font-bold tracking-tighter mb-8">Excellence in Care.</h1>
-            <p class="text-2xl text-slate-500 font-light max-w-2xl">
-                Redefining the patient experience through clinical precision and a deeply human approach.
-            </p>
-        </header>
+    <!-- Header Section -->
+    <header class="py-24 px-6 max-w-7xl mx-auto text-center">
+        <h1 class="text-6xl md:text-7xl font-bold tracking-tighter text-clinical-900 mb-6">Expertise in Care.</h1>
+        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Bridging advanced medical precision with a compassionate, patient-first philosophy in the heart of Toronto.</p>
+    </header>
 
-        <!-- Bento Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
-                <h2 class="text-sm font-semibold text-blue-600 mb-4 uppercase tracking-widest">Philosophy</h2>
-                <p class="text-xl leading-relaxed text-slate-700">
-                    Dr. Haddad believes that the most effective healthcare exists at the intersection of advanced technology and compassionate, active listening. Your well-being is not a data point; it is a partnership.
+    <!-- Main Content Grid -->
+    <main class="max-w-7xl mx-auto px-6 pb-24 grid md:grid-cols-2 gap-16 items-center">
+        <div class="space-y-8">
+            <img src="https://loremflickr.com/1200/800/doctors" alt="Dr. Haddad" class="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover">
+        </div>
+        
+        <div class="space-y-8">
+            <div>
+                <h2 class="text-sm font-bold uppercase tracking-widest text-clinical-teal mb-2">Our Philosophy</h2>
+                <h3 class="text-4xl font-bold tracking-tight text-clinical-900">Excellence in Every Interaction</h3>
+                <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+                    Dr. Albert J Haddad brings years of clinical expertise to Yorkville. We believe medicine is not just about treatment, but about building lasting health through trust, transparency, and the latest medical technologies.
                 </p>
             </div>
-            <img src="https://loremflickr.com/1200/800/doctors" alt="Dr. Haddad" class="w-full h-full object-cover rounded-[2rem] shadow-2xl">
-        </div>
-
-        <!-- Credentials -->
-        <section class="bg-white rounded-[2rem] p-12 shadow-sm border border-slate-100">
-            <h3 class="text-3xl font-bold mb-12">Credentials & Expertise</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            
+            <div class="grid grid-cols-2 gap-8 pt-8 border-t border-slate-200">
                 <div>
-                    <div class="text-4xl font-bold text-slate-900 mb-2">15+</div>
-                    <p class="text-slate-500">Years of clinical practice in Toronto</p>
+                    <h4 class="text-4xl font-bold text-clinical-900">4.9</h4>
+                    <p class="text-sm text-slate-500 uppercase tracking-tight">Patient Rating</p>
                 </div>
                 <div>
-                    <div class="text-4xl font-bold text-slate-900 mb-2">4.9</div>
-                    <p class="text-slate-500">Star rating across 18 verified reviews</p>
-                </div>
-                <div>
-                    <div class="text-4xl font-bold text-slate-900 mb-2">Board</div>
-                    <p class="text-slate-500">Certified by the College of Physicians</p>
+                    <h4 class="text-4xl font-bold text-clinical-900">18+</h4>
+                    <p class="text-sm text-slate-500 uppercase tracking-tight">Verified Reviews</p>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t border-slate-200 bg-white py-24">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-16">
-            <div>
-                <h4 class="font-bold mb-4">Location</h4>
-                <p class="text-slate-500">7 St Thomas St #705<br>Toronto, ON M5S 2B7</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Contact</h4>
-                <p class="text-slate-500">+1 416-792-2966</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Connect</h4>
-                <div class="flex gap-4">
-                    <a href="#" class="text-slate-500 hover:text-slate-900">LinkedIn</a>
-                    <a href="#" class="text-slate-500 hover:text-slate-900">Instagram</a>
+    <!-- Credentials Section -->
+    <section class="bg-clinical-900 text-white py-24 rounded-[3rem] mx-6 mb-24">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold tracking-tight mb-16">Credentials & Background</h2>
+            <div class="space-y-12">
+                <div class="bg-white/5 p-8 rounded-3xl backdrop-blur-sm">
+                    <h4 class="text-xl font-semibold mb-2">Clinical Fellowship</h4>
+                    <p class="text-slate-300">Advanced specialized training with a focus on preventative diagnostics and patient wellness.</p>
                 </div>
+                <div class="bg-white/5 p-8 rounded-3xl backdrop-blur-sm">
+                    <h4 class="text-xl font-semibold mb-2">Patient-First Approach</h4>
+                    <p class="text-slate-300">Dedicated to minimizing wait times and maximizing quality of clinical conversation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-16">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+            <div>
+                <h5 class="font-bold text-lg mb-4">Dr. Albert J Haddad</h5>
+                <p class="text-slate-500 text-sm">7 St Thomas St #705<br>Toronto, ON M5S 2B7</p>
+            </div>
+            <div>
+                <h5 class="font-bold text-lg mb-4">Connect</h5>
+                <a href="tel:+14167922966" class="block text-clinical-teal font-medium">+1 416-792-2966</a>
+            </div>
+            <div>
+                <h5 class="font-bold text-lg mb-4">Navigation</h5>
+                <ul class="space-y-2 text-sm text-slate-600">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
         </div>
     </footer>

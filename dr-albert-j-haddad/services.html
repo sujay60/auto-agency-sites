@@ -3,70 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Dr. Albert J Haddad</title>
+    <title>Services | Dr. Albert J Haddad | Toronto</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); }
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinical: { 50: '#F0F9F8', 900: '#0F3D3E' },
+                        accent: '#2E8A99'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-slate-50 text-slate-900 selection:bg-slate-200">
+<body class="bg-clinical-50 text-clinical-900 antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-6 py-6 flex justify-center">
-        <div class="backdrop-blur-md bg-white/70 border border-slate-200/50 rounded-full px-8 py-4 flex items-center gap-8 shadow-sm">
-            <a href="index.html" class="text-sm font-medium hover:text-blue-600 transition">Home</a>
-            <a href="services.html" class="text-sm font-semibold text-blue-600">Services</a>
-            <a href="about.html" class="text-sm font-medium hover:text-blue-600 transition">About</a>
-            <a href="contact.html" class="text-sm font-medium hover:text-blue-600 transition">Contact</a>
+    <nav class="sticky top-0 z-50 glass border-b border-clinical-900/10">
+        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tighter">DR. HADDAD</a>
+            <div class="flex gap-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-accent transition">Home</a>
+                <a href="services.html" class="text-accent">Services</a>
+                <a href="about.html" class="hover:text-accent transition">About</a>
+                <a href="contact.html" class="hover:text-accent transition">Contact</a>
+            </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="pt-32 pb-16 px-6 text-center">
-        <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-6">Clinical Excellence</h1>
-        <p class="text-slate-500 max-w-xl mx-auto text-lg">Precision-led medical care designed for your long-term health, centered in the heart of Yorkville.</p>
+    <header class="py-24 px-6 text-center">
+        <h1 class="text-6xl md:text-7xl font-bold tracking-tighter mb-6">Expert Care.</h1>
+        <p class="text-xl text-clinical-900/60 max-w-2xl mx-auto">Precision, empathy, and evidence-based medicine at the heart of Toronto.</p>
     </header>
 
     <!-- Services Grid -->
-    <main class="max-w-6xl mx-auto px-6 pb-24">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <!-- Service 1 -->
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-500">
-                <img src="https://loremflickr.com/1200/800/medical" alt="Clinical Procedures" class="w-full h-64 object-cover rounded-3xl mb-8">
-                <h3 class="text-2xl font-semibold mb-2">Advanced Diagnostics</h3>
-                <p class="text-slate-500 mb-6">State-of-the-art diagnostic screening for preventative wellness and early detection.</p>
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-clinical-900/5">
+                <h3 class="text-3xl font-bold mb-4">Preventative Medicine</h3>
+                <p class="text-clinical-900/70 mb-6">Proactive health screening and management for long-term wellness.</p>
+                <img src="https://loremflickr.com/1200/800/doctor" alt="Consultation" class="w-full h-64 object-cover rounded-3xl">
             </div>
-
-            <!-- Service 2 -->
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-500">
-                <img src="https://loremflickr.com/1200/800/doctor" alt="Consultation" class="w-full h-64 object-cover rounded-3xl mb-8">
-                <h3 class="text-2xl font-semibold mb-2">Personalized Consults</h3>
-                <p class="text-slate-500 mb-6">Bespoke medical treatment plans tailored specifically to your unique genetic profile.</p>
+            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-clinical-900/5">
+                <h3 class="text-3xl font-bold mb-4">Chronic Care</h3>
+                <p class="text-clinical-900/70 mb-6">Specialized management for complex health conditions with a patient-first approach.</p>
+                <img src="https://loremflickr.com/1200/800/medical" alt="Treatment" class="w-full h-64 object-cover rounded-3xl">
             </div>
-
-            <!-- Service 3 -->
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-500">
-                <img src="https://loremflickr.com/1200/800/health" alt="Therapy" class="w-full h-64 object-cover rounded-3xl mb-8">
-                <h3 class="text-2xl font-semibold mb-2">Chronic Care</h3>
-                <p class="text-slate-500 mb-6">Expert management of long-term conditions with a focus on quality of life and longevity.</p>
+            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-clinical-900/5">
+                <h3 class="text-3xl font-bold mb-4">Diagnostic Services</h3>
+                <p class="text-clinical-900/70 mb-6">Advanced onsite diagnostic evaluations for rapid, accurate results.</p>
+                <img src="https://loremflickr.com/1200/800/healthcare" alt="Diagnostics" class="w-full h-64 object-cover rounded-3xl">
             </div>
-
-            <!-- Service 4 -->
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-500">
-                <img src="https://loremflickr.com/1200/800/hospital" alt="Minor Surgery" class="w-full h-64 object-cover rounded-3xl mb-8">
-                <h3 class="text-2xl font-semibold mb-2">Minor Procedures</h3>
-                <p class="text-slate-500 mb-6">In-office clinical procedures performed with the highest standard of safety and comfort.</p>
+            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-clinical-900/5">
+                <h3 class="text-3xl font-bold mb-4">Annual Wellness</h3>
+                <p class="text-clinical-900/70 mb-6">Comprehensive health reviews to keep your body at its peak performance.</p>
+                <img src="https://loremflickr.com/1200/800/stethoscope" alt="Wellness" class="w-full h-64 object-cover rounded-3xl">
             </div>
-
         </div>
-    </main>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-white py-16 text-center border-t border-slate-100">
-        <p class="text-slate-400 text-sm">© 2024 Dr. Albert J Haddad. 7 St Thomas St #705, Toronto, ON.</p>
-        <p class="text-slate-400 text-sm mt-2 font-medium">+1 416-792-2966</p>
+    <footer class="bg-clinical-900 text-white py-24 mt-24">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-16">
+            <div>
+                <h4 class="text-2xl font-bold mb-6">Dr. Albert J Haddad</h4>
+                <p class="text-white/60">7 St Thomas St #705<br>Toronto, ON M5S 2B7</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Navigation</h4>
+                <div class="flex flex-col gap-3 text-white/60">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Connect</h4>
+                <p class="text-white/60 mb-2">+1 416-792-2966</p>
+                <p class="text-white/60">4.9 Stars from 18 Reviews</p>
+            </div>
+        </div>
     </footer>
 
 </body>
