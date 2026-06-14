@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Albany Medical Building | Toronto Doctors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-[#FAFAFA] text-[#2D3748]">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#E0F2F4]">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-[#006B7F]">ALBANY MEDICAL</a>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="hover:text-[#006B7F]">Home</a>
+                <a href="doctors.html" class="hover:text-[#006B7F]">Doctors</a>
+                <a href="services.html" class="hover:text-[#006B7F]">Services</a>
+                <a href="about.html" class="text-[#006B7F]">About</a>
+                <a href="contact.html" class="hover:text-[#006B7F]">Contact</a>
+            </div>
+            <a href="contact.html" class="bg-[#006B7F] text-white px-8 py-3 rounded-full hover:bg-[#004D5A] transition">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-40 pb-32 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <h1 class="text-7xl font-extrabold text-[#004D5A] leading-tight mb-8">A Legacy of Health in Toronto</h1>
+                <p class="text-xl leading-relaxed text-[#2D3748]">For decades, the Albany Medical Building has stood as a cornerstone of wellness at 807 Broadview Ave, combining historical trust with modern clinical innovation.</p>
+            </div>
+            <div class="reveal">
+                <img src="https://loremflickr.com/800/600/doctors" class="rounded-3xl shadow-2xl w-full" alt="Medical Team">
+            </div>
+        </div>
+    </header>
+
+    <!-- Mission Section -->
+    <section class="py-32 bg-[#1A2024] text-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <img src="https://loremflickr.com/800/600/clinic" class="rounded-3xl shadow-2xl w-full" alt="Facility">
+            </div>
+            <div class="reveal">
+                <h2 class="text-6xl font-bold mb-8 text-[#C5A059]">Patient-Centered Excellence</h2>
+                <p class="text-lg text-gray-300 mb-6">Our mission is simple: to provide comprehensive, accessible, and compassionate care to the Toronto community. We believe in bridging the gap between sophisticated medical technology and the personal touch every patient deserves.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accessibility & Location -->
+    <section class="py-32 bg-[#FAFAFA]">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <h2 class="text-5xl font-bold mb-8 text-[#006B7F]">Located at the Heart of Broadview</h2>
+                <p class="text-lg mb-6">Strategically located at 807 Broadview Ave, we ensure our facility is fully accessible to all patients, featuring barrier-free access and modern amenities to make your visit seamless.</p>
+                <div class="bg-white p-8 rounded-3xl border border-[#E0F2F4] shadow-sm">
+                    <h4 class="font-bold text-[#004D5A] mb-2"><i class="fas fa-map-marker-alt mr-2"></i>Address</h4>
+                    <p>807 Broadview Ave, Toronto, ON M4K 2P8</p>
+                </div>
+            </div>
+            <div class="reveal w-full h-full">
+                <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-full min-h-[400px] rounded-3xl" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="py-20 bg-[#006B7F] text-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div><h3 class="text-5xl font-bold text-[#C5A059]">4.8</h3><p class="text-sm uppercase tracking-widest mt-2">Star Rating</p></div>
+            <div><h3 class="text-5xl font-bold text-[#C5A059]">25+</h3><p class="text-sm uppercase tracking-widest mt-2">Expert Doctors</p></div>
+            <div><h3 class="text-5xl font-bold text-[#C5A059]">10k+</h3><p class="text-sm uppercase tracking-widest mt-2">Patients Served</p></div>
+            <div><h3 class="text-5xl font-bold text-[#C5A059]">50+</h3><p class="text-sm uppercase tracking-widest mt-2">Years Active</p></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1A2024] text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div><h4 class="text-xl font-bold mb-6 text-[#C5A059]">Albany Medical</h4><p class="text-gray-400 text-sm">Professional wellness care in the heart of Toronto.</p></div>
+            <div><h4 class="font-bold mb-6">Quick Links</h4><ul class="space-y-2 text-gray-400"><li><a href="index.html">Home</a></li><li><a href="doctors.html">Doctors</a></li></ul></div>
+            <div><h4 class="font-bold mb-6">Contact</h4><p class="text-gray-400 text-sm">807 Broadview Ave<br>+1 416-366-2000</p></div>
+            <div><h4 class="font-bold mb-6">Social</h4><div class="flex gap-4 text-[#C5A059]"><i class="fab fa-instagram text-2xl"></i><i class="fab fa-facebook text-2xl"></i></div></div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/10 text-center text-gray-500 text-sm">© 2024 Albany Medical Building. All rights reserved.</div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

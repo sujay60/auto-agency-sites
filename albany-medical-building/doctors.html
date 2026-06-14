@@ -9,114 +9,106 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .fade-in-up { transition: all 0.8s ease-out; }
+        .reveal { opacity: 0; transform: translateY(30px); }
         .reveal.active { opacity: 1; transform: translateY(0); }
-        .glass { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
     </style>
 </head>
-<body class="bg-[#F8FAFA] text-[#1B262C]">
+<body class="bg-[#FAFAFA] text-[#2D3748]">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#006B7F]/10">
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="index.html" class="text-2xl font-extrabold text-[#006B7F]">ALBANY MEDICAL</a>
-            <div class="hidden md:flex gap-8 font-medium text-[#1B262C]">
+            <a href="index.html" class="text-2xl font-bold text-[#006B7F]">ALBANY MEDICAL</a>
+            <div class="hidden md:flex gap-8 font-medium text-[#2D3748]">
                 <a href="index.html" class="hover:text-[#006B7F]">Home</a>
+                <a href="doctors.html" class="text-[#006B7F]">Doctors</a>
                 <a href="services.html" class="hover:text-[#006B7F]">Services</a>
-                <a href="doctors.html" class="text-[#006B7F] font-bold">Doctors</a>
+                <a href="about.html" class="hover:text-[#006B7F]">About</a>
                 <a href="contact.html" class="hover:text-[#006B7F]">Contact</a>
             </div>
-            <a href="contact.html" class="bg-[#006B7F] text-white px-8 py-3 rounded-full hover:bg-[#008C99] transition-all">Book Appointment</a>
+            <a href="contact.html" class="px-6 py-2 bg-[#006B7F] text-white rounded-full hover:bg-[#004D5A] transition">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="pt-40 pb-28 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="reveal">
-                <span class="text-[#C4A484] font-bold tracking-widest uppercase">Expert Care</span>
-                <h1 class="text-7xl font-extrabold text-[#004754] mt-4 mb-6 leading-tight">Meet Our Medical Team</h1>
-                <p class="text-xl text-gray-600 leading-relaxed">Dedicated professionals committed to providing sophisticated clinical care with the precision and excellence expected at Albany Medical Building.</p>
-            </div>
-            <div class="reveal delay-200">
-                <img src="https://loremflickr.com/800/600/doctor" class="rounded-3xl shadow-2xl" alt="Medical Team">
-            </div>
-        </div>
-    </header>
-
-    <!-- Doctor Profiles -->
-    <section class="py-32 bg-[#1A2526] text-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 reveal">
+    <!-- Header Section -->
+    <section class="py-32 px-6 max-w-7xl mx-auto reveal">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-                <img src="https://loremflickr.com/800/600/physician" class="rounded-3xl shadow-2xl" alt="Dr. Smith">
+                <h2 class="text-[#C5A059] font-bold tracking-widest uppercase mb-4">Our Medical Team</h2>
+                <h1 class="text-6xl md:text-7xl font-extrabold text-[#1A2024] leading-tight mb-8">Clinical Excellence in Toronto</h1>
+                <p class="text-xl text-gray-600 leading-relaxed">Meet our team of board-certified practitioners at Albany Medical Building, dedicated to providing compassionate, evidence-based care for your long-term wellness.</p>
             </div>
-            <div class="flex flex-col justify-center">
-                <h2 class="text-5xl font-bold mb-6 text-[#C4A484]">Dr. Elena Sterling</h2>
-                <p class="text-2xl font-light mb-4">Chief of Internal Medicine</p>
-                <p class="text-lg text-gray-300 mb-8 leading-relaxed">With over 20 years of experience in Toronto's leading hospitals, Dr. Sterling specializes in chronic disease management and preventive cardiology. Fluent in English and French.</p>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
-                        <h4 class="text-[#C4A484] font-bold">Specialization</h4>
-                        <p>Internal Medicine</p>
-                    </div>
-                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
-                        <h4 class="text-[#C4A484] font-bold">Languages</h4>
-                        <p>English, French</p>
-                    </div>
-                </div>
-            </div>
+            <img src="https://loremflickr.com/800/600/doctors" alt="Medical Team" class="rounded-3xl shadow-2xl w-full">
         </div>
     </section>
 
-    <section class="py-32 bg-[#F8FAFA]">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 reveal">
-            <div class="flex flex-col justify-center">
-                <h2 class="text-5xl font-bold mb-6 text-[#004754]">Dr. Marcus Chen</h2>
-                <p class="text-2xl font-light mb-4">General Practitioner</p>
-                <p class="text-lg text-gray-600 mb-8 leading-relaxed">Dr. Chen brings a compassionate approach to family medicine. His focus is on holistic patient wellness, pediatric care, and community health integration.</p>
-                <ul class="space-y-4 text-[#006B7F]">
-                    <li><i class="fas fa-check mr-2"></i> Specialized in Pediatric Care</li>
-                    <li><i class="fas fa-check mr-2"></i> Board Certified Family Medicine</li>
-                    <li><i class="fas fa-check mr-2"></i> 15 Years of Clinical Experience</li>
-                </ul>
+    <!-- Doctor Profiles -->
+    <section class="py-32 bg-[#1A2024] text-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 reveal">
+            <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-12 rounded-3xl">
+                <h3 class="text-4xl font-bold mb-6 text-[#C5A059]">Dr. Sarah Jenkins</h3>
+                <p class="text-lg text-gray-300 mb-8 italic">"My philosophy is rooted in proactive prevention and empowering patients through detailed education."</p>
+                <div class="space-y-4">
+                    <p><strong>Specialization:</strong> Family Medicine & Cardiology</p>
+                    <p><strong>Credentials:</strong> MD, FRCPC</p>
+                </div>
+            </div>
+            <img src="https://loremflickr.com/800/600/doctor" alt="Doctor" class="rounded-3xl shadow-2xl w-full">
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="py-20 bg-[#006B7F] text-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div>
+                <div class="text-5xl font-extrabold mb-2 text-[#C5A059]">25+</div>
+                <div class="opacity-90 uppercase tracking-wider">Years Experience</div>
             </div>
             <div>
-                <img src="https://loremflickr.com/800/600/surgeon" class="rounded-3xl shadow-2xl" alt="Dr. Chen">
+                <div class="text-5xl font-extrabold mb-2 text-[#C5A059]">4.9</div>
+                <div class="opacity-90 uppercase tracking-wider">Star Rating</div>
+            </div>
+            <div>
+                <div class="text-5xl font-extrabold mb-2 text-[#C5A059]">12k</div>
+                <div class="opacity-90 uppercase tracking-wider">Happy Patients</div>
+            </div>
+            <div>
+                <div class="text-5xl font-extrabold mb-2 text-[#C5A059]">15</div>
+                <div class="opacity-90 uppercase tracking-wider">Specialists</div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#1A2526] text-white py-20 px-6">
+    <footer class="bg-[#1A2024] text-white py-20 px-6">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
-                <h3 class="text-xl font-bold mb-6 text-[#C4A484]">Albany Medical</h3>
-                <p class="text-gray-400">Excellence in healthcare at 807 Broadview Ave, Toronto.</p>
+                <h4 class="text-xl font-bold text-[#C5A059] mb-4">Albany Medical</h4>
+                <p class="text-gray-400">807 Broadview Ave, Toronto, ON M4K 2P8</p>
             </div>
             <div>
-                <h4 class="font-bold mb-6">Quick Links</h4>
-                <ul class="space-y-4 text-gray-400">
+                <h4 class="text-xl font-bold mb-4">Navigation</h4>
+                <ul class="space-y-2 text-gray-400">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
                     <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="services.html">Services</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold mb-6">Contact</h4>
+                <h4 class="text-xl font-bold mb-4">Contact</h4>
                 <p class="text-gray-400">+1 416-366-2000</p>
-                <p class="text-gray-400">807 Broadview Ave, Toronto</p>
             </div>
             <div>
-                <h4 class="font-bold mb-6">Follow Us</h4>
-                <div class="flex space-x-4 text-2xl">
-                    <i class="fab fa-facebook hover:text-[#C4A484] cursor-pointer"></i>
-                    <i class="fab fa-instagram hover:text-[#C4A484] cursor-pointer"></i>
-                    <i class="fab fa-linkedin hover:text-[#C4A484] cursor-pointer"></i>
+                <h4 class="text-xl font-bold mb-4">Connect</h4>
+                <div class="flex gap-4">
+                    <i class="fab fa-facebook text-2xl text-[#006B7F]"></i>
+                    <i class="fab fa-instagram text-2xl text-[#006B7F]"></i>
                 </div>
             </div>
         </div>
         <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/10 text-center text-gray-500 text-sm">
-            &copy; 2024 Albany Medical Building. All rights reserved.
+            &copy; 2023 Albany Medical Building. All Rights Reserved.
         </div>
     </footer>
 
@@ -125,9 +117,11 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('active');
             });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+        });
+        document.querySelectorAll('.reveal').forEach((el) => {
+            el.classList.add('fade-in-up');
+            observer.observe(el);
+        });
     </script>
 </body>
 </html>
