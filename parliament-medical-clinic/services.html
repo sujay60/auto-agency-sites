@@ -3,90 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Parliament Medical Clinic</title>
+    <title>Services | Parliament Medical Clinic - Albany Street Toronto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .visible { opacity: 1; transform: translateY(0); }
+        .hover-scale:hover { transform: scale(1.02); transition: 0.3s; }
     </style>
 </head>
-<body class="bg-[#F8FAFC] text-slate-900">
+<body class="bg-[#F8FAFA] text-[#264653]">
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold tracking-tighter text-teal-900">PARLIAMENT<span class="text-teal-500">.</span></a>
-            <div class="space-x-8 font-medium text-sm tracking-wide">
-                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
-                <a href="services.html" class="text-teal-600 border-b-2 border-teal-600 pb-1">Services</a>
-                <a href="doctors.html" class="hover:text-teal-600 transition">Doctors</a>
-                <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-[#006D77]">PARLIAMENT CLINIC</a>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="hover:text-[#006D77]">Home</a>
+                <a href="about.html" class="hover:text-[#006D77]">About</a>
+                <a href="services.html" class="text-[#006D77]">Services</a>
+                <a href="doctors.html" class="hover:text-[#006D77]">Doctors</a>
             </div>
+            <a href="contact.html" class="bg-[#006D77] text-white px-8 py-3 rounded-full hover:bg-[#004B52] transition">Book Appointment</a>
         </div>
     </nav>
 
     <!-- Header Section -->
-    <header class="py-24 px-6 max-w-7xl mx-auto">
-        <h1 class="text-6xl font-bold tracking-tighter text-slate-900 mb-6">Premium Medical Care</h1>
-        <p class="text-xl text-slate-500 max-w-2xl">Modern health solutions for the Toronto community. Experience a new standard of personalized clinical excellence.</p>
+    <header class="py-32 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center fade-in-up">
+            <div>
+                <h1 class="text-7xl font-extrabold text-[#264653] mb-6">Comprehensive <span class="text-[#006D77]">Medical Care</span></h1>
+                <p class="text-xl text-gray-600 mb-8">Providing sophisticated precision and compassionate care for the Albany Street community. Our clinic is equipped to handle all your health requirements.</p>
+                <div class="flex gap-4">
+                    <span class="text-[#E29578] font-bold text-lg">■ Family Medicine</span>
+                    <span class="text-[#E29578] font-bold text-lg">■ Urgent Care</span>
+                </div>
+            </div>
+            <img src="https://loremflickr.com/800/600/doctors" class="rounded-3xl shadow-2xl" alt="Medical Services">
+        </div>
     </header>
 
-    <!-- Service Split Layouts -->
-    <main class="max-w-7xl mx-auto px-6 space-y-32 mb-32">
-        
-        <section class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-6">
-                <span class="text-teal-600 font-semibold uppercase tracking-widest text-sm">Primary Care</span>
-                <h2 class="text-5xl font-bold tracking-tight">Routine Checkups</h2>
-                <p class="text-lg text-slate-600 leading-relaxed">Preventative care is the cornerstone of longevity. We provide comprehensive physicals, blood panels, and wellness tracking in a comfortable, modern setting.</p>
+    <!-- Services Bento Grid -->
+    <section class="py-32 px-6 bg-[#1D3557] text-white">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="md:col-span-2 p-10 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl hover-scale">
+                <h2 class="text-5xl font-bold mb-6">Primary Services</h2>
+                <p class="text-lg opacity-80 mb-6">We provide a wide range of specialized medical services tailored to your family's history and long-term health goals.</p>
+                <ul class="space-y-4">
+                    <li><i class="fas fa-check text-[#83C5BE] mr-3"></i> Family Medicine & Routine Wellness</li>
+                    <li><i class="fas fa-check text-[#83C5BE] mr-3"></i> Urgent Walk-in Consultations</li>
+                    <li><i class="fas fa-check text-[#83C5BE] mr-3"></i> Comprehensive Physical Examinations</li>
+                </ul>
             </div>
-            <img src="https://loremflickr.com/1200/800/doctor,exam" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl" alt="Medical Exam">
-        </section>
-
-        <section class="grid md:grid-cols-2 gap-16 items-center">
-            <img src="https://loremflickr.com/1200/800/medical,specialist" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl md:order-1 order-2" alt="Specialist Care">
-            <div class="space-y-6 md:order-2 order-1">
-                <span class="text-teal-600 font-semibold uppercase tracking-widest text-sm">Specialized Health</span>
-                <h2 class="text-5xl font-bold tracking-tight">Clinical Specialties</h2>
-                <p class="text-lg text-slate-600 leading-relaxed">From chronic disease management to specialized diagnostic testing, our team of experts utilizes state-of-the-art technology to ensure precise results.</p>
+            <div class="p-10 bg-[#006D77] rounded-3xl hover-scale">
+                <i class="fas fa-heartbeat text-5xl mb-6"></i>
+                <h3 class="text-3xl font-bold mb-4">Chronic Disease</h3>
+                <p>Expert management for diabetes, hypertension, and asthma with consistent monitoring.</p>
             </div>
-        </section>
-
-        <section class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-6">
-                <span class="text-teal-600 font-semibold uppercase tracking-widest text-sm">Modern Practice</span>
-                <h2 class="text-5xl font-bold tracking-tight">General Treatments</h2>
-                <p class="text-lg text-slate-600 leading-relaxed">Acute care, minor procedures, and ongoing health management delivered with empathy and high-end professional precision.</p>
+            <div class="p-10 bg-[#E29578] text-[#1D3557] rounded-3xl hover-scale">
+                <i class="fas fa-syringe text-5xl mb-6"></i>
+                <h3 class="text-3xl font-bold mb-4">Immunizations</h3>
+                <p>Annual flu shots, travel vaccinations, and routine immunization updates for all ages.</p>
             </div>
-            <img src="https://loremflickr.com/1200/800/clinical,treatment" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl" alt="Treatment">
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-teal-950 text-white py-20 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
-            <div>
-                <h3 class="text-xl font-bold mb-4">Parliament Medical</h3>
-                <p class="text-teal-200">1 Oak St, Toronto, ON M5A 0A1</p>
-                <p class="text-teal-200">+1 416-361-5028</p>
-            </div>
-            <div class="flex flex-col gap-2">
-                <a href="index.html" class="hover:text-teal-400">Home</a>
-                <a href="services.html" class="hover:text-teal-400">Services</a>
-                <a href="doctors.html" class="hover:text-teal-400">Doctors</a>
-                <a href="contact.html" class="hover:text-teal-400">Contact</a>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4">Rating</h3>
-                <p class="text-4xl font-bold text-teal-400">4.3 <span class="text-lg text-teal-200">/ 5.0</span></p>
-                <p class="text-teal-200">From 449 verified reviews</p>
+            <div class="md:col-span-2 p-10 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl hover-scale">
+                <h3 class="text-3xl font-bold mb-6">Preventative Screenings</h3>
+                <p>Proactive care is the cornerstone of our practice. We offer blood work, cardiac monitoring, and metabolic testing to identify potential issues before they become emergencies.</p>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-teal-900 text-teal-700 text-sm">
-            © 2023 Parliament Medical Clinic. All rights reserved.
+    </section>
+
+    <!-- Location Section -->
+    <section class="py-32 px-6 bg-[#F8FAFA]">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center fade-in-up">
+            <iframe src="https://www.google.com/maps?q=1+Oak+St+Toronto+ON+M5A+0A1+Canada&output=embed" class="w-full h-[500px] rounded-3xl shadow-2xl" loading="lazy"></iframe>
+            <div>
+                <h2 class="text-6xl font-bold text-[#264653] mb-8">Our Clinic <span class="text-[#006D77]">Location</span></h2>
+                <p class="text-xl mb-6">Conveniently situated at 1 Oak St, Toronto. We serve the Albany Street area with professional medical excellence.</p>
+                <div class="text-[#006D77] font-semibold text-2xl">
+                    <i class="fas fa-phone mr-3"></i> +1 416-361-5028
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="py-20 bg-[#004B52] text-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div><div class="text-5xl font-extrabold text-[#83C5BE] mb-2">4.3</div><div>Star Rating</div></div>
+            <div><div class="text-5xl font-extrabold text-[#83C5BE] mb-2">449+</div><div>Verified Reviews</div></div>
+            <div><div class="text-5xl font-extrabold text-[#83C5BE] mb-2">15+</div><div>Years Experience</div></div>
+            <div><div class="text-5xl font-extrabold text-[#83C5BE] mb-2">10k+</div><div>Patients Served</div></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1D3557] text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div><h4 class="font-bold text-xl mb-4">Parliament Clinic</h4><p class="opacity-60">Professional care in the heart of Toronto.</p></div>
+            <div><h4 class="font-bold text-xl mb-4">Links</h4><ul class="space-y-2 opacity-60"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li></ul></div>
+            <div><h4 class="font-bold text-xl mb-4">Contact</h4><p class="opacity-60">1 Oak St, Toronto<br>+1 416-361-5028</p></div>
+            <div><h4 class="font-bold text-xl mb-4">Social</h4><div class="flex gap-4 text-2xl"><i class="fab fa-facebook"></i><i class="fab fa-instagram"></i></div></div>
         </div>
     </footer>
 
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
