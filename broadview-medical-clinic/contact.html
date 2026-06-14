@@ -6,80 +6,97 @@
     <title>Contact Us | Broadview Medical Clinic</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinic: {
+                            primary: '#0f766e',
+                            secondary: '#ccfbf1',
+                            bg: '#f8fafc',
+                            text: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-[#F8FAFC] text-slate-900">
+<body class="bg-clinic-bg text-clinic-text antialiased">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold tracking-tighter text-teal-900">BROADVIEW<span class="text-teal-500">.</span></a>
-            <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
-                <a href="services.html" class="hover:text-teal-600 transition">Services</a>
-                <a href="doctors.html" class="hover:text-teal-600 transition">Doctors</a>
-                <a href="contact.html" class="text-teal-600">Contact</a>
-            </div>
+    <nav class="max-w-7xl mx-auto px-6 py-8 flex items-center justify-between">
+        <div class="text-2xl font-bold tracking-tighter text-clinic-primary">BROADVIEW MEDICAL</div>
+        <div class="flex gap-8 text-sm font-medium">
+            <a href="index.html" class="hover:text-clinic-primary transition">Home</a>
+            <a href="services.html" class="hover:text-clinic-primary transition">Services</a>
+            <a href="doctors.html" class="hover:text-clinic-primary transition">Doctors</a>
+            <a href="contact.html" class="text-clinic-primary font-bold">Contact</a>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 py-24">
-        <header class="mb-24">
-            <h1 class="text-6xl font-bold tracking-tight text-slate-900 mb-6">Let's connect.</h1>
-            <p class="text-xl text-slate-500 max-w-2xl">Modern medicine, centered on you. Reach out for appointments or inquiries.</p>
-        </header>
+    <!-- Header Section -->
+    <header class="max-w-7xl mx-auto px-6 py-16">
+        <h1 class="text-6xl font-bold tracking-tight mb-6">Let's Connect.</h1>
+        <p class="text-xl text-slate-500 max-w-2xl">Modern medicine in the heart of Toronto. Schedule your visit or reach out for inquiries.</p>
+    </header>
 
-        <div class="grid lg:grid-cols-2 gap-16">
-            <!-- Appointment Form -->
-            <section class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-                <h2 class="text-3xl font-semibold mb-8">Request Appointment</h2>
-                <form class="space-y-6">
-                    <input type="text" placeholder="Full Name" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-500">
-                    <input type="email" placeholder="Email Address" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-500">
-                    <textarea placeholder="Message" rows="4" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
-                    <button class="w-full bg-teal-900 text-white py-4 rounded-xl font-semibold hover:bg-teal-800 transition">Send Request</button>
-                </form>
-            </section>
-
-            <!-- Info & Hours -->
-            <section class="space-y-12">
+    <!-- Main Contact Grid -->
+    <main class="max-w-7xl mx-auto px-6 pb-24 grid md:grid-cols-2 gap-16">
+        
+        <!-- Form Section -->
+        <section class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
+            <h2 class="text-3xl font-semibold mb-8">Patient Intake</h2>
+            <form class="space-y-6">
                 <div>
-                    <h3 class="text-sm font-bold uppercase tracking-widest text-teal-600 mb-4">Location</h3>
-                    <p class="text-lg">797 Broadview Ave, Toronto, ON M4K 2P8</p>
-                    <p class="text-lg">+1 416-463-3228</p>
+                    <label class="block text-sm font-medium mb-2">Full Name</label>
+                    <input type="text" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-clinic-primary outline-none transition">
                 </div>
                 <div>
-                    <h3 class="text-sm font-bold uppercase tracking-widest text-teal-600 mb-4">Clinic Hours</h3>
-                    <div class="grid grid-cols-2 gap-4 text-slate-600">
-                        <span>Mon - Fri</span><span class="font-semibold text-slate-900">8:00 - 18:00</span>
-                        <span>Saturday</span><span class="font-semibold text-slate-900">9:00 - 14:00</span>
-                    </div>
+                    <label class="block text-sm font-medium mb-2">Email Address</label>
+                    <input type="email" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-clinic-primary outline-none transition">
                 </div>
-                <div class="bg-teal-50 p-6 rounded-2xl border border-teal-100">
-                    <p class="text-teal-900 font-semibold">4.3 Star Rating</p>
-                    <p class="text-sm text-teal-700">Based on 53 reviews from our local Toronto community.</p>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Message</label>
+                    <textarea rows="4" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-clinic-primary outline-none transition"></textarea>
                 </div>
-            </section>
-        </div>
+                <button class="w-full bg-clinic-primary text-white py-4 rounded-xl font-semibold hover:bg-teal-800 transition shadow-lg shadow-teal-200">Send Request</button>
+            </form>
+        </section>
 
-        <!-- Interactive Map -->
-        <section class="mt-24">
-            <iframe src="https://www.google.com/maps?q=797+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-96 rounded-[2rem] shadow-2xl border-0" allowfullscreen="" loading="lazy"></iframe>
+        <!-- Details Section -->
+        <section class="flex flex-col gap-8">
+            <div class="h-[400px] w-full">
+                <iframe src="https://www.google.com/maps?q=797+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-full rounded-[2rem] shadow-2xl" frameborder="0"></iframe>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-100">
+                    <h3 class="font-bold text-sm uppercase tracking-widest text-slate-400 mb-2">Location</h3>
+                    <p class="font-medium">797 Broadview Ave, Toronto, ON M4K 2P8</p>
+                </div>
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-100">
+                    <h3 class="font-bold text-sm uppercase tracking-widest text-slate-400 mb-2">Support</h3>
+                    <p class="font-medium">+1 416-463-3228</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-24">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
-            <div>
-                <h4 class="text-white font-bold text-lg mb-4">Broadview Medical</h4>
-                <p class="text-sm">Excellence in primary care, serving the Toronto area with integrity.</p>
+    <footer class="bg-slate-900 text-white py-24 rounded-t-[3rem]">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+            <div class="col-span-2">
+                <h4 class="text-2xl font-bold mb-4">Broadview Medical</h4>
+                <p class="text-slate-400">Serving the Toronto community with excellence, empathy, and innovation.</p>
             </div>
             <div>
-                <h4 class="text-white font-bold text-lg mb-4">Navigation</h4>
-                <ul class="space-y-2 text-sm">
+                <h5 class="font-bold mb-4">Navigation</h5>
+                <ul class="space-y-2 text-slate-400">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="doctors.html">Doctors</a></li>
@@ -87,13 +104,16 @@
                 </ul>
             </div>
             <div>
-                <h4 class="text-white font-bold text-lg mb-4">Social</h4>
-                <div class="flex gap-4">
-                    <!-- Placeholder Social Links -->
-                    <span class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center">IG</span>
-                    <span class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center">LI</span>
-                </div>
+                <h5 class="font-bold mb-4">Connect</h5>
+                <ul class="space-y-2 text-slate-400">
+                    <li>Instagram</li>
+                    <li>LinkedIn</li>
+                    <li>Twitter</li>
+                </ul>
             </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-800 text-sm text-slate-500">
+            © 2024 Broadview Medical Clinic. All rights reserved.
         </div>
     </footer>
 
