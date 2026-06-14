@@ -12,10 +12,10 @@
                 extend: {
                     colors: {
                         clinical: {
-                            50: '#f0f9f8',
-                            900: '#0f3a36',
-                            teal: '#14b8a6',
-                            blue: '#0ea5e9'
+                            50: '#F0F9F8',
+                            900: '#0F2A28',
+                            teal: '#1A7A75',
+                            mint: '#E0F2F1'
                         }
                     }
                 }
@@ -26,75 +26,80 @@
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 selection:bg-teal-200">
+<body class="bg-[#FAFAFA] text-clinical-900 antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold tracking-tighter text-clinical-900">CARE & FAMILY<span class="text-clinical-teal">.</span></a>
-            <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-clinical-teal transition-colors">Home</a>
-                <a href="services.html" class="hover:text-clinical-teal transition-colors">Services</a>
-                <a href="doctors.html" class="text-clinical-900 underline underline-offset-8 decoration-2 decoration-clinical-teal">Doctors</a>
-                <a href="contact.html" class="hover:text-clinical-teal transition-colors">Contact</a>
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-clinical-900/10">
+        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-clinical-900">CARE & FAMILY</a>
+            <div class="flex gap-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-clinical-teal transition">Home</a>
+                <a href="services.html" class="hover:text-clinical-teal transition">Services</a>
+                <a href="doctors.html" class="text-clinical-teal border-b-2 border-clinical-teal">Doctors</a>
+                <a href="contact.html" class="hover:text-clinical-teal transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="pt-32 pb-24 px-6 text-center">
-        <h1 class="text-6xl font-bold tracking-tighter text-slate-900 mb-6">World-Class Care<br>in Yorkville.</h1>
-        <p class="text-lg text-slate-500 max-w-xl mx-auto">Meet our team of dedicated medical professionals committed to your long-term wellness.</p>
+    <header class="py-24 px-6 text-center">
+        <h1 class="text-6xl font-bold tracking-tighter mb-6">Expert Care in Yorkville</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Our practitioners combine global medical expertise with a human-centric approach to family health.</p>
     </header>
 
     <!-- Doctors Grid -->
     <main class="max-w-7xl mx-auto px-6 pb-24">
-        <div class="grid md:grid-cols-2 gap-12">
-            <!-- Doctor 1 -->
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-2xl transition-all duration-500">
-                <img src="https://loremflickr.com/1200/800/doctor,man" alt="Dr. Sarah" class="w-full h-80 object-cover rounded-3xl mb-8">
-                <h2 class="text-3xl font-bold mb-2">Dr. Elena Rossi</h2>
-                <p class="text-clinical-teal font-semibold mb-4">General Medicine & Family Health</p>
-                <p class="text-slate-600 leading-relaxed">Specializing in preventative care and internal medicine with over 15 years of experience in Toronto's healthcare sector.</p>
+        <div class="grid md:grid-cols-2 gap-16">
+            
+            <!-- Doctor Card 1 -->
+            <div class="group bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-2xl transition-all duration-500">
+                <img src="https://loremflickr.com/1200/800/doctor" alt="Doctor" class="w-full h-80 object-cover rounded-3xl mb-8">
+                <h3 class="text-3xl font-bold mb-2">Dr. Elena Vance</h3>
+                <p class="text-clinical-teal font-semibold mb-4">Family Medicine Specialist</p>
+                <p class="text-gray-500 leading-relaxed mb-6">Over 15 years of experience in preventative medicine and integrative family health strategies.</p>
+                <div class="flex gap-4">
+                    <span class="bg-clinical-mint px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest text-clinical-teal">Board Certified</span>
+                </div>
             </div>
 
-            <!-- Doctor 2 -->
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-2xl transition-all duration-500">
-                <img src="https://loremflickr.com/1200/800/doctor,woman" alt="Dr. James" class="w-full h-80 object-cover rounded-3xl mb-8">
-                <h2 class="text-3xl font-bold mb-2">Dr. Marcus Chen</h2>
-                <p class="text-clinical-teal font-semibold mb-4">Pediatrics & Wellness</p>
-                <p class="text-slate-600 leading-relaxed">Focusing on integrative family wellness and child development, Dr. Chen brings a compassionate approach to our Yorkville location.</p>
+            <!-- Doctor Card 2 -->
+            <div class="group bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-2xl transition-all duration-500">
+                <img src="https://loremflickr.com/1200/800/surgeon" alt="Doctor" class="w-full h-80 object-cover rounded-3xl mb-8">
+                <h3 class="text-3xl font-bold mb-2">Dr. Marcus Thorne</h3>
+                <p class="text-clinical-teal font-semibold mb-4">Internal Medicine</p>
+                <p class="text-gray-500 leading-relaxed mb-6">Specializing in chronic disease management and complex diagnostic care for patients of all ages.</p>
+                <div class="flex gap-4">
+                    <span class="bg-clinical-mint px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest text-clinical-teal">Clinical Lead</span>
+                </div>
             </div>
+
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-clinical-900 text-white py-20 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+    <footer class="bg-clinical-900 text-white py-24 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16">
             <div>
-                <h3 class="text-xl font-bold mb-6">Care & Family Yorkville</h3>
-                <p class="text-slate-400">162 Cumberland St #200<br>Toronto, ON M5R 3N5</p>
-                <p class="text-slate-400 mt-4">+1 647-951-4770</p>
+                <h4 class="text-2xl font-bold mb-6">Care & Family</h4>
+                <p class="text-gray-400">162 Cumberland St #200<br>Toronto, ON M5R 3N5</p>
             </div>
             <div>
-                <h4 class="font-bold mb-6">Quick Links</h4>
-                <ul class="space-y-4 text-slate-400">
-                    <li><a href="index.html" class="hover:text-white">Home</a></li>
-                    <li><a href="services.html" class="hover:text-white">Services</a></li>
-                    <li><a href="doctors.html" class="hover:text-white">Doctors</a></li>
-                    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                <h4 class="text-lg font-semibold mb-6">Navigation</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold mb-6">Rating</h4>
-                <div class="flex items-center gap-2">
-                    <span class="text-4xl font-bold">4.5</span>
-                    <span class="text-sm text-slate-400">from 599 reviews</span>
-                </div>
+                <h4 class="text-lg font-semibold mb-6">Connect</h4>
+                <p class="text-clinical-teal font-bold text-xl">+1 647-951-4770</p>
+                <p class="text-gray-400 mt-4">4.5 Stars | 599 Reviews</p>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 text-center text-sm text-slate-600">
-            &copy; 2024 Care & Family Health Yorkville. All rights reserved.
+        <div class="max-w-7xl mx-auto mt-24 pt-8 border-t border-white/10 text-center text-gray-500 text-sm">
+            © 2024 Care & Family Health Yorkville. All rights reserved.
         </div>
     </footer>
 
