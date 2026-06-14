@@ -1,117 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Doctors | Care & Family Health Yorkville</title>
+    <title>Our Medical Team | Care & Family Health Yorkville</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-        .is-visible { opacity: 1; transform: translateY(0); }
+        .reveal { opacity: 1; transform: translateY(0); }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
     </style>
 </head>
-<body class="bg-[#FAFAFA] text-[#2D3436]">
+<body class="bg-[#FBFDFC] text-[#1A202C]">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#E0F2F1]">
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#2D6A78]/10">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-[#006B70]">Care& Family Health</a>
+            <a href="index.html" class="text-2xl font-bold text-[#1B434D]">CARE<span class="text-[#C4A484]">&</span></a>
             <div class="hidden md:flex gap-8 font-medium">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="doctors.html" class="text-[#006B70]">Doctors</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html" class="hover:text-[#2D6A78]">Home</a>
+                <a href="about.html" class="hover:text-[#2D6A78]">About</a>
+                <a href="services.html" class="hover:text-[#2D6A78]">Services</a>
+                <a href="doctors.html" class="text-[#2D6A78] font-bold">Doctors</a>
             </div>
-            <a href="contact.html" class="bg-[#006B70] text-white px-8 py-3 rounded-full hover:bg-[#004D40] transition">Book Appointment</a>
+            <a href="contact.html" class="px-8 py-3 bg-[#2D6A78] text-white rounded-full hover:bg-[#1B434D] transition">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <header class="pt-40 pb-20 px-6">
+    <!-- Header -->
+    <header class="py-32 px-6">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div class="fade-in-up">
-                <span class="text-[#C5A059] font-bold tracking-widest uppercase text-sm">Our Medical Team</span>
-                <h1 class="text-7xl font-extrabold text-[#004D40] mt-4 mb-6 leading-tight">Excellence in Yorkville Healthcare</h1>
-                <p class="text-xl text-gray-600">Meet our team of board-certified professionals dedicated to providing personalized care in the heart of Toronto.</p>
+                <span class="text-[#C4A484] font-semibold tracking-widest uppercase">Our Experts</span>
+                <h1 class="text-6xl md:text-7xl font-extrabold text-[#1B434D] mt-4 mb-6 leading-tight">Excellence in Yorkville Healthcare</h1>
+                <p class="text-xl text-gray-600">Meet our distinguished medical team, providing sophisticated, compassionate care tailored to the refined standards of our Yorkville community.</p>
             </div>
-            <img src="https://loremflickr.com/800/600/doctors" alt="Medical Team" class="rounded-3xl shadow-2xl fade-in-up">
+            <div class="fade-in-up">
+                <img src="https://loremflickr.com/800/600/doctors" class="rounded-3xl shadow-2xl" alt="Medical Team">
+            </div>
         </div>
     </header>
 
-    <!-- Doctor Profiles -->
-    <section class="py-32 bg-[#1A1A1A] text-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <img src="https://loremflickr.com/800/600/doctor,man" alt="Dr. Smith" class="rounded-3xl shadow-2xl fade-in-up">
-            <div class="fade-in-up">
-                <h2 class="text-5xl font-bold mb-6">Dr. Jonathan Smith, MD</h2>
-                <p class="text-[#C5A059] font-semibold mb-4">Specialization: Family Medicine & Preventive Care</p>
-                <p class="text-gray-300 mb-8 leading-relaxed text-lg">With over 15 years of experience in the Yorkville area, Dr. Smith believes that patient education is the cornerstone of effective healthcare. He specializes in chronic disease management and wellness optimization.</p>
-                <div class="p-8 border border-white/10 rounded-3xl backdrop-blur-xl bg-white/5">
-                    <p class="italic">"My philosophy is simple: treating the patient, not just the condition."</p>
-                </div>
+    <!-- Doctor Profile 1 -->
+    <section class="py-32 px-6 bg-[#121818] text-white">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center fade-in-up">
+            <div>
+                <img src="https://loremflickr.com/800/600/doctor" class="rounded-3xl shadow-2xl" alt="Dr. Sarah Jenkins">
+            </div>
+            <div class="glass p-12 rounded-3xl">
+                <h2 class="text-5xl font-bold mb-4">Dr. Sarah Jenkins</h2>
+                <p class="text-[#C4A484] font-bold text-lg mb-6">MD, CCFP - Family Medicine</p>
+                <p class="text-gray-300 text-lg mb-8 leading-relaxed">With over 15 years of experience in family medicine, Dr. Jenkins specializes in preventative wellness and chronic disease management. Her approach blends evidence-based medicine with a deep focus on long-term patient relationships.</p>
+                <ul class="space-y-4">
+                    <li><i class="fas fa-check text-[#C4A484] mr-3"></i> Integrative Healthcare</li>
+                    <li><i class="fas fa-check text-[#C4A484] mr-3"></i> Pediatric Development</li>
+                    <li><i class="fas fa-check text-[#C4A484] mr-3"></i> Holistic Wellness Planning</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section class="py-32 bg-[#FAFAFA]">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="fade-in-up">
-                <h2 class="text-5xl font-bold text-[#004D40] mb-6">Dr. Sarah Jenkins, MD</h2>
-                <p class="text-[#C5A059] font-semibold mb-4">Specialization: Women's Health & Internal Medicine</p>
-                <p class="text-gray-600 mb-8 leading-relaxed text-lg">Dr. Jenkins focuses on holistic approaches to health. Her practice at our Cumberland Street location prioritizes empathetic listening and evidence-based diagnostic precision for all patients.</p>
+    <!-- Doctor Profile 2 -->
+    <section class="py-32 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center fade-in-up">
+            <div class="order-2 md:order-1">
+                <h2 class="text-5xl font-bold text-[#1B434D] mb-4">Dr. Marcus Thorne</h2>
+                <p class="text-[#C4A484] font-bold text-lg mb-6">MD, FRCPC - Cardiology Specialist</p>
+                <p class="text-gray-600 text-lg mb-8 leading-relaxed">Dr. Thorne brings world-class cardiac expertise to Yorkville. Focusing on heart health and metabolic wellness, he utilizes the latest diagnostic technologies to ensure proactive health monitoring for all his patients.</p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="p-6 bg-[#E0F2F3] rounded-2xl">
+                        <h4 class="text-xl font-bold">15+ Years</h4>
+                        <p class="text-sm">Clinical Experience</p>
+                    </div>
+                    <div class="p-6 bg-[#E0F2F3] rounded-2xl">
+                        <h4 class="text-xl font-bold">Board Certified</h4>
+                        <p class="text-sm">Cardiovascular Health</p>
+                    </div>
+                </div>
             </div>
-            <img src="https://loremflickr.com/800/600/doctor,woman" alt="Dr. Jenkins" class="rounded-3xl shadow-2xl fade-in-up">
+            <div class="order-1 md:order-2">
+                <img src="https://loremflickr.com/800/600/surgeon" class="rounded-3xl shadow-2xl" alt="Dr. Marcus Thorne">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="py-20 bg-[#2D6A78] text-white px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div><div class="text-5xl font-bold mb-2">4.5</div><p>Google Rating</p></div>
+            <div><div class="text-5xl font-bold mb-2">599+</div><p>Patient Reviews</p></div>
+            <div><div class="text-5xl font-bold mb-2">12</div><p>Specialists</p></div>
+            <div><div class="text-5xl font-bold mb-2">10k+</div><p>Patients Treated</p></div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#1A1A1A] text-white py-20">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
-            <div>
-                <h3 class="text-[#C5A059] text-xl font-bold mb-4">Care & Family Health</h3>
-                <p class="text-gray-400">162 Cumberland St #200, Toronto, ON M5R 3N5</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Navigation</h4>
-                <ul class="text-gray-400 space-y-2">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="doctors.html">Doctors</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Contact</h4>
-                <p class="text-gray-400">+1 647-951-4770</p>
-                <p class="text-gray-400">info@careand.ca</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Social</h4>
-                <div class="flex gap-4">
-                    <i class="fab fa-instagram text-2xl"></i>
-                    <i class="fab fa-facebook text-2xl"></i>
-                    <i class="fab fa-linkedin text-2xl"></i>
-                </div>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-white/10 text-center text-gray-500">
-            © 2024 Care & Family Health Yorkville. All Rights Reserved.
+    <footer class="bg-[#121818] text-gray-400 py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div><h3 class="text-white text-xl font-bold mb-6">Care & Family Health</h3><p>Yorkville's premier destination for sophisticated medical care.</p></div>
+            <div><h4 class="text-white font-bold mb-6">Navigate</h4><ul class="space-y-3"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="doctors.html">Doctors</a></li></ul></div>
+            <div><h4 class="text-white font-bold mb-6">Contact</h4><p>162 Cumberland St #200<br>Toronto, ON M5R 3N5</p><p class="mt-4">+1 647-951-4770</p></div>
+            <div><h4 class="text-white font-bold mb-6">Connect</h4><div class="flex gap-4 text-2xl"><i class="fab fa-instagram"></i><i class="fab fa-linkedin"></i></div></div>
         </div>
     </footer>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('reveal'); });
+        });
         document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
     </script>
 </body>

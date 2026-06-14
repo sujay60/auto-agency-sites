@@ -1,130 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Care & Family Health Yorkville</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .reveal { transition: all 0.8s ease-out; }
-        .fade-in-up { opacity: 0; transform: translateY(30px); }
-        .fade-in-up.active { opacity: 1; transform: translateY(0); }
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal { opacity: 1; transform: translateY(0); }
     </style>
 </head>
-<body class="bg-[#FAFAFA] text-[#2D3436]">
+<body class="bg-[#FBFDFC] text-[#1A202C]">
 
     <!-- Navbar -->
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-[#006B70]">Care&<span class="text-[#C5A059]">Family</span></a>
-            <div class="hidden md:flex gap-8 font-medium">
-                <a href="index.html">Home</a>
-                <a href="about.html" class="text-[#006B70]">About</a>
-                <a href="services.html">Services</a>
-                <a href="doctors.html">Doctors</a>
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-bold text-[#2D6A78]">Care& Family</a>
+            <div class="hidden md:flex gap-8 font-medium text-[#1B434D]">
+                <a href="index.html" class="hover:text-[#2D6A78]">Home</a>
+                <a href="about.html" class="text-[#2D6A78]">About</a>
+                <a href="services.html" class="hover:text-[#2D6A78]">Services</a>
+                <a href="doctors.html" class="hover:text-[#2D6A78]">Doctors</a>
             </div>
-            <a href="contact.html" class="bg-[#006B70] text-white px-8 py-3 rounded-full hover:bg-[#004D40] transition">Book Appointment</a>
+            <a href="contact.html" class="bg-[#2D6A78] text-white px-8 py-3 rounded-full hover:bg-[#1B434D] transition">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="py-32 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center reveal fade-in-up">
+    <!-- Mission Section -->
+    <section class="py-32 px-6 max-w-7xl mx-auto reveal-on-scroll">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <span class="text-[#C5A059] font-bold tracking-widest uppercase">Our Story</span>
-                <h1 class="text-7xl font-extrabold text-[#004D40] mt-4 mb-8 leading-tight">Elevated Care in the Heart of Yorkville</h1>
-                <p class="text-xl text-gray-600 mb-8">Located at 162 Cumberland St, we combine refined medical expertise with a compassionate approach, ensuring every family receives the dedicated attention they deserve.</p>
+                <h2 class="text-[#C4A484] font-semibold uppercase tracking-widest mb-4">Our Mission</h2>
+                <h1 class="text-6xl font-extrabold text-[#1B434D] leading-tight mb-8">Redefining Family Wellness in Yorkville</h1>
+                <p class="text-lg text-gray-600 mb-6">At Care & Family Health Yorkville, we believe that medical excellence should be matched by a sophisticated, compassionate, and personalized approach. We are committed to providing world-class health services in the heart of Toronto.</p>
+                <p class="text-lg text-gray-600">Our philosophy focuses on long-term health outcomes, emphasizing preventative care, accessibility, and a deep-rooted commitment to our community.</p>
             </div>
-            <img src="https://loremflickr.com/800/600/doctors" alt="Clinic Interior" class="rounded-3xl shadow-2xl object-cover h-[500px] w-full">
+            <img src="https://loremflickr.com/800/600/doctors" alt="Medical Team" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover">
         </div>
     </section>
 
-    <!-- Mission & Values (Alternate Dark) -->
-    <section class="py-32 px-6 bg-[#1A1A1A] text-white">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center reveal fade-in-up">
-            <img src="https://loremflickr.com/800/600/medical" alt="Values" class="rounded-3xl shadow-2xl object-cover h-[500px] w-full">
-            <div>
-                <h2 class="text-5xl font-bold text-[#C5A059] mb-8">Our Core Commitment</h2>
-                <div class="space-y-6">
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-2">Patient-Centered Excellence</h3>
-                        <p class="text-gray-400">We believe in listening first. Our Yorkville clinic is designed to provide comfort and precision for every generation.</p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-2">Integrity & Transparency</h3>
-                        <p class="text-gray-400">Modern healthcare with traditional values. We ensure you are informed and empowered at every step of your health journey.</p>
-                    </div>
+    <!-- Philosophy Section (Dark) -->
+    <section class="py-32 bg-[#121818] text-white px-6 reveal-on-scroll">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <img src="https://loremflickr.com/800/600/clinic" alt="Facility" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover border border-white/10">
+            </div>
+            <div class="order-1 md:order-2">
+                <h2 class="text-[#C4A484] font-semibold uppercase tracking-widest mb-4">Our Philosophy</h2>
+                <h1 class="text-6xl font-extrabold text-white leading-tight mb-8">Refined Care, Centered on You</h1>
+                <p class="text-lg text-gray-300 mb-6">We understand the unique lifestyle of our Yorkville patients. Our clinic blends advanced medical diagnostic capabilities with an understated, calm environment designed to reduce stress and promote healing.</p>
+                <div class="p-8 rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10">
+                    <h3 class="text-xl font-bold mb-2">Patient Accessibility</h3>
+                    <p class="text-gray-400">We prioritize prompt booking, minimal wait times, and comprehensive digital health records for seamless care transitions.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location/Map Section -->
+    <section class="py-32 px-6 max-w-7xl mx-auto reveal-on-scroll">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-[#C4A484] font-semibold uppercase tracking-widest mb-4">Our Home</h2>
+                <h1 class="text-6xl font-extrabold text-[#1B434D] leading-tight mb-8">Located in the Heart of Yorkville</h1>
+                <p class="text-lg text-gray-600 mb-8">162 Cumberland St #200, Toronto, ON M5R 3N5, Canada. We are easily accessible for all residents of Toronto seeking refined medical care.</p>
+            </div>
+            <div class="h-[400px]">
+                <iframe src="https://www.google.com/maps?q=162+Cumberland+St+#200+Toronto+ON+M5R+3N5+Canada&output=embed" class="w-full h-full min-h-[400px] rounded-3xl shadow-2xl" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
     <!-- Stats Bar -->
-    <section class="py-20 px-6 bg-[#E0F2F1]">
-        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-                <h4 class="text-5xl font-extrabold text-[#006B70]">4.5</h4>
-                <p class="text-[#004D40] mt-2">Google Rating</p>
-            </div>
-            <div>
-                <h4 class="text-5xl font-extrabold text-[#006B70]">599+</h4>
-                <p class="text-[#004D40] mt-2">Happy Patients</p>
-            </div>
-            <div>
-                <h4 class="text-5xl font-extrabold text-[#006B70]">15+</h4>
-                <p class="text-[#004D40] mt-2">Expert Doctors</p>
-            </div>
-            <div>
-                <h4 class="text-5xl font-extrabold text-[#006B70]">10Y</h4>
-                <p class="text-[#004D40] mt-2">Years Serving</p>
-            </div>
+    <div class="bg-[#2D6A78] py-16 text-white text-center">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div><div class="text-5xl font-bold">4.5</div><div class="text-[#C4A484]">Google Rating</div></div>
+            <div><div class="text-5xl font-bold">599+</div><div class="text-[#C4A484]">Happy Reviews</div></div>
+            <div><div class="text-5xl font-bold">10+</div><div class="text-[#C4A484]">Specialists</div></div>
+            <div><div class="text-5xl font-bold">5000+</div><div class="text-[#C4A484]">Patients Served</div></div>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
-    <footer class="bg-[#1A1A1A] text-white py-20 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
-            <div>
-                <h3 class="text-xl font-bold mb-4 text-[#C5A059]">Care & Family Health</h3>
-                <p class="text-gray-400">Premium medical services located in the heart of Yorkville, Toronto.</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Contact</h4>
-                <p class="text-gray-400">162 Cumberland St #200<br>Toronto, ON M5R 3N5</p>
-                <p class="text-[#C5A059] mt-2">+1 647-951-4770</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Follow Us</h4>
-                <div class="flex gap-4 text-2xl">
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-linkedin"></i>
-                </div>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/10 text-center text-gray-500">
-            &copy; 2024 Care & Family Health Yorkville. All rights reserved.
+    <footer class="bg-[#121818] text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 text-sm">
+            <div><h3 class="font-bold text-xl mb-4">Care & Family</h3><p class="text-gray-400">162 Cumberland St #200, Toronto</p></div>
+            <div><h3 class="font-bold mb-4">Quick Links</h3><ul class="space-y-2 text-gray-400"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li></ul></div>
+            <div><h3 class="font-bold mb-4">Contact</h3><p class="text-gray-400">+1 647-951-4770</p></div>
+            <div><h3 class="font-bold mb-4">Follow Us</h3><div class="flex gap-4 text-[#C4A484]"><i class="fab fa-facebook"></i><i class="fab fa-instagram"></i></div></div>
         </div>
     </footer>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
+                if (entry.isIntersecting) entry.target.classList.add('reveal');
             });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+            el.classList.add('fade-in-up');
+            observer.observe(el);
+        });
     </script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Care & Family Health Yorkville</title>
+    <title>Medical Services | Care & Family Health Yorkville</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -11,106 +11,120 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
+        .glass { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
     </style>
 </head>
-<body class="bg-[#FAFAFA] text-[#2D3436]">
+<body class="bg-[#FBFDFC] text-[#1A202C]">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#E0F2F1]">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-[#006B70]">Care&<span class="text-[#C5A059]">Family</span></a>
+    <nav class="fixed w-full z-50 glass bg-white/80 border-b border-[#2D6A78]/10 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-[#2D6A78]">CARE & FAMILY</a>
             <div class="hidden md:flex gap-8 font-medium">
-                <a href="index.html" class="hover:text-[#006B70]">Home</a>
-                <a href="about.html" class="hover:text-[#006B70]">About</a>
-                <a href="services.html" class="text-[#006B70] border-b-2 border-[#006B70]">Services</a>
-                <a href="doctors.html" class="hover:text-[#006B70]">Doctors</a>
+                <a href="index.html" class="hover:text-[#2D6A78]">Home</a>
+                <a href="about.html" class="hover:text-[#2D6A78]">About</a>
+                <a href="services.html" class="text-[#2D6A78] font-bold">Services</a>
+                <a href="doctors.html" class="hover:text-[#2D6A78]">Doctors</a>
+                <a href="contact.html" class="hover:text-[#2D6A78]">Contact</a>
             </div>
-            <a href="contact.html" class="bg-[#006B70] text-white px-8 py-3 rounded-full hover:bg-[#004D40] transition">Book Appointment</a>
+            <a href="contact.html" class="bg-[#2D6A78] text-white px-8 py-3 rounded-full hover:bg-[#1B434D] transition">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <section class="py-32 bg-[#FAFAFA]">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center reveal">
-            <div>
-                <span class="text-[#C5A059] font-bold tracking-widest uppercase">Premium Medical Care</span>
-                <h1 class="text-7xl font-extrabold text-[#004D40] mt-4 mb-6 leading-tight">Comprehensive Health Services</h1>
-                <p class="text-xl text-gray-600 leading-relaxed mb-8">Experience sophisticated, patient-centered care in the heart of Yorkville. Our clinicians provide expert management for your entire family's health journey.</p>
+    <!-- Header -->
+    <header class="py-32 bg-[#FBFDFC]">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <h1 class="text-7xl font-extrabold text-[#1B434D] leading-tight">Expert Medical Care in <span class="text-[#2D6A78]">Yorkville</span></h1>
+                <p class="text-xl mt-8 text-gray-600">Comprehensive health solutions designed for your unique needs. We combine sophisticated medical expertise with a commitment to patient-centered wellness.</p>
             </div>
-            <img src="https://loremflickr.com/800/600/doctor" alt="Medical Consultation" class="w-full h-[500px] object-cover rounded-3xl shadow-2xl">
+            <img src="https://loremflickr.com/800/600/doctors" alt="Medical Consult" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover reveal">
+        </div>
+    </header>
+
+    <!-- Services Grid -->
+    <section class="py-32 bg-[#121818] text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Bento Grid Items -->
+                <div class="col-span-2 p-10 bg-white/5 border border-white/10 rounded-3xl reveal">
+                    <h3 class="text-3xl font-bold mb-6 text-[#C4A484]">Preventative Care</h3>
+                    <p class="text-gray-400 text-lg">Proactive health screenings, routine physicals, and comprehensive risk assessments to ensure long-term vitality for you and your family.</p>
+                </div>
+                <div class="p-10 bg-white/5 border border-white/10 rounded-3xl reveal">
+                    <h3 class="text-3xl font-bold mb-6 text-[#C4A484]">Vaccinations</h3>
+                    <p class="text-gray-400 text-lg">Seasonal flu shots, travel immunizations, and standard health protections administered with expert care.</p>
+                </div>
+                <div class="p-10 bg-white/5 border border-white/10 rounded-3xl reveal">
+                    <h3 class="text-3xl font-bold mb-6 text-[#C4A484]">Chronic Management</h3>
+                    <p class="text-gray-400 text-lg">Personalized plans for diabetes, hypertension, and other conditions to maintain your quality of life.</p>
+                </div>
+                <div class="col-span-2 p-10 bg-white/5 border border-white/10 rounded-3xl reveal">
+                    <h3 class="text-3xl font-bold mb-6 text-[#C4A484]">Mental Health Support</h3>
+                    <p class="text-gray-400 text-lg">Confidential consultations and integrated care strategies for managing anxiety, depression, and lifestyle-related stress in a safe environment.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Services Bento Grid -->
-    <section class="py-32 bg-[#1A1A1A] text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-6xl font-bold mb-20 text-center text-[#E0F2F1]">Our Expertise</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="md:col-span-2 p-10 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl reveal">
-                    <i class="fa-solid fa-stethoscope text-4xl text-[#C5A059] mb-6"></i>
-                    <h3 class="text-3xl font-bold mb-4">General Check-ups</h3>
-                    <p class="text-gray-300 text-lg">Comprehensive annual physicals and wellness assessments tailored to your unique biological needs and lifestyle factors.</p>
-                </div>
-                <div class="p-10 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl reveal">
-                    <i class="fa-solid fa-shield-halved text-4xl text-[#C5A059] mb-6"></i>
-                    <h3 class="text-3xl font-bold mb-4">Preventative</h3>
-                    <p class="text-gray-300">Screening and risk assessment strategies.</p>
-                </div>
-                <div class="p-10 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl reveal">
-                    <i class="fa-solid fa-syringe text-4xl text-[#C5A059] mb-6"></i>
-                    <h3 class="text-3xl font-bold mb-4">Vaccinations</h3>
-                    <p class="text-gray-300">Travel and routine immunizations for all age groups.</p>
-                </div>
-                <div class="md:col-span-2 p-10 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl reveal">
-                    <i class="fa-solid fa-heart-pulse text-4xl text-[#C5A059] mb-6"></i>
-                    <h3 class="text-3xl font-bold mb-4">Chronic Disease Management</h3>
-                    <p class="text-gray-300 text-lg">Personalized care plans for long-term health, focusing on diabetes, hypertension, and heart health management with a dedicated medical team.</p>
-                </div>
+    <!-- Stats Bar -->
+    <section class="py-20 bg-[#2D6A78] text-white">
+        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div>
+                <h4 class="text-5xl font-extrabold">4.5</h4>
+                <p class="text-[#C4A484] uppercase tracking-widest mt-2">Rating</p>
+            </div>
+            <div>
+                <h4 class="text-5xl font-extrabold">599+</h4>
+                <p class="text-[#C4A484] uppercase tracking-widest mt-2">Patient Reviews</p>
+            </div>
+            <div>
+                <h4 class="text-5xl font-extrabold">12+</h4>
+                <p class="text-[#C4A484] uppercase tracking-widest mt-2">Specialists</p>
+            </div>
+            <div>
+                <h4 class="text-5xl font-extrabold">24/7</h4>
+                <p class="text-[#C4A484] uppercase tracking-widest mt-2">Care Support</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#1A1A1A] text-white py-20 border-t border-[#006B70]">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+    <footer class="bg-[#121818] text-white py-20">
+        <div class="container mx-auto px-6 grid md:grid-cols-4 gap-12">
             <div>
-                <h4 class="text-xl font-bold mb-6">Care & Family Health</h4>
-                <p class="text-gray-400">162 Cumberland St #200, Toronto, ON M5R 3N5</p>
-                <p class="text-gray-400 mt-2">+1 647-951-4770</p>
+                <h5 class="text-xl font-bold mb-6 text-[#C4A484]">Care & Family Health</h5>
+                <p class="text-gray-400 text-sm">162 Cumberland St #200, Toronto, ON M5R 3N5</p>
             </div>
             <div>
-                <h4 class="text-xl font-bold mb-6">Navigation</h4>
-                <ul class="space-y-3 text-gray-400">
+                <h5 class="font-bold mb-6">Quick Links</h5>
+                <ul class="text-gray-400 space-y-2">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-xl font-bold mb-6">Connect</h4>
-                <div class="flex space-x-4">
-                    <i class="fa-brands fa-instagram text-2xl"></i>
-                    <i class="fa-brands fa-linkedin text-2xl"></i>
-                </div>
+                <h5 class="font-bold mb-6">Contact</h5>
+                <p class="text-gray-400">+1 647-951-4770</p>
             </div>
             <div>
-                <h4 class="text-xl font-bold mb-6">Availability</h4>
-                <p class="text-[#C5A059]">Mon-Fri: 9am - 6pm</p>
+                <h5 class="font-bold mb-6">Follow Us</h5>
+                <div class="flex gap-4 text-2xl">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 text-center text-gray-500">
-            © 2024 Care & Family Health Yorkville. All Rights Reserved.
+        <div class="container mx-auto px-6 mt-12 pt-8 border-t border-white/10 text-center text-gray-500">
+            &copy; 2024 Care & Family Health Yorkville. All Rights Reserved.
         </div>
     </footer>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
     </script>
 </body>
 </html>
