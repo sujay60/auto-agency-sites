@@ -13,54 +13,98 @@
 <body class="bg-slate-50 text-slate-900 antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4">
-        <div class="max-w-6xl mx-auto backdrop-blur-md bg-white/70 border border-slate-200/50 rounded-full py-3 px-8 flex justify-between items-center shadow-sm">
-            <a href="index.html" class="text-xl font-bold tracking-tighter">CARE&<span class="text-blue-600">YORKVILLE</span></a>
+    <nav class="fixed w-full z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto backdrop-blur-md bg-white/70 border border-slate-200/50 rounded-full px-8 py-4 flex items-center justify-between shadow-sm">
+            <a href="index.html" class="font-bold text-lg tracking-tighter">CARE & FAMILY</a>
             <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="text-slate-900">Home</a>
-                <a href="services.html" class="hover:text-blue-600 transition">Services</a>
-                <a href="doctors.html" class="hover:text-blue-600 transition">Doctors</a>
-                <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+                <a href="index.html" class="hover:text-black transition">Home</a>
+                <a href="services.html" class="hover:text-black transition">Services</a>
+                <a href="doctors.html" class="hover:text-black transition">Doctors</a>
+                <a href="contact.html" class="hover:text-black transition">Contact</a>
             </div>
-            <a href="contact.html" class="bg-slate-900 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-slate-800 transition">Book Now</a>
+            <a href="contact.html" class="bg-black text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-800 transition">Book Appointment</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="pt-40 pb-24 px-6">
-        <div class="max-w-5xl mx-auto text-center">
-            <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
-                <span>★ 4.5/5 Rating (599 Reviews)</span>
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold mb-6">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span></span>
+                    Accepting New Patients in Yorkville
+                </div>
+                <h1 class="text-6xl md:text-7xl font-bold tracking-tight mb-6">Modern Care. <br>Refined Health.</h1>
+                <p class="text-xl text-slate-500 mb-10 max-w-lg">Premium primary care located in the heart of Toronto. Personalized attention for your entire family.</p>
+                <div class="flex gap-4">
+                    <a href="contact.html" class="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition">Get Started</a>
+                </div>
             </div>
-            <h1 class="text-6xl md:text-7xl font-bold tracking-tight mb-8">Modern healthcare for<br>the Yorkville lifestyle.</h1>
-            <p class="text-xl text-slate-500 max-w-2xl mx-auto mb-12">Expert primary care, wellness, and family health services located in the heart of Toronto.</p>
-            <div class="flex gap-4 justify-center">
-                <a href="contact.html" class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-semibold shadow-lg shadow-blue-200">Schedule Consultation</a>
-            </div>
+            <img src="https://loremflickr.com/1200/800/doctors" alt="Medical Office" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
         </div>
     </header>
 
-    <!-- Bento Grid Showcase -->
-    <section class="max-w-6xl mx-auto px-6 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="md:col-span-2 bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
-                <img src="https://loremflickr.com/1200/800/doctors" alt="Medical Office" class="w-full h-80 object-cover rounded-3xl mb-6">
-                <h3 class="text-2xl font-bold mb-2">Patient-Centered Excellence</h3>
-                <p class="text-slate-500">We prioritize your time and health with a streamlined, digital-first approach to medicine in the heart of Toronto.</p>
-            </div>
-            <div class="bg-slate-900 text-white p-8 rounded-[2rem] flex flex-col justify-center">
-                <h4 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Location</h4>
-                <p class="text-lg font-medium mb-2">162 Cumberland St #200</p>
-                <p class="text-slate-400 mb-6">Toronto, ON M5R 3N5</p>
-                <h4 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Connect</h4>
-                <p class="text-xl font-semibold">+1 647-951-4770</p>
+    <!-- Reputation & Overview -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100">
+                    <h3 class="text-4xl font-bold mb-2">4.5/5</h3>
+                    <p class="text-slate-600 font-medium">Reputation Rating</p>
+                    <p class="text-sm text-slate-400 mt-2">Based on 599 verified reviews</p>
+                </div>
+                <div class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100">
+                    <h3 class="text-4xl font-bold mb-2">Expert</h3>
+                    <p class="text-slate-600 font-medium">Medical Team</p>
+                    <p class="text-sm text-slate-400 mt-2">Board certified & compassionate</p>
+                </div>
+                <div class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100">
+                    <h3 class="text-4xl font-bold mb-2">Central</h3>
+                    <p class="text-slate-600 font-medium">Yorkville Location</p>
+                    <p class="text-sm text-slate-400 mt-2">162 Cumberland St #200</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Map Section -->
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12">Visit Us</h2>
+            <iframe src="https://www.google.com/maps?q=162+Cumberland+St+#200+Toronto+ON+M5R+3N5+Canada&output=embed" class="w-full h-96 rounded-[2rem] shadow-2xl border-0"></iframe>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="py-24 text-center">
-        <p class="text-slate-400 text-sm">© 2024 Care & Family Health Yorkville. All rights reserved.</p>
+    <footer class="bg-black text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div>
+                <h4 class="font-bold text-lg mb-6">Care & Family</h4>
+                <p class="text-slate-400 text-sm">162 Cumberland St #200<br>Toronto, ON M5R 3N5</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Pages</h4>
+                <ul class="text-slate-400 text-sm space-y-3">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Connect</h4>
+                <ul class="text-slate-400 text-sm space-y-3">
+                    <li>Instagram</li>
+                    <li>LinkedIn</li>
+                    <li>Twitter</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Support</h4>
+                <p class="text-slate-400 text-sm mb-4">+1 647-951-4770</p>
+                <p class="text-slate-500 text-xs">© 2023 Care & Family Health. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
 </body>
