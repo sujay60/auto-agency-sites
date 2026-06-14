@@ -3,121 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Dr. Rauchwerger, M.D. | Albany Clinic Toronto</title>
+    <title>Contact Dr. Rauchwerger | Albany Clinic Toronto</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        .fade-in-up.active { opacity: 1; transform: translateY(0); }
+        .glass { backdrop-blur-xl bg-white/5 border border-white/10; }
     </style>
 </head>
-<body class="bg-[#FAFAFA] text-[#262626]">
+<body class="bg-[#FAFAFA] text-[#1A1A1A]">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#E8F0EF]">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-[#2D5A5A]">DR. RAUCHWERGER</a>
-            <div class="hidden md:flex gap-8 font-medium text-[#1A3636]">
-                <a href="index.html" class="hover:text-[#C5A059] transition">Home</a>
-                <a href="about.html" class="hover:text-[#C5A059] transition">About</a>
-                <a href="services.html" class="hover:text-[#C5A059] transition">Services</a>
-                <a href="contact.html" class="text-[#2D5A5A]">Contact</a>
+            <a href="index.html" class="text-2xl font-bold text-[#2D5A5E]">Dr. Rauchwerger</a>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="hover:text-[#2D5A5E]">Home</a>
+                <a href="about.html" class="hover:text-[#2D5A5E]">About</a>
+                <a href="services.html" class="hover:text-[#2D5A5E]">Services</a>
+                <a href="contact.html" class="text-[#2D5A5E]">Contact</a>
             </div>
-            <a href="contact.html" class="bg-[#2D5A5A] text-white px-8 py-3 rounded-full hover:bg-[#1A3636] transition">Book Appointment</a>
+            <a href="contact.html" class="bg-[#2D5A5E] text-white px-8 py-3 rounded-full transition hover:scale-105">Book Now</a>
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <header class="py-32 px-6">
+    <section class="py-32 px-6">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div class="fade-in-up">
-                <span class="text-[#C5A059] font-bold tracking-widest uppercase text-sm">Get In Touch</span>
-                <h1 class="text-7xl font-extrabold text-[#1A3636] mt-4 mb-8 leading-tight">We're here for your health.</h1>
-                <p class="text-xl text-gray-600 mb-8">Reach out to Dr. Rauchwerger's clinic at Albany Street for professional medical guidance and comprehensive wellness care.</p>
+                <h1 class="text-7xl font-extrabold text-[#1A3638] mb-6">Get in Touch</h1>
+                <p class="text-xl text-gray-600 mb-8">Professional medical care at Albany Clinic. Contact us for consultations, appointments, or general inquiries.</p>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-[#E8F0EF] p-4 rounded-full text-[#2D5A5E]"><i class="fas fa-phone"></i></div>
+                        <span class="text-lg font-medium">+1 416-461-9471</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="bg-[#E8F0EF] p-4 rounded-full text-[#2D5A5E]"><i class="fas fa-location-dot"></i></div>
+                        <span class="text-lg font-medium">807 Broadview Ave, Toronto, ON M4K 2P8</span>
+                    </div>
+                </div>
             </div>
             <div class="fade-in-up">
-                <img src="https://loremflickr.com/800/600/doctor" alt="Dr. Rauchwerger" class="rounded-3xl shadow-2xl object-cover w-full h-[500px]">
+                <img src="https://loremflickr.com/800/600/doctors" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover" alt="Clinic">
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Contact Form & Details Section -->
-    <section class="py-32 bg-[#1A1A1A] text-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
-            <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-12 rounded-3xl fade-in-up">
-                <h2 class="text-5xl font-bold mb-8">Send a Message</h2>
+    <section class="py-32 bg-[#121212] text-white px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+            <div class="glass p-12 rounded-3xl fade-in-up">
+                <h2 class="text-5xl font-bold mb-8 text-[#C5A059]">Send a Message</h2>
                 <form class="space-y-6">
-                    <input type="text" placeholder="Full Name" class="w-full p-4 bg-transparent border border-white/20 rounded-xl focus:outline-none focus:border-[#C5A059]">
-                    <input type="email" placeholder="Email Address" class="w-full p-4 bg-transparent border border-white/20 rounded-xl focus:outline-none focus:border-[#C5A059]">
-                    <textarea placeholder="How can we help?" rows="4" class="w-full p-4 bg-transparent border border-white/20 rounded-xl focus:outline-none focus:border-[#C5A059]"></textarea>
-                    <button class="w-full bg-gradient-to-r from-[#2D5A5A] to-[#4A7A7A] py-4 rounded-xl font-bold hover:scale-[1.02] transition">Submit Inquiry</button>
+                    <input type="text" placeholder="Name" class="w-full bg-transparent border-b border-white/20 py-3 outline-none focus:border-[#C5A059]">
+                    <input type="email" placeholder="Email" class="w-full bg-transparent border-b border-white/20 py-3 outline-none focus:border-[#C5A059]">
+                    <textarea placeholder="Message" class="w-full bg-transparent border-b border-white/20 py-3 outline-none focus:border-[#C5A059] h-32"></textarea>
+                    <button class="w-full bg-gradient-to-r from-[#2D5A5E] to-[#4A8A8F] py-4 rounded-full font-bold">Send Message</button>
                 </form>
             </div>
-            <div class="flex flex-col justify-center space-y-12 fade-in-up">
-                <div>
-                    <h3 class="text-[#C5A059] font-bold text-xl mb-4">Office Location</h3>
-                    <p class="text-3xl font-semibold">807 Broadview Ave,<br>Toronto, ON M4K 2P8, Canada</p>
-                </div>
-                <div>
-                    <h3 class="text-[#C5A059] font-bold text-xl mb-4">Contact Info</h3>
-                    <p class="text-3xl font-semibold">+1 416-461-9471</p>
-                </div>
-                <div>
-                    <h3 class="text-[#C5A059] font-bold text-xl mb-4">Hours</h3>
-                    <p class="text-lg">Mon-Fri: 9:00 AM - 5:00 PM<br>Sat-Sun: Closed</p>
-                </div>
+            <div class="fade-in-up">
+                <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-full min-h-[400px] rounded-3xl" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="py-32 px-6 bg-[#FAFAFA]">
-        <div class="max-w-7xl mx-auto">
-            <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-[500px] rounded-3xl shadow-2xl fade-in-up" loading="lazy"></iframe>
+    <section class="py-32 bg-[#FAFAFA] px-6">
+        <div class="max-w-7xl mx-auto text-center fade-in-up mb-16">
+            <h2 class="text-6xl font-bold text-[#1A3638]">Clinical Excellence Stats</h2>
+        </div>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-12 rounded-3xl shadow-lg border border-[#E8F0EF] text-center">
+                <div class="text-[#2D5A5E] text-6xl font-bold mb-2">4.9</div>
+                <div class="text-[#C5A059] font-medium">Google Rating</div>
+            </div>
+            <div class="bg-white p-12 rounded-3xl shadow-lg border border-[#E8F0EF] text-center">
+                <div class="text-[#2D5A5E] text-6xl font-bold mb-2">25+</div>
+                <div class="text-[#C5A059] font-medium">Years Experience</div>
+            </div>
+            <div class="bg-white p-12 rounded-3xl shadow-lg border border-[#E8F0EF] text-center">
+                <div class="text-[#2D5A5E] text-6xl font-bold mb-2">10k+</div>
+                <div class="text-[#C5A059] font-medium">Patients Treated</div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-[#1A1A1A] text-white py-20">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
-            <div>
-                <h4 class="font-bold text-[#C5A059] text-xl mb-4">Dr. Rauchwerger</h4>
-                <p class="text-gray-400">Professional medical care at Albany Clinic, serving the Toronto community with excellence.</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Quick Links</h4>
-                <ul class="text-gray-400 space-y-2">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Contact</h4>
-                <p class="text-gray-400">807 Broadview Ave<br>Toronto, ON</p>
-                <p class="text-gray-400 mt-2">+1 416-461-9471</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Socials</h4>
-                <div class="flex space-x-4 text-2xl">
-                    <i class="fa-brands fa-linkedin text-[#C5A059]"></i>
-                    <i class="fa-brands fa-facebook text-[#C5A059]"></i>
-                </div>
-            </div>
+    <footer class="bg-[#121212] text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div><h3 class="text-xl font-bold mb-4 text-[#C5A059]">Dr. Rauchwerger</h3><p class="text-gray-400">Excellence in clinical care for the Toronto community.</p></div>
+            <div><h3 class="text-xl font-bold mb-4 text-[#C5A059]">Quick Links</h3><ul class="space-y-2 text-gray-400"><li>Home</li><li>About</li><li>Services</li><li>Contact</li></ul></div>
+            <div><h3 class="text-xl font-bold mb-4 text-[#C5A059]">Contact</h3><p class="text-gray-400">807 Broadview Ave<br>Toronto, ON M4K 2P8<br>+1 416-461-9471</p></div>
+            <div><h3 class="text-xl font-bold mb-4 text-[#C5A059]">Follow Us</h3><div class="flex gap-4 text-2xl text-[#C5A059]"><i class="fab fa-linkedin"></i><i class="fab fa-twitter"></i></div></div>
         </div>
-        <div class="text-center mt-12 border-t border-white/10 pt-8 text-gray-500 text-sm">
-            &copy; 2024 Dr. Rauchwerger, M.D. All rights reserved.
-        </div>
+        <div class="text-center mt-16 pt-8 border-t border-white/10 text-gray-500">© 2024 Dr. Rauchwerger. All Rights Reserved.</div>
     </footer>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
         });
         document.querySelectorAll('.fade-in-up').forEach((el) => observer.observe(el));
     </script>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Dr. Rauchwerger, M.D. | Albany Clinic Toronto</title>
+    <title>About Dr. M. Rauchwerger, M.D. | Albany Clinic Toronto</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,79 +11,99 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
-        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
-        .floating { animation: float 6s ease-in-out infinite; }
+        .gradient-text { background: linear-gradient(to right, #2D5A5E, #4A8A8F); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
-<body class="bg-[#FAFAFA] text-[#262626]">
+<body class="bg-[#FAFAFA] text-[#1A1A1A]">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#2D5A5A]/10">
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-[#2D5A5A]">Dr. Rauchwerger</a>
-            <div class="hidden md:flex gap-8 font-medium text-[#1A3636]">
-                <a href="index.html" class="hover:text-[#C5A059] transition">Home</a>
-                <a href="about.html" class="text-[#C5A059]">About</a>
+            <a href="index.html" class="text-2xl font-bold text-[#2D5A5E]">DR. RAUCHWERGER</a>
+            <div class="hidden md:flex gap-8 font-medium text-[#1A3638]">
+                <a href="index.html" class="hover:text-[#C5A059]">Home</a>
+                <a href="about.html" class="text-[#2D5A5E]">About</a>
                 <a href="services.html" class="hover:text-[#C5A059]">Services</a>
                 <a href="contact.html" class="hover:text-[#C5A059]">Contact</a>
             </div>
-            <a href="contact.html" class="bg-[#2D5A5A] text-white px-8 py-3 rounded-full hover:bg-[#1A3636] transition">Book Appointment</a>
+            <a href="contact.html" class="bg-[#2D5A5E] text-white px-8 py-3 rounded-full hover:bg-[#1A3638] transition">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Header Section -->
     <header class="pt-40 pb-32 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center reveal">
-            <div>
-                <h1 class="text-7xl font-extrabold text-[#1A3636] leading-tight mb-8">Clinical Excellence in <span class="text-[#2D5A5A]">Toronto</span></h1>
-                <p class="text-xl text-gray-600 mb-8">Dr. Rauchwerger combines decades of medical expertise with a compassionate approach, serving the Broadview community with precision and care.</p>
-                <div class="flex gap-4">
-                    <span class="text-[#C5A059] text-5xl font-bold">30+</span>
-                    <span class="text-xl text-[#2D5A5A] font-semibold">Years of Dedicated<br>Medical Service</span>
-                </div>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <h1 class="text-7xl font-extrabold text-[#1A3638] leading-tight">Precision in Medicine, <span class="gradient-text">Warmth in Care.</span></h1>
+                <p class="text-xl text-gray-600 mt-8 leading-relaxed">With decades of clinical excellence at the Albany Clinic, Dr. M. Rauchwerger, M.D. brings a patient-centered philosophy that prioritizes listening, diagnostic accuracy, and long-term wellness.</p>
             </div>
-            <img src="https://loremflickr.com/800/600/doctor" class="rounded-3xl shadow-2xl floating" alt="Dr. Rauchwerger">
+            <div class="reveal">
+                <img src="https://loremflickr.com/800/600/doctors" alt="Dr. Rauchwerger" class="rounded-3xl shadow-2xl w-full object-cover h-[500px]">
+            </div>
         </div>
     </header>
 
-    <!-- Philosophy Section -->
-    <section class="py-32 bg-[#1A1A1A] text-white overflow-hidden">
+    <section class="py-32 bg-[#121212] text-white">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center reveal">
-            <div class="backdrop-blur-xl bg-white/5 p-12 rounded-3xl border border-white/10">
-                <h2 class="text-5xl font-bold mb-8 text-[#C5A059]">Our Philosophy</h2>
-                <p class="text-lg text-gray-300 leading-relaxed mb-6">We believe that true healing happens when technology meets empathy. Dr. Rauchwerger's approach is rooted in the "Albany Standard"—a commitment to personalized, evidence-based care tailored to each patient's unique biological and lifestyle needs.</p>
-                <p class="text-lg text-gray-300 leading-relaxed">Our practice at 807 Broadview Ave serves as a sanctuary for health, ensuring that every patient feels heard, understood, and effectively treated.</p>
+            <div>
+                <img src="https://loremflickr.com/800/600/hospital" alt="Clinic Interior" class="rounded-3xl shadow-2xl w-full object-cover h-[500px]">
             </div>
-            <img src="https://loremflickr.com/800/600/hospital" class="rounded-3xl shadow-2xl" alt="Clinic Interior">
+            <div>
+                <h2 class="text-5xl font-bold mb-8 text-[#C5A059]">Our Medical Philosophy</h2>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">At our Albany Street practice, we believe that medicine is not just about treating symptoms, but about understanding the person behind the patient. Dr. Rauchwerger combines evidence-based medicine with a compassionate approach, ensuring every patient feels heard and empowered.</p>
+                <div class="p-8 backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl">
+                    <p class="italic text-[#C5A059]">"My goal is to provide boutique-quality medical attention within a community-focused environment where patient outcomes are the only priority."</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Credentials / Bento Grid -->
     <section class="py-32 px-6">
-        <div class="max-w-7xl mx-auto reveal">
-            <h2 class="text-6xl font-bold text-[#1A3636] text-center mb-20">Credentials & Expertise</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="md:col-span-2 bg-[#E8F0EF] p-12 rounded-3xl border border-[#2D5A5A]/20">
-                    <h3 class="text-3xl font-bold text-[#2D5A5A] mb-4">Board Certified Excellence</h3>
-                    <p class="text-gray-700">Dr. Rauchwerger is fully licensed by the College of Physicians and Surgeons of Ontario, bringing specialized internal medicine and geriatric care to the Toronto East community.</p>
-                </div>
-                <div class="bg-[#2D5A5A] p-12 rounded-3xl text-white">
-                    <h3 class="text-3xl font-bold text-[#C5A059] mb-4">Innovation</h3>
-                    <p>Utilizing latest advancements in diagnostics and collaborative electronic health records for seamless care.</p>
-                </div>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 reveal">
+            <div class="col-span-2 bg-white p-12 rounded-3xl border border-gray-100 shadow-xl">
+                <h3 class="text-3xl font-bold text-[#1A3638] mb-6">Clinic Legacy</h3>
+                <p class="text-gray-600 mb-6">Located in the heart of Toronto, the Albany Clinic has served generations. Dr. Rauchwerger’s tenure represents a commitment to modernizing healthcare while retaining the traditional values of the family doctor.</p>
+                <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-[400px] rounded-3xl" loading="lazy"></iframe>
+            </div>
+            <div class="col-span-1 bg-[#E8F0EF] p-12 rounded-3xl">
+                <h3 class="text-3xl font-bold text-[#2D5A5E] mb-6">Clinical Focus</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3"><i class="fa fa-check text-[#2D5A5E]"></i> General Medicine</li>
+                    <li class="flex items-center gap-3"><i class="fa fa-check text-[#2D5A5E]"></i> Preventive Wellness</li>
+                    <li class="flex items-center gap-3"><i class="fa fa-check text-[#2D5A5E]"></i> Chronic Disease Management</li>
+                    <li class="flex items-center gap-3"><i class="fa fa-check text-[#2D5A5E]"></i> Specialized Referrals</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-[#1A1A1A] text-white py-24">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+    <section class="py-20 bg-[#2D5A5E] text-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center reveal">
             <div>
-                <h4 class="text-[#C5A059] font-bold text-xl mb-4">Dr. Rauchwerger, M.D.</h4>
-                <p class="text-gray-400">Excellence in medicine at the heart of Toronto's Albany street community.</p>
+                <div class="text-5xl font-extrabold mb-2 text-[#C5A059]">40+</div>
+                <div class="text-sm uppercase tracking-widest">Years Experience</div>
             </div>
             <div>
-                <h4 class="font-bold mb-4">Navigation</h4>
+                <div class="text-5xl font-extrabold mb-2 text-[#C5A059]">4.9</div>
+                <div class="text-sm uppercase tracking-widest">Patient Rating</div>
+            </div>
+            <div>
+                <div class="text-5xl font-extrabold mb-2 text-[#C5A059]">2k+</div>
+                <div class="text-sm uppercase tracking-widest">Annual Patients</div>
+            </div>
+            <div>
+                <div class="text-5xl font-extrabold mb-2 text-[#C5A059]">24/7</div>
+                <div class="text-sm uppercase tracking-widest">Portal Access</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#121212] text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div>
+                <h4 class="font-bold text-xl mb-4">Dr. Rauchwerger</h4>
+                <p class="text-gray-400">807 Broadview Ave, Toronto, ON M4K 2P8</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-xl mb-4">Navigation</h4>
                 <ul class="text-gray-400 space-y-2">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -92,29 +112,26 @@
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold mb-4">Contact</h4>
-                <p class="text-gray-400">807 Broadview Ave<br>Toronto, ON M4K 2P8</p>
-                <p class="text-gray-400 mt-2">+1 416-461-9471</p>
+                <h4 class="font-bold text-xl mb-4">Contact</h4>
+                <p class="text-gray-400">+1 416-461-9471</p>
             </div>
             <div>
-                <h4 class="font-bold mb-4">Connect</h4>
-                <div class="flex gap-4">
-                    <i class="fa-brands fa-linkedin text-2xl hover:text-[#C5A059] cursor-pointer"></i>
-                    <i class="fa-brands fa-instagram text-2xl hover:text-[#C5A059] cursor-pointer"></i>
+                <h4 class="font-bold text-xl mb-4">Social</h4>
+                <div class="flex gap-4 text-2xl text-[#C5A059]">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-twitter"></i>
                 </div>
             </div>
         </div>
-        <div class="text-center mt-16 text-gray-600 border-t border-white/10 pt-8">
-            &copy; 2024 Dr. Rauchwerger, M.D. All rights reserved.
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/10 text-center text-gray-600 text-sm">
+            &copy; 2024 Dr. M. Rauchwerger, M.D. All Rights Reserved.
         </div>
     </footer>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        });
+            entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>

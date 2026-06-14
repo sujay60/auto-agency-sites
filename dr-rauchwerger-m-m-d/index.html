@@ -1,106 +1,142 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Rauchwerger, M.D. | Albany Clinic Toronto</title>
+    <title>Dr. Rauchwerger, M., M.D. | Albany Clinic Toronto</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-        .visible { opacity: 1; transform: translateY(0); }
-        .floating { animation: floating 3s ease-in-out infinite; }
-        @keyframes floating { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        .glass { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
     </style>
 </head>
-<body class="bg-[#FAFAFA] text-[#262626]">
+<body class="bg-[#FAFAFA] text-[#1A1A1A]">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#2D5A5A]/10 py-4">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-[#2D5A5A]">DR. RAUCHWERGER</a>
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#E8F0EF]">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-[#2D5A5E]">DR. RAUCHWERGER</div>
             <div class="hidden md:flex gap-8 font-medium">
                 <a href="index.html" class="hover:text-[#C5A059]">Home</a>
                 <a href="about.html" class="hover:text-[#C5A059]">About</a>
                 <a href="services.html" class="hover:text-[#C5A059]">Services</a>
                 <a href="contact.html" class="hover:text-[#C5A059]">Contact</a>
             </div>
-            <a href="contact.html" class="bg-[#2D5A5A] text-white px-8 py-3 rounded-full hover:bg-[#4A7A7A] transition">Book Appointment</a>
+            <a href="contact.html" class="bg-[#2D5A5E] text-white px-8 py-3 rounded-full hover:bg-[#1A3638] transition">Book Appointment</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-48 pb-32 px-6">
-        <div class="container mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="fade-in-up">
-                <h1 class="text-7xl font-extrabold text-[#1A3636] leading-tight mb-8">Excellence in Medical <span class="text-[#2D5A5A]">Wellness</span></h1>
-                <p class="text-xl text-gray-600 mb-10">Providing sophisticated, precision-based medical care at the heart of Toronto's Albany Street community.</p>
-                <div class="flex gap-4">
-                    <a href="contact.html" class="bg-[#2D5A5A] text-white px-10 py-4 rounded-full text-lg font-bold">Schedule Consultation</a>
-                </div>
+    <section class="py-32 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div class="fade-in-up">
+            <h1 class="text-7xl font-extrabold text-[#1A3638] mb-6 leading-tight">Excellence in Medical Care</h1>
+            <p class="text-xl text-gray-600 mb-8">Providing sophisticated, boutique professional healthcare at the heart of Albany Clinic, Toronto. Your health is our primary commitment.</p>
+            <a href="contact.html" class="inline-block bg-gradient-to-r from-[#2D5A5E] to-[#4A8A8F] text-white px-10 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition">Schedule a Consultation</a>
+        </div>
+        <img src="https://loremflickr.com/800/600/doctor" class="rounded-3xl shadow-2xl fade-in-up" alt="Dr. Rauchwerger">
+    </section>
+
+    <!-- Services Bento -->
+    <section class="py-32 bg-[#121212] text-[#FFFFFF] px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="col-span-1 md:col-span-2 p-10 rounded-3xl glass border border-white/10 fade-in-up">
+                <h2 class="text-5xl font-bold mb-6 text-[#C5A059]">Specialized Clinical Services</h2>
+                <p class="text-lg opacity-80 mb-8">We offer comprehensive medical assessments and personalized treatment plans tailored to your unique wellness journey.</p>
             </div>
-            <div class="floating">
-                <img src="https://loremflickr.com/800/600/doctors" alt="Dr. Rauchwerger" class="rounded-3xl shadow-2xl">
+            <div class="p-8 rounded-3xl bg-[#2D5A5E] hover:scale-105 transition duration-500 fade-in-up">
+                <i class="fa-solid fa-stethoscope text-4xl mb-6"></i>
+                <h3 class="text-2xl font-bold mb-4">General Diagnostics</h3>
+                <p class="opacity-90">Precision in identifying underlying health conditions through modern medical screening.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-32 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+        <div class="fade-in-up">
+            <h2 class="text-6xl font-bold text-[#1A3638] mb-8">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <details class="p-6 bg-[#E8F0EF] rounded-2xl cursor-pointer">
+                    <summary class="font-bold text-lg text-[#2D5A5E]">What are the office hours?</summary>
+                    <p class="mt-4 text-gray-700">We operate Monday through Friday, 9:00 AM to 5:00 PM by appointment only.</p>
+                </details>
+                <details class="p-6 bg-[#E8F0EF] rounded-2xl cursor-pointer">
+                    <summary class="font-bold text-lg text-[#2D5A5E]">How do I book a visit?</summary>
+                    <p class="mt-4 text-gray-700">You can contact our office directly at +1 416-461-9471 to schedule.</p>
+                </details>
+            </div>
+        </div>
+        <div class="fade-in-up">
+            <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-full min-h-[400px] rounded-3xl shadow-2xl" loading="lazy"></iframe>
         </div>
     </section>
 
     <!-- Stats Bar -->
-    <section class="bg-[#1A1A1A] py-20 text-white">
-        <div class="container mx-auto grid grid-cols-3 text-center">
-            <div><div class="text-6xl font-bold text-[#C5A059]">25+</div><p>Years Experience</p></div>
-            <div><div class="text-6xl font-bold text-[#C5A059]">4.9</div><p>Star Rating</p></div>
-            <div><div class="text-6xl font-bold text-[#C5A059]">10k+</div><p>Patients Treated</p></div>
-        </div>
-    </section>
-
-    <!-- Services Bento -->
-    <section class="py-32 bg-[#FAFAFA]">
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-20">Specialized Care</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="col-span-2 p-10 bg-[#E8F0EF] rounded-3xl">
-                    <h3 class="text-3xl font-bold mb-4">Comprehensive Diagnostics</h3>
-                    <p>Advanced medical screening and precision diagnostics ensuring personalized health outcomes for every patient.</p>
-                </div>
-                <div class="p-10 bg-[#2D5A5A] text-white rounded-3xl">
-                    <h3 class="text-2xl font-bold mb-4">Preventative Medicine</h3>
-                </div>
+    <section class="bg-[#1A3638] py-20 text-white px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div>
+                <h4 class="text-5xl font-bold text-[#C5A059] mb-2">20+</h4>
+                <p>Years Experience</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Location & Map -->
-    <section class="py-32 bg-[#1A1A1A] text-white">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16">
-            <div class="fade-in-up">
-                <h2 class="text-5xl font-bold mb-8">Find Us in <span class="text-[#C5A059]">Toronto</span></h2>
-                <p class="text-lg mb-8">807 Broadview Ave, Toronto, ON M4K 2P8, Canada</p>
-                <p class="text-lg mb-8">Phone: +1 416-461-9471</p>
+            <div>
+                <h4 class="text-5xl font-bold text-[#C5A059] mb-2">4.9</h4>
+                <p>Patient Rating</p>
             </div>
-            <div class="w-full h-full min-h-[400px]">
-                <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-full min-h-[400px] rounded-3xl" loading="lazy"></iframe>
+            <div>
+                <h4 class="text-5xl font-bold text-[#C5A059] mb-2">500+</h4>
+                <p>Happy Patients</p>
+            </div>
+            <div>
+                <h4 class="text-5xl font-bold text-[#C5A059] mb-2">100%</h4>
+                <p>Professional Care</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#1A1A1A] text-white py-20 border-t border-[#2D5A5A]">
-        <div class="container mx-auto px-6 grid grid-cols-4 gap-12">
-            <div><h4 class="text-xl font-bold mb-4">Dr. Rauchwerger</h4><p>Albany Clinic, Toronto.</p></div>
-            <div><h4 class="text-xl font-bold mb-4">Navigation</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li></ul></div>
-            <div><h4 class="text-xl font-bold mb-4">Contact</h4><p>807 Broadview Ave</p><p>+1 416-461-9471</p></div>
-            <div><h4 class="text-xl font-bold mb-4">Follow Us</h4><div class="flex gap-4"><i class="fa-brands fa-linkedin text-2xl"></i></div></div>
+    <footer class="bg-[#121212] text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div>
+                <h5 class="font-bold text-[#C5A059] mb-4">DR. RAUCHWERGER</h5>
+                <p class="text-sm opacity-60">Providing excellence in medical care within the heart of Toronto.</p>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4">Navigation</h5>
+                <ul class="space-y-2 opacity-60">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4">Contact</h5>
+                <p class="opacity-60 text-sm">807 Broadview Ave, Toronto, ON M4K 2P8</p>
+                <p class="opacity-60 text-sm">+1 416-461-9471</p>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4">Social</h5>
+                <div class="flex gap-4">
+                    <i class="fab fa-linkedin text-2xl hover:text-[#C5A059] cursor-pointer"></i>
+                    <i class="fab fa-facebook text-2xl hover:text-[#C5A059] cursor-pointer"></i>
+                </div>
+            </div>
         </div>
-        <div class="text-center mt-12 pt-8 border-t border-white/10">© 2023 Dr. Rauchwerger M.D. All Rights Reserved.</div>
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/10 text-center opacity-50 text-sm">
+            &copy; 2024 Dr. Rauchwerger, M.D. All Rights Reserved.
+        </div>
     </footer>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-        });
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
     </script>
 </body>
