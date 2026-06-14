@@ -9,71 +9,109 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinic: {
+                            50: '#f0f9fa',
+                            900: '#0f3a3d',
+                            teal: '#14b8a6',
+                            blue: '#e0f2f1'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-slate-50 text-slate-900 selection:bg-teal-200">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-6 py-4">
-        <div class="max-w-6xl mx-auto backdrop-blur-md bg-white/70 rounded-full shadow-sm border border-slate-100 px-8 py-4 flex items-center justify-between">
-            <a href="index.html" class="text-xl font-bold tracking-tighter">ALBANY<span class="text-blue-600">.</span></a>
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold tracking-tighter text-clinic-900">ALBANY<span class="text-teal-500">.</span></span>
             <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
-                <a href="services.html" class="hover:text-blue-600 transition">Services</a>
-                <a href="doctors.html" class="hover:text-blue-600 transition">Doctors</a>
-                <a href="feedback.html" class="text-blue-600 font-semibold">Feedback</a>
-                <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
+                <a href="services.html" class="hover:text-teal-600 transition">Services</a>
+                <a href="doctors.html" class="hover:text-teal-600 transition">Doctors</a>
+                <a href="feedback.html" class="text-teal-600">Feedback</a>
+                <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <section class="pt-40 pb-20 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-6xl md:text-7xl font-bold tracking-tight mb-8">Your voice shapes our care.</h1>
-            <p class="text-xl text-slate-500 max-w-2xl mx-auto">We are committed to evolving. Help us bridge the gap between where we are and the excellence you deserve.</p>
+    <section class="pt-32 pb-16 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <h1 class="text-6xl font-bold tracking-tighter text-clinic-900 mb-6">Your voice shapes our care.</h1>
+            <p class="text-xl text-slate-500 max-w-2xl mx-auto">We are committed to evolving. Help us bridge the gap between our service and your expectations.</p>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="max-w-6xl mx-auto px-6 pb-24 grid md:grid-cols-2 gap-16 items-center">
+    <!-- Feedback Bento Grid -->
+    <main class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
         
-        <!-- Bento Box Left -->
-        <div class="space-y-8">
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
-                <h2 class="text-2xl font-semibold mb-4">Patient Experience</h2>
-                <p class="text-slate-600 leading-relaxed mb-6">Transparency is our priority. While we navigate growth, your direct insights regarding wait times and staff interactions are reviewed daily by our management team.</p>
-                <div class="bg-blue-50 p-6 rounded-2xl">
-                    <span class="text-4xl font-bold text-blue-600">2.7</span>
-                    <span class="ml-2 text-slate-500 font-medium">/ 5.0 Average Rating</span>
+        <!-- Form Section -->
+        <div class="lg:col-span-2 bg-white p-12 rounded-[2rem] shadow-sm border border-slate-100">
+            <h2 class="text-3xl font-bold tracking-tight mb-8">Share your experience</h2>
+            <form class="space-y-6">
+                <div class="grid grid-cols-2 gap-6">
+                    <input type="text" placeholder="Name" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:ring-2 focus:ring-teal-500">
+                    <input type="email" placeholder="Email" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:ring-2 focus:ring-teal-500">
                 </div>
-            </div>
-
-            <div class="bg-slate-900 text-white p-8 rounded-[2rem]">
-                <h2 class="text-2xl font-semibold mb-2">Direct Line</h2>
-                <p class="text-slate-400 mb-6 text-sm">Speak directly with our clinic lead.</p>
-                <a href="tel:+14164619471" class="text-xl font-bold underline decoration-blue-500">+1 416-461-9471</a>
-            </div>
+                <textarea rows="6" placeholder="Your feedback or suggestions..." class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 outline-none focus:ring-2 focus:ring-teal-500"></textarea>
+                <button class="w-full py-4 bg-clinic-900 text-white rounded-xl font-semibold hover:bg-teal-600 transition shadow-lg">Submit Feedback</button>
+            </form>
         </div>
 
-        <!-- Image Right -->
-        <img src="https://loremflickr.com/1200/800/doctors" alt="Clinic Staff" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
+        <!-- Info Sidebar -->
+        <div class="space-y-8">
+            <div class="bg-clinic-900 p-8 rounded-[2rem] text-white">
+                <h3 class="text-xl font-semibold mb-4">Clinic Policy</h3>
+                <p class="text-teal-100 text-sm leading-relaxed">We value transparency. All feedback is reviewed weekly by our management team to ensure we meet the standards our patients deserve.</p>
+            </div>
+            <div class="bg-teal-100 p-8 rounded-[2rem] text-clinic-900">
+                <h3 class="text-xl font-semibold mb-4">Direct Contact</h3>
+                <p class="font-bold text-2xl">+1 416-461-9471</p>
+                <p class="text-sm mt-2 opacity-80">807 Broadview Ave, Toronto</p>
+            </div>
+        </div>
     </main>
 
+    <!-- Map Section -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="w-full h-96 bg-white p-4 rounded-[2rem] shadow-2xl border border-slate-100">
+            <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" width="100%" height="100%" class="rounded-3xl" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="py-20 border-t border-slate-200">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-sm text-slate-500">
+    <footer class="bg-clinic-900 text-white py-24">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
-                <h4 class="font-bold text-slate-900 mb-4">Location</h4>
-                <p>807 Broadview Ave<br>Toronto, ON M4K 2P8</p>
+                <h4 class="text-2xl font-bold mb-6">Albany.</h4>
+                <p class="text-teal-200 text-sm">Elevating patient care standards in Toronto.</p>
             </div>
-            <div>
-                <h4 class="font-bold text-slate-900 mb-4">Procedure</h4>
-                <p>Appointments are confirmed via email. Please arrive 10 minutes early to update your records.</p>
+            <div class="space-y-4">
+                <h5 class="font-semibold text-teal-400">Navigation</h5>
+                <a href="index.html" class="block text-sm hover:text-white transition">Home</a>
+                <a href="services.html" class="block text-sm hover:text-white transition">Services</a>
+                <a href="doctors.html" class="block text-sm hover:text-white transition">Doctors</a>
             </div>
-            <div>
-                <h4 class="font-bold text-slate-900 mb-4">Legal</h4>
-                <p>© 2023 Albany Medical Clinic.<br>All rights reserved.</p>
+            <div class="space-y-4">
+                <h5 class="font-semibold text-teal-400">Location</h5>
+                <p class="text-sm">807 Broadview Ave<br>Toronto, ON M4K 2P8</p>
             </div>
+            <div class="space-y-4">
+                <h5 class="font-semibold text-teal-400">Socials</h5>
+                <a href="#" class="block text-sm">Instagram</a>
+                <a href="#" class="block text-sm">LinkedIn</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-teal-800 text-center text-teal-600 text-xs">
+            © 2024 Albany Medical Clinic. All rights reserved.
         </div>
     </footer>
 
