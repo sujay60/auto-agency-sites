@@ -3,145 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Physicians | Albany Medical Building | Toronto</title>
+    <title>Our Practitioners | Albany Medical Building</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        medical: {
-                            50: '#f0f9fa',
-                            900: '#0f3a3e',
-                            teal: '#14b8a6',
-                            blue: '#0ea5e9'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-[#F8FAFC] text-slate-900 selection:bg-teal-200">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-6 py-4">
-        <div class="max-w-7xl mx-auto glass border border-slate-200 rounded-[2rem] px-8 py-4 flex justify-between items-center shadow-lg">
-            <div class="text-xl font-bold tracking-tighter text-medical-900">ALBANY MEDICAL</div>
+    <nav class="fixed w-full z-50 px-6 py-6 backdrop-blur-md bg-white/70 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-teal-900">ALBANY MEDICAL</a>
             <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-medical-teal transition">Home</a>
-                <a href="doctors.html" class="text-medical-teal font-semibold">Physicians</a>
-                <a href="services.html" class="hover:text-medical-teal transition">Services</a>
-                <a href="contact.html" class="hover:text-medical-teal transition">Contact</a>
+                <a href="index.html" class="hover:text-teal-600 transition-colors">Home</a>
+                <a href="doctors.html" class="text-teal-600">Doctors</a>
+                <a href="services.html" class="hover:text-teal-600 transition-colors">Services</a>
+                <a href="contact.html" class="hover:text-teal-600 transition-colors">Contact</a>
             </div>
-            <a href="contact.html" class="bg-medical-900 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-teal-800 transition">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="pt-48 pb-24 px-6">
-        <div class="max-w-5xl mx-auto text-center">
-            <h1 class="text-6xl md:text-7xl font-bold text-medical-900 tracking-tight mb-8">Clinical Excellence in the <br>Heart of Toronto.</h1>
-            <p class="text-xl text-slate-500 max-w-2xl mx-auto">Our multidisciplinary team of physicians combines decades of diagnostic expertise with a deeply compassionate, patient-first philosophy.</p>
-        </div>
-    </header>
-
-    <!-- Physician Profiles -->
-    <section class="py-24 px-6 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16 items-center mb-24">
-                <img src="https://loremflickr.com/1200/800/doctor,portrait" class="rounded-[2rem] shadow-2xl h-[500px] w-full object-cover" alt="Dr. Sarah Jenkins">
-                <div>
-                    <h2 class="text-4xl font-bold text-medical-900 mb-6">Dr. Sarah Jenkins, MD</h2>
-                    <span class="inline-block bg-teal-50 text-medical-teal px-4 py-1 rounded-full text-sm font-semibold mb-6">Family Medicine & Geriatrics</span>
-                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">Dr. Jenkins focuses on chronic disease management and proactive health screening. With a patient-centered approach, she ensures every individual receives a tailored care plan that prioritizes long-term vitality.</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-slate-700">✓ 15+ Years Clinical Experience</li>
-                        <li class="flex items-center gap-3 text-slate-700">✓ Specialized in Preventative Cardiology</li>
-                        <li class="flex items-center gap-3 text-slate-700">✓ University of Toronto Faculty</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="order-2 md:order-1">
-                    <h2 class="text-4xl font-bold text-medical-900 mb-6">Dr. Marcus Thorne, MD</h2>
-                    <span class="inline-block bg-sky-50 text-medical-blue px-4 py-1 rounded-full text-sm font-semibold mb-6">Internal Medicine & Diagnostics</span>
-                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">Dr. Thorne utilizes advanced diagnostic methodologies to uncover complex health concerns. He believes that communication is the key to medical success and maintains an open-door policy for all his patients.</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-slate-700">✓ Precision Diagnostic Specialist</li>
-                        <li class="flex items-center gap-3 text-slate-700">✓ Focus on Metabolic Wellness</li>
-                        <li class="flex items-center gap-3 text-slate-700">✓ Fluent in English & French</li>
-                    </ul>
-                </div>
-                <img src="https://loremflickr.com/1200/800/doctor,man" class="rounded-[2rem] shadow-2xl h-[500px] w-full object-cover order-1 md:order-2" alt="Dr. Marcus Thorne">
-            </div>
-        </div>
+    <!-- Header Section -->
+    <section class="pt-40 pb-20 px-6 max-w-7xl mx-auto">
+        <h1 class="text-7xl font-bold tracking-tight text-slate-900 mb-6">Distinguished Care.</h1>
+        <p class="text-xl text-slate-500 max-w-2xl">Meet our multidisciplinary team of medical professionals committed to excellence at 807 Broadview Ave.</p>
     </section>
 
-    <!-- Care Philosophy -->
-    <section class="py-24 px-6 bg-medical-900 text-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h3 class="text-5xl font-bold mb-12">Our Commitment to You</h3>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 border border-white/10 rounded-[2rem]">
-                    <div class="text-3xl font-bold mb-4">98%</div>
-                    <p class="text-slate-300">Patient Satisfaction Rate</p>
-                </div>
-                <div class="p-8 border border-white/10 rounded-[2rem]">
-                    <div class="text-3xl font-bold mb-4">24/7</div>
-                    <p class="text-slate-300">Digital Portal Access</p>
-                </div>
-                <div class="p-8 border border-white/10 rounded-[2rem]">
-                    <div class="text-3xl font-bold mb-4">0min</div>
-                    <p class="text-slate-300">Average Wait Time</p>
-                </div>
+    <!-- Doctors Grid -->
+    <section class="pb-24 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Doctor 1 -->
+            <div class="group bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-2xl transition-all duration-500">
+                <img src="https://loremflickr.com/800/800/doctor" class="w-full h-80 object-cover rounded-3xl mb-8" alt="Dr. Name">
+                <h3 class="text-2xl font-semibold text-teal-900">Dr. Sarah Jenkins</h3>
+                <p class="text-teal-600 font-medium mb-4">Internal Medicine Specialist</p>
+                <p class="text-slate-500 text-sm leading-relaxed mb-6">15+ years of clinical experience specializing in preventative health and complex diagnostics.</p>
+                <button class="bg-slate-900 text-white px-6 py-3 rounded-xl text-sm font-semibold hover:bg-teal-600 transition-colors">Book Consultation</button>
+            </div>
+            <!-- Doctor 2 -->
+            <div class="group bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-2xl transition-all duration-500">
+                <img src="https://loremflickr.com/800/800/surgeon" class="w-full h-80 object-cover rounded-3xl mb-8" alt="Dr. Name">
+                <h3 class="text-2xl font-semibold text-teal-900">Dr. Marcus Chen</h3>
+                <p class="text-teal-600 font-medium mb-4">Orthopedic Surgery</p>
+                <p class="text-slate-500 text-sm leading-relaxed mb-6">Focusing on sports injury recovery and minimally invasive surgical techniques for mobility.</p>
+                <button class="bg-slate-900 text-white px-6 py-3 rounded-xl text-sm font-semibold hover:bg-teal-600 transition-colors">Book Consultation</button>
             </div>
         </div>
     </section>
 
     <!-- Location Section -->
-    <section class="py-24 px-6">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold text-medical-900 mb-12 text-center">Find Us in Toronto</h2>
-            <div class="bg-white p-4 rounded-[2rem] shadow-2xl">
-                <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-96 rounded-[1.5rem]" frameborder="0"></iframe>
+    <section class="py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-5xl font-bold mb-8">Clinical Excellence in Toronto.</h2>
+                <p class="text-slate-400 mb-6">Located in the heart of the Broadview community. Accessible, modern, and dedicated to your longevity.</p>
+                <div class="text-sm border-l-2 border-teal-500 pl-4">
+                    <p class="font-bold">807 Broadview Ave, Toronto</p>
+                    <p>ON M4K 2P8, Canada</p>
+                    <p class="mt-2 text-teal-400">+1 416-366-2000</p>
+                </div>
             </div>
+            <iframe class="rounded-3xl shadow-2xl w-full h-96" src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" frameborder="0" allowfullscreen=""></iframe>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-medical-900 text-slate-400 py-24 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+    <footer class="bg-[#1A1A1A] py-16 text-slate-400">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
             <div>
-                <h4 class="text-white font-bold text-lg mb-6">Albany Medical</h4>
-                <p>807 Broadview Ave<br>Toronto, ON M4K 2P8</p>
+                <h4 class="text-white font-bold mb-4">Albany Medical</h4>
+                <p class="text-sm">Setting the gold standard for clinical care in Toronto.</p>
+            </div>
+            <div class="flex flex-col gap-2">
+                <a href="index.html" class="hover:text-teal-400 transition-colors">Home</a>
+                <a href="doctors.html" class="hover:text-teal-400 transition-colors">Doctors</a>
+                <a href="services.html" class="hover:text-teal-400 transition-colors">Services</a>
+                <a href="contact.html" class="hover:text-teal-400 transition-colors">Contact</a>
             </div>
             <div>
-                <h4 class="text-white font-bold text-lg mb-6">Navigation</h4>
-                <ul class="space-y-4">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="doctors.html">Physicians</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                <h4 class="text-white font-bold mb-4">Social</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-teal-400">LinkedIn</a>
+                    <a href="#" class="hover:text-teal-400">Twitter</a>
+                </div>
             </div>
-            <div>
-                <h4 class="text-white font-bold text-lg mb-6">Connect</h4>
-                <p>+1 416-366-2000</p>
-                <p>info@albanymed.ca</p>
-            </div>
-            <div>
-                <h4 class="text-white font-bold text-lg mb-6">Socials</h4>
-                <p>LinkedIn</p>
-                <p>Twitter</p>
-                <p>Instagram</p>
-            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-800 text-xs text-slate-600">
+            © 2024 Albany Medical Building. All rights reserved.
         </div>
     </footer>
 
