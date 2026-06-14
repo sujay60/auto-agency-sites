@@ -3,92 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Physicians | Albany Medical Building</title>
+    <title>Our Doctors | Albany Medical Building</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-[#F8FAFC] text-slate-900 antialiased">
+<body class="bg-[#F8FAFC] text-slate-900">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div class="text-xl font-bold tracking-tighter text-teal-900">ALBANY MEDICAL</div>
-            <div class="flex gap-8 text-sm font-medium text-slate-600">
+    <nav class="fixed w-full z-50 px-8 py-6">
+        <div class="max-w-7xl mx-auto backdrop-blur-md bg-white/70 border border-slate-200 rounded-[2rem] px-8 py-4 flex items-center justify-between shadow-sm">
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-teal-900">ALBANY<span class="text-teal-600">.</span></a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
                 <a href="index.html" class="hover:text-teal-600 transition">Home</a>
                 <a href="doctors.html" class="text-teal-700">Doctors</a>
                 <a href="services.html" class="hover:text-teal-600 transition">Services</a>
                 <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
             </div>
+            <a href="contact.html" class="bg-teal-900 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-teal-800 transition">Book Visit</a>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="py-24 px-6 text-center">
-        <h1 class="text-6xl font-bold tracking-tight text-teal-950 mb-6">Expert Care. Clinical Precision.</h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Meet our team of board-certified specialists dedicated to your health and wellness at the heart of Toronto.</p>
+    <header class="pt-40 pb-24 px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-6xl md:text-7xl font-bold tracking-tighter text-slate-900 mb-6">Expertise in Care.</h1>
+            <p class="text-xl text-slate-500 max-w-2xl mx-auto">Meet our team of specialized practitioners committed to your wellness at Albany Medical Building.</p>
+        </div>
     </header>
 
-    <!-- Doctor Grid -->
-    <section class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div class="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all border border-slate-100">
-            <img src="https://loremflickr.com/1200/800/doctor" class="w-full h-80 object-cover rounded-3xl mb-8" alt="Dr. Sarah Jenkins">
-            <h3 class="text-2xl font-bold mb-2">Dr. Sarah Jenkins</h3>
-            <p class="text-teal-600 font-semibold mb-4">Internal Medicine & Cardiology</p>
-            <p class="text-slate-500 leading-relaxed">Specializing in preventive heart health and chronic disease management. Over 15 years of excellence in clinical care.</p>
-        </div>
-        <div class="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all border border-slate-100">
-            <img src="https://loremflickr.com/1200/800/physician" class="w-full h-80 object-cover rounded-3xl mb-8" alt="Dr. Marcus Thorne">
-            <h3 class="text-2xl font-bold mb-2">Dr. Marcus Thorne</h3>
-            <p class="text-teal-600 font-semibold mb-4">Dermatology & Aesthetic Medicine</p>
-            <p class="text-slate-500 leading-relaxed">Expert in advanced skin health, laser therapies, and dermatological surgery. Committed to precision and patient comfort.</p>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="max-w-5xl mx-auto px-6 py-24">
-        <h2 class="text-4xl font-bold tracking-tight text-teal-950 mb-12 text-center">Frequently Asked Questions</h2>
-        <div class="space-y-6">
-            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
-                <h4 class="font-bold text-lg mb-2">How do I book a consultation?</h4>
-                <p class="text-slate-500">You can book online via our contact portal or call us directly at +1 416-366-2000.</p>
+    <!-- Doctors Grid -->
+    <section class="max-w-7xl mx-auto px-8 pb-24">
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Profile Card -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 group hover:shadow-2xl transition-all duration-500">
+                <img src="https://loremflickr.com/1200/800/doctor" alt="Doctor" class="w-full h-80 object-cover rounded-3xl mb-8">
+                <h3 class="text-2xl font-bold text-slate-900">Dr. Elena Rodriguez</h3>
+                <p class="text-teal-600 font-medium mb-4">Internal Medicine Specialist</p>
+                <p class="text-slate-600 mb-6">Over 15 years of experience in preventative healthcare and complex chronic condition management.</p>
+                <div class="flex gap-4">
+                    <span class="px-4 py-2 bg-slate-100 rounded-full text-xs font-semibold uppercase tracking-wider">Board Certified</span>
+                    <span class="px-4 py-2 bg-slate-100 rounded-full text-xs font-semibold uppercase tracking-wider">Top Rated</span>
+                </div>
             </div>
-            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
-                <h4 class="font-bold text-lg mb-2">Are you accepting new patients?</h4>
-                <p class="text-slate-500">Yes, our clinic is currently accepting new registrations for primary care.</p>
+
+            <!-- Profile Card -->
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 group hover:shadow-2xl transition-all duration-500">
+                <img src="https://loremflickr.com/1200/800/surgeon" alt="Doctor" class="w-full h-80 object-cover rounded-3xl mb-8">
+                <h3 class="text-2xl font-bold text-slate-900">Dr. Marcus Thorne</h3>
+                <p class="text-teal-600 font-medium mb-4">Cardiology & Diagnostics</p>
+                <p class="text-slate-600 mb-6">Expertise in cardiovascular imaging and non-invasive diagnostic procedures for long-term heart health.</p>
+                <div class="flex gap-4">
+                    <span class="px-4 py-2 bg-slate-100 rounded-full text-xs font-semibold uppercase tracking-wider">Clinical Researcher</span>
+                </div>
             </div>
         </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="max-w-7xl mx-auto px-6 py-24">
-        <h2 class="text-4xl font-bold tracking-tight text-teal-950 mb-12">Visit Our Clinic</h2>
-        <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-96 rounded-3xl shadow-2xl border-none"></iframe>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-teal-950 text-white py-20 mt-24">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+    <footer class="bg-slate-900 text-slate-400 py-24 px-8">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16">
             <div>
-                <h5 class="font-bold mb-4">Albany Medical Building</h5>
-                <p class="text-teal-300 text-sm">807 Broadview Ave, Toronto, ON M4K 2P8</p>
-                <p class="text-teal-300 text-sm">+1 416-366-2000</p>
+                <h2 class="text-white text-xl font-bold mb-6">Albany Medical.</h2>
+                <p>807 Broadview Ave<br>Toronto, ON M4K 2P8</p>
+                <p class="mt-4 text-white font-semibold">+1 416-366-2000</p>
             </div>
             <div>
-                <h5 class="font-bold mb-4">Navigation</h5>
-                <ul class="space-y-2 text-teal-300 text-sm">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="doctors.html">Doctors</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <h3 class="text-white font-semibold mb-6">Navigate</h3>
+                <ul class="space-y-4">
+                    <li><a href="index.html" class="hover:text-teal-400 transition">Home</a></li>
+                    <li><a href="doctors.html" class="hover:text-teal-400 transition">Doctors</a></li>
+                    <li><a href="services.html" class="hover:text-teal-400 transition">Services</a></li>
+                    <li><a href="contact.html" class="hover:text-teal-400 transition">Contact</a></li>
                 </ul>
             </div>
             <div>
-                <h5 class="font-bold mb-4">Social</h5>
-                <p class="text-teal-300 text-sm">Follow us for health updates and clinic announcements.</p>
+                <h3 class="text-white font-semibold mb-6">Connect</h3>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-teal-600 transition">IG</a>
+                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-teal-600 transition">LI</a>
+                </div>
             </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-24 pt-8 border-t border-slate-800 text-sm text-center">
+            © 2024 Albany Medical Building. All rights reserved.
         </div>
     </footer>
 
