@@ -3,143 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Information | Dr. Rauchwerger, M., M.D.</title>
+    <title>Patient Information | Dr. Rauchwerger, M.D. | Albany Clinic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clinical: {
-                            50: '#f0fdfa',
-                            900: '#0f766e',
-                            950: '#064e3b',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal { opacity: 1; transform: translateY(0); }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-[#FAFAFA] text-[#1A1A1A]">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-8 py-6">
-        <div class="max-w-7xl mx-auto glass rounded-[2rem] border border-slate-200 shadow-sm px-8 py-4 flex justify-between items-center">
-            <div class="font-bold text-xl tracking-tight text-clinical-950">DR. RAUCHWERGER</div>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-clinical-900 transition">Home</a>
-                <a href="services.html" class="hover:text-clinical-900 transition">Services</a>
-                <a href="patient-info.html" class="text-clinical-900 underline decoration-2 underline-offset-4">Patient Info</a>
-                <a href="contact.html" class="hover:text-clinical-900 transition">Contact</a>
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-[#2D5A5E]">Dr. Rauchwerger</a>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-[#2D5A5E]">Home</a>
+                <a href="about.html" class="hover:text-[#2D5A5E]">About</a>
+                <a href="services.html" class="hover:text-[#2D5A5E]">Services</a>
+                <a href="patient-info.html" class="text-[#2D5A5E]">Patient Info</a>
+                <a href="contact.html" class="hover:text-[#2D5A5E]">Contact</a>
             </div>
-            <a href="contact.html" class="bg-clinical-950 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-teal-800 transition">Book Visit</a>
+            <a href="contact.html" class="bg-[#2D5A5E] text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#1A3638] transition">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <header class="pt-40 pb-24 px-8">
-        <div class="max-w-5xl mx-auto text-center">
-            <h1 class="text-6xl md:text-7xl font-bold text-slate-950 mb-8">Patient Preparation</h1>
-            <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">We prioritize clarity, comfort, and professional excellence. Everything you need to know for a seamless visit to our Toronto clinic.</p>
+    <header class="py-32 bg-[#E8F0EF]">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h1 class="text-7xl font-extrabold text-[#2D5A5E] mb-6">Patient Resources</h1>
+            <p class="text-xl text-[#1A3638] max-w-2xl mx-auto">Providing clarity and comfort throughout your medical journey at Albany Clinic.</p>
         </div>
     </header>
 
-    <!-- Section 1: The Experience -->
-    <section class="py-24 px-8 bg-white">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <section class="py-32 bg-[#FAFAFA] reveal fade-in-up">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <span class="text-clinical-900 font-semibold tracking-widest uppercase text-sm">Our Philosophy</span>
-                <h2 class="text-4xl font-bold mt-4 mb-6">What to Expect During Your Visit</h2>
-                <p class="text-lg text-slate-600 mb-8 leading-relaxed">At 807 Broadview, your time is valued. Our consultation process is designed to be thorough, ensuring that no question goes unanswered. From your initial check-in to your departure, expect a high-touch, concierge-level experience.</p>
+                <h2 class="text-5xl font-bold text-[#1A1A1A] mb-8">What to Expect</h2>
+                <p class="text-lg text-gray-600 mb-6">Your first visit with Dr. Rauchwerger is centered on comprehensive understanding. We review your medical history, current symptoms, and tailor a diagnostic approach that prioritizes your unique health goals.</p>
                 <ul class="space-y-4">
-                    <li class="flex items-start gap-4"><div class="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center text-clinical-900">✓</div> Digital-first intake process</li>
-                    <li class="flex items-start gap-4"><div class="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center text-clinical-900">✓</div> Same-day electronic chart updates</li>
-                    <li class="flex items-start gap-4"><div class="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center text-clinical-900">✓</div> Comprehensive follow-up communication</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-[#C4A484]"></i> Comprehensive health screening</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-[#C4A484]"></i> Personalized treatment pathways</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-[#C4A484]"></i> State-of-the-art diagnostic facilities</li>
                 </ul>
             </div>
-            <img src="https://loremflickr.com/1200/800/clinic,doctor" alt="Clinical environment" class="w-full h-full object-cover rounded-[2rem] shadow-2xl">
+            <img src="https://loremflickr.com/800/600/doctors" class="rounded-3xl shadow-2xl" alt="Consultation">
         </div>
     </section>
 
-    <!-- Section 2: Policy Bento Grid -->
-    <section class="py-24 px-8 bg-slate-50">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold mb-16 text-center">Office Policies</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-                    <h3 class="text-2xl font-semibold mb-4">Cancellations</h3>
-                    <p class="text-slate-600">Please provide 48 hours notice for any appointment changes to allow us to accommodate other patients in need.</p>
-                </div>
-                <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-                    <h3 class="text-2xl font-semibold mb-4">Privacy</h3>
-                    <p class="text-slate-600">Your health data is protected under the strictest PIPEDA compliance standards, ensuring complete confidentiality.</p>
-                </div>
-                <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-                    <h3 class="text-2xl font-semibold mb-4">Documentation</h3>
-                    <p class="text-slate-600">Please bring your OHIP card and a list of any current medications you are taking to your first appointment.</p>
+    <section class="py-32 bg-[#121212] text-white reveal fade-in-up">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <img src="https://loremflickr.com/800/600/hospital" class="rounded-3xl shadow-2xl" alt="Clinic Office">
+            </div>
+            <div class="order-1 md:order-2">
+                <h2 class="text-5xl font-bold text-[#C4A484] mb-8">Insurance & Forms</h2>
+                <p class="text-lg text-gray-300 mb-6">To streamline your visit, please complete our digital registration forms in advance. We accept most major insurance providers and assist with direct billing where applicable.</p>
+                <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-8 rounded-3xl">
+                    <h3 class="text-2xl font-semibold mb-4">Office Hours</h3>
+                    <p class="text-gray-400">Mon - Fri: 9:00 AM - 5:00 PM</p>
+                    <p class="text-gray-400">Sat: By Appointment Only</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 3: Preparation Instructions -->
-    <section class="py-24 px-8">
-        <div class="max-w-4xl mx-auto bg-clinical-950 rounded-[3rem] p-16 text-white text-center">
-            <h2 class="text-4xl font-bold mb-8">Ready for Your Appointment?</h2>
-            <p class="text-teal-100 text-lg mb-12">Review these guidelines to ensure your visit is as efficient and helpful as possible.</p>
-            <div class="grid sm:grid-cols-2 gap-8 text-left">
-                <div class="bg-white/10 p-6 rounded-2xl">
-                    <h4 class="font-bold mb-2">Health History</h4>
-                    <p class="text-sm text-teal-100">Submit your history forms online 24 hours prior to your visit.</p>
-                </div>
-                <div class="bg-white/10 p-6 rounded-2xl">
-                    <h4 class="font-bold mb-2">Consultation List</h4>
-                    <p class="text-sm text-teal-100">Write down your top three concerns to discuss with Dr. Rauchwerger.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 4: Location Map -->
-    <section class="py-24 px-8">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold mb-12 text-center">Finding Us</h2>
-            <iframe class="w-full h-96 rounded-[3rem] shadow-2xl" src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-950 text-white py-24 px-8">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
-            <div class="col-span-2">
-                <h4 class="text-2xl font-bold mb-4">Dr. Rauchwerger, M., M.D.</h4>
-                <p class="text-slate-400">807 Broadview Ave, Toronto, ON M4K 2P8</p>
-                <p class="text-slate-400">+1 416-461-9471</p>
+    <footer class="bg-[#121212] text-white py-20 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <h3 class="text-xl font-bold mb-4 text-[#C4A484]">Albany Clinic</h3>
+                <p class="text-gray-400 text-sm">Providing expert medical care in the heart of Toronto.</p>
             </div>
             <div>
-                <h5 class="font-semibold mb-4">Navigation</h5>
-                <ul class="space-y-2 text-slate-400">
-                    <li><a href="index.html">Home</a></li>
+                <h3 class="text-xl font-bold mb-4 text-[#C4A484]">Links</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="patient-info.html">Patient Info</a></li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div>
-                <h5 class="font-semibold mb-4">Social</h5>
-                <ul class="space-y-2 text-slate-400">
-                    <li>LinkedIn</li>
-                    <li>Toronto Medical Board</li>
-                </ul>
+                <h3 class="text-xl font-bold mb-4 text-[#C4A484]">Contact</h3>
+                <p class="text-sm text-gray-400">807 Broadview Ave, Toronto</p>
+                <p class="text-sm text-gray-400">+1 416-461-9471</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4 text-[#C4A484]">Connect</h3>
+                <div class="flex gap-4">
+                    <i class="fab fa-facebook text-xl hover:text-[#C4A484]"></i>
+                    <i class="fab fa-linkedin text-xl hover:text-[#C4A484]"></i>
+                </div>
             </div>
         </div>
     </footer>
 
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('reveal');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-up').forEach(section => observer.observe(section));
+    </script>
 </body>
 </html>
