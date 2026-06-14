@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Care & Family Health Yorkville | Premium Medical Care</title>
+    <title>Care & Family Health Yorkville | Elite Medical Care</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script>
@@ -12,9 +12,12 @@
                 extend: {
                     colors: {
                         clinical: {
-                            50: '#F0F9F8',
-                            500: '#2D9DA6',
-                            900: '#0F2D2E',
+                            50: '#f0fdfa',
+                            900: '#0f766e',
+                            950: '#115e59',
+                        },
+                        neutral: {
+                            850: '#1a1a1a'
                         }
                     }
                 }
@@ -23,67 +26,99 @@
     </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-stone-50 text-neutral-900">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 backdrop-blur-lg bg-white/70 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold text-clinical-900 tracking-tighter">CARE&<span class="text-clinical-500">YORKVILLE</span></a>
-            <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="text-clinical-500">Home</a>
-                <a href="services.html" class="hover:text-clinical-500 transition">Services</a>
-                <a href="doctors.html" class="hover:text-clinical-500 transition">Doctors</a>
-                <a href="contact.html" class="hover:text-clinical-500 transition">Contact</a>
+    <nav class="fixed w-full z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto glass rounded-full shadow-sm border border-stone-200 px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-clinical-900">CARE & FAMILY</a>
+            <div class="flex gap-8 text-sm font-medium text-stone-600">
+                <a href="index.html" class="hover:text-clinical-900 transition">Home</a>
+                <a href="services.html" class="hover:text-clinical-900 transition">Services</a>
+                <a href="doctors.html" class="hover:text-clinical-900 transition">Doctors</a>
+                <a href="contact.html" class="hover:text-clinical-900 transition">Contact</a>
             </div>
-            <a href="contact.html" class="bg-clinical-900 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-clinical-500 transition">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="max-w-7xl mx-auto px-6 py-24">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
+    <!-- Hero -->
+    <header class="pt-32 pb-24 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-clinical-50 text-clinical-500 text-xs font-bold uppercase tracking-widest mb-6">
-                    <span>★ 4.5 Rating (599 Reviews)</span>
+                <div class="inline-block px-4 py-1 rounded-full bg-teal-100 text-clinical-900 text-sm font-semibold mb-6">
+                    ★ 4.5 Stars from 599 Reviews
                 </div>
-                <h1 class="text-6xl md:text-7xl font-bold tracking-tighter text-clinical-900 mb-8 leading-[1.1]">Modern Health for the Yorkville Community.</h1>
-                <p class="text-xl text-slate-500 mb-10 max-w-md">Premium, personalized medical care located in the heart of Toronto. Your health, our priority.</p>
-                <div class="flex gap-4">
-                    <a href="contact.html" class="bg-clinical-500 text-white px-8 py-4 rounded-2xl font-semibold shadow-lg hover:bg-clinical-900 transition">Schedule Visit</a>
-                    <a href="services.html" class="bg-white border border-slate-200 px-8 py-4 rounded-2xl font-semibold hover:bg-slate-50 transition">Explore Services</a>
-                </div>
+                <h1 class="text-6xl md:text-7xl font-bold tracking-tight mb-8">Redefining Family Health in Yorkville.</h1>
+                <p class="text-xl text-stone-500 mb-10 leading-relaxed">Precision medical care, patient-first philosophy. Serving the heart of Toronto from our Cumberland Street practice.</p>
+                <a href="contact.html" class="bg-clinical-900 text-white px-10 py-4 rounded-full font-semibold hover:bg-clinical-950 transition shadow-lg shadow-teal-900/20">Book an Appointment</a>
             </div>
-            <img src="https://loremflickr.com/1200/800/doctors" alt="Medical Clinic" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
+            <img src="https://loremflickr.com/1200/800/doctors" alt="Clinic Interior" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
         </div>
     </header>
 
-    <!-- Location & Overview -->
-    <section class="max-w-7xl mx-auto px-6 py-24 bg-white rounded-[3rem] my-12">
-        <div class="grid md:grid-cols-2 gap-16">
-            <div>
-                <h2 class="text-4xl font-bold tracking-tight mb-6">Located in the Heart of Toronto</h2>
-                <p class="text-slate-600 mb-8">Visit us at 162 Cumberland St #200. We provide a sanctuary for health and wellness, combining clinical excellence with a boutique atmosphere.</p>
-                <div class="space-y-4">
-                    <p class="font-bold">162 Cumberland St #200, Toronto, ON</p>
-                    <p class="text-clinical-500 font-bold">+1 647-951-4770</p>
+    <!-- Overview -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center">Modern Care. Traditional Values.</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 bg-stone-50 rounded-3xl border border-stone-100">
+                    <h3 class="text-xl font-bold mb-4">General Practice</h3>
+                    <p class="text-stone-600">Comprehensive health screenings and routine family care for all ages.</p>
                 </div>
+                <div class="p-8 bg-stone-50 rounded-3xl border border-stone-100">
+                    <h3 class="text-xl font-bold mb-4">Preventative Medicine</h3>
+                    <p class="text-stone-600">Proactive wellness planning designed to sustain your long-term vitality.</p>
+                </div>
+                <div class="p-8 bg-stone-50 rounded-3xl border border-stone-100">
+                    <h3 class="text-xl font-bold mb-4">Specialized Consults</h3>
+                    <p class="text-stone-600">Access to elite specialists in a comfortable, discreet environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 px-6 bg-stone-50">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">Frequently Asked</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+                    <h4 class="font-bold mb-2">Do you accept new patients?</h4>
+                    <p class="text-stone-600">Yes, we are currently accepting new patient registrations in the Yorkville area.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+                    <h4 class="font-bold mb-2">What is your availability?</h4>
+                    <p class="text-stone-600">Appointments can be scheduled online or via phone Monday through Saturday.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl font-bold mb-6">Visit Us in Yorkville</h2>
+                <p class="text-lg text-stone-600 mb-8">162 Cumberland St #200, Toronto, ON M5R 3N5, Canada</p>
+                <p class="text-2xl font-bold text-clinical-900">+1 647-951-4770</p>
             </div>
             <iframe src="https://www.google.com/maps?q=162+Cumberland+St+#200+Toronto+ON+M5R+3N5+Canada&output=embed" class="w-full h-96 rounded-3xl shadow-2xl border-0"></iframe>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-clinical-900 text-slate-300 py-24">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
-            <div class="col-span-2">
-                <h3 class="text-white text-xl font-bold mb-4">Care & Family Health Yorkville</h3>
-                <p class="text-sm">Providing exceptional, patient-centered care in Toronto. We combine advanced medical expertise with a compassionate approach.</p>
+    <footer class="bg-neutral-850 text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div>
+                <h4 class="font-bold mb-4">Care & Family</h4>
+                <p class="text-stone-400 text-sm">Elite health services in the heart of Toronto.</p>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">Navigate</h4>
-                <ul class="space-y-2 text-sm">
+                <h4 class="font-bold mb-4">Explore</h4>
+                <ul class="text-stone-400 text-sm space-y-2">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="doctors.html">Doctors</a></li>
@@ -91,13 +126,16 @@
                 </ul>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">Contact</h4>
-                <p class="text-sm">+1 647-951-4770</p>
-                <p class="text-sm mt-2">162 Cumberland St #200</p>
+                <h4 class="font-bold mb-4">Contact</h4>
+                <p class="text-stone-400 text-sm">162 Cumberland St #200<br>Toronto, ON M5R 3N5</p>
             </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-800 text-xs text-slate-500 text-center">
-            © 2024 Care & Family Health Yorkville. All rights reserved.
+            <div>
+                <h4 class="font-bold mb-4">Socials</h4>
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 rounded-full bg-white/10"></div>
+                    <div class="w-10 h-10 rounded-full bg-white/10"></div>
+                </div>
+            </div>
         </div>
     </footer>
 
