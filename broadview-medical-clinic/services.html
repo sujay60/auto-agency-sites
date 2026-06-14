@@ -3,126 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Broadview Medical Clinic | Toronto</title>
+    <title>Our Medical Services | Broadview Medical Clinic</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-        .is-visible { opacity: 1; transform: translateY(0); }
-        .hover-scale { transition: transform 0.3s ease; }
-        .hover-scale:hover { transform: scale(1.02); }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        .floating { animation: floating 3s ease-in-out infinite; }
+        @keyframes floating { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
     </style>
 </head>
-<body class="bg-[#FAFAFA] text-[#101820]">
+<body class="bg-[#F8F9FA] text-[#1D3557]">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="index.html" class="text-2xl font-extrabold text-[#006B7F]">BROADVIEW<span class="text-[#4DAB9A]">MED</span></a>
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#006D77]/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold text-[#006D77]">Broadview Medical</a>
             <div class="hidden md:flex gap-8 font-medium">
-                <a href="index.html">Home</a>
-                <a href="services.html" class="text-[#006B7F]">Services</a>
-                <a href="doctors.html">Doctors</a>
-                <a href="about.html">About</a>
+                <a href="index.html" class="hover:text-[#E29578]">Home</a>
+                <a href="services.html" class="text-[#006D77]">Services</a>
+                <a href="doctors.html" class="hover:text-[#E29578]">Doctors</a>
+                <a href="about.html" class="hover:text-[#E29578]">About</a>
+                <a href="contact.html" class="hover:text-[#E29578]">Contact</a>
             </div>
-            <a href="contact.html" class="bg-[#006B7F] text-white px-8 py-3 rounded-full hover:bg-[#004754] transition">Book Now</a>
+            <a href="contact.html" class="bg-[#006D77] text-white px-8 py-3 rounded-full hover:bg-[#004B52] transition">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="py-32 bg-[#FAFAFA]">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="fade-in-up">
-                <h1 class="text-7xl font-extrabold mb-6 text-[#1A2224]">Comprehensive Medical Care</h1>
-                <p class="text-xl text-gray-600 mb-8">Professional, patient-centered care at the heart of Toronto. We provide a full spectrum of health services tailored to your individual needs.</p>
-            </div>
-            <img src="https://loremflickr.com/800/600/doctor,clinic" alt="Medical Services" class="rounded-3xl shadow-2xl hover-scale">
-        </div>
+    <header class="pt-40 pb-28 px-6 text-center">
+        <h1 class="text-7xl font-extrabold text-[#1D3557] mb-6">Our Medical Services</h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Providing compassionate, evidence-based healthcare for the Toronto community.</p>
     </header>
 
-    <!-- Services Section -->
-    <section class="py-32 bg-[#1A2224] text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="col-span-2 p-10 rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10 hover-scale">
-                    <h2 class="text-4xl font-bold mb-6 text-[#4DAB9A]">Family Medicine</h2>
-                    <p class="text-lg text-gray-300">Our family physicians provide longitudinal care for patients of all ages, focusing on preventative health, chronic disease management, and long-term wellness plans.</p>
-                </div>
-                <div class="p-10 rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10 hover-scale">
-                    <h2 class="text-2xl font-bold mb-4 text-[#4DAB9A]">Walk-In Care</h2>
-                    <p class="text-gray-300">Urgent care for non-emergency medical concerns, available with professional efficiency.</p>
-                </div>
-                <div class="p-10 rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10 hover-scale">
-                    <h2 class="text-2xl font-bold mb-4 text-[#4DAB9A]">Physical Exams</h2>
-                    <p class="text-gray-300">Comprehensive annual health check-ups and specialized physical assessments.</p>
-                </div>
-                <div class="col-span-2 p-10 rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10 hover-scale">
-                    <h2 class="text-4xl font-bold mb-6 text-[#4DAB9A]">Referral Processes</h2>
-                    <p class="text-lg text-gray-300">Seamless coordination with Toronto's leading specialists to ensure your care journey is managed with precision and expertise.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Info Section -->
-    <section class="py-32 bg-[#FAFAFA]">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <img src="https://loremflickr.com/800/600/vaccination" alt="Vaccination" class="rounded-3xl shadow-2xl hover-scale">
-            <div class="fade-in-up">
-                <h2 class="text-6xl font-extrabold mb-8">Preventative Care & Vaccinations</h2>
-                <p class="text-xl text-gray-600 mb-8">Stay ahead of illness with our comprehensive immunization programs and preventative screenings, designed to protect you and your family year-round.</p>
-                <div class="flex gap-4">
-                    <div class="bg-[#E0F2F4] p-6 rounded-2xl">
-                        <h4 class="text-3xl font-bold text-[#006B7F]">4.3</h4>
-                        <p class="text-[#1A2224]">Google Rating</p>
-                    </div>
-                    <div class="bg-[#E0F2F4] p-6 rounded-2xl">
-                        <h4 class="text-3xl font-bold text-[#006B7F]">53+</h4>
-                        <p class="text-[#1A2224]">Verified Reviews</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-[#1A2224] text-white py-20">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+    <section class="py-32 px-6 bg-[#F8F9FA] reveal">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <h3 class="text-xl font-bold mb-4">Broadview Medical</h3>
+                <h2 class="text-5xl font-bold text-[#006D77] mb-8">Family Medicine</h2>
+                <p class="text-lg leading-relaxed mb-6">We provide comprehensive, ongoing care for patients of all ages. From infants to seniors, our doctors are committed to building long-term relationships to ensure optimal wellness for your entire family.</p>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3"><i class="fa fa-check text-[#E29578]"></i> Chronic disease management</li>
+                    <li class="flex items-center gap-3"><i class="fa fa-check text-[#E29578]"></i> Regular health checkups</li>
+                    <li class="flex items-center gap-3"><i class="fa fa-check text-[#E29578]"></i> Mental health support</li>
+                </ul>
+            </div>
+            <img src="https://loremflickr.com/800/600/doctor,clinic" alt="Family Medicine" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover">
+        </div>
+    </section>
+
+    <section class="py-32 px-6 bg-[#2D3436] text-white reveal">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <img src="https://loremflickr.com/800/600/vaccination" alt="Preventative Care" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover">
+            </div>
+            <div class="order-1 md:order-2">
+                <h2 class="text-5xl font-bold text-[#83C5BE] mb-8">Prevention & Wellness</h2>
+                <p class="text-lg leading-relaxed mb-6">Proactive healthcare is the foundation of a long, healthy life. We focus on early detection, screening, and immunization programs to prevent health issues before they arise.</p>
+                <div class="grid grid-cols-2 gap-6 bg-white/5 p-8 rounded-3xl border border-white/10">
+                    <div>
+                        <h4 class="font-bold text-[#E29578]">Vaccinations</h4>
+                        <p class="text-sm">Seasonal flu, travel, and routine shots.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-[#E29578]">Screenings</h4>
+                        <p class="text-sm">Cancer, cardiovascular, and diabetes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 bg-white reveal">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="col-span-3 mb-12">
+                <h2 class="text-5xl font-bold">Specialized Care Pathways</h2>
+            </div>
+            <div class="bg-[#F8F9FA] p-10 rounded-3xl border border-[#006D77]/10 hover:scale-105 transition">
+                <i class="fa fa-user-md text-4xl text-[#E29578] mb-6"></i>
+                <h3 class="text-2xl font-bold mb-4">Specialist Referrals</h3>
+                <p>Seamless coordination with Toronto's leading specialists for complex medical needs.</p>
+            </div>
+            <div class="bg-[#F8F9FA] p-10 rounded-3xl border border-[#006D77]/10 hover:scale-105 transition">
+                <i class="fa fa-flask text-4xl text-[#E29578] mb-6"></i>
+                <h3 class="text-2xl font-bold mb-4">Diagnostic Lab</h3>
+                <p>On-site testing services to speed up your diagnosis and treatment plan.</p>
+            </div>
+            <div class="bg-[#F8F9FA] p-10 rounded-3xl border border-[#006D77]/10 hover:scale-105 transition">
+                <i class="fa fa-heartbeat text-4xl text-[#E29578] mb-6"></i>
+                <h3 class="text-2xl font-bold mb-4">Minor Procedures</h3>
+                <p>Expert care for minor surgeries, wound care, and aesthetic procedures.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-[#006D77] py-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+            <div>
+                <h3 class="text-6xl font-extrabold text-[#83C5BE]">4.3</h3>
+                <p class="mt-2 text-white/80 uppercase tracking-widest text-sm">Google Rating</p>
+            </div>
+            <div>
+                <h3 class="text-6xl font-extrabold text-[#83C5BE]">53+</h3>
+                <p class="mt-2 text-white/80 uppercase tracking-widest text-sm">Patient Reviews</p>
+            </div>
+            <div>
+                <h3 class="text-6xl font-extrabold text-[#83C5BE]">10+</h3>
+                <p class="mt-2 text-white/80 uppercase tracking-widest text-sm">Experienced Staff</p>
+            </div>
+            <div>
+                <h3 class="text-6xl font-extrabold text-[#83C5BE]">797</h3>
+                <p class="mt-2 text-white/80 uppercase tracking-widest text-sm">Broadview Ave</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-[#2D3436] text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div>
+                <h4 class="text-xl font-bold mb-6 text-[#83C5BE]">Broadview Medical</h4>
                 <p class="text-gray-400">797 Broadview Ave, Toronto, ON M4K 2P8</p>
             </div>
             <div>
-                <h3 class="font-bold mb-4">Links</h3>
-                <ul class="text-gray-400 space-y-2">
+                <h4 class="text-xl font-bold mb-6">Navigation</h4>
+                <ul class="space-y-2 text-gray-400">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
                 </ul>
             </div>
             <div>
-                <h3 class="font-bold mb-4">Contact</h3>
+                <h4 class="text-xl font-bold mb-6">Contact</h4>
                 <p class="text-gray-400">+1 416-463-3228</p>
             </div>
-            <div class="flex gap-4">
-                <i class="fab fa-facebook text-2xl"></i>
-                <i class="fab fa-instagram text-2xl"></i>
+            <div>
+                <h4 class="text-xl font-bold mb-6">Connect</h4>
+                <div class="flex gap-4">
+                    <i class="fab fa-facebook text-2xl"></i>
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
             </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-white/10 text-center text-gray-500">
-            © 2024 Broadview Medical Clinic. All rights reserved.
         </div>
     </footer>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('is-visible');
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, { threshold: 0.1 });
-
-        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+        document.querySelectorAll('.reveal').forEach(el => {
+            el.classList.add('fade-in-up');
+            observer.observe(el);
+        });
     </script>
 </body>
 </html>

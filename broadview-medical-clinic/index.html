@@ -1,134 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Broadview Medical Clinic | Trusted Healthcare in Toronto</title>
+    <title>Broadview Medical Clinic | Trusted Doctors in Albany Street, Toronto</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-        .fade-in-up.active { opacity: 1; transform: translateY(0); }
-        .glass { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        @keyframes floating { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
+        .floating { animation: floating 6s ease-in-out infinite; }
     </style>
 </head>
-<body class="bg-[#FAFAFA] text-[#101820]">
+<body class="bg-[#F8F9FA] text-[#1D3557]">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 glass bg-white/80 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-[#006B7F]">Broadview Medical</a>
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-extrabold text-[#006D77]">BROADVIEW<span class="text-[#E29578]">MED</span></a>
             <div class="hidden md:flex gap-8 font-medium">
-                <a href="index.html" class="hover:text-[#4DAB9A]">Home</a>
-                <a href="services.html" class="hover:text-[#4DAB9A]">Services</a>
-                <a href="doctors.html" class="hover:text-[#4DAB9A]">Doctors</a>
-                <a href="about.html" class="hover:text-[#4DAB9A]">About</a>
-                <a href="contact.html" class="hover:text-[#4DAB9A]">Contact</a>
+                <a href="index.html" class="hover:text-[#006D77]">Home</a>
+                <a href="services.html" class="hover:text-[#006D77]">Services</a>
+                <a href="doctors.html" class="hover:text-[#006D77]">Doctors</a>
+                <a href="about.html" class="hover:text-[#006D77]">About</a>
+                <a href="contact.html" class="hover:text-[#006D77]">Contact</a>
             </div>
-            <a href="contact.html" class="bg-[#006B7F] text-white px-8 py-3 rounded-full hover:bg-[#004754] transition">Book Appointment</a>
+            <a href="contact.html" class="bg-[#006D77] text-white px-8 py-3 rounded-full hover:bg-[#004B52] transition">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="py-32 px-6">
+    <header class="pt-40 pb-32 px-6">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="fade-in-up">
-                <span class="text-[#006B7F] font-semibold tracking-widest uppercase text-sm">Premier Healthcare in Toronto</span>
-                <h1 class="text-6xl md:text-7xl font-extrabold mt-6 leading-tight">Your Health, <br><span class="text-[#4DAB9A]">Our Commitment.</span></h1>
-                <p class="text-xl text-gray-600 mt-8 mb-10">Providing sophisticated medical precision and restorative wellness at the heart of Albany Street, Toronto.</p>
+            <div class="reveal">
+                <h1 class="text-7xl font-extrabold leading-tight mb-8">Compassionate Care in the Heart of <span class="text-[#006D77]">Toronto</span></h1>
+                <p class="text-xl text-gray-600 mb-10">Providing refined clinical excellence and modern healthcare tailored to your family's needs at 797 Broadview Ave.</p>
                 <div class="flex gap-4">
-                    <a href="#" class="bg-[#006B7F] text-white px-10 py-4 rounded-full font-bold">Request Visit</a>
-                    <a href="#" class="border-2 border-[#006B7F] text-[#006B7F] px-10 py-4 rounded-full font-bold">Our Services</a>
+                    <button class="bg-[#006D77] text-white px-10 py-4 rounded-full font-bold">Get Started</button>
+                    <button class="border border-[#006D77] text-[#006D77] px-10 py-4 rounded-full font-bold">Our Services</button>
                 </div>
             </div>
-            <img src="https://loremflickr.com/800/600/doctors" class="rounded-3xl shadow-2xl hover:scale-105 transition duration-500" alt="Clinic">
+            <img src="https://loremflickr.com/800/600/doctors" alt="Medical Clinic" class="rounded-3xl shadow-2xl floating">
         </div>
     </header>
 
-    <!-- Stats Bar -->
-    <div class="bg-[#004754] text-white py-20">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
-            <div><h3 class="text-5xl font-bold">4.3</h3><p class="text-[#4DAB9A]">Google Rating</p></div>
-            <div><h3 class="text-5xl font-bold">53+</h3><p class="text-[#4DAB9A]">Verified Reviews</p></div>
-            <div><h3 class="text-5xl font-bold">10+</h3><p class="text-[#4DAB9A]">Expert Doctors</p></div>
-            <div><h3 class="text-5xl font-bold">20+</h3><p class="text-[#4DAB9A]">Years Serving</p></div>
-        </div>
-    </div>
-
-    <!-- Services Overview -->
-    <section class="py-32 px-6 bg-[#FAFAFA]">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-            <div class="col-span-2 p-12 bg-white rounded-3xl border shadow-sm fade-in-up">
-                <h2 class="text-5xl font-bold mb-6">Compassionate Care Services</h2>
-                <p class="text-gray-600 text-lg mb-8">We offer a comprehensive range of medical services tailored to your individual needs, ensuring precision and comfort at every step.</p>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="p-6 bg-[#E0F2F4] rounded-2xl border border-[#006B7F]/20">
-                        <i class="fa fa-stethoscope text-[#006B7F] text-3xl mb-4"></i>
-                        <h4 class="text-xl font-bold mb-2">General Practice</h4>
-                        <p>Comprehensive physicals and routine check-ups for all ages.</p>
-                    </div>
-                    <div class="p-6 bg-[#E0F2F4] rounded-2xl border border-[#006B7F]/20">
-                        <i class="fa fa-heartbeat text-[#006B7F] text-3xl mb-4"></i>
-                        <h4 class="text-xl font-bold mb-2">Preventative Care</h4>
-                        <p>Early detection and long-term wellness strategy planning.</p>
-                    </div>
-                </div>
+    <section class="py-32 bg-[#2D3436] text-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center reveal">
+            <div class="bg-white/5 p-10 rounded-3xl border border-white/10 backdrop-blur-xl">
+                <h2 class="text-5xl font-bold mb-6 text-[#E29578]">Excellence in Practice</h2>
+                <p class="mb-6">Broadview Medical Clinic offers a sophisticated approach to patient care. Our multidisciplinary team ensures every visit is handled with professional grace and medical precision.</p>
+                <ul class="space-y-4">
+                    <li><i class="fas fa-check text-[#83C5BE] mr-2"></i> Modern Diagnostic Tools</li>
+                    <li><i class="fas fa-check text-[#83C5BE] mr-2"></i> Patient-Centered Philosophy</li>
+                    <li><i class="fas fa-check text-[#83C5BE] mr-2"></i> Accessible Downtown Location</li>
+                </ul>
             </div>
-            <div class="bg-[#1A2224] text-white p-12 rounded-3xl flex flex-col justify-center fade-in-up">
-                <h3 class="text-3xl font-bold mb-6">Book Your Appointment</h3>
-                <input type="text" placeholder="Name" class="w-full mb-4 p-4 rounded-xl bg-white/10 border border-white/20">
-                <input type="email" placeholder="Email" class="w-full mb-4 p-4 rounded-xl bg-white/10 border border-white/20">
-                <button class="w-full bg-gradient-to-r from-[#006B7F] to-[#4DAB9A] p-4 rounded-xl font-bold">Book Now</button>
-            </div>
+            <img src="https://loremflickr.com/800/600/doctor" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover">
         </div>
     </section>
 
-    <!-- Location & Map -->
-    <section class="py-32 px-6 bg-[#1A2224] text-white">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="fade-in-up">
-                <h2 class="text-6xl font-bold">Find Us on <span class="text-[#4DAB9A]">Albany Street</span></h2>
-                <p class="text-xl mt-6 text-gray-400">Located conveniently at 797 Broadview Ave, Toronto. We are easily accessible for all your healthcare needs in the community.</p>
-                <div class="mt-10 space-y-4 text-lg">
-                    <p><i class="fa fa-location-dot mr-4 text-[#4DAB9A]"></i>797 Broadview Ave, Toronto, ON M4K 2P8</p>
-                    <p><i class="fa fa-phone mr-4 text-[#4DAB9A]"></i>+1 416-463-3228</p>
-                </div>
-            </div>
-            <div class="w-full h-[400px] rounded-3xl overflow-hidden fade-in-up">
-                <iframe src="https://www.google.com/maps?q=797+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-full" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
     <section class="py-32 px-6">
-        <div class="max-w-4xl mx-auto fade-in-up">
-            <h2 class="text-5xl font-bold text-center mb-16">Frequently Asked Questions</h2>
-            <div class="space-y-6">
-                <details class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100"><summary class="font-bold text-xl cursor-pointer">What are your clinic hours?</summary><p class="mt-4 text-gray-600">We are open Monday through Friday, 9:00 AM - 6:00 PM.</p></details>
-                <details class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100"><summary class="font-bold text-xl cursor-pointer">Do you accept walk-ins?</summary><p class="mt-4 text-gray-600">We prioritize appointments, but urgent care needs can be accommodated.</p></details>
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-6xl font-bold text-center mb-20">Frequently Asked Questions</h2>
+            <div class="grid md:grid-cols-2 gap-8 reveal">
+                <details class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <summary class="font-bold text-xl cursor-pointer">How do I book an appointment?</summary>
+                    <p class="mt-4 text-gray-600">You can book online via our contact form or call us directly at +1 416-463-3228.</p>
+                </details>
+                <details class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <summary class="font-bold text-xl cursor-pointer">Where is the clinic located?</summary>
+                    <p class="mt-4 text-gray-600">We are located at 797 Broadview Ave, Toronto, ON M4K 2P8.</p>
+                </details>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-[#1A2224] text-white py-20 px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-            <div><h4 class="text-xl font-bold mb-4">Broadview Medical</h4><p class="text-gray-400">Professional healthcare for the Toronto community.</p></div>
-            <div><h4 class="text-xl font-bold mb-4">Links</h4><ul class="space-y-2 text-gray-400"><li><a href="#">Services</a></li><li><a href="#">Doctors</a></li><li><a href="#">About</a></li></ul></div>
-            <div><h4 class="text-xl font-bold mb-4">Contact</h4><p class="text-gray-400">797 Broadview Ave<br>+1 416-463-3228</p></div>
-            <div><h4 class="text-xl font-bold mb-4">Social</h4><div class="flex gap-4"><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-instagram"></i></div></div>
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center reveal">
+            <iframe src="https://www.google.com/maps?q=797+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-[500px] rounded-3xl" loading="lazy"></iframe>
+            <div>
+                <h2 class="text-5xl font-bold mb-8">Visit Our <span class="text-[#006D77]">Clinic</span></h2>
+                <p class="text-xl text-gray-600 mb-8">Conveniently located on Broadview Avenue. We serve the local community with dedicated, high-quality medical services every weekday.</p>
+                <div class="bg-[#F8F9FA] p-8 rounded-2xl border-l-4 border-[#006D77]">
+                    <h4 class="font-bold text-[#006D77] mb-2">Office Hours</h4>
+                    <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                    <p>Sat - Sun: Closed</p>
+                </div>
+            </div>
         </div>
-        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/10 text-center text-gray-500">© 2023 Broadview Medical Clinic. All rights reserved.</div>
+    </section>
+
+    <section class="py-20 bg-[#006D77] text-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div class="reveal">
+                <div class="text-6xl font-extrabold mb-2 text-[#E29578]">4.3</div>
+                <div class="text-sm uppercase tracking-widest">Google Rating</div>
+            </div>
+            <div class="reveal">
+                <div class="text-6xl font-extrabold mb-2 text-[#E29578]">53+</div>
+                <div class="text-sm uppercase tracking-widest">Expert Reviews</div>
+            </div>
+            <div class="reveal">
+                <div class="text-6xl font-extrabold mb-2 text-[#E29578]">10+</div>
+                <div class="text-sm uppercase tracking-widest">Medical Staff</div>
+            </div>
+            <div class="reveal">
+                <div class="text-6xl font-extrabold mb-2 text-[#E29578]">20+</div>
+                <div class="text-sm uppercase tracking-widest">Years Experience</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#2D3436] text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div>
+                <h3 class="text-xl font-bold mb-6">Broadview Medical</h3>
+                <p class="text-gray-400">Compassionate healthcare for the Toronto community.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Navigation</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Contact</h4>
+                <p class="text-gray-400">797 Broadview Ave, Toronto</p>
+                <p class="text-gray-400">+1 416-463-3228</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Social</h4>
+                <div class="flex gap-4">
+                    <i class="fab fa-facebook text-2xl"></i>
+                    <i class="fab fa-instagram text-2xl"></i>
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
-        });
-        document.querySelectorAll('.fade-in-up').forEach((el) => observer.observe(el));
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
