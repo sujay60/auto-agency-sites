@@ -3,83 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Dr. Rauchwerger, M.D.</title>
+    <title>Services | Dr. Rauchwerger, M.D. | Toronto Clinical Excellence</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinical: {
+                            50: '#f0fdfa',
+                            900: '#0f766e',
+                            brand: '#0d9488'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-[#F8FAFC] text-slate-900 selection:bg-teal-200">
+<body class="bg-slate-50 text-slate-900">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold tracking-tighter text-teal-900">DR. RAUCHWERGER</a>
-            <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-teal-700 transition">Home</a>
-                <a href="services.html" class="text-teal-900">Services</a>
-                <a href="about.html" class="hover:text-teal-700 transition">About</a>
-                <a href="contact.html" class="hover:text-teal-700 transition">Contact</a>
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-clinical-900">DR. RAUCHWERGER</a>
+            <div class="space-x-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-clinical-brand transition">Home</a>
+                <a href="services.html" class="text-clinical-brand underline decoration-2 underline-offset-8">Services</a>
+                <a href="about.html" class="hover:text-clinical-brand transition">About</a>
+                <a href="contact.html" class="hover:text-clinical-brand transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="pt-32 pb-20 px-6">
-        <div class="max-w-7xl mx-auto">
-            <h1 class="text-6xl md:text-7xl font-bold tracking-tighter text-slate-900 mb-6">Clinical Excellence.</h1>
-            <p class="text-xl text-slate-500 max-w-2xl">Precision-focused medical care tailored to your specific wellness journey at our Broadview Ave facility.</p>
-        </div>
+    <header class="py-24 max-w-7xl mx-auto px-6 text-center">
+        <h1 class="text-6xl md:text-7xl font-bold tracking-tighter mb-6 text-slate-900">Clinical Excellence</h1>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto">Comprehensive medical care tailored to your unique health profile, delivered with precision and empathy.</p>
     </header>
 
-    <!-- Services Bento Grid -->
-    <section class="max-w-7xl mx-auto px-6 py-12 space-y-24">
+    <!-- Services Grid -->
+    <main class="max-w-7xl mx-auto px-6 pb-24 space-y-32">
         
-        <!-- Primary Service -->
-        <div class="grid md:grid-cols-2 gap-16 items-center">
+        <!-- Service 1 -->
+        <section class="grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <span class="text-teal-600 font-semibold tracking-widest uppercase text-sm">Diagnostics</span>
-                <h2 class="text-4xl font-bold mt-2 mb-6">Comprehensive Patient Evaluation</h2>
-                <p class="text-lg text-slate-600 leading-relaxed">State-of-the-art diagnostic screening and personalized health roadmaps designed to detect potential concerns early and maintain long-term vitality.</p>
+                <span class="text-clinical-brand font-semibold tracking-widest uppercase text-sm">Diagnostic Care</span>
+                <h2 class="text-5xl font-bold tracking-tight mt-4 mb-6">Advanced Health Assessments</h2>
+                <p class="text-lg text-slate-600 leading-relaxed">Early detection is the cornerstone of longevity. We utilize state-of-the-art diagnostic tools to provide a complete map of your current health status and future risks.</p>
             </div>
-            <img src="https://loremflickr.com/1200/800/doctor,clinic" alt="Medical Diagnostics" class="w-full h-[400px] object-cover rounded-[2rem] shadow-2xl">
-        </div>
+            <img src="https://loremflickr.com/1200/800/doctor,checkup" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl" alt="Medical Consultation">
+        </section>
 
-        <!-- Secondary Service -->
-        <div class="grid md:grid-cols-2 gap-16 items-center flex-row-reverse">
-            <div class="md:text-right">
-                <span class="text-teal-600 font-semibold tracking-widest uppercase text-sm">Treatment</span>
-                <h2 class="text-4xl font-bold mt-2 mb-6">Customized Care Plans</h2>
-                <p class="text-lg text-slate-600 leading-relaxed">Evidence-based therapeutic protocols integrated with holistic wellness, ensuring every patient receives individual attention and care.</p>
+        <!-- Service 2 -->
+        <section class="grid md:grid-cols-2 gap-16 items-center">
+            <img src="https://loremflickr.com/1200/800/medical,lab" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl order-2 md:order-1" alt="Laboratory Analysis">
+            <div class="order-1 md:order-2">
+                <span class="text-clinical-brand font-semibold tracking-widest uppercase text-sm">Chronic Care</span>
+                <h2 class="text-5xl font-bold tracking-tight mt-4 mb-6">Personalized Treatment Plans</h2>
+                <p class="text-lg text-slate-600 leading-relaxed">Medicine is not one-size-fits-all. Dr. Rauchwerger creates bespoke management strategies for chronic conditions, focusing on sustainable quality of life and symptomatic relief.</p>
             </div>
-            <img src="https://loremflickr.com/1200/800/stethoscope,patient" alt="Patient Care" class="w-full h-[400px] object-cover rounded-[2rem] shadow-2xl">
-        </div>
+        </section>
 
-    </section>
+        <!-- Service 3 -->
+        <section class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-clinical-brand font-semibold tracking-widest uppercase text-sm">Preventative</span>
+                <h2 class="text-5xl font-bold tracking-tight mt-4 mb-6">Wellness & Optimization</h2>
+                <p class="text-lg text-slate-600 leading-relaxed">Beyond treating illness, we focus on biological optimization. From metabolic health to immune support, we help you operate at your physical and cognitive peak.</p>
+            </div>
+            <img src="https://loremflickr.com/1200/800/doctor,health" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl" alt="Wellness Optimization">
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-teal-900 text-teal-100 py-24 mt-24">
+    <footer class="bg-slate-900 text-white py-20">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
             <div>
-                <h3 class="font-bold text-white mb-4">Dr. Rauchwerger, M.D.</h3>
-                <p class="text-teal-300">807 Broadview Ave<br>Toronto, ON M4K 2P8</p>
+                <h4 class="font-bold text-xl mb-4">Dr. Rauchwerger, M.D.</h4>
+                <p class="text-slate-400">807 Broadview Ave<br>Toronto, ON M4K 2P8<br>+1 416-461-9471</p>
+            </div>
+            <div class="space-y-2">
+                <a href="index.html" class="block text-slate-400 hover:text-white">Home</a>
+                <a href="services.html" class="block text-white font-semibold">Services</a>
+                <a href="about.html" class="block text-slate-400 hover:text-white">About</a>
+                <a href="contact.html" class="block text-slate-400 hover:text-white">Contact</a>
             </div>
             <div>
-                <h3 class="font-bold text-white mb-4">Navigation</h3>
-                <ul class="space-y-2 text-teal-300">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="font-bold text-white mb-4">Inquiries</h3>
-                <p class="text-teal-300">+1 416-461-9471</p>
-                <div class="flex gap-4 mt-6">
-                    <div class="w-10 h-10 bg-teal-800 rounded-full"></div>
-                    <div class="w-10 h-10 bg-teal-800 rounded-full"></div>
+                <h4 class="font-bold text-xl mb-4">Connect</h4>
+                <div class="flex space-x-4">
+                    <span class="text-slate-500">LinkedIn</span>
+                    <span class="text-slate-500">Twitter</span>
                 </div>
             </div>
         </div>
