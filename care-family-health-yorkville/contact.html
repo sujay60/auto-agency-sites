@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Care & Family Health Yorkville</title>
+    <title>Contact | Care & Family Health Yorkville</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script>
@@ -11,10 +11,13 @@
             theme: {
                 extend: {
                     colors: {
-                        clinic: {
-                            primary: '#0f5e5e',
-                            secondary: '#e6f3f3',
-                            accent: '#2a9d8f'
+                        clinical: {
+                            50: '#f0fdfa',
+                            500: '#14b8a6',
+                            900: '#0f766e',
+                        },
+                        stone: {
+                            800: '#1f2937'
                         }
                     }
                 }
@@ -23,83 +26,82 @@
     </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-slate-50 text-slate-900">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 glass border-b border-slate-200">
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-clinic-primary tracking-tighter">CARE & FAMILY</a>
-            <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-clinic-primary transition-colors">Home</a>
-                <a href="services.html" class="hover:text-clinic-primary transition-colors">Services</a>
-                <a href="doctors.html" class="hover:text-clinic-primary transition-colors">Doctors</a>
-                <a href="contact.html" class="text-clinic-primary border-b-2 border-clinic-primary">Contact</a>
+            <div class="text-2xl font-bold tracking-tighter text-clinical-900">CARE<span class="text-clinical-500">&</span>FAMILY</div>
+            <div class="flex gap-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-clinical-500 transition">Home</a>
+                <a href="services.html" class="hover:text-clinical-500 transition">Services</a>
+                <a href="doctors.html" class="hover:text-clinical-500 transition">Doctors</a>
+                <a href="contact.html" class="text-clinical-600 border-b-2 border-clinical-600">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="max-w-7xl mx-auto px-6 py-24 text-center">
-        <h1 class="text-6xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6">Connect with us.</h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Your journey to better health begins with a conversation. Visit us in the heart of Yorkville.</p>
+    <header class="max-w-7xl mx-auto px-6 py-24">
+        <h1 class="text-7xl font-bold tracking-tighter mb-6">Let's Connect.</h1>
+        <p class="text-xl text-slate-500 max-w-2xl">Premium family health services in the heart of Yorkville. Our team is ready to assist you with your wellness journey.</p>
     </header>
 
-    <!-- Contact Section -->
-    <main class="max-w-7xl mx-auto px-6 pb-24">
-        <div class="grid md:grid-cols-2 gap-16 items-start">
-            
-            <!-- Contact Info & Form -->
-            <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
-                <h2 class="text-3xl font-bold mb-8">Send a Message</h2>
-                <form class="space-y-6">
-                    <div>
-                        <label class="block text-sm font-semibold mb-2">Name</label>
-                        <input type="text" class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-clinic-primary">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold mb-2">Email</label>
-                        <input type="email" class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-clinic-primary">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold mb-2">Message</label>
-                        <textarea rows="4" class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-clinic-primary"></textarea>
-                    </div>
-                    <button class="w-full bg-clinic-primary text-white font-semibold py-4 rounded-xl hover:bg-teal-800 transition-all">Request Appointment</button>
-                </form>
-            </div>
-
-            <!-- Map & Details -->
-            <div class="space-y-10">
-                <div class="h-[400px] w-full overflow-hidden rounded-[2rem] shadow-2xl">
-                    <iframe src="https://www.google.com/maps?q=162+Cumberland+St+#200+Toronto+ON+M5R+3N5+Canada&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <!-- Contact Grid -->
+    <main class="max-w-7xl mx-auto px-6 pb-24 grid md:grid-cols-2 gap-16 items-start">
+        
+        <!-- Form Section -->
+        <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
+            <h2 class="text-3xl font-bold mb-8">Appointment Request</h2>
+            <form class="space-y-6">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Full Name</label>
+                    <input type="text" class="w-full bg-slate-50 p-4 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-clinical-500">
                 </div>
-                <div class="grid grid-cols-2 gap-8">
-                    <div>
-                        <h4 class="font-bold text-slate-900">Address</h4>
-                        <p class="text-slate-500 mt-2">162 Cumberland St #200,<br>Toronto, ON M5R 3N5</p>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-slate-900">Contact</h4>
-                        <p class="text-slate-500 mt-2">+1 647-951-4770<br>info@yorkvillecare.ca</p>
-                    </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Email Address</label>
+                    <input type="email" class="w-full bg-slate-50 p-4 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-clinical-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Preferred Date</label>
+                    <input type="date" class="w-full bg-slate-50 p-4 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-clinical-500">
+                </div>
+                <button class="w-full bg-clinical-900 text-white font-semibold py-4 rounded-xl hover:bg-clinical-500 transition shadow-lg">Submit Request</button>
+            </form>
+        </div>
+
+        <!-- Info & Map -->
+        <div class="space-y-12">
+            <div class="h-[400px] w-full">
+                <iframe src="https://www.google.com/maps?q=162+Cumberland+St+#200+Toronto+ON+M5R+3N5+Canada&output=embed" class="w-full h-full rounded-[2rem] shadow-2xl"></iframe>
+            </div>
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-bold mb-1">Hours</h4>
+                    <p class="text-slate-500 text-sm">Mon-Fri: 9am - 6pm<br>Sat: 10am - 2pm</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-1">Parking</h4>
+                    <p class="text-slate-500 text-sm">Validated parking available at Cumberland Terrace Garage.</p>
                 </div>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[#1A1A1A] text-slate-400 py-20">
+    <footer class="bg-clinical-900 text-white py-24">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
-            <div>
-                <h5 class="text-white font-bold mb-4">Care & Family Yorkville</h5>
-                <p class="text-sm">Premium medical care in the heart of Toronto's most prestigious district.</p>
+            <div class="col-span-2">
+                <h3 class="text-2xl font-bold mb-4">Care & Family Health</h3>
+                <p class="text-teal-200 text-sm">162 Cumberland St #200, Toronto, ON M5R 3N5</p>
+                <p class="text-teal-200 text-sm mt-2">+1 647-951-4770</p>
+                <p class="text-emerald-400 font-bold mt-4">4.5 Stars from 599 Reviews</p>
             </div>
             <div>
-                <h5 class="text-white font-bold mb-4">Links</h5>
-                <ul class="space-y-2 text-sm">
+                <h4 class="font-bold mb-6">Links</h4>
+                <ul class="space-y-4 text-teal-100 text-sm">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="doctors.html">Doctors</a></li>
@@ -107,17 +109,12 @@
                 </ul>
             </div>
             <div>
-                <h5 class="text-white font-bold mb-4">Social</h5>
-                <ul class="space-y-2 text-sm">
+                <h4 class="font-bold mb-6">Connect</h4>
+                <ul class="space-y-4 text-teal-100 text-sm">
                     <li>Instagram</li>
                     <li>LinkedIn</li>
                     <li>Twitter</li>
                 </ul>
-            </div>
-            <div>
-                <h5 class="text-white font-bold mb-4">Rating</h5>
-                <p class="text-emerald-400 font-bold text-2xl">4.5 ★</p>
-                <p class="text-xs">599 Reviews</p>
             </div>
         </div>
     </footer>

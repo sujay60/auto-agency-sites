@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Physicians | Care & Family Health Yorkville</title>
+    <title>Our Doctors | Care & Family Health Yorkville</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script>
@@ -12,10 +12,10 @@
                 extend: {
                     colors: {
                         clinical: {
-                            50: '#F0F9F8',
-                            900: '#0F3D3E',
-                            teal: '#1A7D7E',
-                            light: '#E2F1F0'
+                            50: '#f0f9f8',
+                            900: '#0f3a36',
+                            teal: '#14b8a6',
+                            blue: '#0ea5e9'
                         }
                     }
                 }
@@ -26,16 +26,16 @@
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-[#FAFAFA] text-slate-900">
+<body class="bg-slate-50 text-slate-900">
 
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="index.html" class="text-xl font-bold tracking-tighter text-clinical-900 uppercase">Care& Yorkville</a>
-            <div class="flex gap-8 text-sm font-medium text-slate-600">
+        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-clinical-900 tracking-tighter">CARE<span class="text-clinical-teal">&</span>YORKVILLE</a>
+            <div class="space-x-8 text-sm font-medium text-slate-600">
                 <a href="index.html" class="hover:text-clinical-teal transition">Home</a>
                 <a href="services.html" class="hover:text-clinical-teal transition">Services</a>
-                <a href="doctors.html" class="text-clinical-teal">Doctors</a>
+                <a href="doctors.html" class="text-clinical-900 border-b-2 border-clinical-teal pb-1">Doctors</a>
                 <a href="contact.html" class="hover:text-clinical-teal transition">Contact</a>
             </div>
         </div>
@@ -43,49 +43,53 @@
 
     <!-- Header -->
     <header class="py-24 px-6 text-center">
-        <h1 class="text-6xl font-bold tracking-tight text-clinical-900 mb-6">Expert Care, Personalized.</h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Meet our team of board-certified physicians dedicated to your long-term wellness in the heart of Yorkville.</p>
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-clinical-900 mb-6">Expert Care.</h1>
+        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Meet our dedicated medical team, committed to your long-term health and wellbeing in the heart of Yorkville.</p>
     </header>
 
-    <!-- Doctor Profile 1 -->
-    <section class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
-        <img src="https://loremflickr.com/1200/800/doctor" alt="Physician" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
-        <div>
-            <span class="text-clinical-teal font-semibold tracking-widest uppercase text-sm">Lead Physician</span>
-            <h2 class="text-5xl font-bold tracking-tight mt-2 mb-6">Dr. Sarah Jenkins</h2>
-            <p class="text-lg text-slate-600 mb-8 leading-relaxed">Specializing in internal medicine and family wellness, Dr. Jenkins brings over 15 years of clinical experience to Yorkville. Her philosophy centers on preventative care and listening to the patient’s narrative.</p>
-            <div class="bg-clinical-light p-6 rounded-2xl">
-                <h4 class="font-bold text-clinical-900">Qualifications</h4>
-                <p class="text-sm text-clinical-800">MD, University of Toronto | FRCPC | Certified Internal Medicine</p>
+    <!-- Doctor Profiles Section -->
+    <main class="max-w-7xl mx-auto px-6 pb-24 space-y-32">
+        
+        <!-- Profile 1 -->
+        <section class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-clinical-teal font-semibold tracking-wider uppercase text-sm">Medical Director</span>
+                <h2 class="text-4xl font-bold mt-2 mb-6">Dr. Elena Thorne, MD</h2>
+                <p class="text-lg text-slate-600 leading-relaxed mb-8">With over 15 years in family practice, Dr. Thorne specializes in preventative health and integrative wellness. Her approach combines data-driven diagnostics with personalized patient counseling.</p>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <p class="font-semibold text-clinical-900">Credentialing</p>
+                    <p class="text-sm text-slate-500">Board Certified in Family Medicine • Toronto Medical Association Fellow</p>
+                </div>
             </div>
-        </div>
-    </section>
+            <img src="https://loremflickr.com/1200/800/doctor,portrait" alt="Doctor" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
+        </section>
 
-    <!-- Doctor Profile 2 -->
-    <section class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
-        <div class="order-2 md:order-1">
-            <span class="text-clinical-teal font-semibold tracking-widest uppercase text-sm">Family Practitioner</span>
-            <h2 class="text-5xl font-bold tracking-tight mt-2 mb-6">Dr. Marcus Thorne</h2>
-            <p class="text-lg text-slate-600 mb-8 leading-relaxed">Dr. Thorne is passionate about pediatric health and integrative medicine. He believes that healthcare should be a collaborative journey, ensuring every patient feels empowered and heard.</p>
-            <div class="bg-clinical-light p-6 rounded-2xl">
-                <h4 class="font-bold text-clinical-900">Qualifications</h4>
-                <p class="text-sm text-clinical-800">MD, McGill University | CCFP | Sports Medicine Specialist</p>
+        <!-- Profile 2 -->
+        <section class="grid md:grid-cols-2 gap-16 items-center">
+            <img src="https://loremflickr.com/1200/800/doctor,surgeon" alt="Doctor" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl md:order-1 order-2">
+            <div class="md:order-2 order-1">
+                <span class="text-clinical-teal font-semibold tracking-wider uppercase text-sm">Primary Care</span>
+                <h2 class="text-4xl font-bold mt-2 mb-6">Dr. Marcus Chen, MD</h2>
+                <p class="text-lg text-slate-600 leading-relaxed mb-8">Dr. Chen brings a compassionate touch to primary care, focusing on chronic disease management and adolescent health. He believes that listening is the most powerful diagnostic tool.</p>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <p class="font-semibold text-clinical-900">Credentialing</p>
+                    <p class="text-sm text-slate-500">MD, University of Toronto • Pediatric Specialty Certification</p>
+                </div>
             </div>
-        </div>
-        <img src="https://loremflickr.com/1200/800/doctor,physician" alt="Physician" class="order-1 md:order-2 w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
-    </section>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-clinical-900 text-white mt-24 py-24">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+    <footer class="bg-clinical-900 text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
             <div>
-                <h3 class="text-2xl font-bold mb-4">Care& Family Health</h3>
-                <p class="text-slate-400">162 Cumberland St #200, Toronto, ON M5R 3N5</p>
-                <p class="mt-4 text-clinical-teal">+1 647-951-4770</p>
+                <h3 class="text-xl font-bold mb-4">Care & Yorkville</h3>
+                <p class="text-slate-400">162 Cumberland St #200<br>Toronto, ON M5R 3N5</p>
             </div>
             <div>
-                <h4 class="font-bold mb-4">Navigation</h4>
-                <ul class="space-y-2 text-slate-400">
+                <h4 class="font-semibold mb-4">Navigate</h4>
+                <ul class="space-y-2 text-slate-400 text-sm">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="doctors.html">Doctors</a></li>
@@ -93,12 +97,9 @@
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold mb-4">Connect</h4>
-                <p class="text-slate-400">4.5 Stars from 599 reviews</p>
-                <div class="flex gap-4 mt-4">
-                    <span class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center">IG</span>
-                    <span class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center">LI</span>
-                </div>
+                <h4 class="font-semibold mb-4">Connect</h4>
+                <p class="text-clinical-teal text-xl font-bold">+1 647-951-4770</p>
+                <p class="text-sm text-slate-400 mt-2">Rating: 4.5/5 (599 Reviews)</p>
             </div>
         </div>
     </footer>
