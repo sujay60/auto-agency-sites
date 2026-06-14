@@ -1,115 +1,110 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Medical Team | Care & Family Health Yorkville</title>
+    <title>Our Doctors | Care & Family Health Yorkville</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-        .reveal { opacity: 1; transform: translateY(0); }
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .fade-in-up.active { opacity: 1; transform: translateY(0); }
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.02); }
     </style>
 </head>
-<body class="bg-[#FBFDFC] text-[#1A202C]">
+<body class="bg-[#FAFAFA] text-[#2D3436]">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#2D6A78]/10">
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-[#1B434D]">CARE<span class="text-[#C4A484]">&</span></a>
+            <a href="index.html" class="text-2xl font-bold text-[#006B70]">CARE<span class="text-[#C5A059]">&</span>FAMILY</a>
             <div class="hidden md:flex gap-8 font-medium">
-                <a href="index.html" class="hover:text-[#2D6A78]">Home</a>
-                <a href="about.html" class="hover:text-[#2D6A78]">About</a>
-                <a href="services.html" class="hover:text-[#2D6A78]">Services</a>
-                <a href="doctors.html" class="text-[#2D6A78] font-bold">Doctors</a>
+                <a href="index.html" class="hover:text-[#006B70]">Home</a>
+                <a href="about.html" class="hover:text-[#006B70]">About</a>
+                <a href="services.html" class="hover:text-[#006B70]">Services</a>
+                <a href="doctors.html" class="text-[#006B70]">Doctors</a>
+                <a href="contact.html" class="hover:text-[#006B70]">Contact</a>
             </div>
-            <a href="contact.html" class="px-8 py-3 bg-[#2D6A78] text-white rounded-full hover:bg-[#1B434D] transition">Book Appointment</a>
+            <a href="contact.html" class="bg-[#006B70] text-white px-8 py-3 rounded-full hover:bg-[#004D40] transition">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="py-32 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="fade-in-up">
-                <span class="text-[#C4A484] font-semibold tracking-widest uppercase">Our Experts</span>
-                <h1 class="text-6xl md:text-7xl font-extrabold text-[#1B434D] mt-4 mb-6 leading-tight">Excellence in Yorkville Healthcare</h1>
-                <p class="text-xl text-gray-600">Meet our distinguished medical team, providing sophisticated, compassionate care tailored to the refined standards of our Yorkville community.</p>
-            </div>
-            <div class="fade-in-up">
-                <img src="https://loremflickr.com/800/600/doctors" class="rounded-3xl shadow-2xl" alt="Medical Team">
-            </div>
+    <header class="pt-40 pb-28 bg-[#FAFAFA]">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h1 class="text-7xl font-extrabold text-[#004D40] mb-6">Distinguished Medical Professionals</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Providing precision care in the heart of Yorkville with a commitment to clinical excellence and compassionate patient outcomes.</p>
         </div>
     </header>
 
-    <!-- Doctor Profile 1 -->
-    <section class="py-32 px-6 bg-[#121818] text-white">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center fade-in-up">
+    <section class="py-32 bg-[#1A2624] text-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center fade-in-up">
             <div>
-                <img src="https://loremflickr.com/800/600/doctor" class="rounded-3xl shadow-2xl" alt="Dr. Sarah Jenkins">
-            </div>
-            <div class="glass p-12 rounded-3xl">
-                <h2 class="text-5xl font-bold mb-4">Dr. Sarah Jenkins</h2>
-                <p class="text-[#C4A484] font-bold text-lg mb-6">MD, CCFP - Family Medicine</p>
-                <p class="text-gray-300 text-lg mb-8 leading-relaxed">With over 15 years of experience in family medicine, Dr. Jenkins specializes in preventative wellness and chronic disease management. Her approach blends evidence-based medicine with a deep focus on long-term patient relationships.</p>
-                <ul class="space-y-4">
-                    <li><i class="fas fa-check text-[#C4A484] mr-3"></i> Integrative Healthcare</li>
-                    <li><i class="fas fa-check text-[#C4A484] mr-3"></i> Pediatric Development</li>
-                    <li><i class="fas fa-check text-[#C4A484] mr-3"></i> Holistic Wellness Planning</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Doctor Profile 2 -->
-    <section class="py-32 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center fade-in-up">
-            <div class="order-2 md:order-1">
-                <h2 class="text-5xl font-bold text-[#1B434D] mb-4">Dr. Marcus Thorne</h2>
-                <p class="text-[#C4A484] font-bold text-lg mb-6">MD, FRCPC - Cardiology Specialist</p>
-                <p class="text-gray-600 text-lg mb-8 leading-relaxed">Dr. Thorne brings world-class cardiac expertise to Yorkville. Focusing on heart health and metabolic wellness, he utilizes the latest diagnostic technologies to ensure proactive health monitoring for all his patients.</p>
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="p-6 bg-[#E0F2F3] rounded-2xl">
-                        <h4 class="text-xl font-bold">15+ Years</h4>
-                        <p class="text-sm">Clinical Experience</p>
-                    </div>
-                    <div class="p-6 bg-[#E0F2F3] rounded-2xl">
-                        <h4 class="text-xl font-bold">Board Certified</h4>
-                        <p class="text-sm">Cardiovascular Health</p>
-                    </div>
+                <span class="text-[#C5A059] font-bold tracking-widest uppercase">Chief Medical Officer</span>
+                <h2 class="text-6xl font-bold my-6">Dr. Sarah Jenkins, MD</h2>
+                <p class="text-lg leading-relaxed text-gray-300 mb-8">With over 20 years of experience in family medicine, Dr. Jenkins leads our Yorkville clinic with a philosophy rooted in preventative care and integrated wellness. Her approach combines state-of-the-art diagnostic technology with deeply personalized patient relationships.</p>
+                <div class="flex gap-4">
+                    <span class="bg-[#006B70] px-4 py-2 rounded-lg text-sm font-semibold">Board Certified</span>
+                    <span class="bg-white/10 px-4 py-2 rounded-lg text-sm font-semibold">Family Practice Specialist</span>
                 </div>
             </div>
+            <img src="https://loremflickr.com/800/600/doctor" alt="Dr. Sarah Jenkins" class="rounded-3xl shadow-2xl hover-scale">
+        </div>
+    </section>
+
+    <section class="py-32 bg-[#FAFAFA]">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center fade-in-up">
+            <img src="https://loremflickr.com/800/600/surgeon" alt="Dr. Marcus Thorne" class="rounded-3xl shadow-2xl hover-scale order-2 md:order-1">
             <div class="order-1 md:order-2">
-                <img src="https://loremflickr.com/800/600/surgeon" class="rounded-3xl shadow-2xl" alt="Dr. Marcus Thorne">
+                <span class="text-[#C5A059] font-bold tracking-widest uppercase">Lead Consultant</span>
+                <h2 class="text-6xl font-bold text-[#004D40] my-6">Dr. Marcus Thorne, PhD</h2>
+                <p class="text-lg leading-relaxed text-gray-600 mb-8">Dr. Thorne brings a wealth of knowledge in internal medicine. His diagnostic precision is matched only by his dedication to long-term health optimization. He specializes in metabolic health and chronic condition management.</p>
+                <div class="flex gap-4">
+                    <span class="bg-[#E0F2F1] text-[#006B70] px-4 py-2 rounded-lg text-sm font-semibold">Clinical Research</span>
+                    <span class="bg-[#E0F2F1] text-[#006B70] px-4 py-2 rounded-lg text-sm font-semibold">Internal Medicine</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Bar -->
-    <section class="py-20 bg-[#2D6A78] text-white px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
-            <div><div class="text-5xl font-bold mb-2">4.5</div><p>Google Rating</p></div>
-            <div><div class="text-5xl font-bold mb-2">599+</div><p>Patient Reviews</p></div>
-            <div><div class="text-5xl font-bold mb-2">12</div><p>Specialists</p></div>
-            <div><div class="text-5xl font-bold mb-2">10k+</div><p>Patients Treated</p></div>
+    <footer class="bg-[#1A2624] text-white py-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Care & Family Health</h3>
+                <p class="text-gray-400">162 Cumberland St #200, Toronto, ON M5R 3N5</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Contact</h3>
+                <p class="text-gray-400">+1 647-951-4770</p>
+                <p class="text-gray-400">info@careand.ca</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Connect</h3>
+                <div class="flex gap-4 text-2xl">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+            </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-[#121818] text-gray-400 py-20 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
-            <div><h3 class="text-white text-xl font-bold mb-6">Care & Family Health</h3><p>Yorkville's premier destination for sophisticated medical care.</p></div>
-            <div><h4 class="text-white font-bold mb-6">Navigate</h4><ul class="space-y-3"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="doctors.html">Doctors</a></li></ul></div>
-            <div><h4 class="text-white font-bold mb-6">Contact</h4><p>162 Cumberland St #200<br>Toronto, ON M5R 3N5</p><p class="mt-4">+1 647-951-4770</p></div>
-            <div><h4 class="text-white font-bold mb-6">Connect</h4><div class="flex gap-4 text-2xl"><i class="fab fa-instagram"></i><i class="fab fa-linkedin"></i></div></div>
+        <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-white/10 text-center text-gray-500 text-sm">
+            &copy; 2023 Care & Family Health Yorkville. All rights reserved.
         </div>
     </footer>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('reveal'); });
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
         });
         document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
     </script>

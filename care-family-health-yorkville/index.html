@@ -10,110 +10,111 @@
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-        .is-visible { opacity: 1; transform: translateY(0); }
-        details summary::-webkit-details-marker { display: none; }
+        .show { opacity: 1; transform: translateY(0); }
     </style>
 </head>
-<body class="bg-[#FBFDFC] text-[#1A202C]">
+<body class="bg-[#FAFAFA] text-[#2D3436]">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#2D6A78]/10">
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-[#2D6A78]">Care & Family</a>
-            <div class="hidden md:flex gap-8 font-medium text-[#1B434D]">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="doctors.html">Doctors</a>
-                <a href="contact.html">Contact</a>
+            <a href="index.html" class="text-2xl font-bold text-[#006B70]">Care&<span class="text-[#004D40]">Yorkville</span></a>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="hover:text-[#006B70]">Home</a>
+                <a href="about.html" class="hover:text-[#006B70]">About</a>
+                <a href="services.html" class="hover:text-[#006B70]">Services</a>
+                <a href="doctors.html" class="hover:text-[#006B70]">Doctors</a>
             </div>
-            <a href="contact.html" class="bg-[#2D6A78] text-white px-8 py-3 rounded-full hover:bg-[#1B434D] transition">Book Appointment</a>
+            <a href="contact.html" class="bg-[#006B70] text-white px-8 py-3 rounded-full hover:bg-[#004D40] transition">Book Appointment</a>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <header class="pt-40 pb-32 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <!-- Hero Section -->
+    <header class="py-32 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div class="fade-in-up">
-            <h1 class="text-7xl font-extrabold text-[#1B434D] leading-tight mb-6">Expert Healthcare in <span class="text-[#2D6A78]">Yorkville</span></h1>
-            <p class="text-xl text-[#1B434D]/80 mb-8">Refined medical expertise located at 162 Cumberland St. Experience personalized family care designed for the modern Toronto lifestyle.</p>
-            <a href="#contact" class="bg-[#2D6A78] text-white px-10 py-4 rounded-full text-lg hover:scale-105 transition transform inline-block">Schedule Your Visit</a>
+            <span class="text-[#C5A059] font-bold tracking-widest uppercase">Premier Wellness in Yorkville</span>
+            <h1 class="text-6xl md:text-7xl font-extrabold mt-6 leading-tight text-[#004D40]">Clinical Precision, Refined Care.</h1>
+            <p class="text-xl mt-8 text-gray-600">Your trusted doctors in Albany Street, Toronto. Providing boutique healthcare services tailored to your family's needs with 4.5-star excellence.</p>
+            <div class="mt-10 flex gap-4">
+                <a href="#" class="bg-[#006B70] text-white px-8 py-4 rounded-full font-bold">Explore Services</a>
+                <a href="#" class="border border-[#006B70] text-[#006B70] px-8 py-4 rounded-full font-bold">Contact Us</a>
+            </div>
         </div>
-        <div class="fade-in-up delay-200">
-            <img src="https://loremflickr.com/800/600/doctors" class="rounded-3xl shadow-2xl" alt="Medical Office">
-        </div>
+        <img src="https://loremflickr.com/800/600/doctors" alt="Medical Clinic" class="rounded-3xl shadow-2xl w-full h-auto">
     </header>
 
+    <!-- Stats Section -->
+    <section class="bg-[#1A2624] py-20 text-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div><div class="text-5xl font-bold text-[#C5A059]">4.5</div><p>Star Rating</p></div>
+            <div><div class="text-5xl font-bold text-[#C5A059]">599+</div><p>Verified Reviews</p></div>
+            <div><div class="text-5xl font-bold text-[#C5A059]">15+</div><p>Expert Doctors</p></div>
+            <div><div class="text-5xl font-bold text-[#C5A059]">24/7</div><p>Care Support</p></div>
+        </div>
+    </section>
+
     <!-- Features Bento -->
-    <section class="py-32 bg-[#121818] text-[#E0F2F3] px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-            <div class="col-span-2 p-10 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl">
-                <h2 class="text-5xl font-bold mb-6 text-[#C4A484]">Comprehensive Family Health</h2>
-                <p class="text-lg opacity-80">Our clinic provides holistic, evidence-based medicine. We combine diagnostic precision with compassionate care, ensuring every patient receives a tailored health plan.</p>
+    <section class="py-32 max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="md:col-span-2 bg-[#E0F2F1] p-12 rounded-3xl">
+                <h2 class="text-5xl font-bold text-[#004D40]">Comprehensive Family Wellness</h2>
+                <p class="mt-6 text-lg">We provide an extensive range of medical services designed to nurture health at every stage of life, right in the heart of Toronto.</p>
             </div>
-            <div class="p-10 bg-[#2D6A78] rounded-3xl">
-                <i class="fa-solid fa-user-doctor text-4xl mb-4"></i>
-                <h3 class="text-2xl font-semibold mb-2">Expert Staff</h3>
-                <p>Highly qualified physicians specializing in family wellness.</p>
+            <div class="bg-[#006B70] p-12 rounded-3xl text-white">
+                <i class="fas fa-stethoscope text-4xl mb-6"></i>
+                <h3 class="text-2xl font-bold">General Practice</h3>
+            </div>
+            <div class="bg-[#1A2624] p-12 rounded-3xl text-white">
+                <i class="fas fa-heartbeat text-4xl mb-6"></i>
+                <h3 class="text-2xl font-bold">Cardiology</h3>
+            </div>
+            <div class="md:col-span-2 bg-white border p-12 rounded-3xl">
+                <h3 class="text-3xl font-bold">Patient-Centered Philosophy</h3>
+                <p class="mt-4">Our approach blends the latest medical advancements with a compassionate touch, ensuring every patient feels heard, respected, and expertly cared for.</p>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="py-32 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
-        <div class="fade-in-up">
-            <h2 class="text-6xl font-bold text-[#1B434D] mb-8">Commonly Asked Questions</h2>
-            <p class="text-lg text-[#2D6A78]">We believe in transparency. Get the answers you need about our Toronto clinic services.</p>
-        </div>
-        <div class="space-y-6">
-            <details class="group p-6 bg-white shadow-lg rounded-2xl border border-[#2D6A78]/20">
-                <summary class="font-bold text-xl cursor-pointer flex justify-between">Do you accept new patients? <i class="fa-solid fa-chevron-down group-open:rotate-180 transition"></i></summary>
-                <p class="mt-4 text-[#1B434D]/70">Yes, we are currently accepting new family practice patients at our Cumberland Street location.</p>
-            </details>
-        </div>
-    </section>
-
-    <!-- Map & Contact Section -->
-    <section class="py-32 bg-[#FBFDFC] px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
-            <div class="h-full">
-                <iframe src="https://www.google.com/maps?q=162+Cumberland+St+#200+Toronto+ON+M5R+3N5+Canada&output=embed" class="w-full h-full min-h-[400px] rounded-3xl shadow-2xl" loading="lazy"></iframe>
-            </div>
-            <div class="bg-[#121818] p-12 rounded-3xl text-white shadow-2xl">
-                <h2 class="text-4xl font-bold mb-8 text-[#C4A484]">Get In Touch</h2>
+    <!-- Contact & Map -->
+    <section class="py-28 bg-[#FAFAFA] border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+            <div class="bg-white p-10 rounded-3xl shadow-lg">
+                <h2 class="text-4xl font-bold mb-8">Visit Our Clinic</h2>
                 <form class="space-y-6">
-                    <input type="text" placeholder="Name" class="w-full p-4 bg-white/5 border border-white/10 rounded-xl">
-                    <input type="email" placeholder="Email" class="w-full p-4 bg-white/5 border border-white/10 rounded-xl">
-                    <textarea placeholder="Message" class="w-full p-4 bg-white/5 border border-white/10 rounded-xl h-32"></textarea>
-                    <button class="w-full py-4 rounded-full bg-gradient-to-r from-[#2D6A78] to-[#4A8F9E] font-bold">Send Request</button>
+                    <input type="text" placeholder="Full Name" class="w-full p-4 bg-gray-50 rounded-xl border">
+                    <input type="email" placeholder="Email Address" class="w-full p-4 bg-gray-50 rounded-xl border">
+                    <textarea placeholder="Message" class="w-full p-4 bg-gray-50 rounded-xl border h-32"></textarea>
+                    <button class="w-full bg-[#006B70] text-white py-4 rounded-xl font-bold">Send Message</button>
                 </form>
             </div>
+            <iframe src="https://www.google.com/maps?q=162+Cumberland+St+#200+Toronto+ON+M5R+3N5+Canada&output=embed" class="w-full h-full min-h-[400px] rounded-3xl shadow-2xl"></iframe>
         </div>
     </section>
 
-    <!-- Stats Bar -->
-    <section class="py-20 bg-[#E0F2F3] text-center border-y border-[#2D6A78]/20">
-        <div class="max-w-7xl mx-auto grid grid-cols-3 gap-8">
-            <div><p class="text-6xl font-bold text-[#2D6A78]">4.5</p><p class="text-[#1B434D]">Star Rating</p></div>
-            <div><p class="text-6xl font-bold text-[#2D6A78]">599+</p><p class="text-[#1B434D]">Reviews</p></div>
-            <div><p class="text-6xl font-bold text-[#2D6A78]">10+</p><p class="text-[#1B434D]">Years Practice</p></div>
+    <!-- FAQ -->
+    <section class="py-20 max-w-4xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            <details class="bg-white p-6 rounded-2xl shadow-sm border"><summary class="font-bold cursor-pointer">What are your clinic hours?</summary><p class="mt-2 text-gray-600">We are open Mon-Fri 8am-8pm, and Sat 9am-2pm.</p></details>
+            <details class="bg-white p-6 rounded-2xl shadow-sm border"><summary class="font-bold cursor-pointer">Do you accept new patients?</summary><p class="mt-2 text-gray-600">Yes, we are currently accepting new family health registrations.</p></details>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#121818] text-white py-20 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
-            <div><h4 class="text-[#C4A484] font-bold mb-4">Care & Family</h4><p class="text-sm opacity-60">162 Cumberland St #200, Toronto, ON M5R 3N5</p></div>
-            <div><h4 class="font-bold mb-4">Links</h4><ul class="space-y-2 opacity-60"><li>Home</li><li>About</li><li>Services</li></ul></div>
-            <div><h4 class="font-bold mb-4">Contact</h4><p class="opacity-60">+1 647-951-4770</p></div>
-            <div><h4 class="font-bold mb-4">Social</h4><div class="flex gap-4"><i class="fab fa-instagram"></i><i class="fab fa-linkedin"></i></div></div>
+    <footer class="bg-[#1A2624] text-white py-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+            <div><h3 class="text-xl font-bold mb-4">Care& Yorkville</h3><p>Providing excellence in Toronto health since 2010.</p></div>
+            <div><h3 class="font-bold mb-4">Links</h3><ul class="space-y-2"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li></ul></div>
+            <div><h3 class="font-bold mb-4">Contact</h3><p>162 Cumberland St #200</p><p>+1 647-951-4770</p></div>
+            <div><h3 class="font-bold mb-4">Follow Us</h3><div class="flex gap-4 text-2xl"><i class="fab fa-instagram"></i><i class="fab fa-facebook"></i></div></div>
         </div>
-        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/10 text-center opacity-40">© 2024 Care & Family Health Yorkville</div>
+        <div class="text-center mt-12 border-t border-white/10 pt-8 text-sm">© 2024 Care& Family Health Yorkville. All Rights Reserved.</div>
     </footer>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
-        }, { threshold: 0.1 });
+            entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('show'); });
+        });
         document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
     </script>
 </body>

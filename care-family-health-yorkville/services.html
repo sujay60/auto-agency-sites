@@ -11,120 +11,103 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
-        .glass { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
     </style>
 </head>
-<body class="bg-[#FBFDFC] text-[#1A202C]">
+<body class="bg-[#FAFAFA] text-[#2D3436]">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 glass bg-white/80 border-b border-[#2D6A78]/10 py-6">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-[#2D6A78]">CARE & FAMILY</a>
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-[#006B70]">CARE&<span class="text-[#C5A059]">YORKVILLE</span></a>
             <div class="hidden md:flex gap-8 font-medium">
-                <a href="index.html" class="hover:text-[#2D6A78]">Home</a>
-                <a href="about.html" class="hover:text-[#2D6A78]">About</a>
-                <a href="services.html" class="text-[#2D6A78] font-bold">Services</a>
-                <a href="doctors.html" class="hover:text-[#2D6A78]">Doctors</a>
-                <a href="contact.html" class="hover:text-[#2D6A78]">Contact</a>
+                <a href="index.html" class="hover:text-[#006B70]">Home</a>
+                <a href="about.html" class="hover:text-[#006B70]">About</a>
+                <a href="services.html" class="text-[#006B70] border-b-2 border-[#006B70]">Services</a>
+                <a href="doctors.html" class="hover:text-[#006B70]">Doctors</a>
+                <a href="contact.html" class="hover:text-[#006B70]">Contact</a>
             </div>
-            <a href="contact.html" class="bg-[#2D6A78] text-white px-8 py-3 rounded-full hover:bg-[#1B434D] transition">Book Appointment</a>
+            <a href="contact.html" class="bg-[#006B70] text-white px-8 py-3 rounded-full hover:bg-[#008C8C] transition">Book Appointment</a>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="py-32 bg-[#FBFDFC]">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+    <header class="pt-40 pb-28 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div class="reveal">
-                <h1 class="text-7xl font-extrabold text-[#1B434D] leading-tight">Expert Medical Care in <span class="text-[#2D6A78]">Yorkville</span></h1>
-                <p class="text-xl mt-8 text-gray-600">Comprehensive health solutions designed for your unique needs. We combine sophisticated medical expertise with a commitment to patient-centered wellness.</p>
+                <h1 class="text-7xl font-extrabold text-[#004D40] leading-tight mb-6">Comprehensive Clinical Excellence</h1>
+                <p class="text-xl text-gray-600 mb-8">Providing sophisticated medical care in the heart of Yorkville. From preventative screenings to specialized wellness, our practice combines clinical precision with personalized attention.</p>
             </div>
-            <img src="https://loremflickr.com/800/600/doctors" alt="Medical Consult" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover reveal">
+            <div class="reveal">
+                <img src="https://loremflickr.com/800/600/clinic" alt="Medical Office" class="rounded-3xl shadow-2xl">
+            </div>
         </div>
     </header>
 
     <!-- Services Grid -->
-    <section class="py-32 bg-[#121818] text-white">
-        <div class="container mx-auto px-6">
+    <section class="py-32 bg-[#1A2624] text-white">
+        <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Bento Grid Items -->
-                <div class="col-span-2 p-10 bg-white/5 border border-white/10 rounded-3xl reveal">
-                    <h3 class="text-3xl font-bold mb-6 text-[#C4A484]">Preventative Care</h3>
-                    <p class="text-gray-400 text-lg">Proactive health screenings, routine physicals, and comprehensive risk assessments to ensure long-term vitality for you and your family.</p>
+                <div class="col-span-2 p-10 rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10 hover:scale-[1.02] transition">
+                    <h2 class="text-4xl font-bold mb-6 text-[#C5A059]">Family Medicine</h2>
+                    <p class="text-lg leading-relaxed">Comprehensive primary care for patients of all ages. We prioritize long-term health management, routine physicals, and personalized patient-doctor relationships in our boutique setting.</p>
                 </div>
-                <div class="p-10 bg-white/5 border border-white/10 rounded-3xl reveal">
-                    <h3 class="text-3xl font-bold mb-6 text-[#C4A484]">Vaccinations</h3>
-                    <p class="text-gray-400 text-lg">Seasonal flu shots, travel immunizations, and standard health protections administered with expert care.</p>
+                <div class="p-10 rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10 hover:scale-[1.02] transition">
+                    <i class="fas fa-stethoscope text-4xl text-[#C5A059] mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Screenings</h3>
+                    <p>Evidence-based preventative diagnostics.</p>
                 </div>
-                <div class="p-10 bg-white/5 border border-white/10 rounded-3xl reveal">
-                    <h3 class="text-3xl font-bold mb-6 text-[#C4A484]">Chronic Management</h3>
-                    <p class="text-gray-400 text-lg">Personalized plans for diabetes, hypertension, and other conditions to maintain your quality of life.</p>
+                <div class="p-10 rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10 hover:scale-[1.02] transition">
+                    <i class="fas fa-notes-medical text-4xl text-[#C5A059] mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Consultations</h3>
+                    <p>In-depth wellness and strategy sessions.</p>
                 </div>
-                <div class="col-span-2 p-10 bg-white/5 border border-white/10 rounded-3xl reveal">
-                    <h3 class="text-3xl font-bold mb-6 text-[#C4A484]">Mental Health Support</h3>
-                    <p class="text-gray-400 text-lg">Confidential consultations and integrated care strategies for managing anxiety, depression, and lifestyle-related stress in a safe environment.</p>
+                <div class="col-span-2 p-10 rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10 hover:scale-[1.02] transition">
+                    <h2 class="text-4xl font-bold mb-6 text-[#C5A059]">Minor Procedures</h2>
+                    <p class="text-lg leading-relaxed">Our clinic is equipped for a range of minor surgical procedures, skin assessments, and urgent care needs, ensuring high-quality clinical outcomes with minimal wait times.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Bar -->
-    <section class="py-20 bg-[#2D6A78] text-white">
-        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
-            <div>
-                <h4 class="text-5xl font-extrabold">4.5</h4>
-                <p class="text-[#C4A484] uppercase tracking-widest mt-2">Rating</p>
-            </div>
-            <div>
-                <h4 class="text-5xl font-extrabold">599+</h4>
-                <p class="text-[#C4A484] uppercase tracking-widest mt-2">Patient Reviews</p>
-            </div>
-            <div>
-                <h4 class="text-5xl font-extrabold">12+</h4>
-                <p class="text-[#C4A484] uppercase tracking-widest mt-2">Specialists</p>
-            </div>
-            <div>
-                <h4 class="text-5xl font-extrabold">24/7</h4>
-                <p class="text-[#C4A484] uppercase tracking-widest mt-2">Care Support</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#121818] text-white py-20">
-        <div class="container mx-auto px-6 grid md:grid-cols-4 gap-12">
+    <footer class="bg-[#1A2624] text-white py-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
             <div>
-                <h5 class="text-xl font-bold mb-6 text-[#C4A484]">Care & Family Health</h5>
-                <p class="text-gray-400 text-sm">162 Cumberland St #200, Toronto, ON M5R 3N5</p>
+                <h4 class="text-xl font-bold mb-6 text-[#C5A059]">Care & Family Health</h4>
+                <p class="text-sm opacity-70">162 Cumberland St #200, Toronto, ON M5R 3N5</p>
             </div>
             <div>
-                <h5 class="font-bold mb-6">Quick Links</h5>
-                <ul class="text-gray-400 space-y-2">
+                <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-2 opacity-70">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                 </ul>
             </div>
             <div>
-                <h5 class="font-bold mb-6">Contact</h5>
-                <p class="text-gray-400">+1 647-951-4770</p>
+                <h4 class="text-lg font-bold mb-6">Contact</h4>
+                <p class="opacity-70">+1 647-951-4770</p>
             </div>
             <div>
-                <h5 class="font-bold mb-6">Follow Us</h5>
+                <h4 class="text-lg font-bold mb-6">Follow Us</h4>
                 <div class="flex gap-4 text-2xl">
                     <i class="fab fa-instagram"></i>
                     <i class="fab fa-linkedin"></i>
                 </div>
             </div>
         </div>
-        <div class="container mx-auto px-6 mt-12 pt-8 border-t border-white/10 text-center text-gray-500">
-            &copy; 2024 Care & Family Health Yorkville. All Rights Reserved.
+        <div class="text-center mt-12 pt-8 border-t border-white/10 opacity-50 text-sm">
+            © 2024 Care & Family Health Yorkville. All rights reserved.
         </div>
     </footer>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
         }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
