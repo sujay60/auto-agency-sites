@@ -9,74 +9,89 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinic: {
+                            50: '#F0F9F8',
+                            900: '#0F2E2C',
+                            teal: '#1A5F5A',
+                            accent: '#47B5A7'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-[#F8FAFC] text-slate-900">
+<body class="bg-clinic-50 text-clinic-900">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold tracking-tighter text-teal-900">ALBANY MEDICAL</a>
-            <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
-                <a href="doctors.html" class="hover:text-teal-600 transition">Doctors</a>
-                <a href="services.html" class="text-teal-600">Services</a>
-                <a href="contact.html" class="hover:text-teal-600 transition">Contact</a>
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-white/70 border-b border-clinic-900/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <span class="text-xl font-bold tracking-tighter text-clinic-900">ALBANY MEDICAL</span>
+            <div class="flex gap-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-clinic-teal transition">Home</a>
+                <a href="doctors.html" class="hover:text-clinic-teal transition">Doctors</a>
+                <a href="services.html" class="text-clinic-teal">Services</a>
+                <a href="contact.html" class="hover:text-clinic-teal transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="max-w-7xl mx-auto px-6 py-24">
-        <h1 class="text-6xl font-bold tracking-tighter text-slate-900 max-w-2xl mb-8">Comprehensive clinical excellence.</h1>
-        <p class="text-xl text-slate-500 max-w-xl">Advanced diagnostics and personalized care pathways designed for your long-term health.</p>
+    <header class="pt-32 pb-16 px-6 text-center">
+        <h1 class="text-6xl font-bold tracking-tighter mb-6">Our Medical Services</h1>
+        <p class="max-w-2xl mx-auto text-xl opacity-70">Advanced diagnostic care and specialized wellness programs tailored for the Toronto community.</p>
     </header>
 
     <!-- Services Grid -->
-    <main class="max-w-7xl mx-auto px-6 pb-24 space-y-24">
+    <main class="max-w-7xl mx-auto px-6 py-24 space-y-32">
         
         <!-- Service 1 -->
         <section class="grid md:grid-cols-2 gap-16 items-center">
-            <img src="https://loremflickr.com/1200/800/doctors" alt="Medical Diagnostics" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
-            <div>
-                <span class="text-teal-600 font-semibold tracking-wide uppercase text-sm">Diagnostic Imaging</span>
-                <h2 class="text-4xl font-bold tracking-tight mt-4 mb-6">State-of-the-art diagnostic testing.</h2>
-                <p class="text-slate-600 leading-relaxed text-lg">We utilize industry-leading technology to provide rapid, accurate insights. From high-resolution scans to comprehensive lab panels, your results are handled with precision.</p>
+            <div class="space-y-6">
+                <span class="text-clinic-accent font-semibold tracking-widest uppercase text-sm">Diagnostic</span>
+                <h2 class="text-5xl font-bold tracking-tight">Preventative Care & Screenings</h2>
+                <p class="text-lg opacity-80 leading-relaxed">Comprehensive health assessments to detect risks early. We utilize state-of-the-art diagnostic imaging and lab analysis to ensure precision in every report.</p>
             </div>
+            <img src="https://loremflickr.com/1200/800/doctors" alt="Services" class="w-full h-[400px] object-cover rounded-[2rem] shadow-2xl">
         </section>
 
         <!-- Service 2 -->
         <section class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="order-2 md:order-1">
-                <span class="text-teal-600 font-semibold tracking-wide uppercase text-sm">Primary Care</span>
-                <h2 class="text-4xl font-bold tracking-tight mt-4 mb-6">Personalized family medicine.</h2>
-                <p class="text-slate-600 leading-relaxed text-lg">Building long-term health partnerships. Our physicians prioritize preventative wellness, chronic disease management, and mental health support for every stage of life.</p>
+            <img src="https://loremflickr.com/1200/800/hospital" alt="Facility" class="w-full h-[400px] object-cover rounded-[2rem] shadow-2xl md:order-1">
+            <div class="space-y-6 order-1">
+                <span class="text-clinic-accent font-semibold tracking-widest uppercase text-sm">Specialized</span>
+                <h2 class="text-5xl font-bold tracking-tight">Chronic Disease Management</h2>
+                <p class="text-lg opacity-80 leading-relaxed">Dedicated support for long-term health. Our team specializes in managing metabolic, cardiovascular, and autoimmune conditions with a patient-first approach.</p>
             </div>
-            <img src="https://loremflickr.com/1200/800/doctor" alt="Consultation" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl order-1 md:order-2">
         </section>
 
         <!-- Service 3 -->
         <section class="grid md:grid-cols-2 gap-16 items-center">
-            <img src="https://loremflickr.com/1200/800/surgery" alt="Minor Surgery" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
-            <div>
-                <span class="text-teal-600 font-semibold tracking-wide uppercase text-sm">Minor Procedures</span>
-                <h2 class="text-4xl font-bold tracking-tight mt-4 mb-6">Safe, efficient clinical care.</h2>
-                <p class="text-slate-600 leading-relaxed text-lg">Modern treatment rooms equipped for minor surgical interventions, dermatological care, and urgent care needs, ensuring minimal wait times and optimal outcomes.</p>
+            <div class="space-y-6">
+                <span class="text-clinic-accent font-semibold tracking-widest uppercase text-sm">Wellness</span>
+                <h2 class="text-5xl font-bold tracking-tight">Integrative Wellness</h2>
+                <p class="text-lg opacity-80 leading-relaxed">Bridging the gap between medicine and holistic vitality. From nutritional counseling to lifestyle coaching, we focus on the whole person.</p>
             </div>
+            <img src="https://loremflickr.com/1200/800/medical" alt="Wellness" class="w-full h-[400px] object-cover rounded-[2rem] shadow-2xl">
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer class="bg-teal-950 text-teal-100 py-24">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
-            <div class="col-span-2">
+    <footer class="bg-clinic-900 text-white py-24 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div class="col-span-2 md:col-span-1">
                 <h3 class="text-2xl font-bold mb-4">Albany Medical</h3>
-                <p class="text-teal-300">807 Broadview Ave, Toronto, ON M4K 2P8</p>
-                <p class="text-teal-300">+1 416-366-2000</p>
+                <p class="opacity-60 text-sm">807 Broadview Ave, Toronto, ON M4K 2P8</p>
             </div>
             <div>
-                <h4 class="font-semibold mb-6">Links</h4>
-                <ul class="space-y-4 text-teal-300 text-sm">
+                <h4 class="font-bold mb-4">Navigation</h4>
+                <ul class="space-y-2 opacity-60 text-sm">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="doctors.html">Doctors</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -84,16 +99,17 @@
                 </ul>
             </div>
             <div>
-                <h4 class="font-semibold mb-6">Connect</h4>
-                <ul class="space-y-4 text-teal-300 text-sm">
-                    <li>Twitter</li>
-                    <li>LinkedIn</li>
-                    <li>Instagram</li>
-                </ul>
+                <h4 class="font-bold mb-4">Contact</h4>
+                <p class="opacity-60 text-sm">+1 416-366-2000</p>
+                <p class="opacity-60 text-sm">info@albanymedical.ca</p>
             </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-teal-900 text-teal-700 text-xs text-center">
-            &copy; 2024 Albany Medical Building. All rights reserved.
+            <div>
+                <h4 class="font-bold mb-4">Connect</h4>
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 rounded-full bg-white/10"></div>
+                    <div class="w-10 h-10 rounded-full bg-white/10"></div>
+                </div>
+            </div>
         </div>
     </footer>
 
