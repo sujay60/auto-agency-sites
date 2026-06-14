@@ -3,119 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Albany Medical Clinic | Toronto</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Services | Albany Medical Clinic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { font-family: 'Inter', sans-serif; }
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
-        .glass { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
+        .animate-float { animation: float 6s ease-in-out infinite; }
     </style>
 </head>
-<body class="bg-[#F8FAFA] text-[#264653]">
+<body class="bg-[#f8fafc] text-[#1e293b]">
 
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-[#006D77]">ALBANY MEDICAL</a>
-            <div class="hidden md:flex gap-8 font-medium">
-                <a href="index.html" class="hover:text-[#006D77]">Home</a>
-                <a href="about.html" class="hover:text-[#006D77]">About</a>
-                <a href="services.html" class="text-[#006D77]">Services</a>
-                <a href="doctors.html" class="hover:text-[#006D77]">Doctors</a>
-                <a href="contact.html" class="hover:text-[#006D77]">Contact</a>
+    <nav class="w-full fixed top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold tracking-tighter text-[#0f766e]">Albany Medical Clinic</a>
+            <div class="hidden md:flex items-center gap-8 text-[#1e293b] font-medium">
+                <a href="index.html" class="hover:text-[#0f766e] transition-colors">Index</a>
+                <a href="services.html" class="hover:text-[#0f766e] transition-colors">Services</a>
+                <a href="doctors.html" class="hover:text-[#0f766e] transition-colors">Doctors</a>
+                <a href="about.html" class="hover:text-[#0f766e] transition-colors">About</a>
+                <a href="contact.html" class="hover:text-[#0f766e] transition-colors">Contact</a>
             </div>
-            <a href="contact.html" class="bg-[#006D77] text-white px-8 py-3 rounded-full hover:bg-[#004B52] transition">Book Appointment</a>
+            <a href="contact.html" class="hidden md:inline-block px-8 py-3 bg-[#0f766e] text-white rounded-full font-medium hover:scale-105 transition-transform">Book Now</a>
         </div>
     </nav>
 
-    <header class="pt-40 pb-20 px-6">
-        <div class="max-w-7xl mx-auto text-center reveal">
-            <h1 class="text-7xl font-extrabold mb-6">Expert Medical Care</h1>
-            <p class="text-2xl text-gray-500 max-w-2xl mx-auto">Providing compassionate, precision-based healthcare tailored to the Toronto community.</p>
-        </div>
+    <header class="pt-40 pb-20 px-6 container mx-auto">
+        <h1 class="text-7xl font-extrabold tracking-tight text-[#0f172a] reveal">Premium Medical Services</h1>
+        <p class="text-2xl text-slate-600 mt-6 max-w-2xl reveal">Comprehensive care focused on your long-term wellbeing in the heart of Toronto.</p>
     </header>
 
-    <section class="py-32 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center reveal">
-            <div>
-                <span class="text-[#E29578] font-bold uppercase tracking-widest">Clinical Excellence</span>
-                <h2 class="text-6xl font-bold mt-4 mb-8">General Practice</h2>
-                <p class="text-xl leading-relaxed mb-6">Our physicians provide comprehensive primary care for patients of all ages, ensuring preventative care and diagnostic accuracy remain at the forefront of your health journey.</p>
-                <ul class="space-y-4 text-lg">
-                    <li><i class="fa fa-check text-[#83C5BE] mr-3"></i> Annual physical assessments</li>
-                    <li><i class="fa fa-check text-[#83C5BE] mr-3"></i> Acute illness management</li>
-                    <li><i class="fa fa-check text-[#83C5BE] mr-3"></i> Preventative health screenings</li>
-                </ul>
+    <section class="container mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-5 reveal">
+                <div class="bg-[#0f766e] p-12 rounded-[3rem] text-white">
+                    <h2 class="text-4xl font-bold mb-6">Patient-Centric Approach</h2>
+                    <p class="text-lg opacity-90 leading-relaxed">We combine modern medical technology with compassionate care. From routine screenings to specialized minor procedures, our expert team ensures you feel heard and healed.</p>
+                </div>
             </div>
-            <img src="https://loremflickr.com/800/600/doctor,exam" class="rounded-3xl shadow-2xl" alt="Medical Exam">
+            <div class="md:col-span-7 reveal">
+                <img src="https://loremflickr.com/800/600/doctors" class="rounded-[2rem] shadow-2xl w-full h-[500px] object-cover animate-float" alt="Service">
+            </div>
         </div>
     </section>
 
-    <section class="py-32 px-6 bg-[#1D3557] text-white">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center reveal">
-            <img src="https://loremflickr.com/800/600/clinic,hospital" class="rounded-3xl shadow-2xl" alt="Clinic Interior">
-            <div>
-                <span class="text-[#E29578] font-bold uppercase tracking-widest">Ongoing Support</span>
-                <h2 class="text-6xl font-bold mt-4 mb-8">Chronic Disease Management</h2>
-                <p class="text-xl leading-relaxed mb-6">We partner with you to manage long-term health conditions with dedicated care plans, medication monitoring, and lifestyle integration strategies.</p>
-                <div class="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl">
-                    <p class="italic">"Albany Medical provides a seamless experience for managing my health. The attention to detail is unmatched in Toronto."</p>
-                    <p class="mt-4 font-bold text-[#E29578]">— Satisfied Patient</p>
+    <section class="bg-[#0f172a] py-32 text-[#f1f5f9]">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service Card -->
+                <div class="p-8 border border-white/10 rounded-3xl backdrop-blur-xl hover:bg-white/5 transition-all group reveal">
+                    <i class="fa-solid fa-stethoscope text-[#f59e0b] text-4xl mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">General Practice</h3>
+                    <p class="text-slate-400">Regular check-ups and personalized treatment plans for your daily health needs.</p>
+                </div>
+                <div class="p-8 border border-white/10 rounded-3xl backdrop-blur-xl hover:bg-white/5 transition-all group reveal">
+                    <i class="fa-solid fa-shield-heart text-[#f59e0b] text-4xl mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Preventative Care</h3>
+                    <p class="text-slate-400">Advanced screening and early detection to ensure long-term health vitality.</p>
+                </div>
+                <div class="p-8 border border-white/10 rounded-3xl backdrop-blur-xl hover:bg-white/5 transition-all group reveal">
+                    <i class="fa-solid fa-scissors text-[#f59e0b] text-4xl mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Minor Procedures</h3>
+                    <p class="text-slate-400">Safe and hygienic surgical minor interventions performed by our experienced staff.</p>
+                </div>
+                <div class="p-8 border border-white/10 rounded-3xl backdrop-blur-xl hover:bg-white/5 transition-all group reveal">
+                    <i class="fa-solid fa-pills text-[#f59e0b] text-4xl mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Prescriptions</h3>
+                    <p class="text-slate-400">Seamless management and renewal of your essential medications and treatments.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-32 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 reveal">
-            <div class="col-span-3 text-center mb-12">
-                <h2 class="text-5xl font-bold">Specialized Care Services</h2>
-            </div>
-            <div class="p-10 rounded-3xl bg-white shadow-lg border border-gray-100 hover:scale-105 transition">
-                <h3 class="text-2xl font-bold mb-4 text-[#006D77]">Referral Management</h3>
-                <p>Coordinated access to top-tier specialists across the Greater Toronto Area to ensure your care is continuous.</p>
-            </div>
-            <div class="p-10 rounded-3xl bg-white shadow-lg border border-gray-100 hover:scale-105 transition">
-                <h3 class="text-2xl font-bold mb-4 text-[#006D77]">Preventative Health</h3>
-                <p>Advanced screenings and vaccination programs designed to keep you and your family ahead of potential health risks.</p>
-            </div>
-            <div class="p-10 rounded-3xl bg-white shadow-lg border border-gray-100 hover:scale-105 transition">
-                <h3 class="text-2xl font-bold mb-4 text-[#006D77]">Physical Exams</h3>
-                <p>Thorough executive and routine physical examinations conducted with modern clinical precision.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-[#1D3557] text-white py-20 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+    <footer class="bg-[#0f172a] text-white py-20 px-6 mt-20">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
-                <h4 class="font-bold text-xl mb-6">Albany Medical Clinic</h4>
-                <p class="text-gray-400">807 Broadview Ave, Toronto, ON M4K 2P8</p>
-                <p class="text-[#83C5BE] mt-2">+1 416-461-9471</p>
+                <h4 class="text-xl font-bold mb-4">Albany Medical Clinic</h4>
+                <p class="text-slate-400">807 Broadview Ave, Toronto, ON M4K 2P8, Canada</p>
             </div>
             <div>
-                <h4 class="font-bold text-xl mb-6">Links</h4>
-                <ul class="space-y-3 text-gray-400">
+                <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-slate-400">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold text-xl mb-6">Stats</h4>
-                <p class="text-4xl font-bold text-[#E29578]">800+</p>
-                <p class="text-gray-400">Verified Reviews</p>
+                <h4 class="text-xl font-bold mb-4">Contact</h4>
+                <p class="text-slate-400">+1 416-461-9471</p>
             </div>
             <div>
-                <h4 class="font-bold text-xl mb-6">Connect</h4>
+                <h4 class="text-xl font-bold mb-4">Connect</h4>
                 <div class="flex gap-4">
-                    <i class="fab fa-facebook text-2xl"></i>
-                    <i class="fab fa-instagram text-2xl"></i>
-                    <i class="fab fa-linkedin text-2xl"></i>
+                    <i class="fa-brands fa-facebook text-2xl hover:text-[#f59e0b]"></i>
+                    <i class="fa-brands fa-instagram text-2xl hover:text-[#f59e0b]"></i>
                 </div>
             </div>
+        </div>
+        <div class="container mx-auto mt-12 border-t border-white/10 pt-8 text-center text-slate-500">
+            &copy; 2024 Albany Medical Clinic. All rights reserved.
         </div>
     </footer>
 

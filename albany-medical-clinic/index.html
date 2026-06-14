@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,153 +9,137 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .reveal { transition: all 0.8s ease-out; opacity: 0; transform: translateY(30px); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        .floating { animation: float 6s ease-in-out infinite; }
-        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
+        .reveal { transition: all 0.8s ease-out; }
+        .float { animation: floating 3s ease-in-out infinite; }
+        @keyframes floating { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
     </style>
 </head>
 <body class="bg-[#f8fafc] text-[#1e293b]">
 
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#0f766e]/20 px-6 py-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-[#0f766e]">Albany<span class="text-[#f59e0b]">Medical</span></a>
-            <div class="hidden md:flex gap-8 font-medium">
-                <a href="index.html" class="hover:text-[#0f766e]">Home</a>
-                <a href="about.html" class="hover:text-[#0f766e]">About</a>
-                <a href="doctors.html" class="hover:text-[#0f766e]">Doctors</a>
-                <a href="services.html" class="hover:text-[#0f766e]">Services</a>
-                <a href="contact.html" class="hover:text-[#0f766e]">Contact</a>
+    <nav class="w-full fixed top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold tracking-tighter text-[#0f766e]">Albany Medical Clinic</a>
+            <div class="hidden md:flex items-center gap-8 text-[#1e293b] font-medium">
+                <a href="index.html" class="hover:text-[#0f766e] transition-colors">Index</a>
+                <a href="services.html" class="hover:text-[#0f766e] transition-colors">Services</a>
+                <a href="doctors.html" class="hover:text-[#0f766e] transition-colors">Doctors</a>
+                <a href="about.html" class="hover:text-[#0f766e] transition-colors">About</a>
+                <a href="contact.html" class="hover:text-[#0f766e] transition-colors">Contact</a>
             </div>
-            <a href="contact.html" class="bg-[#0f766e] text-white px-6 py-2 rounded-full hover:bg-[#134e4a] transition">Book Appointment</a>
+            <a href="contact.html" class="hidden md:inline-block px-8 py-3 bg-[#0f766e] text-white rounded-full font-medium hover:scale-105 transition-transform">Book Now</a>
         </div>
     </nav>
 
-    <header class="pt-40 pb-32 px-6 overflow-hidden">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="reveal">
-                <h1 class="text-7xl font-extrabold leading-tight mb-8">Comprehensive <span class="text-[#0f766e]">Healthcare</span> for your family.</h1>
-                <p class="text-xl mb-10 text-slate-600">Located at 807 Broadview Ave, Albany Medical Clinic provides professional, modern medical care with a focus on patient well-being.</p>
-                <a href="contact.html" class="text-lg bg-[#f59e0b] text-[#0f172a] px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform inline-block">Request a Consultation</a>
+    <header class="pt-48 pb-32 overflow-hidden">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal opacity-0 translate-y-10">
+                <span class="text-[#f59e0b] font-bold tracking-widest uppercase text-sm">Compassionate Care Since 1990</span>
+                <h1 class="text-7xl font-extrabold text-[#0f172a] leading-tight mt-6 mb-8">Your Health, <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0f766e] to-[#0ea5e9]">Our Priority.</span></h1>
+                <p class="text-xl text-gray-600 mb-10">Experience patient-centered care at Albany Medical Clinic. We combine expert medical knowledge with modern technology for your well-being.</p>
+                <div class="flex gap-4">
+                    <a href="contact.html" class="px-8 py-4 bg-[#0f766e] text-white rounded-2xl font-bold hover:bg-[#134e4a] transition-all">Book Appointment</a>
+                    <a href="about.html" class="px-8 py-4 bg-[#ccfbf1] text-[#0f766e] rounded-2xl font-bold hover:bg-[#b0f2e5] transition-all">Learn More</a>
+                </div>
             </div>
-            <div class="floating">
-                <img src="https://loremflickr.com/800/600/doctors" alt="Medical Team" class="rounded-[3rem] shadow-2xl w-full h-[500px] object-cover">
+            <div class="relative reveal opacity-0 translate-y-10 float">
+                <img src="https://loremflickr.com/800/600/doctors" class="rounded-[3rem] shadow-2xl object-cover w-full h-[500px]" alt="Doctor">
+                <div class="absolute -bottom-10 -left-10 bg-[#0f172a] p-8 rounded-3xl text-white shadow-2xl">
+                    <p class="text-4xl font-bold">800+</p>
+                    <p class="text-sm opacity-80">Verified Reviews</p>
+                </div>
             </div>
         </div>
     </header>
 
     <section class="py-32 bg-[#0f172a] text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-20 text-[#f59e0b]">Our Philosophy</h2>
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="p-8 border border-white/10 rounded-2xl hover:bg-[#0f766e] transition">
-                    <i class="fa-solid fa-heart-pulse text-4xl mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-4">Patient-Centric</h3>
-                    <p class="text-slate-300">Your health is our priority. We listen, understand, and provide personalized treatment plans.</p>
-                </div>
-                <div class="p-8 border border-white/10 rounded-2xl hover:bg-[#0f766e] transition">
-                    <i class="fa-solid fa-microscope text-4xl mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-4">Modern Technology</h3>
-                    <p class="text-slate-300">Utilizing the latest diagnostic tools to ensure accurate and timely medical outcomes.</p>
-                </div>
-                <div class="p-8 border border-white/10 rounded-2xl hover:bg-[#0f766e] transition">
-                    <i class="fa-solid fa-user-doctor text-4xl mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-4">Expert Team</h3>
-                    <p class="text-slate-300">Dedicated professionals committed to clinical excellence and compassionate care.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-32 px-6">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-5xl font-bold mb-20 text-center">What Patients Say</h2>
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-20 text-[#f59e0b]">Why Patients Trust Us</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl shadow-lg border border-[#0f766e]/20">
-                    <div class="text-[#f59e0b] mb-4">★★★★★</div>
-                    <p class="mb-6">"Professional staff and very clean facility. Truly the best clinic on Broadview."</p>
-                    <h4 class="font-bold">- Sarah J.</h4>
+                <div class="bg-white/5 p-10 rounded-3xl backdrop-blur-xl border border-white/10 hover:-translate-y-4 transition-transform">
+                    <i class="fas fa-user-md text-4xl mb-6 text-[#0ea5e9]"></i>
+                    <h3 class="text-2xl font-bold mb-4">Expert Doctors</h3>
+                    <p class="opacity-80">Our team consists of highly specialized medical professionals dedicated to your long-term health.</p>
                 </div>
-                <div class="bg-white p-8 rounded-3xl shadow-lg border border-[#0f766e]/20">
-                    <div class="text-[#f59e0b] mb-4">★★★★☆</div>
-                    <p class="mb-6">"Wait times are reasonable, and the doctors actually take the time to listen."</p>
-                    <h4 class="font-bold">- Michael D.</h4>
+                <div class="bg-white/5 p-10 rounded-3xl backdrop-blur-xl border border-white/10 hover:-translate-y-4 transition-transform">
+                    <i class="fas fa-clock text-4xl mb-6 text-[#f59e0b]"></i>
+                    <h3 class="text-2xl font-bold mb-4">Flexible Hours</h3>
+                    <p class="opacity-80">We understand your busy schedule and offer accessible appointment slots throughout the week.</p>
                 </div>
-                <div class="bg-white p-8 rounded-3xl shadow-lg border border-[#0f766e]/20">
-                    <div class="text-[#f59e0b] mb-4">★★★★★</div>
-                    <p class="mb-6">"Efficient, friendly, and very thorough. I feel well taken care of here."</p>
-                    <h4 class="font-bold">- Elena R.</h4>
+                <div class="bg-white/5 p-10 rounded-3xl backdrop-blur-xl border border-white/10 hover:-translate-y-4 transition-transform">
+                    <i class="fas fa-heartbeat text-4xl mb-6 text-red-400"></i>
+                    <h3 class="text-2xl font-bold mb-4">Modern Facility</h3>
+                    <p class="opacity-80">Located at 807 Broadview, our clinic is equipped with the latest diagnostic and treatment tools.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-32 bg-[#ccfbf1]/30 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
-            <div>
-                <h2 class="text-5xl font-bold mb-8">Contact & Location</h2>
+    <section class="py-32 container mx-auto px-6">
+        <h2 class="text-5xl font-bold text-center mb-20">Patient Stories</h2>
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="bg-white p-8 rounded-3xl shadow-xl border-t-4 border-[#0f766e]">
+                <p class="mb-6 italic">"Professional staff and very clean environment. I felt heard and cared for."</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
+                    <div><h4 class="font-bold">Sarah Jenkins</h4><div class="text-[#f59e0b]">★★★★★</div></div>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-xl border-t-4 border-[#0f766e]">
+                <p class="mb-6 italic">"The doctors in Albany street are exceptionally thorough and kind."</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
+                    <div><h4 class="font-bold">Marcus Thorne</h4><div class="text-[#f59e0b]">★★★★☆</div></div>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-xl border-t-4 border-[#0f766e]">
+                <p class="mb-6 italic">"Quick booking process and very helpful administrative support."</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
+                    <div><h4 class="font-bold">Elena Rodriguez</h4><div class="text-[#f59e0b]">★★★★★</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-[#ccfbf1]/30">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12">
+            <div class="bg-white p-12 rounded-3xl shadow-lg">
+                <h3 class="text-3xl font-bold mb-8">Schedule a Visit</h3>
                 <form class="space-y-6">
-                    <input type="text" placeholder="Full Name" class="w-full p-4 rounded-xl border border-[#0f766e]/20">
-                    <input type="email" placeholder="Email Address" class="w-full p-4 rounded-xl border border-[#0f766e]/20">
-                    <textarea placeholder="How can we help?" class="w-full p-4 rounded-xl border border-[#0f766e]/20 h-32"></textarea>
-                    <button class="w-full bg-[#0f766e] text-white py-4 rounded-full font-bold">Send Message</button>
+                    <input type="text" placeholder="Full Name" class="w-full p-4 rounded-xl border border-gray-200 bg-gray-50">
+                    <input type="email" placeholder="Email Address" class="w-full p-4 rounded-xl border border-gray-200 bg-gray-50">
+                    <textarea placeholder="Message" class="w-full p-4 rounded-xl border border-gray-200 bg-gray-50 h-32"></textarea>
+                    <button class="w-full py-4 bg-[#0f766e] text-white rounded-xl font-bold hover:bg-[#134e4a]">Send Request</button>
                 </form>
             </div>
-            <div class="w-full h-[400px] rounded-3xl shadow-2xl overflow-hidden">
-                <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-full border-0"></iframe>
+            <div class="w-full h-full min-h-[400px] rounded-3xl shadow-2xl overflow-hidden">
+                <iframe src="https://www.google.com/maps?q=807+Broadview+Ave+Toronto+ON+M4K+2P8+Canada&output=embed" class="w-full h-full"></iframe>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6 max-w-4xl mx-auto">
-        <h2 class="text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+    <section class="py-20 container mx-auto px-6 max-w-4xl">
+        <h2 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
         <div class="space-y-4">
-            <details class="bg-white p-6 rounded-2xl shadow border border-slate-200">
-                <summary class="font-bold cursor-pointer text-[#0f766e]">How do I book an appointment?</summary>
-                <p class="mt-4 text-slate-600">You can call us at +1 416-461-9471 or use our online portal.</p>
-            </details>
-            <details class="bg-white p-6 rounded-2xl shadow border border-slate-200">
-                <summary class="font-bold cursor-pointer text-[#0f766e]">Are you accepting new patients?</summary>
-                <p class="mt-4 text-slate-600">We are currently accepting new patients. Please contact the front desk.</p>
-            </details>
+            <details class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"><summary class="font-bold cursor-pointer">What insurance do you accept?</summary><p class="mt-4 opacity-70">We accept most major provincial health plans and private insurance providers.</p></details>
+            <details class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"><summary class="font-bold cursor-pointer">How do I book an appointment?</summary><p class="mt-4 opacity-70">You can book via the 'Book Now' button or call our office at +1 416-461-9471.</p></details>
         </div>
     </section>
 
-    <footer class="bg-[#0f172a] text-[#f1f5f9] py-20 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
-            <div>
-                <h3 class="text-xl font-bold mb-4 text-[#f59e0b]">Albany Medical</h3>
-                <p>807 Broadview Ave, Toronto, ON M4K 2P8</p>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4 text-[#f59e0b]">Navigation</h3>
-                <ul class="space-y-2">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="doctors.html">Doctors</a></li>
-                    <li><a href="services.html">Services</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4 text-[#f59e0b]">Contact</h3>
-                <p>+1 416-461-9471</p>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4 text-[#f59e0b]">Connect</h3>
-                <div class="flex gap-4 text-2xl">
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                </div>
-            </div>
+    <footer class="bg-[#0f172a] text-white py-20">
+        <div class="container mx-auto px-6 grid md:grid-cols-4 gap-12">
+            <div><h3 class="text-2xl font-bold mb-6 text-[#0f766e]">Albany Medical Clinic</h3><p class="opacity-70">807 Broadview Ave, Toronto, ON M4K 2P8</p></div>
+            <div><h4 class="font-bold mb-6 text-[#f59e0b]">Links</h4><ul class="space-y-2 opacity-70"><li>Services</li><li>Doctors</li><li>About</li><li>Contact</li></ul></div>
+            <div><h4 class="font-bold mb-6 text-[#f59e0b]">Contact</h4><p class="opacity-70">+1 416-461-9471</p></div>
+            <div><h4 class="font-bold mb-6 text-[#f59e0b]">Social</h4><div class="flex gap-4 text-xl"><i class="fab fa-facebook"></i><i class="fab fa-instagram"></i></div></div>
         </div>
-        <div class="text-center mt-12 pt-8 border-t border-white/10">© 2024 Albany Medical Clinic. All rights reserved.</div>
     </footer>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
+            entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.remove('opacity-0', 'translate-y-10'); });
         });
-        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
