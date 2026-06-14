@@ -1,112 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Dr. Ruth Grossman | Premium Medical Care</title>
+    <title>Services | Dr. Ruth Grossman | North York Medical Care</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.02); }
     </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clinical: {
-                            50: '#f0f9f8',
-                            900: '#0f2b29',
-                            teal: '#0d9488',
-                            sky: '#e0f2f1'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-[#F8FAFB] text-[#264653]">
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-clinical-900 tracking-tighter">DR. GROSSMAN</a>
-            <div class="flex gap-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-clinical-teal transition">Home</a>
-                <a href="services.html" class="text-clinical-teal">Services</a>
-                <a href="about.html" class="hover:text-clinical-teal transition">About</a>
-                <a href="contact.html" class="hover:text-clinical-teal transition">Contact</a>
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-xl border-b border-[#83C5BE]/20">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-[#006D77]">Dr. Ruth Grossman</a>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="hover:text-[#006D77]">Home</a>
+                <a href="about.html" class="hover:text-[#006D77]">About</a>
+                <a href="services.html" class="text-[#006D77]">Services</a>
+                <a href="contact.html" class="hover:text-[#006D77]">Contact</a>
             </div>
+            <a href="contact.html" class="bg-[#006D77] text-white px-8 py-3 rounded-full hover:bg-[#004B52] transition">Book Appointment</a>
         </div>
     </nav>
 
     <!-- Header -->
-    <section class="py-24 px-6 max-w-7xl mx-auto">
-        <h1 class="text-6xl md:text-7xl font-bold tracking-tighter text-clinical-900 mb-6">Expert Medical <br> <span class="text-clinical-teal">Clinical Services.</span></h1>
-        <p class="text-xl text-slate-500 max-w-2xl">Precision diagnostics and personalized care pathways designed for your long-term wellness.</p>
-    </section>
+    <header class="pt-40 pb-28 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-7xl font-extrabold text-[#264653] mb-6">Comprehensive Clinical Services</h1>
+            <p class="text-xl text-[#264653]/80 max-w-2xl mx-auto">Expert medical care delivered with compassion and precision at our North York facility.</p>
+        </div>
+    </header>
 
     <!-- Service Section 1 -->
-    <section class="py-24 bg-clinical-50">
+    <section class="py-32 bg-[#EDF6F9] reveal">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <img src="https://loremflickr.com/1200/800/doctors" alt="Consultation" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl">
             <div>
-                <h2 class="text-4xl font-bold tracking-tight text-clinical-900 mb-6">Primary Diagnostics</h2>
-                <p class="text-lg text-slate-600 leading-relaxed mb-8">Comprehensive health screenings utilizing state-of-the-art technology to detect health markers early. Our approach is preventative, thorough, and highly personalized.</p>
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
-                        <h4 class="font-bold text-clinical-teal">Annual Wellness</h4>
-                        <p class="text-sm text-slate-500">Full-body deep dive.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
-                        <h4 class="font-bold text-clinical-teal">Lab Analysis</h4>
-                        <p class="text-sm text-slate-500">Same-day results.</p>
-                    </div>
-                </div>
+                <h2 class="text-5xl font-bold mb-8 text-[#006D77]">Examination & Diagnostics</h2>
+                <p class="text-lg leading-relaxed mb-6">Our clinic utilizes state-of-the-art diagnostic technology to ensure accurate assessments and personalized health pathways for every patient.</p>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-[#E29578]"></i> Full Physical Evaluations</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-[#E29578]"></i> Preventive Health Screenings</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-[#E29578]"></i> Advanced Blood Work Analysis</li>
+                </ul>
+            </div>
+            <img src="https://loremflickr.com/800/600/doctors" class="rounded-3xl shadow-2xl hover-scale" alt="Medical Exam">
+        </div>
+    </section>
+
+    <!-- Bento Grid Section -->
+    <section class="py-32 px-6 max-w-7xl mx-auto reveal">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="md:col-span-2 p-10 bg-[#006D77] text-white rounded-3xl">
+                <h3 class="text-3xl font-bold mb-4">Patient Care Protocols</h3>
+                <p>We prioritize patient comfort through evidence-based practices and transparent communication at every stage of the treatment journey.</p>
+            </div>
+            <div class="p-10 bg-[#83C5BE] text-[#264653] rounded-3xl">
+                <h3 class="text-3xl font-bold mb-4">Wellness</h3>
+                <p>Holistic approaches to long-term health and vitality.</p>
             </div>
         </div>
     </section>
 
-    <!-- Service Section 2 -->
-    <section class="py-24">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="order-2 md:order-1">
-                <h2 class="text-4xl font-bold tracking-tight text-clinical-900 mb-6">Specialized Care</h2>
-                <p class="text-lg text-slate-600 leading-relaxed">Beyond general practice, Dr. Grossman provides evidence-based intervention strategies for chronic condition management and longevity optimization.</p>
-                <ul class="mt-8 space-y-4">
-                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-clinical-teal rounded-full"></span> Longevity & Wellness Planning</li>
-                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-clinical-teal rounded-full"></span> Chronic Disease Management</li>
-                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-clinical-teal rounded-full"></span> Integrative Medicine Pathways</li>
-                </ul>
+    <!-- Stats Bar -->
+    <section class="py-20 bg-[#264653] text-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div>
+                <div class="text-5xl font-extrabold text-[#E29578]">5.0</div>
+                <div class="mt-2 opacity-80">Google Rating</div>
             </div>
-            <img src="https://loremflickr.com/1200/800/doctor" alt="Treatment" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl order-1 md:order-2">
+            <div>
+                <div class="text-5xl font-extrabold text-[#E29578]">11+</div>
+                <div class="mt-2 opacity-80">Verified Reviews</div>
+            </div>
+            <div>
+                <div class="text-5xl font-extrabold text-[#E29578]">10+</div>
+                <div class="mt-2 opacity-80">Years Experience</div>
+            </div>
+            <div>
+                <div class="text-5xl font-extrabold text-[#E29578]">100%</div>
+                <div class="mt-2 opacity-80">Patient Focus</div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-clinical-900 text-white py-24">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+    <footer class="bg-[#EDF6F9] py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
             <div>
-                <h3 class="text-xl font-bold mb-6">Dr. Ruth Grossman</h3>
-                <p class="text-slate-400">1881 Steeles Ave W #2<br>North York, ON M3H 5Y4</p>
-                <p class="mt-4 text-clinical-teal font-semibold">+1 416-665-2900</p>
+                <h4 class="font-bold text-xl mb-4">Dr. Ruth Grossman</h4>
+                <p class="text-sm">1881 Steeles Ave W #2, North York, ON M3H 5Y4, Canada</p>
             </div>
             <div>
-                <h4 class="font-semibold mb-6">Links</h4>
-                <ul class="space-y-4 text-slate-400">
+                <h4 class="font-bold mb-4">Navigation</h4>
+                <ul class="space-y-2 text-sm">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
                     <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-semibold mb-6">Experience</h4>
-                <p class="text-slate-400">Providing elite medical care with a 5.0-star standard of excellence in the Toronto area.</p>
+                <h4 class="font-bold mb-4">Connect</h4>
+                <div class="flex gap-4">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
             </div>
+            <div>
+                <h4 class="font-bold mb-4">Phone</h4>
+                <p>+1 416-665-2900</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-[#006D77]/10 text-center text-sm">
+            &copy; 2024 Dr. Ruth Grossman. All rights reserved.
         </div>
     </footer>
 
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>

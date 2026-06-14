@@ -5,108 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Dr. Ruth Grossman</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .visible { opacity: 1; transform: translateY(0); }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); }
     </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clinical: {
-                            50: '#f0fdfa',
-                            900: '#0f766e',
-                            teal: '#14b8a6',
-                            slate: '#f8fafc'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-[#F8FAFB] text-[#264653]">
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold tracking-tighter text-clinical-900">DR. RUTH GROSSMAN</a>
-            <div class="space-x-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-clinical-teal transition">Home</a>
-                <a href="services.html" class="hover:text-clinical-teal transition">Services</a>
-                <a href="about.html" class="hover:text-clinical-teal transition">About</a>
-                <a href="contact.html" class="text-clinical-900 font-bold">Contact</a>
+            <a href="index.html" class="text-2xl font-bold text-[#006D77]">DR. GROSSMAN</a>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="hover:text-[#006D77]">Home</a>
+                <a href="about.html" class="hover:text-[#006D77]">About</a>
+                <a href="services.html" class="hover:text-[#006D77]">Services</a>
+                <a href="contact.html" class="text-[#006D77]">Contact</a>
             </div>
+            <a href="contact.html" class="bg-[#006D77] text-white px-8 py-3 rounded-full hover:bg-[#004B52] transition">Book Now</a>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="py-24 max-w-7xl mx-auto px-6 text-center">
-        <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">Let's Connect</h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Providing compassionate, expert care in the heart of North York. Schedule your consultation today.</p>
+    <header class="pt-40 pb-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="fade-in-up">
+                <h1 class="text-7xl font-extrabold mb-6 leading-tight text-[#264653]">Get In <span class="text-[#006D77]">Touch</span></h1>
+                <p class="text-xl text-gray-600 mb-8">We are here to answer your questions and help you schedule your next visit with Dr. Ruth Grossman.</p>
+                <div class="flex gap-4">
+                    <a href="tel:+14166652900" class="text-lg font-semibold text-[#006D77]"><i class="fas fa-phone mr-2"></i> +1 416-665-2900</a>
+                </div>
+            </div>
+            <img src="https://loremflickr.com/800/600/doctors" alt="Clinic" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover">
+        </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-6 pb-24">
-        <div class="grid md:grid-cols-2 gap-16 items-start">
-            
-            <!-- Contact Details & Form -->
-            <div class="space-y-12">
-                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
-                    <h2 class="text-2xl font-semibold mb-6">Get In Touch</h2>
-                    <form class="space-y-4">
-                        <input type="text" placeholder="Name" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-clinical-teal">
-                        <input type="email" placeholder="Email" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-clinical-teal">
-                        <textarea placeholder="How can we help?" rows="4" class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-clinical-teal"></textarea>
-                        <button class="w-full bg-clinical-900 text-white py-4 rounded-xl font-semibold hover:bg-teal-800 transition">Send Message</button>
-                    </form>
-                </div>
-
-                <div class="space-y-6">
-                    <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm">
-                        <h3 class="font-bold text-lg text-clinical-900">Office Hours</h3>
-                        <p class="text-slate-600">Mon-Fri: 9:00 AM - 5:00 PM</p>
-                    </div>
-                    <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm">
-                        <h3 class="font-bold text-lg text-clinical-900">Location</h3>
-                        <p class="text-slate-600">1881 Steeles Ave W #2, North York, ON M3H 5Y4</p>
-                        <p class="text-clinical-teal font-semibold mt-2">+1 416-665-2900</p>
-                    </div>
-                </div>
+    <!-- Contact Form Section -->
+    <section class="py-32 px-6 bg-[#EDF6F9]">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="bg-[#006D77] p-12 rounded-3xl text-white shadow-2xl">
+                <h2 class="text-4xl font-bold mb-8">Send a Message</h2>
+                <form class="space-y-6">
+                    <input type="text" placeholder="Full Name" class="w-full p-4 rounded-xl bg-white/10 border border-white/20 placeholder-white/60">
+                    <input type="email" placeholder="Email Address" class="w-full p-4 rounded-xl bg-white/10 border border-white/20 placeholder-white/60">
+                    <textarea placeholder="How can we help?" class="w-full p-4 rounded-xl bg-white/10 border border-white/20 h-32 placeholder-white/60"></textarea>
+                    <button class="w-full py-4 rounded-full bg-gradient-to-r from-[#E29578] to-[#83C5BE] font-bold text-white shadow-lg">Submit Request</button>
+                </form>
             </div>
-
-            <!-- Map -->
-            <div class="h-full min-h-[500px] rounded-[2rem] overflow-hidden shadow-2xl">
-                <iframe src="https://www.google.com/maps?q=1881+Steeles+Ave+W+#2+North+York+ON+M3H+5Y4+Canada&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="fade-in-up">
+                <h2 class="text-5xl font-extrabold mb-6">Find Our Clinic</h2>
+                <p class="text-lg mb-8">Located at 1881 Steeles Ave W #2, North York. Our facility is fully accessible with ample parking and proximity to major transit routes.</p>
+                <div class="w-full h-[400px]">
+                    <iframe src="https://www.google.com/maps?q=1881+Steeles+Ave+W+#2+North+York+ON+M3H+5Y4+Canada&output=embed" class="w-full h-full rounded-3xl" loading="lazy"></iframe>
+                </div>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-3 gap-8 text-center">
+            <div><div class="text-6xl font-extrabold text-[#006D77]">5.0</div><p>Google Rating</p></div>
+            <div><div class="text-6xl font-extrabold text-[#006D77]">11+</div><p>Client Reviews</p></div>
+            <div><div class="text-6xl font-extrabold text-[#006D77]">15+</div><p>Years Experience</p></div>
+        </div>
+    </div>
 
     <!-- Footer -->
-    <footer class="bg-clinical-900 text-white py-16">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-center md:text-left">
-            <div>
-                <h4 class="font-bold text-xl mb-4">Dr. Ruth Grossman</h4>
-                <p class="text-teal-100 text-sm">Excellence in clinical care for the Toronto community.</p>
-            </div>
-            <div class="space-y-2">
-                <a href="index.html" class="block hover:text-teal-300">Home</a>
-                <a href="services.html" class="block hover:text-teal-300">Services</a>
-                <a href="about.html" class="block hover:text-teal-300">About</a>
-                <a href="contact.html" class="block hover:text-teal-300">Contact</a>
-            </div>
-            <div>
-                <p class="font-semibold">5.0 Star Rating (11 Reviews)</p>
-                <div class="flex gap-4 justify-center md:justify-start mt-4">
-                    <span>LinkedIn</span>
-                    <span>Instagram</span>
-                    <span>Twitter</span>
-                </div>
-            </div>
+    <footer class="bg-[#EDF6F9] py-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-4 gap-12">
+            <div><h3 class="font-bold text-xl mb-4">Dr. Ruth Grossman</h3><p>Providing exceptional care in the heart of Toronto.</p></div>
+            <div><h4 class="font-bold mb-4">Navigation</h4><ul class="space-y-2"><li>Index</li><li>About</li><li>Services</li><li>Contact</li></ul></div>
+            <div><h4 class="font-bold mb-4">Contact</h4><p>1881 Steeles Ave W #2<br>North York, ON M3H 5Y4</p></div>
+            <div><h4 class="font-bold mb-4">Follow Us</h4><div class="flex gap-4 text-2xl text-[#006D77]"><i class="fab fa-facebook"></i><i class="fab fa-instagram"></i><i class="fab fa-linkedin"></i></div></div>
         </div>
-        <div class="text-center mt-12 text-teal-700 text-xs">© 2023 Dr. Ruth Grossman. All rights reserved.</div>
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-[#006D77]/20 text-center">© 2024 Dr. Ruth Grossman. All rights reserved.</div>
     </footer>
 
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
