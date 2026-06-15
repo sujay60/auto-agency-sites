@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miami Realty Solution Group - Your Dream Home in Miami</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in-up-element {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        .animation-delay-500 {
+            animation-delay: 0.5s;
+        }
+        .section-reveal {
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .section-reveal.opacity-0 {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .section-reveal.fade-in-up-element {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details summary::after {
+            font-family: "Font Awesome 6 Free";
+            content: "\f078"; /* fas fa-chevron-down */
+            font-weight: 900;
+            margin-left: 1rem;
+            transition: transform 0.3s ease;
+            color: #0f766e;
+        }
+        details[open] summary::after {
+            transform: rotate(180deg);
+        }
+        details[open] summary {
+            color: #0f766e; /* Change color when open */
+        }
+    </style>
+</head>
+<body class="bg-[#f8fafc] text-[#1e293b]">
+
+    <!-- Navbar -->
+    <nav class="w-full fixed top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-100">
+        <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl md:text-3xl font-extrabold tracking-tighter">
+                <span class="text-[#0f766e]">Miami Realty</span>&nbsp;<span class="text-[#1e293b]">Solution Group</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-[#1e293b] font-medium">
+                <a href="#about" class="hover:text-[#0f766e] transition-colors">About</a>
+                <a href="#services" class="hover:text-[#0f766e] transition-colors">Services</a>
+                <a href="#team" class="hover:text-[#0f766e] transition-colors">Team</a>
+                <a href="#contact" class="hover:text-[#0f766e] transition-colors">Contact</a>
+            </div>
+            <a href="#contact" class="hidden md:inline-block px-8 py-3 bg-[#0f766e] text-white rounded-full font-medium hover:scale-105 transition-transform">Book Now</a>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-[#1e293b]">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-4 shadow-lg absolute w-full">
+            <a href="#about" class="block font-medium text-[#1e293b] hover:text-[#0f766e]">About</a>
+            <a href="#services" class="block font-medium text-[#1e293b] hover:text-[#0f766e]">Services</a>
+            <a href="#team" class="block font-medium text-[#1e293b] hover:text-[#0f766e]">Team</a>
+            <a href="#contact" class="block font-medium text-[#1e293b] hover:text-[#0f766e]">Contact</a>
+            <a href="#contact" class="inline-block w-full text-center px-8 py-3 bg-[#0f766e] text-white rounded-full font-medium">Book Now</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-br from-[#0f766e] to-[#0ea5e9] text-[#f1f5f9] py-32 md:py-48 flex items-center justify-center min-h-screen pt-24 section-reveal">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8 text-center relative z-10">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 animate-float">
+                    Your Miami Dream Home Awaits
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto font-light">
+                    Discover unparalleled real estate opportunities with Miami Realty Solution Group.
+                    We turn your aspirations into addresses.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="#services" class="px-10 py-4 bg-[#f59e0b] text-[#0f172a] rounded-full text-lg font-semibold hover:scale-105 transition-transform shadow-lg">
+                        Explore Properties
+                    </a>
+                    <a href="#contact" class="px-10 py-4 border-2 border-[#f1f5f9] text-[#f1f5f9] rounded-full text-lg font-semibold hover:bg-[#f1f5f9]/20 transition-colors hover:scale-105 transition-transform shadow-lg">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+            <div class="absolute inset-0 bg-black/10"></div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="bg-[#f8fafc] py-28 md:py-32 text-[#1e293b] section-reveal">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="md:grid md:grid-cols-2 gap-16 items-center">
+                    <div class="relative mb-12 md:mb-0 order-2 md:order-1">
+                        <img src="https://loremflickr.com/800/600/realestator,miami" alt="Modern Miami architecture" class="w-full h-[500px] object-cover rounded-3xl shadow-2xl relative z-10">
+                        <div class="absolute -bottom-8 -left-8 w-64 h-64 bg-[#ccfbf1] rounded-full mix-blend-multiply filter blur-2xl opacity-70 z-0 hidden md:block animate-float"></div>
+                        <div class="absolute -top-8 -right-8 w-48 h-48 bg-[#f59e0b]/30 rounded-full mix-blend-multiply filter blur-2xl opacity-70 z-0 hidden md:block animate-float animation-delay-500"></div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <span class="text-[#0f766e] font-semibold text-lg mb-4 block">Who We Are</span>
+                        <h2 class="text-4xl md:text-5xl font-extrabold mb-8 leading-tight">
+                            Dedicated to Delivering Your Miami Realty Dreams
+                        </h2>
+                        <p class="text-lg leading-relaxed mb-6">
+                            Miami Realty Solution Group is a premier real estate brokerage dedicated to connecting clients with their ideal properties in the vibrant Miami market. With a deep understanding of local trends and a commitment to personalized service, we guide you through every step of your real estate journey.
+                        </p>
+                        <ul class="space-y-4 text-lg">
+                            <li class="flex items-center gap-3">
+                                <i class="fas fa-check-circle text-[#0f766e] text-xl"></i>
+                                <span>Expert market insights and local knowledge.</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fas fa-check-circle text-[#0f766e] text-xl"></i>
+                                <span>Personalized approach to buying, selling, and investing.</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fas fa-check-circle text-[#0f766e] text-xl"></i>
+                                <span>Seamless transactions with unparalleled support.</span>
+                            </li>
+                        </ul>
+                        <div class="mt-8 flex flex-col sm:flex-row items-center gap-6">
+                            <a href="#contact" class="px-8 py-3 bg-[#0f766e] text-white rounded-full font-medium hover:scale-105 transition-transform shadow-md">
+                                Get a Free Consultation
+                            </a>
+                            <div class="flex items-center gap-2 text-xl font-semibold text-[#f59e0b]">
+                                <i class="fas fa-star"></i>
+                                <span>4.8 <span class="text-[#1e293b] text-base">(208 reviews)</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section id="services" class="bg-[#134e4a] py-28 md:py-32 text-[#f1f5f9] section-reveal">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-[#f59e0b] font-semibold text-lg mb-4 block">Our Expertise</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-8">
+                        Comprehensive Real Estate Solutions
+                    </h2>
+                    <p class="text-xl max-w-3xl mx-auto font-light">
+                        From luxury residences to commercial spaces, our tailored services ensure a smooth and successful experience for every client.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="relative bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all flex flex-col items-start section-reveal">
+                        <div class="text-[#f59e0b] text-5xl mb-6"><i class="fas fa-house-chimney"></i></div>
+                        <h3 class="text-2xl font-bold mb-4">Buying Your Dream Home</h3>
+                        <p class="text-lg leading-relaxed mb-6">
+                            Navigate the Miami market with confidence. We provide access to exclusive listings and expert negotiation to secure your perfect property.
+                        </p>
+                        <a href="#contact" class="mt-auto text-[#0ea5e9] hover:underline flex items-center gap-2 font-medium">
+                            Learn More <i class="fas fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+
+                    <div class="relative bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all flex flex-col items-start section-reveal">
+                        <div class="text-[#f59e0b] text-5xl mb-6"><i class="fas fa-hand-holding-dollar"></i></div>
+                        <h3 class="text-2xl font-bold mb-4">Selling Your Property</h3>
+                        <p class="text-lg leading-relaxed mb-6">
+                            Maximize your property's value with our strategic marketing and extensive network, ensuring a quick and profitable sale.
+                        </p>
+                        <a href="#contact" class="mt-auto text-[#0ea5e9] hover:underline flex items-center gap-2 font-medium">
+                            Learn More <i class="fas fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+
+                    <div class="relative bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all flex flex-col items-start section-reveal">
+                        <div class="text-[#f59e0b] text-5xl mb-6"><i class="fas fa-city"></i></div>
+                        <h3 class="text-2xl font-bold mb-4">Commercial Real Estate</h3>
+                        <p class="text-lg leading-relaxed mb-6">
+                            Specialized services for investors and businesses seeking prime commercial locations and opportunities in Miami.
+                        </p>
+                        <a href="#contact" class="mt-auto text-[#0ea5e9] hover:underline flex items-center gap-2 font-medium">
+                            Learn More <i class="fas fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+
+                    <div class="relative bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all flex flex-col items-start section-reveal">
+                        <div class="text-[#f59e0b] text-5xl mb-6"><i class="fas fa-key"></i></div>
+                        <h3 class="text-2xl font-bold mb-4">Property Management</h3>
+                        <p class="text-lg leading-relaxed mb-6">
+                            Hassle-free management solutions for your investment properties, ensuring optimal returns and tenant satisfaction.
+                        </p>
+                        <a href="#contact" class="mt-auto text-[#0ea5e9] hover:underline flex items-center gap-2 font-medium">
+                            Learn More <i class="fas fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+
+                    <div class="relative bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all flex flex-col items-start section-reveal">
+                        <div class="text-[#f59e0b] text-5xl mb-6"><i class="fas fa-magnifying-glass-location"></i></div>
+                        <h3 class="text-2xl font-bold mb-4">Luxury Property Search</h3>
+                        <p class="text-lg leading-relaxed mb-6">
+                            Exclusive access to Miami's most coveted luxury homes and estates, tailored to your discerning tastes.
+                        </p>
+                        <a href="#contact" class="mt-auto text-[#0ea5e9] hover:underline flex items-center gap-2 font-medium">
+                            Learn More <i class="fas fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+
+                    <div class="relative bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all flex flex-col items-start section-reveal">
+                        <div class="text-[#f59e0b] text-5xl mb-6"><i class="fas fa-chart-line"></i></div>
+                        <h3 class="text-2xl font-bold mb-4">Real Estate Investment</h3>
+                        <p class="text-lg leading-relaxed mb-6">
+                            Strategic guidance and opportunities for both new and seasoned investors looking to grow their portfolio in Miami.
+                        </p>
+                        <a href="#contact" class="mt-auto text-[#0ea5e9] hover:underline flex items-center gap-2 font-medium">
+                            Learn More <i class="fas fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Team Section -->
+        <section id="team" class="bg-[#f8fafc] py-28 md:py-32 text-[#1e293b] section-reveal">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-[#0f766e] font-semibold text-lg mb-4 block">Our Experts</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-8">
+                        Meet the Visionaries Behind Your Success
+                    </h2>
+                    <p class="text-xl max-w-3xl mx-auto font-light">
+                        Our dedicated team of real estate professionals brings unparalleled expertise, passion, and local insight to every client interaction.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <!-- Team Member 1 -->
+                    <div class="relative bg-white p-8 rounded-3xl shadow-xl flex flex-col items-center text-center hover:scale-105 transition-transform section-reveal">
+                        <div class="w-36 h-36 rounded-full overflow-hidden mb-6 border-4 border-[#0f766e] shadow-lg">
+                            <img src="https://loremflickr.com/300/300/person,realtor" alt="Anastasia Popova" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Anastasia Popova</h3>
+                        <p class="text-[#0f766e] font-semibold mb-4">Founder & Lead Broker</p>
+                        <p class="text-base leading-relaxed text-[#1e293b] opacity-80">
+                            With over 15 years in Miami real estate, Anastasia leads our team with a client-first philosophy and a knack for closing complex deals.
+                        </p>
+                        <div class="flex gap-4 mt-6">
+                            <a href="https://linkedin.com/company/miami-realty-solution-group" target="_blank" class="text-[#1e293b] hover:text-[#0f766e] transition-colors"><i class="fab fa-linkedin fa-xl"></i></a>
+                            <a href="https://instagram.com/miamirealtysolution" target="_blank" class="text-[#1e293b] hover:text-[#0f766e] transition-colors"><i class="fab fa-instagram fa-xl"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="relative bg-white p-8 rounded-3xl shadow-xl flex flex-col items-center text-center hover:scale-105 transition-transform section-reveal">
+                        <div class="w-36 h-36 rounded-full overflow-hidden mb-6 border-4 border-[#0f766e] shadow-lg">
+                            <img src="https://loremflickr.com/300/301/person,agent" alt="Antonio Magaldi" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Antonio Magaldi</h3>
+                        <p class="text-[#0f766e] font-semibold mb-4">Luxury Property Specialist</p>
+                        <p class="text-base leading-relaxed text-[#1e293b] opacity-80">
+                            Antonio specializes in Miami's high-end market, offering discerning clients access to exclusive luxury homes and investment opportunities.
+                        </p>
+                        <div class="flex gap-4 mt-6">
+                            <a href="https://linkedin.com/company/miami-realty-solution-group" target="_blank" class="text-[#1e293b] hover:text-[#0f766e] transition-colors"><i class="fab fa-linkedin fa-xl"></i></a>
+                            <a href="https://instagram.com/miamirealtysolution" target="_blank" class="text-[#1e293b] hover:text-[#0f766e] transition-colors"><i class="fab fa-instagram fa-xl"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="relative bg-white p-8 rounded-3xl shadow-xl flex flex-col items-center text-center hover:scale-105 transition-transform section-reveal">
+                        <div class="w-36 h-36 rounded-full overflow-hidden mb-6 border-4 border-[#0f766e] shadow-lg">
+                            <img src="https://loremflickr.com/300/302/person,broker" alt="Martina Rossi" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Martina Rossi</h3>
+                        <p class="text-[#0f766e] font-semibold mb-4">Investment & Commercial Lead</p>
+                        <p class="text-base leading-relaxed text-[#1e293b] opacity-80">
+                            Martina brings sharp analytical skills to the commercial sector, helping investors identify and secure high-yield properties.
+                        </p>
+                        <div class="flex gap-4 mt-6">
+                            <a href="https://linkedin.com/company/miami-realty-solution-group" target="_blank" class="text-[#1e293b] hover:text-[#0f766e] transition-colors"><i class="fab fa-linkedin fa-xl"></i></a>
+                            <a href="https://instagram.com/miamirealtysolution" target="_blank" class="text-[#1e293b] hover:text-[#0f766e] transition-colors"><i class="fab fa-instagram fa-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="bg-[#ccfbf1] py-28 md:py-32 text-[#1e293b] section-reveal">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-[#0f766e] font-semibold text-lg mb-4 block">What Our Clients Say</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-8">
+                        Hear From Our Satisfied Homeowners
+                    </h2>
+                    <p class="text-xl max-w-3xl mx-auto font-light">
+                        Our dedication to client satisfaction is reflected in the success stories and glowing reviews from those we've helped.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-[#ffffff] p-8 rounded-3xl shadow-xl flex flex-col hover:scale-105 transition-transform section-reveal">
+                        <div class="flex items-center mb-4">
+                            <div class="text-[#f59e0b] flex gap-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="ml-3 text-sm text-gray-500">4.5 Stars</span>
+                        </div>
+                        <p class="text-lg italic leading-relaxed mb-6 flex-grow">
+                            "Miami Realty Solution Group made selling our house effortless. Their professionalism, market knowledge, and attention to detail were exceptional. We highly recommend them!"
+                        </p>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <img src="https://loremflickr.com/80/80/person,client" alt="Maria Rodriguez" class="w-12 h-12 rounded-full object-cover border-2 border-[#0f766e]">
+                            <div>
+                                <p class="font-semibold text-lg">Maria Rodriguez</p>
+                                <p class="text-sm text-gray-600">Seller in Brickell</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-[#ffffff] p-8 rounded-3xl shadow-xl flex flex-col hover:scale-105 transition-transform section-reveal">
+                        <div class="flex items-center mb-4">
+                            <div class="text-[#f59e0b] flex gap-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-3 text-sm text-gray-500">5 Stars</span>
+                        </div>
+                        <p class="text-lg italic leading-relaxed mb-6 flex-grow">
+                            "Finding our dream condo in South Beach seemed daunting until we worked with Miami Realty. Their team was incredibly patient and found us the perfect spot. Fantastic service!"
+                        </p>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <img src="https://loremflickr.com/80/81/person,happy" alt="David Chen" class="w-12 h-12 rounded-full object-cover border-2 border-[#0f766e]">
+                            <div>
+                                <p class="font-semibold text-lg">David Chen</p>
+                                <p class="text-sm text-gray-600">Buyer in South Beach</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-[#ffffff] p-8 rounded-3xl shadow-xl flex flex-col hover:scale-105 transition-transform section-reveal">
+                        <div class="flex items-center mb-4">
+                            <div class="text-[#f59e0b] flex gap-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-3 text-sm text-gray-500">5 Stars</span>
+                        </div>
+                        <p class="text-lg italic leading-relaxed mb-6 flex-grow">
+                            "As an investor, I rely on reliable partners. Miami Realty Solution Group consistently delivers. Their market analysis is spot-on, and their network is invaluable. A true asset!"
+                        </p>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <img src="https://loremflickr.com/80/82/person,investor" alt="Sophia Kim" class="w-12 h-12 rounded-full object-cover border-2 border-[#0f766e]">
+                            <div>
+                                <p class="font-semibold text-lg">Sophia Kim</p>
+                                <p class="text-sm text-gray-600">Investor in Wynwood</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Location Section -->
+        <section id="contact" class="bg-[#f8fafc] py-28 md:py-32 text-[#1e293b] section-reveal">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-[#0f766e] font-semibold text-lg mb-4 block">Get in Touch</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-8">
+                        Let's Find Your Perfect Property
+                    </h2>
+                    <p class="text-xl max-w-3xl mx-auto font-light">
+                        Reach out to our expert team for personalized real estate advice and solutions in Miami.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Left Column: Contact Form -->
+                    <div class="bg-[#ffffff] p-8 md:p-12 rounded-3xl shadow-2xl section-reveal">
+                        <h3 class="text-3xl font-bold text-[#1e293b] mb-8">Send Us a Message</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-lg font-medium text-[#1e293b] mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-5 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0ea5e9] focus:border-transparent transition-colors text-[#1e293b] bg-gray-50" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-lg font-medium text-[#1e293b] mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-5 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0ea5e9] focus:border-transparent transition-colors text-[#1e293b] bg-gray-50" placeholder="john.doe@example.com">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-lg font-medium text-[#1e293b] mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-5 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0ea5e9] focus:border-transparent transition-colors text-[#1e293b] bg-gray-50" placeholder="+1 (XXX) XXX-XXXX">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-lg font-medium text-[#1e293b] mb-2">Your Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-5 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0ea5e9] focus:border-transparent transition-colors text-[#1e293b] bg-gray-50" placeholder="Tell us about your real estate needs..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-8 py-4 bg-[#0f766e] text-white rounded-full text-lg font-semibold hover:bg-[#0ea5e9] hover:scale-105 transition-transform shadow-lg">
+                                Send Message
+                            </button>
+                        </form>
+                        <div class="mt-10 text-center">
+                            <p class="text-lg font-semibold mb-4">Or Connect Directly:</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+                                <div>
+                                    <p class="flex items-center gap-3 mb-2">
+                                        <i class="fas fa-phone-alt text-[#0f766e] text-xl"></i>
+                                        <a href="tel:+13057280840" class="text-[#1e293b] hover:text-[#0f766e] transition-colors font-medium">+1 305-728-0840</a>
+                                    </p>
+                                    <p class="flex items-center gap-3">
+                                        <i class="fas fa-envelope text-[#0f766e] text-xl"></i>
+                                        <a href="mailto:martini@miamirealtysolution.com" class="text-[#1e293b] hover:text-[#0f766e] transition-colors font-medium">martini@miamirealtysolution.com</a>
+                                    </p>
+                                    <p class="flex items-center gap-3 mt-2">
+                                        <i class="fas fa-envelope text-[#0f766e] text-xl"></i>
+                                        <a href="mailto:antonioamagaldi@gmail.com" class="text-[#1e293b] hover:text-[#0f766e] transition-colors font-medium">antonioamagaldi@gmail.com</a>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="flex items-start gap-3 mb-2">
+                                        <i class="fas fa-map-marker-alt text-[#0f766e] text-xl mt-1"></i>
+                                        <span class="text-[#1e293b] font-medium">90 SW 3rd St CU3, Miami, FL 33130, United States</span>
+                                    </p>
+                                    <p class="flex items-center gap-3">
+                                        <i class="fas fa-globe text-[#0f766e] text-xl"></i>
+                                        <a href="http://miamirealtysolution.com/" target="_blank" class="text-[#1e293b] hover:text-[#0f766e] transition-colors font-medium">miamirealtysolution.com</a>
+                                    </p>
+                                    <p class="flex items-center gap-3 mt-2">
+                                        <i class="fas fa-clock text-[#0f766e] text-xl"></i>
+                                        <span class="text-[#1e293b] font-medium">Mon-Sat: 9 AM - 6 PM</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex justify-center gap-6 mt-8">
+                                <a href="https://instagram.com/miamirealtysolution" target="_blank" class="text-[#1e293b] hover:text-[#0f766e] transition-colors text-3xl"><i class="fab fa-instagram"></i></a>
+                                <a href="https://facebook.com/Miami" target="_blank" class="text-[#1e293b] hover:text-[#0f766e] transition-colors text-3xl"><i class="fab fa-facebook"></i></a>
+                                <a href="https://linkedin.com/company/miami-realty-solution-group" target="_blank" class="text-[#1e293b] hover:text-[#0f766e] transition-colors text-3xl"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://youtube.com/@UCuJctDPlbuD9GhHRcml-WpQ" target="_blank" class="text-[#1e293b] hover:text-[#0f766e] transition-colors text-3xl"><i class="fab fa-youtube"></i></a>
+                                <a href="https://yelp.com/biz/miami-realty-solution-group-miami" target="_blank" class="text-[#1e293b] hover:text-[#0f766e] transition-colors text-3xl"><i class="fab fa-yelp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Google Maps Iframe -->
+                    <div class="section-reveal">
+                        <iframe
+                            src="https://www.google.com/maps?q=90+SW+3rd+St+CU3+Miami+FL+33130+United+States&output=embed"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-full h-full min-h-[400px] rounded-3xl shadow-2xl border-none"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="bg-[#ccfbf1] py-28 md:py-32 text-[#1e293b] section-reveal">
+            <div class="container mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-[#0f766e] font-semibold text-lg mb-4 block">Questions & Answers</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-8">
+                        Frequently Asked Questions
+                    </h2>
+                    <p class="text-xl max-w-3xl mx-auto font-light">
+                        Find quick answers to common inquiries about real estate in Miami and our services.
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <details class="bg-[#ffffff] p-6 rounded-2xl shadow-lg cursor-pointer hover:shadow-xl transition-shadow section-reveal">
+                        <summary class="flex justify-between items-center text-xl font-semibold text-[#1e293b] focus:outline-none">
+                            What areas in Miami do you specialize in?
+                        </summary>
+                        <div class="mt-4 pt-4 border-t border-gray-200 text-lg leading-relaxed text-[#1e293b] opacity-90">
+                            We specialize in a wide range of Miami areas, including Brickell, South Beach, Coral Gables, Coconut Grove, Wynwood, Downtown Miami, and various luxury enclaves. Our team possesses deep local market knowledge to assist clients across the city.
+                        </div>
+                    </details>
+
+                    <details class="bg-[#ffffff] p-6 rounded-2xl shadow-lg cursor-pointer hover:shadow-xl transition-shadow section-reveal">
+                        <summary class="flex justify-between items-center text-xl font-semibold text-[#1e293b] focus:outline-none">
+                            How long does it typically take to buy a home in Miami?
+                        </summary>
+                        <div class="mt-4 pt-4 border-t border-gray-200 text-lg leading-relaxed text-[#1e293b] opacity-90">
+                            The timeline for buying a home can vary greatly depending on market conditions, buyer readiness, and property type. Generally, from initial search to closing, it can take anywhere from 2-4 months. We strive to make the process as efficient as possible.
+                        </div>
+                    </details>
+
+                    <details class="bg-[#ffffff] p-6 rounded-2xl shadow-lg cursor-pointer hover:shadow-xl transition-shadow section-reveal">
+                        <summary class="flex justify-between items-center text-xl font-semibold text-[#1e293b] focus:outline-none">
+                            What are the benefits of working with a real estate agent?
+                        </summary>
+                        <div class="mt-4 pt-4 border-t border-gray-200 text-lg leading-relaxed text-[#1e293b] opacity-90">
+                            Working with an experienced agent provides invaluable benefits: expert market knowledge, access to exclusive listings, skilled negotiation, legal guidance, and a streamlined process. We save you time, money, and stress, ensuring a successful transaction.
+                        </div>
+                    </details>
+
+                    <details class="bg-[#ffffff] p-6 rounded-2xl shadow-lg cursor-pointer hover:shadow-xl transition-shadow section-reveal">
+                        <summary class="flex justify-between items-center text-xl font-semibold text-[#1e293b] focus:outline-none">
+                            Can you help with property management for investment properties?
+                        </summary>
+                        <div class="mt-4 pt-4 border-t border-gray-200 text-lg leading-relaxed text-[#1e293b] opacity-90">
+                            Yes, we offer comprehensive property management services. This includes tenant screening, rent collection, maintenance coordination, and legal compliance, allowing you to enjoy passive income without the day-to-day burdens.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f172a] text-[#f1f5f9] py-20 md:py-24 section-reveal">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left">
+                <!-- Column 1: Company Info -->
+                <div>
+                    <a href="#" class="text-3xl font-extrabold tracking-tighter block mb-4">
+                        <span class="text-[#0f766e]">Miami Realty</span>&nbsp;<span class="text-[#f1f5f9]">Solution Group</span>
+                    </a>
+                    <p class="text-sm leading-relaxed opacity-80 mb-4">
+                        Your trusted partner for buying, selling, and investing in Miami's vibrant real estate market. We turn aspirations into addresses.
+                    </p>
+                </div>
+
+                <!-- Column 2: Navigation -->
+                <div>
+                    <h4 class="text-xl font-semibold text-[#0ea5e9] mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-lg">
+                        <li><a href="#about" class="hover:text-[#f59e0b] transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-[#f59e0b] transition-colors">Our Services</a></li>
+                        <li><a href="#team" class="hover:text-[#f59e0b] transition-colors">Meet Our Team</a></li>
+                        <li><a href="#contact" class="hover:text-[#f59e0b] transition-colors">Contact Us</a></li>
+                        <li><a href="#contact" class="hover:text-[#f59e0b] transition-colors">Book a Consultation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Details -->
+                <div>
+                    <h4 class="text-xl font-semibold text-[#0ea5e9] mb-6">Contact Details</h4>
+                    <ul class="space-y-3 text-lg">
+                        <li class="flex items-center gap-3 md:justify-start justify-center">
+                            <i class="fas fa-map-marker-alt text-[#0f766e]"></i>
+                            <span>90 SW 3rd St CU3, Miami, FL 33130</span>
+                        </li>
+                        <li class="flex items-center gap-3 md:justify-start justify-center">
+                            <i class="fas fa-phone-alt text-[#0f766e]"></i>
+                            <a href="tel:+13057280840" class="hover:text-[#f59e0b] transition-colors">+1 305-728-0840</a>
+                        </li>
+                        <li class="flex items-center gap-3 md:justify-start justify-center">
+                            <i class="fas fa-envelope text-[#0f766e]"></i>
+                            <a href="mailto:martini@miamirealtysolution.com" class="hover:text-[#f59e0b] transition-colors">martini@miamirealtysolution.com</a>
+                        </li>
+                        <li class="flex items-center gap-3 md:justify-start justify-center">
+                            <i class="fas fa-globe text-[#0f766e]"></i>
+                            <a href="http://miamirealtysolution.com/" target="_blank" class="hover:text-[#f59e0b] transition-colors">miamirealtysolution.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Social & Copyright -->
+                <div>
+                    <h4 class="text-xl font-semibold text-[#0ea5e9] mb-6">Connect With Us</h4>
+                    <div class="flex justify-center md:justify-start gap-6 mb-6">
+                        <a href="https://instagram.com/miamirealtysolution" target="_blank" class="text-3xl hover:text-[#f59e0b] transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/Miami" target="_blank" class="text-3xl hover:text-[#f59e0b] transition-colors"><i class="fab fa-facebook"></i></a>
+                        <a href="https://linkedin.com/company/miami-realty-solution-group" target="_blank" class="text-3xl hover:text-[#f59e0b] transition-colors"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://youtube.com/@UCuJctDPlbuD9GhHRcml-WpQ" target="_blank" class="text-3xl hover:text-[#f59e0b] transition-colors"><i class="fab fa-youtube"></i></a>
+                        <a href="https://yelp.com/biz/miami-realty-solution-group-miami" target="_blank" class="text-3xl hover:text-[#f59e0b] transition-colors"><i class="fab fa-yelp"></i></a>
+                    </div>
+                    <p class="text-sm opacity-60">© 2023 Miami Realty Solution Group. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Scroll Reveal -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up-element');
+                    entry.target.classList.remove('opacity-0');
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.section-reveal').forEach(element => {
+            element.classList.add('opacity-0'); // Add hidden class by default
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
