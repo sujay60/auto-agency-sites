@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Fuentes Real Estate Broker | Fortune Christie's International - Miami Luxury Properties</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll from animations */
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 1s ease-out forwards;
+            opacity: 0;
+        }
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transform: translateY(30px);
+        }
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-outfit text-[#1C1C1C]">
+
+    <!-- Navbar -->
+    <nav class="w-full fixed top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-100">
+        <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl md:text-3xl font-extrabold tracking-tighter">
+                <span class="text-[#2A2A2A]">Jose Fuentes Real Estate</span>&nbsp;
+                <span class="text-[#1C1C1C]">Broker Fortune Christie's International</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-[#1C1C1C] font-medium">
+                <a href="#about" class="hover:text-[#2A2A2A] transition-colors">About</a>
+                <a href="#services" class="hover:text-[#2A2A2A] transition-colors">Services</a>
+                <a href="#team" class="hover:text-[#2A2A2A] transition-colors">Team</a>
+                <a href="#contact" class="hover:text-[#2A2A2A] transition-colors">Contact</a>
+            </div>
+            <a href="#contact" class="hidden md:inline-block px-8 py-3 bg-[#2A2A2A] text-white rounded-full font-medium hover:scale-105 transition-transform">Book Now</a>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-[#1C1C1C]"><i class="fas fa-bars"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-4 shadow-lg absolute w-full">
+            <a href="#about" class="block font-medium text-[#1C1C1C]">About</a>
+            <a href="#services" class="block font-medium text-[#1C1C1C]">Services</a>
+            <a href="#team" class="block font-medium text-[#1C1C1C]">Team</a>
+            <a href="#contact" class="block font-medium text-[#1C1C1C]">Contact</a>
+            <a href="#contact" class="inline-block w-full text-center px-8 py-3 bg-[#2A2A2A] text-white rounded-full font-medium">Book Now</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen flex items-center justify-center text-center overflow-hidden" style="background: linear-gradient(135deg, #3D3B3A, #2A2A2A);">
+            <img src="https://loremflickr.com/1600/900/realestator,luxury,miami,skyline" alt="Miami Luxury Real Estate Skyline" class="absolute inset-0 w-full h-full object-cover opacity-30">
+            <div class="relative z-10 text-white px-4 md:px-8">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-up">
+                    <span class="text-[#B89C6F]">Your Gateway to Miami's Most Prestigious Addresses</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">
+                    Jose Fuentes Real Estate: Navigating the elite world of Miami luxury properties with Fortune Christie's International.
+                </p>
+                <a href="#contact" class="inline-block px-12 py-4 bg-[#B89C6F] text-white text-lg font-semibold rounded-full hover:bg-[#A38B61] transition-all transform hover:scale-105 animate-fade-in-up" style="animation-delay: 0.4s;">
+                    Discover Your Dream Home
+                </a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="bg-[#FBF8F4] py-28 md:py-32 scroll-reveal">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="grid md:grid-cols-2 gap-16 md:gap-20 items-center">
+                    <div class="relative space-y-8 order-2 md:order-1">
+                        <img src="https://loremflickr.com/800/600/miami,realestate,luxuryhome" alt="Luxury Miami Home Interior" class="w-full h-[400px] object-cover rounded-3xl shadow-2xl float transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://loremflickr.com/600/800/miami,realestate,broker" alt="Jose Fuentes Professional Headshot" class="absolute bottom-[-50px] md:bottom-[-80px] left-1/2 -translate-x-1/2 w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-8 border-white shadow-xl float transform hover:scale-110 transition-transform duration-300" style="animation-delay: 0.5s;">
+                    </div>
+                    <div class="order-1 md:order-2 text-center md:text-left">
+                        <h2 class="text-4xl md:text-6xl font-extrabold text-[#2A2A2A] mb-8 leading-tight">
+                            Crafting Legacies in <span class="text-[#B89C6F]">Miami's Luxury Market</span>
+                        </h2>
+                        <p class="text-lg md:text-xl text-[#555555] mb-6">
+                            With an unparalleled understanding of Miami's dynamic real estate landscape, Jose Fuentes is a name synonymous with excellence and discretion. Specializing in high-end residential and investment properties, we offer bespoke services tailored to the unique aspirations of our discerning clientele.
+                        </p>
+                        <p class="text-lg md:text-xl text-[#555555] mb-6">
+                            As part of Fortune Christie's International, we provide access to an exclusive global network, ensuring that every transaction, whether buying or selling, is handled with the utmost professionalism and strategic insight. Our commitment is to transform your real estate dreams into reality.
+                        </p>
+                        <a href="#contact" class="inline-block px-8 py-3 bg-[#2A2A2A] text-white rounded-full font-medium hover:bg-[#1A1A1A] transition-colors mt-6">
+                            Connect with Jose
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section id="services" class="bg-[#333333] py-28 md:py-32 text-white scroll-reveal">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-4xl md:text-6xl font-extrabold text-center text-[#B89C6F] mb-16 leading-tight">
+                    Our Bespoke Real Estate Services
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+                    <!-- Service Card 1 -->
+                    <div class="bg-[#2A2A2A] rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-transform duration-300 group relative">
+                        <div class="absolute -top-6 left-8 bg-[#B89C6F] p-4 rounded-full shadow-lg group-hover:-translate-y-2 transition-transform">
+                            <i class="fas fa-home fa-2x text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mt-8 mb-4 text-[#FCFAF7]">Luxury Property Sales</h3>
+                        <p class="text-[#FCFAF7] leading-relaxed">
+                            Expert representation for sellers of premier Miami residences. We leverage extensive market analysis and Fortune Christie's global reach to secure the best value for your property.
+                        </p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-[#2A2A2A] rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-transform duration-300 group relative md:mt-16">
+                         <div class="absolute -top-6 left-8 bg-[#B89C6F] p-4 rounded-full shadow-lg group-hover:-translate-y-2 transition-transform">
+                            <i class="fas fa-building fa-2x text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mt-8 mb-4 text-[#FCFAF7]">Exclusive Buyer Representation</h3>
+                        <p class="text-[#FCFAF7] leading-relaxed">
+                            Guiding buyers through Miami's most coveted neighborhoods, identifying off-market opportunities and securing your ideal luxury home or investment property.
+                        </p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-[#2A2A2A] rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-transform duration-300 group relative">
+                         <div class="absolute -top-6 left-8 bg-[#B89C6F] p-4 rounded-full shadow-lg group-hover:-translate-y-2 transition-transform">
+                            <i class="fas fa-chart-line fa-2x text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mt-8 mb-4 text-[#FCFAF7]">Real Estate Investment Advisory</h3>
+                        <p class="text-[#FCFAF7] leading-relaxed">
+                            Strategic advice on high-yield investment properties, market trends, and portfolio growth within the dynamic Miami real estate market.
+                        </p>
+                    </div>
+                    <!-- Service Card 4 -->
+                    <div class="bg-[#2A2A2A] rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-transform duration-300 group relative md:-mt-16">
+                         <div class="absolute -top-6 left-8 bg-[#B89C6F] p-4 rounded-full shadow-lg group-hover:-translate-y-2 transition-transform">
+                            <i class="fas fa-globe fa-2x text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mt-8 mb-4 text-[#FCFAF7]">International Client Services</h3>
+                        <p class="text-[#FCFAF7] leading-relaxed">
+                            Seamless service for international clients, including relocation assistance, legal counsel referrals, and property management solutions.
+                        </p>
+                    </div>
+                    <!-- Service Card 5 -->
+                    <div class="bg-[#2A2A2A] rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-transform duration-300 group relative">
+                         <div class="absolute -top-6 left-8 bg-[#B89C6F] p-4 rounded-full shadow-lg group-hover:-translate-y-2 transition-transform">
+                            <i class="fas fa-handshake fa-2x text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mt-8 mb-4 text-[#FCFAF7]">Market Insights & Valuations</h3>
+                        <p class="text-[#FCFAF7] leading-relaxed">
+                            In-depth market reports and precise property valuations, offering clarity and confidence for your real estate decisions.
+                        </p>
+                    </div>
+                    <!-- Service Card 6 (Example of glassmorphism on dark background) -->
+                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-transform duration-300 group relative md:mt-16">
+                         <div class="absolute -top-6 left-8 bg-[#B89C6F] p-4 rounded-full shadow-lg group-hover:-translate-y-2 transition-transform">
+                            <i class="fas fa-concierge-bell fa-2x text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mt-8 mb-4 text-[#FCFAF7]">Concierge Real Estate</h3>
+                        <p class="text-[#FCFAF7] leading-relaxed">
+                            From property tours by helicopter to securing exclusive memberships, we offer an elevated, full-service concierge experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Team Section (Jose Fuentes only) -->
+        <section id="team" class="bg-[#FBF8F4] py-28 md:py-32 scroll-reveal">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-4xl md:text-6xl font-extrabold text-center text-[#2A2A2A] mb-16 leading-tight">
+                    Meet Your Trusted Advisor, <span class="text-[#B89C6F]">Jose Fuentes</span>
+                </h2>
+                <div class="flex flex-col md:flex-row items-center gap-16 md:gap-20">
+                    <div class="relative md:w-1/2">
+                        <img src="https://loremflickr.com/800/800/realestatebroker,professional" alt="Jose Fuentes Professional" class="w-full h-auto object-cover rounded-3xl shadow-2xl transform hover:rotate-3 transition-transform duration-500 float" style="animation-delay: 0.3s;">
+                        <div class="absolute top-0 right-0 w-3/5 h-3/5 bg-[#B89C6F]/10 rounded-bl-[100px] rounded-tr-3xl -z-10 animate-fade-in-up"></div>
+                        <div class="absolute bottom-0 left-0 w-3/5 h-3/5 bg-[#2A2A2A]/5 rounded-tr-[100px] rounded-bl-3xl -z-10 animate-fade-in-up" style="animation-delay: 0.6s;"></div>
+                    </div>
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <p class="text-lg md:text-xl text-[#555555] mb-6">
+                            Jose Fuentes is an esteemed Real Estate Broker with Fortune Christie's International, bringing a wealth of experience and an acute understanding of the luxury property market in Miami. His dedication to client success, combined with a personalized approach, sets him apart.
+                        </p>
+                        <p class="text-lg md:text-xl text-[#555555] mb-6">
+                            Known for his keen negotiation skills and meticulous attention to detail, Jose ensures that every client receives white-glove service, whether they are first-time luxury buyers or seasoned investors. His extensive network and insights into emerging market trends provide an unparalleled advantage.
+                        </p>
+                        <p class="text-lg md:text-xl text-[#555555] mb-6">
+                            Beyond transactions, Jose builds lasting relationships, becoming a trusted advisor for all real estate endeavors. Connect with Jose to experience a superior level of service.
+                        </p>
+                        <div class="flex justify-center md:justify-start gap-6 mt-8">
+                            <a href="https://facebook.com/miamirealestateopportunities" target="_blank" class="text-[#B89C6F] hover:text-[#2A2A2A] transition-colors text-3xl"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://linkedin.com/company/jose-fuentes-realestate" target="_blank" class="text-[#B89C6F] hover:text-[#2A2A2A] transition-colors text-3xl"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="bg-[#333333] py-28 md:py-32 text-white scroll-reveal">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-4xl md:text-6xl font-extrabold text-center text-[#B89C6F] mb-16 leading-tight">
+                    What Our Clients Say
+                </h2>
+                <div class="grid md:grid-cols-3 gap-12">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <span class="text-[#B89C6F] text-xl mr-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                            <p class="text-sm text-[#FCFAF7]">(5.0)</p>
+                        </div>
+                        <p class="text-lg italic mb-6 text-[#FCFAF7]">
+                            "Jose is simply the best! His knowledge of the Miami luxury market is unmatched. He found us our dream waterfront condo and made the entire process seamless. Highly recommend his services!"
+                        </p>
+                        <p class="font-bold text-[#FCFAF7]">- Maria & Carlos G.</p>
+                        <p class="text-sm text-[#FCFAF7]/80">Satisfied Buyers</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <span class="text-[#B89C6F] text-xl mr-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                            <p class="text-sm text-[#FCFAF7]">(4.9)</p>
+                        </div>
+                        <p class="text-lg italic mb-6 text-[#FCFAF7]">
+                            "Professional, responsive, and incredibly effective. Jose sold our property quickly and at a fantastic price. His connections and marketing strategy through Christie's are invaluable."
+                        </p>
+                        <p class="font-bold text-[#FCFAF7]">- David R. Chen</p>
+                        <p class="text-sm text-[#FCFAF7]/80">Seller in Brickell</p>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <span class="text-[#B89C6F] text-xl mr-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                            <p class="text-sm text-[#FCFAF7]">(5.0)</p>
+                        </div>
+                        <p class="text-lg italic mb-6 text-[#FCFAF7]">
+                            "We relied on Jose for our international relocation, and he exceeded all expectations. From finding the perfect home to navigating local logistics, he was an indispensable guide."
+                        </p>
+                        <p class="font-bold text-[#FCFAF7]">- The Dubois Family</p>
+                        <p class="text-sm text-[#FCFAF7]/80">International Relocation</p>
+                    </div>
+                </div>
+                <p class="text-center text-sm text-[#FCFAF7]/80 mt-12">Overall Rating: 4.9★ (66 reviews)</p>
+            </div>
+        </section>
+
+        <!-- Contact & Location Section -->
+        <section id="contact" class="bg-[#FBF8F4] py-28 md:py-32 scroll-reveal">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-4xl md:text-6xl font-extrabold text-center text-[#2A2A2A] mb-16 leading-tight">
+                    Connect With <span class="text-[#B89C6F]">Jose Fuentes</span>
+                </h2>
+                <div class="grid md:grid-cols-2 gap-12 items-stretch">
+                    <!-- Contact Form Column -->
+                    <div class="bg-[#FFFDFB] rounded-3xl p-8 md:p-12 shadow-2xl">
+                        <h3 class="text-3xl font-bold text-[#2A2A2A] mb-8">Send Us a Message</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-[#555555] mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#B89C6F] focus:border-transparent transition-all" placeholder="Your Name" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-[#555555] mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#B89C6F] focus:border-transparent transition-all" placeholder="Your Email" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-[#555555] mb-2">Phone (Optional)</label>
+                                <input type="tel" id="phone" name="phone" class="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#B89C6F] focus:border-transparent transition-all" placeholder="+1 (555) 123-4567">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-[#555555] mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#B89C6F] focus:border-transparent transition-all" placeholder="How can Jose assist you?" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-8 py-4 bg-[#B89C6F] text-white font-semibold rounded-xl hover:bg-[#A38B61] transition-all transform hover:scale-[1.01]">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Google Maps Column -->
+                    <div class="relative w-full h-full min-h-[400px]">
+                        <iframe
+                            src="https://www.google.com/maps?q=1390+Brickell+Ave+#104+Miami+FL+33131+United+States&output=embed"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-3xl shadow-2xl">
+                        </iframe>
+                        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-gray-100 text-[#1C1C1C]">
+                            <p class="font-bold text-lg mb-2">Jose Fuentes Real Estate Broker</p>
+                            <p class="flex items-center text-sm mb-1"><i class="fas fa-map-marker-alt text-[#B89C6F] mr-2"></i> 1390 Brickell Ave #104, Miami, FL 33131, United States</p>
+                            <p class="flex items-center text-sm mb-1"><i class="fas fa-phone text-[#B89C6F] mr-2"></i> +1 786-439-6764</p>
+                            <p class="flex items-center text-sm"><i class="fas fa-envelope text-[#B89C6F] mr-2"></i> josefuentesrealestate@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="bg-[#333333] py-28 md:py-32 text-white scroll-reveal">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-4xl md:text-6xl font-extrabold text-center text-[#B89C6F] mb-16 leading-tight">
+                    Frequently Asked Questions
+                </h2>
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <details class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-lg group">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer text-xl font-semibold text-[#FCFAF7] hover:text-[#B89C6F] transition-colors">
+                            What makes Miami a unique luxury real estate market?
+                            <span class="transform group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="px-6 pb-6 text-[#FCFAF7] leading-relaxed border-t border-white/10 pt-4">
+                            Miami's luxury real estate market is unique due to its stunning waterfront properties, vibrant cultural scene, favorable tax environment, and status as a global hub for business and tourism. It attracts high-net-worth individuals from around the world seeking a sophisticated lifestyle and sound investment opportunities.
+                        </div>
+                    </details>
+                    <details class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-lg group">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer text-xl font-semibold text-[#FCFAF7] hover:text-[#B89C6F] transition-colors">
+                            How does working with Fortune Christie's International benefit me?
+                            <span class="transform group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="px-6 pb-6 text-[#FCFAF7] leading-relaxed border-t border-white/10 pt-4">
+                            Partnering with Fortune Christie's International provides unparalleled global exposure for sellers and exclusive access to a curated portfolio of luxury properties for buyers. Our affiliation means a commitment to excellence, sophisticated marketing strategies, and a network of trusted advisors worldwide, ensuring a seamless and elevated experience.
+                        </div>
+                    </details>
+                    <details class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-lg group">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer text-xl font-semibold text-[#FCFAF7] hover:text-[#B89C6F] transition-colors">
+                            What types of properties do you specialize in?
+                            <span class="transform group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="px-6 pb-6 text-[#FCFAF7] leading-relaxed border-t border-white/10 pt-4">
+                            Jose Fuentes specializes in a diverse range of luxury properties across Miami, including waterfront estates, high-rise penthouses in Brickell and South Beach, exclusive island homes, and prime commercial investment opportunities. Our focus is on properties that embody luxury, prestige, and strong investment potential.
+                        </div>
+                    </details>
+                    <details class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-lg group">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer text-xl font-semibold text-[#FCFAF7] hover:text-[#B89C6F] transition-colors">
+                            Can you assist with international clients and relocation?
+                            <span class="transform group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="px-6 pb-6 text-[#FCFAF7] leading-relaxed border-t border-white/10 pt-4">
+                            Absolutely. We have extensive experience working with international clients and offer comprehensive relocation services. This includes guiding you through the buying process in Florida, connecting you with trusted legal and financial advisors, and providing insights into Miami's lifestyle and community.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#333333] text-white py-16 md:py-20">
+        <div class="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
+            <!-- Column 1: Company Info -->
+            <div>
+                <a href="#" class="text-2xl font-extrabold tracking-tighter mb-4 block">
+                    <span class="text-[#B89C6F]">Jose Fuentes Real Estate</span>
+                </a>
+                <p class="text-[#FCFAF7]/80 text-sm leading-relaxed mb-4">
+                    Your premier partner for luxury real estate in Miami, affiliated with Fortune Christie's International.
+                </p>
+                <div class="flex items-center mb-2">
+                    <span class="text-[#B89C6F] mr-2"><i class="fas fa-star"></i></span>
+                    <span class="text-[#FCFAF7]">4.9★ (66 reviews)</span>
+                </div>
+            </div>
+
+            <!-- Column 2: Navigation Links -->
+            <div>
+                <h4 class="text-xl font-semibold mb-6 text-[#FCFAF7]">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="#about" class="hover:text-[#B89C6F] transition-colors text-[#FCFAF7]/80">About Us</a></li>
+                    <li><a href="#services" class="hover:text-[#B89C6F] transition-colors text-[#FCFAF7]/80">Services</a></li>
+                    <li><a href="#team" class="hover:text-[#B89C6F] transition-colors text-[#FCFAF7]/80">Team</a></li>
+                    <li><a href="#contact" class="hover:text-[#B89C6F] transition-colors text-[#FCFAF7]/80">Contact</a></li>
+                    <li><a href="#contact" class="hover:text-[#B89C6F] transition-colors text-[#FCFAF7]/80">Book an Appointment</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Details -->
+            <div>
+                <h4 class="text-xl font-semibold mb-6 text-[#FCFAF7]">Get in Touch</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-[#B89C6F] mt-1 mr-3"></i>
+                        <span class="text-[#FCFAF7]/80">1390 Brickell Ave #104, Miami, FL 33131, United States</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone text-[#B89C6F] mr-3"></i>
+                        <a href="tel:+17864396764" class="hover:text-[#B89C6F] transition-colors text-[#FCFAF7]/80">+1 786-439-6764</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope text-[#B89C6F] mr-3"></i>
+                        <a href="mailto:josefuentesrealestate@gmail.com" class="hover:text-[#B89C6F] transition-colors text-[#FCFAF7]/80">josefuentesrealestate@gmail.com</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-globe text-[#B89C6F] mr-3"></i>
+                        <a href="https://beacons.ai/mrdreammaker_" target="_blank" class="hover:text-[#B89C6F] transition-colors text-[#FCFAF7]/80">Our Website</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Social Media & Newsletter -->
+            <div>
+                <h4 class="text-xl font-semibold mb-6 text-[#FCFAF7]">Follow Us</h4>
+                <div class="flex gap-4 mb-8">
+                    <a href="https://facebook.com/miamirealestateopportunities" target="_blank" class="text-2xl text-[#FCFAF7]/80 hover:text-[#B89C6F] transition-colors"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://linkedin.com/company/jose-fuentes-realestate" target="_blank" class="text-2xl text-[#FCFAF7]/80 hover:text-[#B89C6F] transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <h4 class="text-xl font-semibold mb-4 text-[#FCFAF7]">Business Hours</h4>
+                <p class="text-[#FCFAF7]/80 text-sm">By appointment only. Please contact us to schedule a consultation.</p>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-16 pt-8 text-center text-sm text-[#FCFAF7]/60">
+            &copy; 2023 Jose Fuentes Real Estate Broker. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Intersection Observer for scroll reveal animations
+        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        }, observerOptions);
+
+        scrollRevealElements.forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
