@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The World Realty - Miami's Premier Luxury Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: #212121; /* Default text color */
+        }
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0; /* Default hidden state */
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-[#F8F5EE] text-[#212121] antialiased">
+
+    <!-- Navbar -->
+    <nav class="w-full fixed top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-100">
+        <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl md:text-3xl font-extrabold tracking-tighter">
+                <span class="text-[#005C7A]">The</span>&nbsp;<span class="text-[#212121]">World Realty</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-[#212121] font-medium">
+                <a href="#about" class="hover:text-[#005C7A] transition-colors">About</a>
+                <a href="#services" class="hover:text-[#005C7A] transition-colors">Services</a>
+                <a href="#team" class="hover:text-[#005C7A] transition-colors">Team</a>
+                <a href="#contact" class="hover:text-[#005C7A] transition-colors">Contact</a>
+            </div>
+            <a href="#contact" class="hidden md:inline-block px-8 py-3 bg-[#005C7A] text-white rounded-full font-medium hover:scale-105 transition-transform duration-300">Book Now</a>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-[#212121]"><i class="fas fa-bars"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-4 shadow-lg absolute w-full">
+            <a href="#about" class="block font-medium text-[#212121]">About</a>
+            <a href="#services" class="block font-medium text-[#212121]">Services</a>
+            <a href="#team" class="block font-medium text-[#212121]">Team</a>
+            <a href="#contact" class="block font-medium text-[#212121]">Contact</a>
+            <a href="#contact" class="inline-block w-full text-center px-8 py-3 bg-[#005C7A] text-white rounded-full font-medium">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center pt-24 md:pt-0 overflow-hidden bg-gradient-to-br from-[#005C7A] to-[#009ACF]">
+        <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://picsum.photos/1920/1080?random=1');"></div>
+        <div class="container mx-auto px-4 md:px-6 relative z-10 text-center text-[#F5F5F5] pb-20">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight mb-6 drop-shadow-lg opacity-0 fade-in-up">
+                <span class="block">Discover Miami's</span>
+                <span class="block text-[#D1A75B]">Luxury Real Estate</span>
+            </h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-10 drop-shadow-md opacity-0 fade-in-up" style="animation-delay: 0.3s;">
+                Connecting you with unparalleled properties and an exceptional lifestyle in the heart of Florida.
+            </p>
+            <a href="#contact" class="inline-block px-10 py-4 bg-[#D1A75B] text-[#212121] text-lg font-semibold rounded-full shadow-xl hover:scale-105 transition-transform duration-300 opacity-0 fade-in-up" style="animation-delay: 0.6s;">
+                Find Your Dream Home
+            </a>
+        </div>
+        <!-- Subtle geometric pattern for unique aesthetic -->
+        <div class="absolute bottom-0 left-0 w-1/4 h-1/4 bg-[#003D50]/30 transform rotate-45 -translate-x-1/2 translate-y-1/2"></div>
+        <div class="absolute top-0 right-0 w-1/5 h-1/5 bg-[#003D50]/30 transform -rotate-45 translate-x-1/2 -translate-y-1/2"></div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-28 md:py-32 bg-[#F8F5EE] text-[#212121] overflow-hidden">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-center mb-16 text-[#003D50] opacity-0 fade-in-up">About The World Realty</h2>
+            <div class="md:grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative mb-12 md:mb-0 opacity-0 fade-in-up" style="animation-delay: 0.2s;">
+                    <img src="https://picsum.photos/800/700?random=2" alt="Miami Skyline" class="w-full h-[450px] object-cover rounded-3xl shadow-2xl relative z-10">
+                    <div class="absolute -bottom-8 -left-8 w-2/3 h-2/3 bg-[#D1A75B] rounded-3xl opacity-80 z-0 floating"></div>
+                </div>
+                <div class="space-y-8 opacity-0 fade-in-up" style="animation-delay: 0.4s;">
+                    <p class="text-lg leading-relaxed">
+                        At <strong class="text-[#005C7A]">The World Realty</strong>, led by Aleksandra Marzec, we redefine luxury real estate in Miami. With a deep understanding of the market and an unwavering commitment to our clients, we specialize in connecting discerning buyers with their ideal properties and achieving exceptional results for sellers.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Our expertise spans from opulent waterfront estates to vibrant urban penthouses, all within Miami's most coveted neighborhoods. We pride ourselves on a personalized approach, ensuring every transaction is seamless, transparent, and tailored to your unique aspirations.
+                    </p>
+                    <div class="flex items-center gap-4 text-xl font-semibold">
+                        <i class="fas fa-star text-[#D1A75B]"></i> <span class="text-[#005C7A]">5.0★ (32 reviews)</span>
+                    </div>
+                    <a href="#contact" class="inline-block px-8 py-3 bg-[#005C7A] text-white rounded-full font-medium hover:scale-105 transition-transform duration-300">
+                        Connect with an Expert
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="services" class="py-28 md:py-32 bg-[#263238] text-[#F5F5F5] overflow-hidden">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-center mb-16 text-[#009ACF] opacity-0 fade-in-up">Our Expertise, Your Advantage</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Service 1 -->
+                <div class="group relative bg-[#003D50] rounded-3xl shadow-2xl p-8 flex flex-col items-start opacity-0 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="absolute inset-0 bg-cover bg-center rounded-3xl opacity-20 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://picsum.photos/600/400?random=3');"></div>
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="text-6xl text-[#D1A75B] mb-6"><i class="fas fa-home"></i></div>
+                        <h3 class="text-3xl font-bold mb-4">Luxury Property Sales</h3>
+                        <p class="text-lg leading-relaxed flex-grow">
+                            Specializing in the sale of high-end homes, condos, and estates across Miami's most exclusive neighborhoods. We leverage extensive market knowledge and a vast network to connect sellers with qualified buyers.
+                        </p>
+                        <a href="#contact" class="mt-6 text-[#D1A75B] hover:underline text-lg font-medium self-end">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group relative bg-[#003D50] rounded-3xl shadow-2xl p-8 flex flex-col items-start opacity-0 fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="absolute inset-0 bg-cover bg-center rounded-3xl opacity-20 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://picsum.photos/600/400?random=4');"></div>
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="text-6xl text-[#D1A75B] mb-6"><i class="fas fa-building"></i></div>
+                        <h3 class="text-3xl font-bold mb-4">Exclusive Buyer Representation</h3>
+                        <p class="text-lg leading-relaxed flex-grow">
+                            From identifying prime opportunities to negotiating favorable terms, we guide buyers through every step of acquiring their dream property, ensuring a smooth and successful transaction.
+                        </p>
+                        <a href="#contact" class="mt-6 text-[#D1A75B] hover:underline text-lg font-medium self-end">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group relative bg-[#003D50] rounded-3xl shadow-2xl p-8 flex flex-col items-start opacity-0 fade-in-up" style="animation-delay: 0.6s;">
+                    <div class="absolute inset-0 bg-cover bg-center rounded-3xl opacity-20 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://picsum.photos/600/400?random=5');"></div>
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="text-6xl text-[#D1A75B] mb-6"><i class="fas fa-chart-line"></i></div>
+                        <h3 class="text-3xl font-bold mb-4">Investment & Market Insights</h3>
+                        <p class="text-lg leading-relaxed flex-grow">
+                            Providing expert analysis and strategic advice on Miami's dynamic real estate market, helping investors make informed decisions for maximum returns.
+                        </p>
+                        <a href="#contact" class="mt-6 text-[#D1A75B] hover:underline text-lg font-medium self-end">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Unique structural layout: Overlapping image and text block -->
+            <div class="relative mt-24 pt-16 pb-12 px-8 bg-[#005C7A] rounded-3xl shadow-xl md:flex items-center gap-12 overflow-hidden opacity-0 fade-in-up" style="animation-delay: 0.8s;">
+                <img src="https://picsum.photos/800/600?random=6" alt="Luxury Interior" class="w-full md:w-1/2 h-80 md:h-96 object-cover rounded-3xl shadow-2xl relative md:-translate-x-1/4 z-10 mb-8 md:mb-0">
+                <div class="relative z-20 text-[#F5F5F5] md:w-1/2 md:pl-8">
+                    <h3 class="text-4xl font-bold mb-6 text-[#D1A75B]">A Partner in Your Real Estate Journey</h3>
+                    <p class="text-lg leading-relaxed mb-6">
+                        We don't just facilitate transactions; we build relationships. Our commitment is to understand your vision and tirelessly work to bring it to life, whether you're buying, selling, or investing in Miami's luxury market.
+                    </p>
+                    <a href="#contact" class="inline-block px-8 py-3 bg-[#D1A75B] text-[#212121] rounded-full font-medium hover:scale-105 transition-transform duration-300">
+                        Get Started Today
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="team" class="py-28 md:py-32 bg-[#F8F5EE] text-[#212121] overflow-hidden">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-center mb-16 text-[#003D50] opacity-0 fade-in-up">Meet Our Founder</h2>
+            <div class="relative md:flex items-center bg-[#EBE8DF] rounded-3xl shadow-2xl p-8 md:p-12 gap-12 overflow-hidden opacity-0 fade-in-up" style="animation-delay: 0.2s;">
+                <div class="md:w-1/2 lg:w-2/5 flex justify-center mb-8 md:mb-0 relative z-10">
+                    <img src="https://picsum.photos/600/800?random=7" alt="Aleksandra Marzec" class="w-full max-w-sm h-auto object-cover rounded-3xl shadow-xl transform hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="md:w-1/2 lg:w-3/5 relative z-10">
+                    <h3 class="text-5xl font-bold mb-4 text-[#005C7A]">Aleksandra Marzec</h3>
+                    <p class="text-xl font-medium text-[#D1A75B] mb-6">Founder & Lead Broker, The World Realty</p>
+                    <p class="text-lg leading-relaxed mb-6">
+                        Aleksandra Marzec is a luminary in Miami's luxury real estate landscape. With an unparalleled drive and a keen eye for exceptional properties, Aleksandra has built The World Realty on principles of integrity, market mastery, and client-centric service. Her international background and sophisticated approach ensure every client receives world-class representation.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-8">
+                        Whether you're looking for a private estate in Coral Gables, a high-rise condo in Brickell, or a beachfront property in South Beach, Aleksandra's expertise is your ultimate asset.
+                    </p>
+                    <div class="flex gap-6 text-2xl">
+                        <a href="https://instagram.com/Aleksandramarzec9" target="_blank" class="text-[#005C7A] hover:text-[#D1A75B] transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/AleksandraTeam" target="_blank" class="text-[#005C7A] hover:text-[#D1A75B] transition-colors"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/_image" target="_blank" class="text-[#005C7A] hover:text-[#D1A75B] transition-colors"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://linkedin.com/company/aleksandramarzecrealty" target="_blank" class="text-[#005C7A] hover:text-[#D1A75B] transition-colors"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://youtube.com/@AleksandraMarzec" target="_blank" class="text-[#005C7A] hover:text-[#D1A75B] transition-colors"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Geometric background element for unique structure -->
+                <div class="absolute bottom-0 right-0 w-1/3 h-full bg-[#D1A75B]/20 transform skew-x-12 -translate-y-1/2 translate-x-1/2 hidden md:block"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-28 md:py-32 bg-[#263238] text-[#F5F5F5] overflow-hidden">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-center mb-16 text-[#009ACF] opacity-0 fade-in-up">What Our Clients Say</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Testimonial 1 -->
+                <div class="bg-[#EBE8DF] text-[#212121] rounded-3xl p-8 shadow-2xl hover:shadow-primary-lg transition-shadow duration-300 opacity-0 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="flex items-center mb-4">
+                        <div class="text-[#D1A75B]">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-3 text-sm font-semibold">5.0</span>
+                    </div>
+                    <p class="text-lg italic mb-6">
+                        "Aleksandra and her team delivered beyond expectation. They found us the perfect waterfront condo and handled everything with utmost professionalism. A truly seamless experience!"
+                    </p>
+                    <p class="font-bold text-lg">— Michael P.</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-[#EBE8DF] text-[#212121] rounded-3xl p-8 shadow-2xl hover:shadow-primary-lg transition-shadow duration-300 opacity-0 fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="flex items-center mb-4">
+                        <div class="text-[#D1A75B]">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-3 text-sm font-semibold">5.0</span>
+                    </div>
+                    <p class="text-lg italic mb-6">
+                        "Selling our luxury home felt daunting, but The World Realty made it effortless. Their marketing was exceptional, and we achieved our target price quickly. Highly recommend!"
+                    </p>
+                    <p class="font-bold text-lg">— Sophia L.</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-[#EBE8DF] text-[#212121] rounded-3xl p-8 shadow-2xl hover:shadow-primary-lg transition-shadow duration-300 opacity-0 fade-in-up" style="animation-delay: 0.6s;">
+                    <div class="flex items-center mb-4">
+                        <div class="text-[#D1A75B]">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-3 text-sm font-semibold">5.0</span>
+                    </div>
+                    <p class="text-lg italic mb-6">
+                        "Investment in Miami's market requires local expertise. Aleksandra provided invaluable insights, leading us to a fantastic opportunity. A true partner!"
+                    </p>
+                    <p class="font-bold text-lg">— David R.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="py-28 md:py-32 bg-[#F8F5EE] text-[#212121] overflow-hidden">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-center mb-16 text-[#003D50] opacity-0 fade-in-up">Get in Touch</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-stretch">
+                <!-- Contact Form (Left Column) -->
+                <div class="bg-[#EBE8DF] rounded-3xl shadow-2xl p-8 md:p-10 flex flex-col justify-center opacity-0 fade-in-up" style="animation-delay: 0.2s;">
+                    <h3 class="text-3xl font-bold mb-8 text-[#005C7A]">Send Us a Message</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-lg font-medium text-[#212121] mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-5 py-3 rounded-lg border border-gray-300 focus:border-[#005C7A] focus:ring focus:ring-[#005C7A]/20 transition-all duration-300 bg-white text-[#212121]" placeholder="Your Name" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-lg font-medium text-[#212121] mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-5 py-3 rounded-lg border border-gray-300 focus:border-[#005C7A] focus:ring focus:ring-[#005C7A]/20 transition-all duration-300 bg-white text-[#212121]" placeholder="your@email.com" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-lg font-medium text-[#212121] mb-2">Phone (Optional)</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-5 py-3 rounded-lg border border-gray-300 focus:border-[#005C7A] focus:ring focus:ring-[#005C7A]/20 transition-all duration-300 bg-white text-[#212121]" placeholder="+1 (123) 456-7890">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-lg font-medium text-[#212121] mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-5 py-3 rounded-lg border border-gray-300 focus:border-[#005C7A] focus:ring focus:ring-[#005C7A]/20 transition-all duration-300 bg-white text-[#212121]" placeholder="Tell us about your real estate needs..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-8 py-4 bg-[#005C7A] text-white rounded-full font-semibold text-lg hover:bg-[#003D50] transition-colors duration-300 hover:scale-105">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Google Maps (Right Column) -->
+                <div class="opacity-0 fade-in-up" style="animation-delay: 0.4s;">
+                    <h3 class="text-3xl font-bold mb-8 text-[#005C7A] text-center md:text-left">Our Location</h3>
+                    <iframe 
+                        src="https://www.google.com/maps?q=1221+Brickell+Ave+Miami+FL+33131+United+States&output=embed" 
+                        class="w-full h-full min-h-[400px] rounded-3xl shadow-2xl border-none">
+                    </iframe>
+                    <p class="text-center md:text-left text-lg mt-6 flex items-center justify-center md:justify-start gap-3">
+                        <i class="fas fa-map-marker-alt text-[#D1A75B]"></i> 1221 Brickell Ave, Miami, FL 33131, United States
+                    </p>
+                    <p class="text-center md:text-left text-lg mt-2 flex items-center justify-center md:justify-start gap-3">
+                        <i class="fas fa-phone-alt text-[#D1A75B]"></i> +1 305-760-9121
+                    </p>
+                    <p class="text-center md:text-left text-lg mt-2 flex items-center justify-center md:justify-start gap-3">
+                        <i class="fas fa-envelope text-[#D1A75B]"></i> alek@aleksandrateam.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-28 md:py-32 bg-[#263238] text-[#F5F5F5] overflow-hidden">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-center mb-16 text-[#009ACF] opacity-0 fade-in-up">Frequently Asked Questions</h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <!-- FAQ Item 1 -->
+                <details class="bg-[#003D50] rounded-lg shadow-xl py-6 px-8 cursor-pointer group opacity-0 fade-in-up" style="animation-delay: 0.2s;">
+                    <summary class="flex justify-between items-center text-xl font-semibold text-[#F5F5F5] hover:text-[#D1A75B] transition-colors">
+                        What areas in Miami do you specialize in?
+                        <span class="group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="mt-4 text-lg leading-relaxed text-[#F5F5F5]/90">
+                        We specialize in Miami's most exclusive neighborhoods, including Brickell, South Beach, Coral Gables, Coconut Grove, Key Biscayne, and Sunny Isles Beach. Our deep local knowledge ensures we can find the perfect property for your needs across these coveted areas.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 2 -->
+                <details class="bg-[#003D50] rounded-lg shadow-xl py-6 px-8 cursor-pointer group opacity-0 fade-in-up" style="animation-delay: 0.4s;">
+                    <summary class="flex justify-between items-center text-xl font-semibold text-[#F5F5F5] hover:text-[#D1A75B] transition-colors">
+                        How do you help clients find off-market properties?
+                        <span class="group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="mt-4 text-lg leading-relaxed text-[#F5F5F5]/90">
+                        Our extensive network and strong relationships within the luxury market often give us access to exclusive off-market listings. We proactively connect with owners and other agents to uncover hidden gems that aren't publicly advertised, giving our clients a distinct advantage.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 3 -->
+                <details class="bg-[#003D50] rounded-lg shadow-xl py-6 px-8 cursor-pointer group opacity-0 fade-in-up" style="animation-delay: 0.6s;">
+                    <summary class="flex justify-between items-center text-xl font-semibold text-[#F5F5F5] hover:text-[#D1A75B] transition-colors">
+                        What is your process for selling a luxury property?
+                        <span class="group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="mt-4 text-lg leading-relaxed text-[#F5F5F5]/90">
+                        Our selling process begins with a comprehensive market analysis and property valuation. We then develop a tailored, high-impact marketing strategy, including professional photography, videography, targeted digital campaigns, and exclusive showings to qualified buyers. We handle all negotiations to secure the best possible outcome for you.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 4 -->
+                <details class="bg-[#003D50] rounded-lg shadow-xl py-6 px-8 cursor-pointer group opacity-0 fade-in-up" style="animation-delay: 0.8s;">
+                    <summary class="flex justify-between items-center text-xl font-semibold text-[#F5F5F5] hover:text-[#D1A75B] transition-colors">
+                        Do you assist international clients with relocation?
+                        <span class="group-open:rotate-180 transition-transform duration-300"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="mt-4 text-lg leading-relaxed text-[#F5F5F5]/90">
+                        Absolutely. Miami is a global hub, and we regularly assist international clients with their relocation needs. This includes not only finding the perfect property but also connecting them with trusted resources for legal, financial, and logistical aspects of moving to Miami.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#263238] text-[#F5F5F5] py-16 md:py-20">
+        <div class="container mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <!-- Column 1: Company Info & Logo -->
+            <div>
+                <a href="#" class="text-3xl font-extrabold tracking-tighter block mb-4">
+                    <span class="text-[#005C7A]">The</span>&nbsp;<span class="text-[#F5F5F5]">World Realty</span>
+                </a>
+                <p class="text-sm leading-relaxed mb-4">
+                    Your trusted partner for luxury real estate in Miami. Discover unparalleled properties and exceptional service.
+                </p>
+                <div class="flex items-center gap-2 text-sm">
+                    <i class="fas fa-star text-[#D1A75B]"></i> <span>5.0★ (32 reviews)</span>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h4 class="text-xl font-bold mb-6 text-[#009ACF]">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="#about" class="hover:text-[#D1A75B] transition-colors">About Us</a></li>
+                    <li><a href="#services" class="hover:text-[#D1A75B] transition-colors">Services</a></li>
+                    <li><a href="#team" class="hover:text-[#D1A75B] transition-colors">Our Team</a></li>
+                    <li><a href="#contact" class="hover:text-[#D1A75B] transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div>
+                <h4 class="text-xl font-bold mb-6 text-[#009ACF]">Contact Details</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-map-marker-alt text-[#D1A75B] mt-1"></i>
+                        <span>1221 Brickell Ave, Miami, FL 33131, United States</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-phone-alt text-[#D1A75B]"></i>
+                        <span>+1 305-760-9121</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-envelope text-[#D1A75B]"></i>
+                        <span>alek@aleksandrateam.com</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-globe text-[#D1A75B]"></i>
+                        <a href="https://www.aleksandramarzec.com/" target="_blank" class="hover:text-[#D1A75B] transition-colors">aleksandramarzec.com</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-clock text-[#D1A75B]"></i>
+                        <span>By Appointment Only</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Social Media & Copyright -->
+            <div>
+                <h4 class="text-xl font-bold mb-6 text-[#009ACF]">Follow Us</h4>
+                <div class="flex space-x-5 text-2xl mb-8">
+                    <a href="https://instagram.com/Aleksandramarzec9" target="_blank" class="hover:text-[#D1A75B] transition-colors"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/AleksandraTeam" target="_blank" class="hover:text-[#D1A75B] transition-colors"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/_image" target="_blank" class="hover:text-[#D1A75B] transition-colors"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com/company/aleksandramarzecrealty" target="_blank" class="hover:text-[#D1A75B] transition-colors"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://youtube.com/@AleksandraMarzec" target="_blank" class="hover:text-[#D1A75B] transition-colors"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="text-sm">
+                    &copy; <span id="current-year"></span> The World Realty. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Scroll Reveal -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scroll for internal links and close mobile menu
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.getElementById('mobile-menu').classList.add('hidden'); // Hide mobile menu on click
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for scroll-reveal animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                    entry.target.classList.remove('opacity-0');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.opacity-0.fade-in-up').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
