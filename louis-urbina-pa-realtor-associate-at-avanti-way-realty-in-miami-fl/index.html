@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louis Urbina, PA - Realtor Associate at Avanti Way Realty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #F8F8F7; /* BG Light */
+            color: #22282B; /* Text Dark */
+        }
+        .reveal-item {
+            opacity: 0;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .reveal-item.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Keyframe for fade-in-up */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 1s ease-out forwards;
+        }
+
+        /* Keyframe for floating effect */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="w-full fixed top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-100">
+        <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl md:text-3xl font-extrabold tracking-tighter">
+                <span class="text-[#1E3A4B]">Louis Urbina, PA - Realtor Associate</span>&nbsp;<span class="text-[#22282B]">at Avanti Way Realty in Miami, FL</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-[#22282B] font-medium">
+                <a href="#about" class="hover:text-[#1E3A4B] transition-colors">About</a>
+                <a href="#services" class="hover:text-[#1E3A4B] transition-colors">Services</a>
+                <a href="#team" class="hover:text-[#1E3A4B] transition-colors">Team</a>
+                <a href="#contact" class="hover:text-[#1E3A4B] transition-colors">Contact</a>
+            </div>
+            <a href="#contact" class="hidden md:inline-block px-8 py-3 bg-[#1E3A4B] text-white rounded-full font-medium hover:scale-105 transition-transform">Book Now</a>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-[#22282B]">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-4 shadow-lg absolute w-full">
+            <a href="#about" class="block font-medium text-[#22282B]">About</a>
+            <a href="#services" class="block font-medium text-[#22282B]">Services</a>
+            <a href="#team" class="block font-medium text-[#22282B]">Team</a>
+            <a href="#contact" class="block font-medium text-[#22282B]">Contact</a>
+            <a href="#contact" class="inline-block w-full text-center px-8 py-3 bg-[#1E3A4B] text-white rounded-full font-medium">Book Now</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen flex items-center justify-center bg-gradient-to-br from-[#10222B] to-[#4A7C93] text-white pt-28 md:pt-0">
+            <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://picsum.photos/1920/1080?random=1');"></div>
+            <div class="relative z-10 text-center px-4 md:px-8 max-w-5xl mx-auto reveal-item">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-up">
+                    <span class="text-[#B38F5F]">Your Gateway to Miami's Premier Real Estate.</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto animate-fade-in-up" style="animation-delay: 0.3s;">
+                    Discover sophisticated coastal luxury and modern elegance with Louis Urbina, PA at Avanti Way Realty. Unwavering professionalism for your Miami property journey.
+                </p>
+                <a href="#contact" class="inline-block px-12 py-5 bg-[#B38F5F] text-[#10222B] text-lg font-semibold rounded-full hover:bg-[#A37E4F] transition-all transform hover:scale-105 shadow-lg animate-fade-in-up" style="animation-delay: 0.6s;">
+                    Explore Opportunities
+                </a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="bg-[#F8F8F7] py-28 md:py-32 reveal-item">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-4xl md:text-6xl font-bold text-center text-[#1E3A4B] mb-16 md:mb-20 animate-fade-in-up">About Louis Urbina, PA</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+                    <div class="relative order-2 md:order-1 animate-fade-in-up">
+                        <img src="https://picsum.photos/800/600?random=2" alt="Luxury Miami condo" class="w-full h-[450px] object-cover rounded-3xl shadow-2xl z-10">
+                        <img src="https://picsum.photos/600/800?random=3" alt="Louis Urbina working" class="absolute hidden lg:block -bottom-16 -left-16 w-64 h-80 object-cover rounded-3xl shadow-2xl border-4 border-white z-20 float-animation">
+                    </div>
+                    <div class="order-1 md:order-2 space-y-8 text-lg text-[#22282B] animate-fade-in-up">
+                        <p>
+                            As a distinguished Realtor Associate with Avanti Way Realty, Louis Urbina, PA brings unparalleled expertise and a deep understanding of the dynamic Miami real estate market. With a focus on sophistication and client satisfaction, Louis guides buyers and sellers through every step of their journey, ensuring seamless transactions and exceptional results.
+                        </p>
+                        <p>
+                            Our philosophy centers on building lasting relationships, founded on trust, transparency, and tailored service. Whether you're seeking an exclusive waterfront estate, a chic urban condominium, or a strategic investment opportunity, Louis Urbina is your dedicated partner in navigating Miami's vibrant property landscape. We are committed to excellence, delivering a luxury experience defined by modern elegance and unwavering professionalism.
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-[#1E3A4B] font-medium">
+                            <li>Local market mastery and insights</li>
+                            <li>Personalized guidance and advisory</li>
+                            <li>Seamless transaction management</li>
+                            <li>Commitment to client success</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section id="services" class="bg-gradient-to-r from-[#10222B] to-[#4A7C93] py-28 md:py-32 text-white reveal-item">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-4xl md:text-6xl font-bold text-center text-[#B38F5F] mb-16 md:mb-20 animate-fade-in-up">Our Comprehensive Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl shadow-2xl text-center reveal-item animate-fade-in-up transition-all hover:scale-105 duration-300">
+                        <i class="fa-solid fa-house-user text-6xl text-[#B38F5F] mb-6"></i>
+                        <h3 class="text-3xl font-semibold mb-4 text-white">Luxury Home Sales</h3>
+                        <p class="text-lg text-[#D0D7D9]">Specializing in high-end properties, we offer bespoke marketing strategies and discreet representation for sellers of luxury homes in Miami's most exclusive neighborhoods.</p>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl shadow-2xl text-center reveal-item animate-fade-in-up transition-all hover:scale-105 duration-300" style="animation-delay: 0.2s;">
+                        <i class="fa-solid fa-city text-6xl text-[#B38F5F] mb-6"></i>
+                        <h3 class="text-3xl font-semibold mb-4 text-white">Buyer Representation</h3>
+                        <p class="text-lg text-[#D0D7D9]">From first-time buyers to seasoned investors, we provide personalized property searches, expert negotiation, and seamless closing support.</p>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl shadow-2xl text-center reveal-item animate-fade-in-up transition-all hover:scale-105 duration-300" style="animation-delay: 0.4s;">
+                        <i class="fa-solid fa-chart-line text-6xl text-[#B38F5F] mb-6"></i>
+                        <h3 class="text-3xl font-semibold mb-4 text-white">Real Estate Investment</h3>
+                        <p class="text-lg text-[#D0D7D9]">Identify lucrative investment opportunities in Miami's thriving market, with in-depth analysis and strategic advice to maximize your returns.</p>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl shadow-2xl text-center reveal-item animate-fade-in-up transition-all hover:scale-105 duration-300" style="animation-delay: 0.6s;">
+                        <i class="fa-solid fa-key text-6xl text-[#B38F5F] mb-6"></i>
+                        <h3 class="text-3xl font-semibold mb-4 text-white">Property Rentals</h3>
+                        <p class="text-lg text-[#D0D7D9]">Whether finding your perfect rental or securing qualified tenants for your property, we streamline the rental process with efficiency and expertise.</p>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl shadow-2xl text-center reveal-item animate-fade-in-up transition-all hover:scale-105 duration-300" style="animation-delay: 0.8s;">
+                        <i class="fa-solid fa-building text-6xl text-[#B38F5F] mb-6"></i>
+                        <h3 class="text-3xl font-semibold mb-4 text-white">New Development Sales</h3>
+                        <p class="text-lg text-[#D0D7D9]">Gain exclusive access and insights into Miami's most anticipated new residential developments and pre-construction opportunities.</p>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl shadow-2xl text-center reveal-item animate-fade-in-up transition-all hover:scale-105 duration-300" style="animation-delay: 1s;">
+                        <i class="fa-solid fa-handshake text-6xl text-[#B38F5F] mb-6"></i>
+                        <h3 class="text-3xl font-semibold mb-4 text-white">Relocation Services</h3>
+                        <p class="text-lg text-[#D0D7D9]">Smooth transitions for those moving to Miami, including neighborhood tours, school information, and comprehensive settling-in assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Team Section -->
+        <section id="team" class="bg-[#F8F8F7] py-28 md:py-32 reveal-item">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-4xl md:text-6xl font-bold text-center text-[#1E3A4B] mb-16 md:mb-20 animate-fade-in-up">Meet Louis Urbina, PA</h2>
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-20 max-w-5xl mx-auto">
+                    <div class="flex-shrink-0 relative w-full md:w-1/2 lg:w-2/5 animate-fade-in-up">
+                        <img src="https://picsum.photos/600/800?random=4" alt="Louis Urbina, Realtor Associate" class="w-full h-auto object-cover rounded-3xl shadow-2xl">
+                        <div class="absolute -bottom-8 -right-8 bg-[#B38F5F] text-white p-6 rounded-tl-3xl rounded-br-3xl text-center z-10 hidden sm:block">
+                            <p class="text-xl font-semibold">5.0★ Rating</p>
+                            <p class="text-sm">Across 68 Reviews</p>
+                        </div>
+                    </div>
+                    <div class="space-y-8 text-lg text-[#22282B] w-full md:w-1/2 lg:w-3/5 animate-fade-in-up" style="animation-delay: 0.3s;">
+                        <h3 class="text-4xl font-bold text-[#1E3A4B]">Louis Urbina, PA</h3>
+                        <p class="text-2xl font-medium text-[#4A7C93]">Realtor Associate at Avanti Way Realty</p>
+                        <p>
+                            Louis Urbina is more than just a realtor; he is a trusted advisor and a passionate advocate for his clients. With years of experience in the competitive Miami market, Louis has cultivated a reputation for his in-depth market knowledge, astute negotiation skills, and unwavering dedication to achieving his clients' goals.
+                        </p>
+                        <p>
+                            His approach is client-centric, focusing on understanding individual needs and preferences to deliver tailored solutions. Louis believes that successful real estate transactions are built on clear communication, meticulous attention to detail, and a commitment to ethical practices. He leverages cutting-edge technology and a vast network to ensure his clients receive the best possible service, whether they are buying, selling, or investing in Miami's vibrant real estate landscape.
+                        </p>
+                        <a href="#contact" class="inline-block mt-6 px-8 py-4 bg-[#1E3A4B] text-white rounded-full font-medium hover:scale-105 transition-transform shadow-lg">
+                            Connect with Louis
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="bg-[#EAEAE7] py-28 md:py-32 reveal-item">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-4xl md:text-6xl font-bold text-center text-[#1E3A4B] mb-16 md:mb-20 animate-fade-in-up">What Our Clients Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="bg-white p-8 rounded-3xl shadow-2xl reveal-item animate-fade-in-up transition-all hover:scale-105 duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="text-[#B38F5F]">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-[#22282B] font-semibold">5.0</span>
+                        </div>
+                        <p class="text-lg text-[#22282B] mb-6 leading-relaxed">"Louis made our first home-buying experience in Miami absolutely incredible. His knowledge of Brickell was unmatched, and he guided us with patience and professionalism every step of the way. Highly recommend!"</p>
+                        <p class="font-bold text-[#1E3A4B]">- Maria G.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-2xl reveal-item animate-fade-in-up transition-all hover:scale-105 duration-300" style="animation-delay: 0.2s;">
+                        <div class="flex items-center mb-4">
+                            <div class="text-[#B38F5F]">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-[#22282B] font-semibold">5.0</span>
+                        </div>
+                        <p class="text-lg text-[#22282B] mb-6 leading-relaxed">"Selling my luxury condo seemed daunting, but Louis handled everything with such elegance and efficiency. He secured an excellent offer faster than I expected. True professional!"</p>
+                        <p class="font-bold text-[#1E3A4B]">- David L.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-2xl reveal-item animate-fade-in-up transition-all hover:scale-105 duration-300" style="animation-delay: 0.4s;">
+                        <div class="flex items-center mb-4">
+                            <div class="text-[#B38F5F]">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-[#22282B] font-semibold">5.0</span>
+                        </div>
+                        <p class="text-lg text-[#22282B] mb-6 leading-relaxed">"For investment properties, Louis is the only realtor I trust in Miami. His insights into market trends and potential returns are invaluable. He found us an amazing deal!"</p>
+                        <p class="font-bold text-[#1E3A4B]">- Sophia K.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Location Section -->
+        <section id="contact" class="bg-gradient-to-br from-[#10222B] to-[#4A7C93] py-28 md:py-32 text-white reveal-item">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-4xl md:text-6xl font-bold text-center text-[#B38F5F] mb-16 md:mb-20 animate-fade-in-up">Get In Touch & Visit Us</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
+                    <!-- Contact Form -->
+                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-12 rounded-3xl shadow-2xl reveal-item animate-fade-in-up">
+                        <h3 class="text-3xl font-bold mb-8 text-white">Send Us a Message</h3>
+                        <form action="#" method="POST" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-lg font-medium mb-2 text-[#D0D7D9]">Your Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-5 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#B38F5F] text-white placeholder-gray-400" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-lg font-medium mb-2 text-[#D0D7D9]">Your Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-5 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#B38F5F] text-white placeholder-gray-400" placeholder="john.doe@example.com">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-lg font-medium mb-2 text-[#D0D7D9]">Your Phone (Optional)</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-5 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#B38F5F] text-white placeholder-gray-400" placeholder="+1 (555) 123-4567">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-lg font-medium mb-2 text-[#D0D7D9]">How Can We Help?</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-5 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#B38F5F] text-white placeholder-gray-400" placeholder="I'm interested in buying a property..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-8 py-4 bg-[#B38F5F] text-[#10222B] text-xl font-semibold rounded-xl hover:bg-[#A37E4F] transition-all transform hover:scale-105 shadow-lg">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                    <!-- Google Map -->
+                    <div class="reveal-item animate-fade-in-up" style="animation-delay: 0.3s;">
+                        <iframe
+                            src="https://www.google.com/maps?q=444+Brickell+Ave+P32+Miami+FL+33131+United+States&output=embed"
+                            width="100%"
+                            height="100%"
+                            min-h-[400px]
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-3xl shadow-2xl"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="bg-[#F8F8F7] py-28 md:py-32 reveal-item">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-4xl md:text-6xl font-bold text-center text-[#1E3A4B] mb-16 md:mb-20 animate-fade-in-up">Frequently Asked Questions</h2>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <details class="group bg-[#EAEAE7] p-6 rounded-3xl shadow-lg cursor-pointer reveal-item animate-fade-in-up">
+                        <summary class="flex justify-between items-center text-2xl font-semibold text-[#1E3A4B] transition-colors group-hover:text-[#4A7C93]">
+                            What areas do you specialize in?
+                            <i class="fa-solid fa-chevron-down text-[#B38F5F] group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <p class="mt-4 text-lg text-[#22282B] leading-relaxed">
+                            We specialize in the most sought-after neighborhoods of Miami, including Brickell, Downtown Miami, Coconut Grove, Coral Gables, South Beach, and luxury waterfront communities. Our deep local expertise allows us to provide specific insights into each area.
+                        </p>
+                    </details>
+                    <details class="group bg-[#EAEAE7] p-6 rounded-3xl shadow-lg cursor-pointer reveal-item animate-fade-in-up" style="animation-delay: 0.2s;">
+                        <summary class="flex justify-between items-center text-2xl font-semibold text-[#1E3A4B] transition-colors group-hover:text-[#4A7C93]">
+                            How do you help buyers find their ideal property?
+                            <i class="fa-solid fa-chevron-down text-[#B38F5F] group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <p class="mt-4 text-lg text-[#22282B] leading-relaxed">
+                            Our process begins with an in-depth consultation to understand your unique needs, lifestyle, and investment goals. We then leverage our extensive network and market analysis tools to curate a selection of properties that perfectly match your criteria, followed by expert negotiation and closing support.
+                        </p>
+                    </details>
+                    <details class="group bg-[#EAEAE7] p-6 rounded-3xl shadow-lg cursor-pointer reveal-item animate-fade-in-up" style="animation-delay: 0.4s;">
+                        <summary class="flex justify-between items-center text-2xl font-semibold text-[#1E3A4B] transition-colors group-hover:text-[#4A7C93]">
+                            What is your approach to selling a property?
+                            <i class="fa-solid fa-chevron-down text-[#B38F5F] group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <p class="mt-4 text-lg text-[#22282B] leading-relaxed">
+                            For sellers, we develop a comprehensive, tailored marketing strategy that includes professional photography, virtual tours, targeted online campaigns, and access to our exclusive network of buyers. We focus on showcasing your property's unique value to attract the right buyer and secure the best possible price.
+                        </p>
+                    </details>
+                    <details class="group bg-[#EAEAE7] p-6 rounded-3xl shadow-lg cursor-pointer reveal-item animate-fade-in-up" style="animation-delay: 0.6s;">
+                        <summary class="flex justify-between items-center text-2xl font-semibold text-[#1E3A4B] transition-colors group-hover:text-[#4A7C93]">
+                            Can you assist with international clients and relocation?
+                            <i class="fa-solid fa-chevron-down text-[#B38F5F] group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <p class="mt-4 text-lg text-[#22282B] leading-relaxed">
+                            Absolutely. Miami is a global hub, and we regularly assist international clients with their real estate needs. We provide comprehensive relocation services, including neighborhood guidance, school information, and connections to trusted professionals for legal and financial advice, ensuring a smooth transition.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1A2B35] text-white py-16 md:py-20">
+        <div class="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+            <!-- Company Info -->
+            <div class="space-y-4 reveal-item animate-fade-in-up">
+                <h4 class="text-2xl font-bold text-[#B38F5F]">Louis Urbina, PA</h4>
+                <p class="text-[#D0D7D9] text-sm">
+                    Realtor Associate at Avanti Way Realty. <br>Your premier partner for Miami's luxury real estate.
+                </p>
+                <p class="text-[#D0D7D9] text-sm">© 2023 Louis Urbina, PA. All rights reserved.</p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="space-y-4 reveal-item animate-fade-in-up" style="animation-delay: 0.1s;">
+                <h4 class="text-2xl font-bold text-[#B38F5F]">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#about" class="hover:text-[#4A7C93] transition-colors text-[#D0D7D9]">About Us</a></li>
+                    <li><a href="#services" class="hover:text-[#4A7C93] transition-colors text-[#D0D7D9]">Our Services</a></li>
+                    <li><a href="#team" class="hover:text-[#4A7C93] transition-colors text-[#D0D7D9]">Meet The Team</a></li>
+                    <li><a href="#contact" class="hover:text-[#4A7C93] transition-colors text-[#D0D7D9]">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="space-y-4 reveal-item animate-fade-in-up" style="animation-delay: 0.2s;">
+                <h4 class="text-2xl font-bold text-[#B38F5F]">Contact Info</h4>
+                <p class="flex items-center justify-center md:justify-start text-[#D0D7D9]"><i class="fas fa-map-marker-alt text-[#B38F5F] mr-3"></i> 444 Brickell Ave P32, Miami, FL 33131</p>
+                <p class="flex items-center justify-center md:justify-start text-[#D0D7D9]"><i class="fas fa-phone-alt text-[#B38F5F] mr-3"></i> +1 786-355-7423</p>
+                <p class="flex items-center justify-center md:justify-start text-[#D0D7D9]"><i class="fas fa-envelope text-[#B38F5F] mr-3"></i> miacitylife.re@gmail.com</p>
+                <p class="flex items-center justify-center md:justify-start text-[#D0D7D9]"><i class="fas fa-globe text-[#B38F5F] mr-3"></i> <a href="http://www.miacitylife.com/" class="hover:text-[#4A7C93] transition-colors">www.miacitylife.com</a></p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="space-y-4 reveal-item animate-fade-in-up" style="animation-delay: 0.3s;">
+                <h4 class="text-2xl font-bold text-[#B38F5F]">Follow Us</h4>
+                <div class="flex justify-center md:justify-start gap-6 text-3xl">
+                    <a href="https://instagram.com/pmtgroupll" target="_blank" class="text-[#D0D7D9] hover:text-[#B38F5F] transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com/miamirealestateopportunities" target="_blank" class="text-[#D0D7D9] hover:text-[#B38F5F] transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu JS -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Intersection Observer for scroll reveal animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const revealItems = document.querySelectorAll('.reveal-item');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        entry.target.classList.add('animate-fade-in-up');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            revealItems.forEach(item => {
+                item.classList.add('opacity-0'); // Ensure initial state is hidden
+                item.style.transform = 'translateY(20px)'; // Add initial translateY for animation
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
