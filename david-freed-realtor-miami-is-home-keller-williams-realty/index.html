@@ -10,396 +10,431 @@
     <style>
         body {
             font-family: 'Outfit', sans-serif;
-            overflow-x: hidden; /* Prevent horizontal scroll due to animations/elements */
+            scroll-behavior: smooth;
+            overflow-x: hidden;
         }
-        /* Custom CSS for keyframe animations */
-        @keyframes fadeInUp {
+        .container {
+            max-width: 1200px; /* Custom container width */
+        }
+
+        /* Custom Keyframe Animations */
+        @keyframes fade-in-up {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out forwards;
+        }
+
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
             100% { transform: translateY(0px); }
         }
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-        .float {
+        .animate-float {
             animation: float 3s ease-in-out infinite;
         }
-        .reveal-on-scroll {
+
+        /* Initial state for scroll reveal elements */
+        .scroll-reveal {
             opacity: 0;
-            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
             transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
-        .reveal-on-scroll.is-visible {
+        .scroll-reveal.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Custom Gradient Background */
+        .bg-gradient-custom {
+            background: linear-gradient(to right, #FFC073, #0C4F57);
+        }
+
+        /* Adjust navbar text for specific elements */
+        .navbar-brand-primary {
+            color: #025E66;
+        }
+        .navbar-brand-dark {
+            color: #212121;
+        }
+        .navbar-link-hover:hover {
+            color: #025E66;
+        }
+        .navbar-button {
+            background-color: #025E66;
+            color: white;
+        }
+        .navbar-button:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
-<body class="text-[#222222]">
+<body class="text-[#212121] bg-[#FDFDFD]">
 
     <!-- Navbar -->
     <nav class="w-full fixed top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-100">
         <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl md:text-3xl font-extrabold tracking-tighter">
-                <span class="text-[#2A606A]">David Freed Realtor | Miami</span>&nbsp;<span class="text-[#222222]">Is Home | Keller Williams Realty</span>
+                <span class="navbar-brand-primary">David Freed Realtor | Miami</span>&nbsp;
+                <span class="navbar-brand-dark">Is Home | Keller Williams Realty</span>
             </a>
-            <div class="hidden md:flex items-center gap-8 text-[#222222] font-medium">
-                <a href="#about" class="hover:text-[#2A606A] transition-colors">About</a>
-                <a href="#services" class="hover:text-[#2A606A] transition-colors">Services</a>
-                <a href="#team" class="hover:text-[#2A606A] transition-colors">Team</a>
-                <a href="#contact" class="hover:text-[#2A606A] transition-colors">Contact</a>
+            <div class="hidden md:flex items-center gap-8 text-[#212121] font-medium">
+                <a href="#about" class="navbar-link-hover transition-colors">About</a>
+                <a href="#services" class="navbar-link-hover transition-colors">Services</a>
+                <a href="#team" class="navbar-link-hover transition-colors">Team</a>
+                <a href="#contact" class="navbar-link-hover transition-colors">Contact</a>
             </div>
-            <a href="#contact" class="hidden md:inline-block px-8 py-3 bg-[#2A606A] text-white rounded-full font-medium hover:scale-105 transition-transform">Book Now</a>
-            <button id="mobile-menu-btn" class="md:hidden text-2xl text-[#222222]">
-                <i class="fas fa-bars"></i>
-            </button>
+            <a href="#contact" class="hidden md:inline-block px-8 py-3 navbar-button rounded-full font-medium hover:scale-105 transition-transform">Book Now</a>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-[#212121]"><i class="fas fa-bars"></i></button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-4 shadow-lg absolute w-full">
-            <a href="#about" class="block font-medium text-[#222222]">About</a>
-            <a href="#services" class="block font-medium text-[#222222]">Services</a>
-            <a href="#team" class="block font-medium text-[#222222]">Team</a>
-            <a href="#contact" class="block font-medium text-[#222222]">Contact</a>
-            <a href="#contact" class="inline-block w-full text-center px-8 py-3 bg-[#2A606A] text-white rounded-full font-medium">Book Now</a>
+            <a href="#about" class="block font-medium text-[#212121]">About</a>
+            <a href="#services" class="block font-medium text-[#212121]">Services</a>
+            <a href="#team" class="block font-medium text-[#212121]">Team</a>
+            <a href="#contact" class="block font-medium text-[#212121]">Contact</a>
+            <a href="#contact" class="inline-block w-full text-center px-8 py-3 navbar-button rounded-full font-medium">Book Now</a>
         </div>
     </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="relative h-screen flex items-center justify-center text-white overflow-hidden pt-24 md:pt-0 bg-gradient-to-br from-[#F5D6A7] to-[#2A606A]">
-            <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://picsum.photos/1920/1080?random=1');"></div>
-            <div class="container mx-auto px-4 md:px-8 z-10 text-center relative reveal-on-scroll">
-                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 drop-shadow-lg text-[#13383B]">
-                    Miami Is Home. <br class="hidden md:block">Let's Find Yours.
-                </h1>
-                <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto drop-shadow-md text-[#FCF8F5]">
-                    Experience sophisticated Miami living with David Freed Realtor, your expert guide to luxury properties and dream homes.
-                </p>
-                <a href="#contact" class="inline-block px-10 py-4 bg-[#F0A79E] text-[#13383B] text-xl font-semibold rounded-full hover:scale-105 transition-transform shadow-xl">
-                    Explore Miami Real Estate
-                </a>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center text-[#FDFDFD] overflow-hidden" style="padding-top: 96px;">
+        <img src="https://picsum.photos/1920/1080?random=1" alt="Miami Skyline at Golden Hour" class="absolute inset-0 w-full h-full object-cover brightness-50">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#0C4F57]/60 to-[#FFC073]/40"></div>
+        <div class="relative z-10 text-center max-w-4xl px-4 scroll-reveal">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 drop-shadow-lg animate-fade-in-up">
+                Discover Your Dream Home in Paradise
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 drop-shadow-md animate-fade-in-up" style="animation-delay: 0.2s;">
+                Miami Is Home: Your Trusted Partner for Luxury Real Estate in South Florida
+            </p>
+            <a href="#contact" class="inline-block bg-[#D4AF37] text-[#013C40] px-10 py-4 rounded-full text-lg font-semibold shadow-xl hover:scale-105 transition-transform animate-fade-in-up" style="animation-delay: 0.4s;">
+                Find Your Miami Home Today
+            </a>
+        </div>
+    </section>
 
-        <!-- About Us Section -->
-        <section id="about" class="bg-[#FDFCFB] py-24 md:py-32">
-            <div class="container mx-auto px-4 md:px-8">
-                <div class="grid md:grid-cols-2 gap-16 md:gap-20 items-center">
-                    <div class="relative reveal-on-scroll">
-                        <img src="https://picsum.photos/800/900?random=2" alt="David Freed Realtor Miami" class="w-full h-[500px] object-cover rounded-3xl shadow-2xl z-10 relative">
-                        <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-[#F0A79E] rounded-full mix-blend-multiply opacity-70 blur-xl hidden md:block"></div>
-                        <div class="absolute -top-10 -right-10 w-48 h-48 bg-[#8FBCC2] rounded-full mix-blend-multiply opacity-70 blur-xl hidden md:block"></div>
+    <!-- About Us Section -->
+    <section id="about" class="py-28 md:py-32 bg-[#FDFDFD] text-[#212121]">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-center mb-16 scroll-reveal">About David Freed & Miami Is Home</h2>
+            <div class="md:grid md:grid-cols-2 gap-20 items-center">
+                <div class="relative mb-12 md:mb-0 scroll-reveal">
+                    <img src="https://picsum.photos/800/600?random=2" alt="David Freed showing a property" class="w-full h-[500px] object-cover rounded-3xl shadow-2xl">
+                    <div class="absolute -bottom-10 -right-10 bg-[#F9F9F9] p-8 rounded-3xl shadow-xl border border-gray-200 backdrop-blur-sm bg-opacity-70 md:w-3/4 animate-float hidden md:block">
+                        <p class="text-xl font-semibold text-[#025E66] mb-2">5.0★ (146 Reviews)</p>
+                        <p class="text-[#212121]">"David is an exceptional realtor. His knowledge of the Miami market is unmatched, and he truly puts his clients first."</p>
                     </div>
-                    <div class="reveal-on-scroll">
-                        <h2 class="text-4xl md:text-6xl font-bold text-[#13383B] mb-8 leading-tight">
-                            Your Journey to Miami Living, Perfected.
-                        </h2>
-                        <p class="text-lg md:text-xl text-[#222222] mb-6 leading-relaxed">
-                            With an unparalleled understanding of Miami's vibrant neighborhoods and a commitment to personalized service, David Freed and the Keller Williams team are dedicated to making your real estate dreams a reality. From luxury condos with breathtaking bay views to charming family homes, we ensure a seamless and enjoyable experience.
-                        </p>
-                        <p class="text-lg md:text-xl text-[#222222] leading-relaxed border-l-4 border-[#2A606A] pl-4 italic">
-                            "Every client, every home, every story is unique. We listen, we understand, and we deliver results that move you."
-                        </p>
-                        <a href="#contact" class="mt-8 inline-block px-8 py-3 bg-[#2A606A] text-white rounded-full font-medium hover:scale-105 transition-transform shadow-lg">
-                            Get in Touch
-                        </a>
+                </div>
+                <div class="scroll-reveal">
+                    <h3 class="text-4xl font-bold mb-6 text-[#025E66]">Your Expert Guide to Miami Real Estate</h3>
+                    <p class="text-lg leading-relaxed mb-8">
+                        As a proud member of Keller Williams Realty and the driving force behind "Miami Is Home," David Freed brings unparalleled passion and expertise to the vibrant South Florida real estate market. With a deep understanding of Miami's diverse neighborhoods, from the luxurious Brickell penthouses to the charming Coral Gables estates, David is dedicated to helping clients navigate their buying, selling, and investment journeys with confidence and ease.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-8">
+                        Our philosophy is built on personalized service, transparent communication, and an unwavering commitment to achieving your real estate goals. We believe that finding your home in Miami should be an exciting and rewarding experience, and we're here to make that a reality, every step of the way. Your dream home awaits in the Magic City!
+                    </p>
+                    <a href="#contact" class="inline-block bg-[#025E66] text-[#FDFDFD] px-8 py-3 rounded-full font-medium hover:scale-105 transition-transform shadow-lg">Get to Know Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-28 md:py-32 bg-[#F0EFEF] text-[#212121]">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-center mb-16 scroll-reveal">Our Comprehensive Real Estate Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Service Card 1 -->
+                <div class="bg-[#F9F9F9] p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scroll-reveal">
+                    <i class="fas fa-house-user text-5xl text-[#D4AF37] mb-6 block"></i>
+                    <h3 class="text-3xl font-bold mb-4 text-[#013C40]">Buying Your Home</h3>
+                    <p class="text-lg leading-relaxed">
+                        From first-time homebuyers to luxury property connoisseurs, we meticulously search, negotiate, and close on your ideal Miami residence. We provide tailored guidance through every step.
+                    </p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="bg-[#F9F9F9] p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scroll-reveal" style="animation-delay: 0.1s;">
+                    <i class="fas fa-tag text-5xl text-[#D4AF37] mb-6 block"></i>
+                    <h3 class="text-3xl font-bold mb-4 text-[#013C40]">Selling Your Property</h3>
+                    <p class="text-lg leading-relaxed">
+                        Maximize your property's value with our strategic marketing, expert staging advice, and skilled negotiation to ensure a smooth and profitable sale in the competitive Miami market.
+                    </p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="bg-[#F9F9F9] p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scroll-reveal" style="animation-delay: 0.2s;">
+                    <i class="fas fa-city text-5xl text-[#D4AF37] mb-6 block"></i>
+                    <h3 class="text-3xl font-bold mb-4 text-[#013C40]">Relocation Services</h3>
+                    <p class="text-lg leading-relaxed">
+                        Moving to Miami? We offer comprehensive relocation support, helping you settle into the perfect neighborhood and connecting you with essential local services.
+                    </p>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="bg-[#F9F9F9] p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scroll-reveal" style="animation-delay: 0.3s;">
+                    <i class="fas fa-chart-line text-5xl text-[#D4AF37] mb-6 block"></i>
+                    <h3 class="text-3xl font-bold mb-4 text-[#013C40]">Real Estate Investment</h3>
+                    <p class="text-lg leading-relaxed">
+                        Identify lucrative investment opportunities in Miami's dynamic market. From income properties to development projects, we provide data-driven insights for smart investments.
+                    </p>
+                </div>
+                <!-- Service Card 5 -->
+                <div class="bg-[#F9F9F9] p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scroll-reveal" style="animation-delay: 0.4s;">
+                    <i class="fas fa-gem text-5xl text-[#D4AF37] mb-6 block"></i>
+                    <h3 class="text-3xl font-bold mb-4 text-[#013C40]">Luxury Property Specialist</h3>
+                    <p class="text-lg leading-relaxed">
+                        Experience concierge-level service for high-end properties. We understand the unique demands of the luxury market and deliver exceptional results.
+                    </p>
+                </div>
+                <!-- Service Card 6 -->
+                <div class="bg-[#F9F9F9] p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scroll-reveal" style="animation-delay: 0.5s;">
+                    <i class="fas fa-search-dollar text-5xl text-[#D4AF37] mb-6 block"></i>
+                    <h3 class="text-3xl font-bold mb-4 text-[#013C40]">Market Analysis & Valuation</h3>
+                    <p class="text-lg leading-relaxed">
+                        Receive accurate, in-depth market analysis and property valuations. Make informed decisions whether you're buying, selling, or evaluating your portfolio.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="team" class="py-28 md:py-32 bg-[#FDFDFD] text-[#212121]">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-center mb-16 scroll-reveal">Meet Your Dedicated Realtor</h2>
+            <div class="max-w-4xl mx-auto md:grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative mb-12 md:mb-0 scroll-reveal">
+                    <img src="https://picsum.photos/800/800?random=3" alt="David Freed" class="w-full h-auto object-cover rounded-3xl shadow-2xl">
+                    <div class="absolute -bottom-8 -left-8 md:-bottom-12 md:-left-12 bg-[#D4AF37] p-6 rounded-3xl shadow-xl text-[#013C40] text-center transform rotate-[-5deg] animate-float">
+                        <p class="text-2xl font-bold">Client Focused</p>
+                        <p class="text-lg">Results Driven</p>
+                    </div>
+                </div>
+                <div class="scroll-reveal">
+                    <h3 class="text-4xl font-bold mb-6 text-[#025E66]">David Freed – Bringing Miami Home to You</h3>
+                    <p class="text-lg leading-relaxed mb-6">
+                        David Freed is not just a realtor; he's a Miami enthusiast and a community advocate. With a comprehensive understanding of the local market trends, property values, and hidden gems, David provides invaluable insights that only a true local can offer. His commitment to clients extends beyond transactions, focusing on building lasting relationships and ensuring every client finds not just a house, but a home they love.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-8">
+                        Backed by the powerful network of Keller Williams Realty, David leverages cutting-edge technology and a collaborative team approach to give you a distinct advantage in buying or selling. Whether it's a first-time purchase, a luxury investment, or a seamless relocation, David's dedication to excellence makes him the ideal partner for your Miami real estate journey.
+                    </p>
+                    <div class="flex gap-6 text-3xl">
+                        <a href="https://instagram.com/beaverdaddy" target="_blank" aria-label="Instagram" class="text-[#025E66] hover:text-[#D4AF37] transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com/david.freed1" target="_blank" aria-label="Facebook" class="text-[#025E66] hover:text-[#D4AF37] transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://linkedin.com/company/david-freed777" target="_blank" aria-label="LinkedIn" class="text-[#025E66] hover:text-[#D4AF37] transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://youtube.com/@DavidFreedMiamiRealtor" target="_blank" aria-label="YouTube" class="text-[#025E66] hover:text-[#D4AF37] transition-colors"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Services Section -->
-        <section id="services" class="bg-gradient-to-br from-[#1A1A1A] to-[#13383B] py-24 md:py-32 text-[#E0E0E0]">
-            <div class="container mx-auto px-4 md:px-8">
-                <h2 class="text-4xl md:text-6xl font-bold text-center text-[#FDFCFB] mb-16 leading-tight reveal-on-scroll">
-                    Comprehensive Real Estate Services
-                </h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-                    <div class="bg-[#2A606A]/70 backdrop-blur-md border border-white/10 rounded-3xl p-8 shadow-2xl hover:scale-[1.02] transition-transform reveal-on-scroll">
-                        <div class="text-5xl text-[#F0A79E] mb-6"><i class="fas fa-house-chimney-medical"></i></div>
-                        <h3 class="text-3xl font-semibold mb-4 text-[#FDFCFB]">Buying Your Dream Home</h3>
-                        <p class="text-lg text-[#FCF8F5]">
-                            Navigate Miami's competitive market with expert guidance. We help you identify properties that match your lifestyle, negotiate the best deals, and ensure a smooth closing process.
-                        </p>
-                    </div>
-                    <div class="bg-[#2A606A]/70 backdrop-blur-md border border-white/10 rounded-3xl p-8 shadow-2xl hover:scale-[1.02] transition-transform reveal-on-scroll">
-                        <div class="text-5xl text-[#F0A79E] mb-6"><i class="fas fa-handshake"></i></div>
-                        <h3 class="text-3xl font-semibold mb-4 text-[#FDFCFB]">Selling for Top Value</h3>
-                        <p class="text-lg text-[#FCF8F5]">
-                            Leverage our market insights and extensive network to sell your property quickly and profitably. From staging to closing, we handle every detail with precision.
-                        </p>
-                    </div>
-                    <div class="bg-[#2A606A]/70 backdrop-blur-md border border-white/10 rounded-3xl p-8 shadow-2xl hover:scale-[1.02] transition-transform reveal-on-scroll">
-                        <div class="text-5xl text-[#F0A79E] mb-6"><i class="fas fa-city"></i></div>
-                        <h3 class="text-3xl font-semibold mb-4 text-[#FDFCFB]">Luxury Market Expertise</h3>
-                        <p class="text-lg text-[#FCF8F5]">
-                            Specializing in Miami's luxury segment, we connect discerning buyers with exclusive properties and assist sellers in attracting affluent clientele.
-                        </p>
-                    </div>
-                    <div class="bg-[#2A606A]/70 backdrop-blur-md border border-white/10 rounded-3xl p-8 shadow-2xl hover:scale-[1.02] transition-transform reveal-on-scroll">
-                        <div class="text-5xl text-[#F0A79E] mb-6"><i class="fas fa-building"></i></div>
-                        <h3 class="text-3xl font-semibold mb-4 text-[#FDFCFB]">Investment Properties</h3>
-                        <p class="text-lg text-[#FCF8F5]">
-                            Discover lucrative investment opportunities in Miami's booming real estate market. We provide comprehensive analysis and strategic advice for maximum returns.
-                        </p>
-                    </div>
-                    <div class="bg-[#2A606A]/70 backdrop-blur-md border border-white/10 rounded-3xl p-8 shadow-2xl hover:scale-[1.02] transition-transform reveal-on-scroll">
-                        <div class="text-5xl text-[#F0A79E] mb-6"><i class="fas fa-magnifying-glass-location"></i></div>
-                        <h3 class="text-3xl font-semibold mb-4 text-[#FDFCFB]">Relocation Services</h3>
-                        <p class="text-lg text-[#FCF8F5]">
-                            Moving to Miami? We offer comprehensive relocation assistance, helping you settle into your new city and find the perfect home with ease.
-                        </p>
-                    </div>
-                    <div class="bg-[#2A606A]/70 backdrop-blur-md border border-white/10 rounded-3xl p-8 shadow-2xl hover:scale-[1.02] transition-transform reveal-on-scroll">
-                        <div class="text-5xl text-[#F0A79E] mb-6"><i class="fas fa-key"></i></div>
-                        <h3 class="text-3xl font-semibold mb-4 text-[#FDFCFB]">Rental Assistance</h3>
-                        <p class="text-lg text-[#FCF8F5]">
-                            Whether you're looking for a short-term lease or a long-term rental, we streamline your search and help you secure the ideal property in your desired neighborhood.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Team Section -->
-        <section id="team" class="bg-[#FDFCFB] py-24 md:py-32">
-            <div class="container mx-auto px-4 md:px-8">
-                <h2 class="text-4xl md:text-6xl font-bold text-center text-[#13383B] mb-16 leading-tight reveal-on-scroll">
-                    Meet Your Trusted Miami Real Estate Partner
-                </h2>
-                <div class="grid md:grid-cols-2 gap-16 items-center">
-                    <div class="relative flex justify-center reveal-on-scroll">
-                        <img src="https://picsum.photos/600/700?random=3" alt="David Freed" class="w-full max-w-md h-[550px] object-cover rounded-full shadow-2xl border-8 border-[#F0A79E] hover:scale-105 transition-transform">
-                        <div class="absolute inset-0 bg-[#2A606A] rounded-full mix-blend-multiply opacity-20 hidden md:block"></div>
-                    </div>
-                    <div class="text-center md:text-left reveal-on-scroll">
-                        <h3 class="text-4xl font-bold text-[#2A606A] mb-4">David Freed</h3>
-                        <p class="text-2xl font-medium text-[#13383B] mb-6">Principal Realtor | Keller Williams Realty</p>
-                        <p class="text-lg text-[#222222] mb-6 leading-relaxed">
-                            David Freed brings a wealth of knowledge and an infectious passion for Miami real estate. With a reputation for integrity, sharp negotiation skills, and an unwavering client-first approach, David consistently exceeds expectations. He believes in building lasting relationships, ensuring that every client feels confident and well-informed throughout their real estate journey.
-                        </p>
-                        <p class="text-lg text-[#222222] mb-8 leading-relaxed">
-                            A true Miami enthusiast, David is deeply connected to the community and provides invaluable insights into the city's diverse sub-markets, from Brickell's urban vibrancy to Coral Gables' historic charm.
-                        </p>
-                        <div class="flex justify-center md:justify-start gap-6 text-3xl">
-                            <a href="https://instagram.com/beaverdaddy" target="_blank" class="text-[#2A606A] hover:text-[#F0A79E] transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://facebook.com/david.freed1" target="_blank" class="text-[#2A606A] hover:text-[#F0A79E] transition-colors"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="https://linkedin.com/company/david-freed777" target="_blank" class="text-[#2A606A] hover:text-[#F0A79E] transition-colors"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://youtube.com/@DavidFreedMiamiRealtor" target="_blank" class="text-[#2A606A] hover:text-[#F0A79E] transition-colors"><i class="fa-brands fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Testimonials Section -->
-        <section class="bg-gradient-to-br from-[#F5D6A7] to-[#2A606A] py-24 md:py-32 text-[#13383B]">
-            <div class="container mx-auto px-4 md:px-8">
-                <h2 class="text-4xl md:text-6xl font-bold text-center text-[#13383B] mb-16 leading-tight reveal-on-scroll">
-                    What Our Clients Say
-                </h2>
-                <div class="grid md:grid-cols-3 gap-12">
-                    <div class="bg-[#FCF8F5] p-8 rounded-3xl shadow-2xl hover:scale-[1.02] transition-transform reveal-on-scroll">
-                        <div class="flex items-center mb-4 text-[#F5D6A7]">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-lg italic text-[#222222] mb-6">
-                            "David made selling our luxury condo a breeze. His market knowledge is incredible, and his negotiation skills ensured we got an amazing price. Highly recommend!"
-                        </p>
-                        <p class="font-semibold text-[#2A606A] text-xl">- Sarah & Mark T.</p>
-                    </div>
-                    <div class="bg-[#FCF8F5] p-8 rounded-3xl shadow-2xl hover:scale-[1.02] transition-transform reveal-on-scroll">
-                        <div class="flex items-center mb-4 text-[#F5D6A7]">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-lg italic text-[#222222] mb-6">
-                            "As first-time homebuyers in Miami, we were overwhelmed. David's patience and expertise guided us every step. We found our perfect home in Brickell!"
-                        </p>
-                        <p class="font-semibold text-[#2A606A] text-xl">- Jessica L.</p>
-                    </div>
-                    <div class="bg-[#FCF8F5] p-8 rounded-3xl shadow-2xl hover:scale-[1.02] transition-transform reveal-on-scroll">
-                        <div class="flex items-center mb-4 text-[#F5D6A7]">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-lg italic text-[#222222] mb-6">
-                            "I've worked with many realtors, but David stands out. His professionalism and deep understanding of the investment market are unmatched. A true partner."
-                        </p>
-                        <p class="font-semibold text-[#2A606A] text-xl">- Robert D.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact & Location Section -->
-        <section id="contact" class="bg-[#FDFCFB] py-24 md:py-32">
-            <div class="container mx-auto px-4 md:px-8">
-                <h2 class="text-4xl md:text-6xl font-bold text-center text-[#13383B] mb-16 leading-tight reveal-on-scroll">
-                    Let's Connect & Discuss Your Miami Home
-                </h2>
-                <div class="grid md:grid-cols-2 gap-12 items-start">
-                    <!-- Contact Form Column -->
-                    <div class="bg-[#FCF8F5] p-8 md:p-12 rounded-3xl shadow-2xl reveal-on-scroll">
-                        <h3 class="text-3xl font-semibold text-[#2A606A] mb-8">Send Us a Message</h3>
-                        <form class="space-y-6 text-[#222222]">
-                            <div>
-                                <label for="name" class="block text-lg font-medium mb-2">Full Name</label>
-                                <input type="text" id="name" name="name" class="w-full px-5 py-3 border border-[#8FBCC2] rounded-xl focus:ring-2 focus:ring-[#F0A79E] focus:border-transparent transition-all" placeholder="Your Name">
+    <!-- Testimonials Section -->
+    <section class="py-28 md:py-32 bg-[#F0EFEF] text-[#212121]">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-center mb-16 scroll-reveal">What Our Clients Say</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Testimonial 1 -->
+                <div class="bg-[#F9F9F9] p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scroll-reveal">
+                    <div class="flex items-center mb-6">
+                        <img src="https://picsum.photos/100/100?random=4" alt="Client 1" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <p class="font-bold text-xl text-[#013C40]">Sarah J.</p>
+                            <div class="text-[#D4AF37]">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
-                            <div>
-                                <label for="email" class="block text-lg font-medium mb-2">Email Address</label>
-                                <input type="email" id="email" name="email" class="w-full px-5 py-3 border border-[#8FBCC2] rounded-xl focus:ring-2 focus:ring-[#F0A79E] focus:border-transparent transition-all" placeholder="your@example.com">
-                            </div>
-                            <div>
-                                <label for="phone" class="block text-lg font-medium mb-2">Phone Number (Optional)</label>
-                                <input type="tel" id="phone" name="phone" class="w-full px-5 py-3 border border-[#8FBCC2] rounded-xl focus:ring-2 focus:ring-[#F0A79E] focus:border-transparent transition-all" placeholder="(123) 456-7890">
-                            </div>
-                            <div>
-                                <label for="message" class="block text-lg font-medium mb-2">Your Message</label>
-                                <textarea id="message" name="message" rows="6" class="w-full px-5 py-3 border border-[#8FBCC2] rounded-xl focus:ring-2 focus:ring-[#F0A79E] focus:border-transparent transition-all" placeholder="Tell us about your real estate needs..."></textarea>
-                            </div>
-                            <button type="submit" class="w-full px-8 py-4 bg-[#2A606A] text-white text-xl font-semibold rounded-full hover:bg-[#13383B] transition-colors shadow-lg">
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
-
-                    <!-- Google Maps Column -->
-                    <div class="reveal-on-scroll">
-                        <h3 class="text-3xl font-semibold text-[#2A606A] mb-8 md:mt-0 text-center md:text-left">Our Location</h3>
-                        <div class="rounded-3xl shadow-2xl overflow-hidden">
-                            <iframe
-                                src="https://www.google.com/maps?q=45+SW+9th+St+Apt+3006+Miami+FL+33130+United+States&output=embed"
-                                width="100%"
-                                height="450"
-                                style="border:0;"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                                class="w-full h-full min-h-[400px] rounded-3xl"
-                            ></iframe>
-                        </div>
-                        <div class="mt-8 text-center md:text-left text-[#222222]">
-                            <p class="text-xl font-medium mb-2"><i class="fas fa-map-marker-alt text-[#2A606A] mr-3"></i> 45 SW 9th St Apt 3006, Miami, FL 33130, United States</p>
-                            <p class="text-xl font-medium mb-2"><i class="fas fa-phone-alt text-[#2A606A] mr-3"></i> +1 954-263-8115</p>
-                            <p class="text-xl font-medium"><i class="fas fa-envelope text-[#2A606A] mr-3"></i> davidfreed@kw.com</p>
                         </div>
                     </div>
+                    <p class="text-lg leading-relaxed italic">
+                        "David helped us find our dream condo in Brickell. His negotiation skills are unmatched, and he made the entire process seamless. Highly recommend!"
+                    </p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-[#F9F9F9] p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scroll-reveal" style="animation-delay: 0.1s;">
+                    <div class="flex items-center mb-6">
+                        <img src="https://picsum.photos/100/100?random=5" alt="Client 2" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <p class="font-bold text-xl text-[#013C40]">Mark T.</p>
+                            <div class="text-[#D4AF37]">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-lg leading-relaxed italic">
+                        "Selling our home with David was a fantastic experience. He secured a top-dollar offer quickly and handled all the details with professionalism."
+                    </p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-[#F9F9F9] p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 scroll-reveal" style="animation-delay: 0.2s;">
+                    <div class="flex items-center mb-6">
+                        <img src="https://picsum.photos/100/100?random=6" alt="Client 3" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <p class="font-bold text-xl text-[#013C40]">Jessica L.</p>
+                            <div class="text-[#D4AF37]">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-lg leading-relaxed italic">
+                        "As an investor, I rely on David's market insights. He's helped me make several profitable decisions. A true expert in Miami real estate."
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- FAQ Section -->
-        <section class="bg-gradient-to-br from-[#1A1A1A] to-[#13383B] py-24 md:py-32 text-[#E0E0E0]">
-            <div class="container mx-auto px-4 md:px-8">
-                <h2 class="text-4xl md:text-6xl font-bold text-center text-[#FDFCFB] mb-16 leading-tight reveal-on-scroll">
-                    Frequently Asked Questions
-                </h2>
-                <div class="max-w-4xl mx-auto space-y-6">
-                    <details class="bg-[#2A606A]/70 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl overflow-hidden reveal-on-scroll">
-                        <summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer text-2xl font-semibold text-[#FDFCFB] hover:bg-[#13383B] transition-colors">
-                            What areas of Miami do you specialize in?
-                            <span class="text-3xl text-[#F0A79E]"><i class="fas fa-chevron-down"></i></span>
-                        </summary>
-                        <div class="p-6 md:p-8 pt-0 border-t border-white/10 text-lg text-[#FCF8F5]">
-                            I specialize in the vibrant and diverse neighborhoods of Miami, including Brickell, Downtown Miami, South Beach, Coral Gables, Coconut Grove, Edgewater, and Wynwood. My deep local knowledge ensures I can help you find the perfect property in the area that best suits your lifestyle.
+    <!-- Contact & Location Section -->
+    <section id="contact" class="py-28 md:py-32 bg-[#FDFDFD] text-[#212121]">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-center mb-16 scroll-reveal">Let's Connect & Find Your Miami Home</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-stretch">
+                <!-- Contact Form -->
+                <div class="bg-[#F9F9F9] p-10 rounded-3xl shadow-2xl scroll-reveal">
+                    <h3 class="text-3xl font-bold mb-8 text-[#025E66]">Send Us a Message</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-lg font-medium text-[#212121] mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-[#025E66] focus:border-[#025E66] bg-white text-[#212121]" placeholder="Your Name">
                         </div>
-                    </details>
-                    <details class="bg-[#2A606A]/70 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl overflow-hidden reveal-on-scroll">
-                        <summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer text-2xl font-semibold text-[#FDFCFB] hover:bg-[#13383B] transition-colors">
-                            How do you help buyers find the right property?
-                            <span class="text-3xl text-[#F0A79E]"><i class="fas fa-chevron-down"></i></span>
-                        </summary>
-                        <div class="p-6 md:p-8 pt-0 border-t border-white/10 text-lg text-[#FCF8F5]">
-                            My process begins with a thorough consultation to understand your needs, preferences, and budget. I then leverage my extensive network, advanced search tools, and off-market opportunities to present you with curated listings. I guide you through viewings, provide detailed market analysis, and expertly negotiate on your behalf to secure your ideal home.
+                        <div>
+                            <label for="email" class="block text-lg font-medium text-[#212121] mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-[#025E66] focus:border-[#025E66] bg-white text-[#212121]" placeholder="your.email@example.com">
                         </div>
-                    </details>
-                    <details class="bg-[#2A606A]/70 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl overflow-hidden reveal-on-scroll">
-                        <summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer text-2xl font-semibold text-[#FDFCFB] hover:bg-[#13383B] transition-colors">
-                            What is your approach to selling properties?
-                            <span class="text-3xl text-[#F0A79E]"><i class="fas fa-chevron-down"></i></span>
-                        </summary>
-                        <div class="p-6 md:p-8 pt-0 border-t border-white/10 text-lg text-[#FCF8F5]">
-                            For sellers, I develop a customized marketing strategy that includes professional photography, virtual tours, targeted digital campaigns, and exclusive network outreach. I provide accurate pricing based on current market trends and ensure your property receives maximum exposure to attract qualified buyers, ultimately aiming for the highest possible sale price in the shortest time.
+                        <div>
+                            <label for="phone" class="block text-lg font-medium text-[#212121] mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-[#025E66] focus:border-[#025E66] bg-white text-[#212121]" placeholder="+1 (555) 123-4567">
                         </div>
-                    </details>
-                    <details class="bg-[#2A606A]/70 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl overflow-hidden reveal-on-scroll">
-                        <summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer text-2xl font-semibold text-[#FDFCFB] hover:bg-[#13383B] transition-colors">
-                            Can you assist with luxury real estate and investment properties?
-                            <span class="text-3xl text-[#F0A79E]"><i class="fas fa-chevron-down"></i></span>
-                        </summary>
-                        <div class="p-6 md:p-8 pt-0 border-t border-white/10 text-lg text-[#FCF8F5]">
-                            Absolutely. I have a deep specialization in Miami's luxury market, connecting discerning clients with high-end homes and exclusive opportunities. For investors, I offer strategic advice, detailed market analysis, and identify properties with strong potential for appreciation and rental income, helping you build a robust real estate portfolio.
+                        <div>
+                            <label for="message" class="block text-lg font-medium text-[#212121] mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="6" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-[#025E66] focus:border-[#025E66] bg-white text-[#212121]" placeholder="Tell us about your real estate needs..."></textarea>
                         </div>
-                    </details>
+                        <button type="submit" class="w-full bg-[#025E66] text-[#FDFDFD] px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform shadow-lg">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+                <!-- Google Map -->
+                <div class="scroll-reveal">
+                    <iframe
+                        src="https://www.google.com/maps?q=45+SW+9th+St+Apt+3006+Miami+FL+33130+United+States&output=embed"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="w-full h-full min-h-[400px] rounded-3xl shadow-2xl"
+                    ></iframe>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-28 md:py-32 bg-[#F0EFEF] text-[#212121]">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-center mb-16 scroll-reveal">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto space-y-8">
+                <!-- FAQ Item 1 -->
+                <details class="bg-[#F9F9F9] p-8 rounded-3xl shadow-xl cursor-pointer scroll-reveal">
+                    <summary class="flex justify-between items-center text-2xl font-semibold text-[#013C40]">
+                        How much is my home worth in the current Miami market?
+                        <span class="text-[#D4AF37]"><i class="fas fa-plus"></i></span>
+                    </summary>
+                    <div class="mt-4 text-lg leading-relaxed text-[#212121]">
+                        Determining your home's accurate value requires a comprehensive market analysis. We'll assess comparable sales, current market trends, property condition, and unique features to provide you with a precise valuation. Contact us for a complimentary, no-obligation home valuation report.
+                    </div>
+                </details>
+                <!-- FAQ Item 2 -->
+                <details class="bg-[#F9F9F9] p-8 rounded-3xl shadow-xl cursor-pointer scroll-reveal" style="animation-delay: 0.1s;">
+                    <summary class="flex justify-between items-center text-2xl font-semibold text-[#013C40]">
+                        What is the process for buying a home in Miami?
+                        <span class="text-[#D4AF37]"><i class="fas fa-plus"></i></span>
+                    </summary>
+                    <div class="mt-4 text-lg leading-relaxed text-[#212121]">
+                        The home buying process typically involves pre-approval for a mortgage, identifying your needs and preferences, searching for properties, making an offer, negotiating, conducting inspections and appraisals, and finally, closing. David Freed will guide you through each step, ensuring a smooth and informed journey.
+                    </div>
+                </details>
+                <!-- FAQ Item 3 -->
+                <details class="bg-[#F9F9F9] p-8 rounded-3xl shadow-xl cursor-pointer scroll-reveal" style="animation-delay: 0.2s;">
+                    <summary class="flex justify-between items-center text-2xl font-semibold text-[#013C40]">
+                        Why should I choose David Freed and Keller Williams Realty?
+                        <span class="text-[#D4AF37]"><i class="fas fa-plus"></i></span>
+                    </summary>
+                    <div class="mt-4 text-lg leading-relaxed text-[#212121]">
+                        David Freed offers deep local expertise, a client-centric approach, and proven negotiation skills, all backed by the global resources and innovative technology of Keller Williams Realty. We prioritize your goals, provide transparent communication, and strive to make your real estate experience both successful and enjoyable.
+                    </div>
+                </details>
+                <!-- FAQ Item 4 -->
+                <details class="bg-[#F9F9F9] p-8 rounded-3xl shadow-xl cursor-pointer scroll-reveal" style="animation-delay: 0.3s;">
+                    <summary class="flex justify-between items-center text-2xl font-semibold text-[#013C40]">
+                        What are the current trends in the Miami luxury real estate market?
+                        <span class="text-[#D4AF37]"><i class="fas fa-plus"></i></span>
+                    </summary>
+                    <div class="mt-4 text-lg leading-relaxed text-[#212121]">
+                        Miami's luxury market is highly dynamic, often driven by international buyers, new developments, and a strong demand for waterfront properties and high-end amenities. We closely monitor these trends to provide our clients with up-to-the-minute insights and strategic advice.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-[#1A1A1A] text-[#E0E0E0] py-16 md:py-24">
-        <div class="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
-            <!-- Company Info -->
+    <footer class="bg-[#1A1A1A] text-[#FDFDFD] py-16 md:py-20">
+        <div class="container mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
+            <!-- Column 1: Company Info -->
             <div>
                 <a href="#" class="text-2xl md:text-3xl font-extrabold tracking-tighter block mb-4">
-                    <span class="text-[#2A606A]">David Freed Realtor</span> <span class="text-[#E0E0E0]">| KW</span>
+                    <span class="text-[#025E66]">David Freed Realtor | Miami</span>&nbsp;
+                    <span class="text-[#FDFDFD]">Is Home</span>
                 </a>
-                <p class="text-lg mb-4">Your expert guide to sophisticated Miami living.</p>
-                <p class="text-lg"><i class="fas fa-map-marker-alt text-[#F0A79E] mr-2"></i> 45 SW 9th St Apt 3006, Miami, FL 33130</p>
-                <p class="text-lg"><i class="fas fa-phone-alt text-[#F0A79E] mr-2"></i> +1 954-263-8115</p>
+                <p class="text-gray-400 leading-relaxed text-sm">
+                    Your trusted partner for luxury real estate in Miami, dedicated to making your home dreams a reality with expertise and personalized service.
+                </p>
             </div>
 
-            <!-- Navigation Links -->
+            <!-- Column 2: Quick Links -->
             <div>
-                <h3 class="text-xl font-bold text-[#F0A79E] mb-6">Quick Links</h3>
-                <ul class="space-y-3">
-                    <li><a href="#about" class="hover:text-[#8FBCC2] transition-colors text-lg">About Us</a></li>
-                    <li><a href="#services" class="hover:text-[#8FBCC2] transition-colors text-lg">Our Services</a></li>
-                    <li><a href="#team" class="hover:text-[#8FBCC2] transition-colors text-lg">Meet The Team</a></li>
-                    <li><a href="#contact" class="hover:text-[#8FBCC2] transition-colors text-lg">Contact Us</a></li>
+                <h4 class="text-xl font-bold mb-6 text-[#D4AF37]">Quick Links</h4>
+                <ul class="space-y-3 text-gray-400">
+                    <li><a href="#about" class="hover:text-[#FDFDFD] transition-colors text-sm">About Us</a></li>
+                    <li><a href="#services" class="hover:text-[#FDFDFD] transition-colors text-sm">Our Services</a></li>
+                    <li><a href="#team" class="hover:text-[#FDFDFD] transition-colors text-sm">Meet the Team</a></li>
+                    <li><a href="#contact" class="hover:text-[#FDFDFD] transition-colors text-sm">Contact Us</a></li>
+                    <li><a href="https://miamishome.com/?utm_source=gbp&utm_medium=organic" target="_blank" class="hover:text-[#FDFDFD] transition-colors text-sm">Official Website</a></li>
                 </ul>
             </div>
 
-            <!-- Contact Details -->
+            <!-- Column 3: Contact Details -->
             <div>
-                <h3 class="text-xl font-bold text-[#F0A79E] mb-6">Contact & Hours</h3>
-                <ul class="space-y-3">
-                    <li><p class="text-lg"><i class="fas fa-envelope text-[#F0A79E] mr-2"></i> davidfreed@kw.com</p></li>
-                    <li><p class="text-lg"><i class="fas fa-globe text-[#F0A79E] mr-2"></i> <a href="https://miamishome.com/?utm_source=gbp&utm_medium=organic" target="_blank" class="hover:text-[#8FBCC2] transition-colors">miamishome.com</a></p></li>
-                    <li>
-                        <p class="text-lg font-semibold mt-4">Office Hours:</p>
-                        <p class="text-md">Mon-Fri: 9:00 AM - 6:00 PM</p>
-                        <p class="text-md">Sat: 10:00 AM - 4:00 PM</p>
-                        <p class="text-md">Sun: By Appointment</p>
-                    </li>
-                </ul>
+                <h4 class="text-xl font-bold mb-6 text-[#D4AF37]">Contact Us</h4>
+                <address class="space-y-3 text-gray-400 not-italic">
+                    <p class="flex items-center text-sm"><i class="fas fa-map-marker-alt text-[#025E66] mr-3"></i> 45 SW 9th St Apt 3006, Miami, FL 33130, United States</p>
+                    <p class="flex items-center text-sm"><i class="fas fa-phone-alt text-[#025E66] mr-3"></i> <a href="tel:+19542638115" class="hover:text-[#FDFDFD] transition-colors">+1 954-263-8115</a></p>
+                    <p class="flex items-center text-sm"><i class="fas fa-envelope text-[#025E66] mr-3"></i> <a href="mailto:davidfreed@kw.com" class="hover:text-[#FDFDFD] transition-colors">davidfreed@kw.com</a></p>
+                </address>
             </div>
 
-            <!-- Social Media & Copyright -->
+            <!-- Column 4: Social & Copyright -->
             <div>
-                <h3 class="text-xl font-bold text-[#F0A79E] mb-6">Stay Connected</h3>
-                <div class="flex space-x-6 text-3xl mb-8">
-                    <a href="https://instagram.com/beaverdaddy" target="_blank" class="text-[#E0E0E0] hover:text-[#F0A79E] transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://facebook.com/david.freed1" target="_blank" class="text-[#E0E0E0] hover:text-[#F0A79E] transition-colors"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://linkedin.com/company/david-freed777" target="_blank" class="text-[#E0E0E0] hover:text-[#F0A79E] transition-colors"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://youtube.com/@DavidFreedMiamiRealtor" target="_blank" class="text-[#E0E0E0] hover:text-[#F0A79E] transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                <h4 class="text-xl font-bold mb-6 text-[#D4AF37]">Connect With Us</h4>
+                <div class="flex space-x-6 mb-8 text-2xl">
+                    <a href="https://instagram.com/beaverdaddy" target="_blank" aria-label="Instagram" class="text-gray-400 hover:text-[#D4AF37] transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com/david.freed1" target="_blank" aria-label="Facebook" class="text-gray-400 hover:text-[#D4AF37] transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://linkedin.com/company/david-freed777" target="_blank" aria-label="LinkedIn" class="text-gray-400 hover:text-[#D4AF37] transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://youtube.com/@DavidFreedMiamiRealtor" target="_blank" aria-label="YouTube" class="text-gray-400 hover:text-[#D4AF37] transition-colors"><i class="fa-brands fa-youtube"></i></a>
                 </div>
-                <p class="text-md">&copy; <span id="current-year"></span> David Freed Realtor. All rights reserved.</p>
-                <p class="text-md mt-2">Powered by Keller Williams Realty.</p>
+                <p class="text-gray-500 text-sm">&copy; 2024 David Freed Realtor | Miami Is Home. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Mobile Menu Toggle JS -->
+    <!-- Mobile Menu JS -->
     <script>
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
@@ -411,35 +446,26 @@
                 document.getElementById('mobile-menu').classList.add('hidden');
             });
         });
-    </script>
 
-    <!-- IntersectionObserver for scroll reveal -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const revealElements = document.querySelectorAll('.reveal-on-scroll');
+        // Intersection Observer for scroll reveal animations
+        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
 
-            const observerOptions = {
-                root: null, // viewport
-                rootMargin: '0px',
-                threshold: 0.1 // 10% of element visible
-            };
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target); // Stop observing once visible
-                    }
-                });
-            }, observerOptions);
-
-            revealElements.forEach(el => {
-                observer.observe(el);
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing once visible
+                }
             });
+        }, observerOptions);
 
-            // Set current year in footer
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-        });
+        scrollRevealElements.forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
